@@ -68,6 +68,9 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Heure de laboratoire (8 h SVT/SPC sans personnel) | art. 9 | ✅ |
 | | Pondération éducation prioritaire 1,1 | art. 8 | ✅ |
 | heures-supplementaires | 2 HSA imposables « sauf empêchement pour raison de santé » | art. 4-III | ✅ 🔧 |
+| | Temps partiel : pas d'HS imposées (seulement exceptionnellement, à leur demande, remplacements < 1 an) | décret 82-624 art. 3 bis | ✅ 🔧 (ajouté) |
+| | Documentalistes : pas d'heures supplémentaires | circ. 2015-057 I | ✅ 🔧 (ajouté) |
+| | Allègement/décharge : HS imposable au-delà du maximum **réduit** (pas d'exemption) | circ. 2015-057 I | ✅ 🔧 (contrairement à une idée répandue) |
 | | HSE toujours refusables | — | 🟡 |
 | | HVC : mission liée selon la circulaire | circ. 2015-057 | 🔧 |
 | reunions-obligatoires | Missions liées : réunions d'équipes (conseils de classe, d'enseignement), dispositifs d'évaluation, **réunions parents-professeurs**, HVC | décret 2014-940 art. 2-II, circ. 2015-057 II | 🔧 (réunions parents-profs manquaient) |

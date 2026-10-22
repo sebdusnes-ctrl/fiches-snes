@@ -56,7 +56,8 @@ fiches:
       - "Seule la première HSA est majorée de 20 %. Les suivantes sont moins bien payées qu’une heure ordinaire."
     textes:
       - "Décret n° 2014-940 : est supplémentaire toute heure faite au-delà du maximum de service, réductions et pondérations comprises."
-      - "En cas de pondération, la première HSA se compte après le calcul des pondérations."
+      - "**Pas d’heures supplémentaires imposées** aux enseignant·es **à temps partiel** : ils et elles n’en font qu’« exceptionnellement à leur demande », pour des remplacements de moins d’une année (décret n° 82-624, art. 3 bis) ; ni aux **professeur·es documentalistes**, qui « ne peuvent bénéficier d’heures supplémentaires » (circulaire n° 2015-057)."
+      - "**Allègement ou décharge de service** : l’heure imposable se compte « au-delà des maxima de service hebdomadaires réduits par application de l’allègement » (circulaire n° 2015-057). En cas de pondération, la première HSA se compte après le calcul des pondérations."
       - "Les stagiaires ne sont pas censé·es avoir d’HSA."
       - "Une HSE ne peut pas servir à payer une mission particulière : celle-ci relève de l’IMP."
       - "**Heures de vie de classe** : la circulaire n° 2015-057 les classe parmi les missions liées couvertes par l’ISOE ; le SNES-FSU en revendique le paiement en HSE quand elles s’ajoutent au service (voir la [fiche dédiée](fiche:heure-de-vie-de-classe))."
@@ -67,6 +68,8 @@ fiches:
     snes: "Les heures supplémentaires imposées alourdissent la charge de travail et sont un facteur majeur d’épuisement professionnel. Le SNES-FSU demande des postes, pas des heures supplémentaires."
     source:
       - { doc: decret_ors, ref: "art. 4" }
+      - { doc: circ_ors, ref: "I" }
+      - { doc: decret_temps_partiel, ref: "art. 3 bis" }
       - { doc: abecedaire, pages: "15" }
 
   - id: etat-vs-emploi-du-temps
