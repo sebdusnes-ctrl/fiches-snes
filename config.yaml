@@ -100,6 +100,10 @@ sources:
     titre: "Décret n° 89-825 du 9 novembre 1989 (ISSR)"
     detail: "Légifrance, version en vigueur"
     url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000881259"
+  circ_pp:
+    titre: "Circulaire n° 2018-108 du 10 octobre 2018 (rôle du professeur principal)"
+    detail: "BO n° 37 du 11 octobre 2018"
+    url: "https://www.education.gouv.fr/bo/18/Hebdo33/MENE1823888C.htm"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"

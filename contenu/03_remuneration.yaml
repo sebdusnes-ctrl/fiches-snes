@@ -33,7 +33,7 @@ fiches:
       - "**Part fonctionnelle** : c’est la rémunération des missions du Pacte (1 250 € brut par mission)."
     textes:
       - "Le chef d’établissement désigne les professeur·es principaux·ales « **avec l’accord des intéressés** » (code de l’éducation, art. D.421-49-1). Le ou la PP coordonne le suivi des élèves et la préparation de leur orientation, en liaison avec les Psy-ÉN."
-      - "Circulaire n° 2018-108 : elle précise les missions du ou de la PP (coordination de l’équipe, suivi des élèves, orientation) **sans créer de nouvelle obligation**. Aucune autre tâche ne peut lui être imposée."
+      - "La circulaire n° 2018-108 décrit les missions du ou de la PP : coordination de l’équipe, suivi des élèves, préparation de l’orientation avec le ou la Psy-ÉN, lien avec les familles. Selon le SNES-FSU, elle ne crée pas d’obligation nouvelle, et aucune autre tâche ne peut être imposée au PP."
       - "Les professeur·es documentalistes qui sont PP peuvent percevoir la part modulable depuis la rentrée 2024."
       - "Les parts modulable et fonctionnelle sont versées en 9 fois à partir d’octobre, après inscription sur l’état VS."
     agir:
@@ -42,7 +42,10 @@ fiches:
     snes: "Le rôle du ou de la Psy-ÉN dans l’orientation est essentiel : le travail du ou de la PP ne peut que le compléter, pas s’y substituer."
     liens:
       - { libelle: "Mémo rémunérations et carrières (SNES-FSU)", url: "https://r.snes.edu/RemuneraCarrieres" }
-    source: { doc: abecedaire, pages: "15, 20" }
+    source:
+      - { doc: code_education, ref: "art. D.421-49-1" }
+      - { doc: circ_pp, ref: "I et III" }
+      - { doc: abecedaire, pages: "15, 20" }
 
   - id: rep-rep-plus
     titre: "Exercer en REP ou en REP+"

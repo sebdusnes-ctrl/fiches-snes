@@ -16,6 +16,8 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 - Citer le mot exact du texte quand il est en jeu (« participation », « convocation », « se conformer »…).
 - Distinguer ce que dit le texte, ce qu'en fait l'administration, et ce que revendique ou lit le SNES-FSU.
 - Ne jamais présenter une revendication ou un usage comme une règle.
+- Sources admises : textes officiels, publications du SNES-FSU et de la FSU. **Jamais les documents d'autres syndicats** (SNALC, SGEN, CGT…), qui n'ont pas les mêmes mandats, même comme appui.
+- Vérifier qu'un texte cité s'applique bien au **collège** (ex. : la note de service n° 99-073, souvent citée pour les HVC, concerne la réforme du **lycée**).
 
 ## Conseil d'administration
 
@@ -73,7 +75,9 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Conseil pédagogique, CEC, conseil de cycle 3 : la direction peut désigner, mais ces instances ne figurent pas dans la liste des missions liées → présence non obligatoire | R.421-41-1, R.421-41-3, circ. 2015-057 II | 🔧 |
 | | Journée de solidarité, demi-journées rectorales | arrêtés cités par le SNES Lille | ⏳ |
 | heure-de-vie-de-classe | **Au moins 10 h annuelles de vie de classe par niveau** dues aux élèves | arrêté du 19 mai 2015 (annexes, version en vigueur) | ✅ 🔧 (ajouté) |
-| | PP désigné « avec l'accord des intéressés » | code de l'éducation D.421-49-1 (2025) | ✅ 🔧 (ajouté ; ce n'est pas le décret 93-55) |
+| | PP désigné « avec l'accord des intéressés » | code de l'éducation D.421-49-1 (2025) ; circ. 2018-108 | ✅ 🔧 (ajouté ; ce n'est pas le décret 93-55) |
+| | Le PP « **peut être conduit à** organiser et animer » les HVC, avec le CPE et la direction : pas une obligation | circ. 2018-108, 1.3 | 🔧 (remplace la note 99-073, qui vise le lycée) |
+| | Objet : « dialogue permanent » ; usage pour l'oral du DNB ou Pix hors de cet objet (lecture, la formule « tout autre sujet » laissant une marge) | circ. 2015-057 I-B-1 | 🔧 🟡 |
 | | « n'entrent pas dans le service d'enseignement stricto sensu » **mais** classées en missions liées couvertes par l'ISOE | circ. 2015-057 I-B-1 et II | 🔧 (la fiche présentait le paiement en HSE comme acquis) |
 | | « Illégal de ne pas payer en HSE sous le seuil des 10 h » | aucun texte trouvé | 🔧 (non repris ; la fiche dit qu'aucun texte ne fixe de seuil) |
 | | Réponses ministérielles 2010 et 2013 | citées par le SNES | 🟡 |
@@ -118,7 +122,8 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 
 | Fiche | Point | Texte | Statut |
 |---|---|---|---|
-| isoe-professeur-principal | PP « avec l'accord des intéressés » ; coordination du suivi et de l'orientation | D.421-49-1 | 🔧 (référence) |
+| isoe-professeur-principal | PP « avec l'accord des intéressés » ; coordination du suivi et de l'orientation | D.421-49-1, circ. 2018-108 | 🔧 (référence) |
+| | « Ne crée pas d'obligation nouvelle » | lecture SNES, absente de la circulaire | 🟡 (attribué) |
 | | Montants ISOE (part fixe, modulable, fonctionnelle) | arrêtés | ⏳ |
 | rep-rep-plus, frais-de-deplacement, bulletin-de-paie | Montants, plafonds, intérêts de retard | arrêtés, décrets 2006-781, 2010-676 | ⏳ (attribués) |
 | rendez-vous-de-carriere, promotions-de-grade | Rendez-vous aux 6e, 8e, 9e échelons ; ratios de promotion | décret 2017-786, arrêtés | ⏳ |
