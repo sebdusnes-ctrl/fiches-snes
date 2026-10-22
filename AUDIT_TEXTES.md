@@ -48,6 +48,7 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | **Budget non adopté : réglé par la collectivité et l'autorité académique** | L.421-11, f | 🔧 (remplace l'argument M9.6) |
 | imp-en-ca | Avis du CA après le conseil pédagogique, février-juin ; IMP et allègement exclusifs ; taux non proratisé | circ. 2015-058, décret 2014-940 art. 3 | ✅ 🔧 |
 | | Coordination EPS (3 enseignants / 50 h ; 2 500 € au-delà de 4 ETP) | circ. 2015-058 | ✅ |
+| | Technologie (collège) : coordonnateur obligatoire dès que plusieurs professeurs utilisent les équipements ; 1 250 € (625/2 500 selon charge) | circ. 2015-058 | ✅ 🔧 (ajouté) ; « taux minimum » propre à la technologie : non trouvé ⏳ |
 | reglement-interieur | Loi du **24** août 2026 (et non 26), usage interdit aussi pendant les activités extérieures | L.511-5 | 🔧 |
 | | « Les pratiques continuent tant que le RI n'est pas modifié » | — | 🟡 |
 | elections-ca | 7e semaine, J−20, J−10 francs, liste 2 à double des sièges, désistement 8 jours francs, matériel J−6, bureau 8 h, contestation 5 jours ouvrables | R.421-30 | ✅ |
