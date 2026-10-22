@@ -115,6 +115,9 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Le texte dit « participation » (circulaire) ; aucun texte ne dit « présence » ni ne fixe de minimum | circ. 2015-057 II | 🔧 |
 | | Contribution écrite | — | 🟡 |
 
+| punitions (nouvelle) | Punition ≠ sanction ; mesures d'ordre intérieur, sans recours ni dossier ; prononcées par les enseignants « à leur propre initiative » ; liste indicative ; exclusion de cours « nécessairement » accompagnée d'une prise en charge ; zéro disciplinaire et punitions collectives proscrits ; information écrite des parents | circ. 2014-059 (BO 22 du 29/5/2014), § I-2 | ✅ |
+| | Pas de texte permettant à la direction d'annuler une punition (ni de texte l'interdisant explicitement) | — | 🟡 (formulé « aucun texte ne prévoit ») |
+
 ## Droits syndicaux et libertés
 
 | Fiche | Point | Texte | Statut |

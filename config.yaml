@@ -144,6 +144,10 @@ sources:
     titre: "Décret n° 86-442 du 14 mars 1986 (médecins agréés, congés de maladie, temps partiel thérapeutique)"
     detail: "Légifrance, version en vigueur"
     url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000884830"
+  circ_regle:
+    titre: "Circulaire n° 2014-059 du 27 mai 2014 (application de la règle, mesures de prévention et sanctions)"
+    detail: "BO n° 22 du 29 mai 2014"
+    url: "https://www.education.gouv.fr/bo/14/Hebdo22/MENE1406107C.htm"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"
