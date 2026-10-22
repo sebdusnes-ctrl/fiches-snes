@@ -138,10 +138,12 @@ fiches:
       - "S’il refuse de le convoquer après une **demande écrite d’un personnel**, le chef d’établissement doit en donner le motif par écrit."
     textes:
       - "Art. R.511-20 à D.511-43 du code de l’éducation. Quorum : la majorité des membres. Le président a voix prépondérante en cas d’égalité."
-      - "Le chef d’établissement propose une sanction et la met aux voix. Si elle est rejetée, il doit en proposer d’autres jusqu’à ce qu’une majorité se dégage. Le conseil ne peut pas statuer sur des faits déjà sanctionnés."
-      - "Les membres sont tenus au secret. La confidentialité des votes doit être préservée (art. D.511-41)."
+      - "**C’est le conseil qui décide de la sanction**, par un vote **à bulletin secret, à la majorité des suffrages exprimés** (art. D.511-41). Les membres sont tenus au secret."
+      - "**Aucun texte ne réserve au chef d’établissement le choix de la sanction mise aux voix.** Comme président, il organise la discussion et met aux voix ce qui en ressort. Il ne peut pas refuser de soumettre au vote une sanction évoquée pendant la délibération."
+      - "Usage (non réglementaire) : commencer par la sanction la plus lourde évoquée, puis descendre tant qu’aucune majorité ne se dégage. Le conseil ne peut pas statuer sur des faits déjà sanctionnés."
       - "Recours : devant le recteur, puis seulement ensuite devant le tribunal administratif."
     agir:
+      - "Une sanction a été évoquée pendant les débats ? Demandez qu’elle soit mise aux voix."
       - "Un·e professeur·e de la classe peut siéger, sauf s’il ou elle a demandé la tenue du conseil : son suppléant·e le remplace alors."
       - "Faites préciser dans le RI la composition, les délais de convocation et les compétences de la commission éducative."
     source: { doc: agir_ca, pages: "11, 23" }
