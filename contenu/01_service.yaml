@@ -126,21 +126,21 @@ fiches:
       - { doc: reunions, pages: "1" }
 
   - id: heure-de-vie-de-classe
-    titre: "Heure de vie de classe : ce que dit la circulaire, ce que revendique le SNES"
-    resume: "Pour l’administration, c’est une mission liée couverte par l’ISOE. Le SNES-FSU exige le paiement en HSE quand elle s’ajoute au service."
+    titre: "Heure de vie de classe : dues aux élèves, mais par qui et comment payées ?"
+    resume: "Au moins 10 h par an et par niveau sont dues aux élèves. Le statut de ces heures pour les enseignant·es reste contesté."
     en_bref:
-      - "Circulaire n° 2015-057 : les heures de vie de classe **« n’entrent pas dans le service d’enseignement stricto sensu »** des enseignant·es qui les animent."
-      - "**Mais** la même circulaire les range parmi les **missions liées**, qui « relèvent pleinement du service […] sans faire l’objet d’une rémunération spécifique supplémentaire autre que l’indemnité de suivi et d’orientation des élèves ». C’est la position officielle."
-      - "**Le SNES-FSU conteste cette lecture** et demande le paiement en **HSE** de toute HVC faite en plus du service. Ce n’est pas acquis : c’est une revendication à porter collectivement."
+      - "**Les élèves ont droit à au moins 10 heures annuelles de vie de classe par niveau** (arrêté du 19 mai 2015, annexes). C’est une obligation pour l’établissement, pas pour un·e enseignant·e en particulier."
+      - "Le ou la **professeur·e principal·e** organise ces heures, mais n’est pas tenu·e de toutes les animer. Et nul ne peut être PP sans son accord : le chef d’établissement les désigne « **avec l’accord des intéressés** » (code de l’éducation, art. D.421-49-1)."
+      - "**Rémunération : deux lectures s’opposent.** La circulaire n° 2015-057 dit que ces heures « n’entrent pas dans le service d’enseignement stricto sensu », mais les range parmi les missions liées couvertes par l’ISOE. Le SNES-FSU exige leur paiement en **HSE** quand elles s’ajoutent au service."
     textes:
-      - "Le décret n° 2014-940 (art. 2-II), qui fixe les missions liées, **ne mentionne pas** les heures de vie de classe ; le décret n° 93-55 sur l’ISOE non plus. Seule la circulaire, texte d’application, les y rattache."
-      - "Deux réponses ministérielles citées par le SNES-FSU, **antérieures** à cette circulaire, allaient dans le sens du SNES-FSU : paiement en HSE « dès lors qu’elles sont assurées en dépassement [du] temps de service obligatoire » (L. Chatel, 2010) ; l’ISOE « n’a donc pas pour vocation de rémunérer ces heures » (V. Peillon, 2013)."
-      - "Note de service n° 99-073 : les HVC sont organisées sous la responsabilité du ou de la professeur·e principal·e ou des CPE, avec le concours de l’équipe. Le ou la PP n’est pas tenu·e de toutes les animer."
+      - "Le décret n° 2014-940 (art. 2-II) et le décret n° 93-55 sur l’ISOE **ne mentionnent pas** les heures de vie de classe : seule la circulaire, texte d’application, les rattache aux missions liées."
+      - "Deux réponses ministérielles citées par le SNES-FSU, antérieures à la circulaire, retenaient le paiement en HSE « dès lors qu’elles sont assurées en dépassement [du] temps de service obligatoire » (2010) ; l’ISOE « n’a donc pas pour vocation de rémunérer ces heures » (2013)."
+      - "**Aucun texte ne fixe de seuil** au-delà ou en deçà duquel le paiement en HSE serait obligatoire : la revendication porte sur toute heure faite en plus du service."
     agir:
-      - "Comptez les HVC faites en plus de votre service."
-      - "Avec la section, adressez une **lettre collective** à la direction : nombre d’heures faites, demande de paiement en HSE, arguments ci-dessus. Prévenez la section départementale ou académique."
+      - "Comptez les HVC faites en plus de votre service, et rappelez que l’établissement doit en assurer au moins 10 par niveau."
+      - "Avec la section, adressez une **lettre collective** à la direction : heures faites, demande de paiement en HSE, arguments ci-dessus. Prévenez la section départementale ou académique."
     source:
+      - { doc: arrete_college, ref: "annexes" }
+      - { doc: code_education, ref: "art. D.421-49-1" }
       - { doc: circ_ors, ref: "I-B-1 et II" }
-      - { doc: decret_ors, ref: "art. 2" }
       - { doc: faq_snes, ref: "« Heure de vie de classe »" }
-      - { doc: s3_lille, ref: "Bulletin académique n° 333" }

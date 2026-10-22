@@ -80,6 +80,26 @@ sources:
     titre: "Code de la défense"
     detail: "Légifrance, version en vigueur"
     url: "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006071307"
+  arrete_college:
+    titre: "Arrêté du 19 mai 2015 relatif à l’organisation des enseignements dans les classes de collège"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000030613339"
+  decret_aed:
+    titre: "Décret n° 2003-484 du 6 juin 2003 (assistants d’éducation)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000412591"
+  decret_aesh:
+    titre: "Décret n° 2014-724 du 27 juin 2014 (AESH)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000029147713"
+  decret_tzr:
+    titre: "Décret n° 99-823 du 17 septembre 1999 (fonctions de remplacement)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000212764"
+  decret_issr:
+    titre: "Décret n° 89-825 du 9 novembre 1989 (ISSR)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000881259"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"

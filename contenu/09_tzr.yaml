@@ -14,18 +14,19 @@ fiches:
       - "**Ne rejoignez une suppléance qu’avec un écrit du rectorat** (avis de suppléance ou arrêté). C’est votre ordre de mission : il couvre aussi un éventuel accident de trajet."
       - "**Ne refusez jamais une affectation** : ce serait un abandon de poste. Demandez plutôt au rectorat s’il existe une autre suppléance, et contactez la section."
     textes:
-      - "Votre maximum de service est celui de votre corps : 18 h pour les certifié·es, 15 h pour les agrégé·es. Vous gardez vos réductions et pondérations (REP+, complément de service, heure de laboratoire…)."
+      - "Votre maximum de service est celui de votre corps (18 h certifié·es, 15 h agrégé·es), avec vos réductions et pondérations."
       - "Affecté·e à l’année : **2 HSA au plus** peuvent vous être imposées."
-      - "Une affectation hors de votre discipline, ou en documentation, exige votre accord. Votre établissement de rattachement ne peut pas être changé sans votre demande."
-      - "**En attente de suppléance** : la direction peut vous confier des activités pédagogiques dans votre discipline (soutien, dédoublements…), avec un **emploi du temps hebdomadaire**, des groupes identifiés et un **état VS**. Elles s’arrêtent dès que le rectorat vous affecte ailleurs. Pas de « rattrapage » d’heures : le service ne s’annualise pas."
+      - "Une affectation hors de votre discipline, ou en documentation, exige votre accord. Selon la jurisprudence citée par le SNES-FSU, votre établissement de rattachement ne peut pas être changé sans votre demande."
+      - "**Entre deux remplacements**, vous pouvez être chargé·e « d’activités de nature pédagogique » dans votre établissement de rattachement, « dans la limite de [votre] obligation de service statutaire et conformément à [votre] qualification » ; chaque heure compte comme une heure de service (décret n° 99-823, art. 5). Exigez un **emploi du temps hebdomadaire** et un **état VS**."
       - "**Remplacements de courte durée** : si vous n’êtes pas volontaire, ils ne peuvent vous être imposés qu’en attente de suppléance ou avec un service incomplet, et **uniquement par arrêté rectoral**. Sans arrêté, la direction ne peut pas vous les imposer."
       - "Si vous remplacez un·e collègue qui a signé le Pacte, vous n’avez pas à reprendre ses engagements : le Pacte est individuel."
       - "Note de service n° 99-152 : un **temps de préparation** doit vous être accordé avant de commencer."
     agir:
       - "Demandez par écrit votre emploi du temps et votre état VS : ils prouvent votre service et couvrent un éventuel accident de service."
       - "Ne signez jamais un avis de suppléance non daté : écrivez « Vu et pris connaissance le… » avec la date réelle, et gardez avis et états VS pour contrôler vos paies."
-      - "Chaque prolongation est une nouvelle suppléance : elle doit faire l’objet d’un nouvel avis du rectorat."
-    source: { doc: memo_tzr, pages: "5 à 9" }
+    source:
+      - { doc: decret_tzr, ref: "art. 3 à 5" }
+      - { doc: memo_tzr, pages: "5 à 9" }
 
   - id: tzr-indemnites
     titre: "TZR : ISSR et frais de déplacement"
@@ -43,4 +44,6 @@ fiches:
       - "Remplacement commencé après la rentrée et prévu jusqu’en fin d’année : vérifiez que l’arrêté n’est **pas antidaté** au 1er septembre. C’est une manœuvre pour ne pas payer l’ISSR."
       - "Faites indiquer sur le procès-verbal d’installation la date réelle de votre prise de fonctions."
       - "ISSR non versée : réclamez-la au service gestionnaire du rectorat et prévenez la section."
-    source: { doc: memo_tzr, pages: "12 à 14" }
+    source:
+      - { doc: decret_issr, ref: "art. 2 et 5" }
+      - { doc: memo_tzr, pages: "12 à 14" }

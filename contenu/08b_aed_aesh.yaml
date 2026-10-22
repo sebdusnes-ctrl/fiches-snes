@@ -25,8 +25,9 @@ fiches:
     liens:
       - { libelle: "AED : le dossier du SNES-FSU", url: "https://www.snes.edu/metiers/aed/" }
     source:
+      - { doc: decret_aed, ref: "art. 1 à 5" }
+      - { doc: code_education, ref: "art. L.916-1" }
       - { doc: abecedaire, pages: "4, 20" }
-      - { doc: agir_ca, pages: "18" }
       - { doc: aesh, pages: "4" }
 
   - id: aed-missions
@@ -43,7 +44,10 @@ fiches:
     agir:
       - "Une injonction de dernière minute à venir à d’autres horaires : demandez une modification écrite de l’emploi du temps."
       - "Mission ou lieu d’exercice absent de votre contrat : vous pouvez refuser. Contactez la section."
-    source: { doc: aed, ref: "4 pages" }
+    source:
+      - { doc: decret_aed, ref: "art. 1" }
+      - { doc: code_education, ref: "art. R.421-12" }
+      - { doc: aed, ref: "4 pages" }
 
   - id: aed-limites
     titre: "AED : vidéosurveillance, mobilisations, grève à l’internat"
@@ -68,20 +72,21 @@ fiches:
     titre: "AESH : contrat, salaire, mutuelle"
     resume: "Recrutement par le rectorat, CDD de 3 ans puis CDI, temps incomplets, mutuelle obligatoire, subrogation repoussée."
     en_bref:
-      - "Les AESH sont des contractuel·les de l’Éducation nationale : **CDD de 3 ans, puis CDI**. Depuis le 1er janvier 2025, ils et elles sont recruté·es par le **rectorat ou la DSDEN**, et rattaché·es à un PIAL ou à un PAS qui organise leur service."
-      - "Temps plein fixé à 1 607 h (39 h 10 sur 41 semaines), mais la plupart des contrats sont à **temps incomplet**, le plus souvent à 63 % (24 h par semaine)."
+      - "Les AESH sont des contractuel·les : **contrat de 3 ans, renouvelable en CDI** (décret n° 2014-724, art. 3). Ils et elles sont recruté·es par l’État (rectorat, DSDEN) ou par un établissement **avec l’accord du DASEN** (code de l’éducation, art. L.917-1), et rattaché·es à un PIAL ou à un PAS qui organise leur service."
+      - "Temps plein : 1 607 h par an sur **39 à 45 semaines** (art. 6). La plupart des contrats sont à **temps incomplet**, le plus souvent à 63 % (24 h par semaine)."
     textes:
-      - "Décret n° 2014-724 du 27 juin 2014 modifié. Recrutement avec le baccalauréat, un diplôme d’aide à la personne ou 9 mois d’expérience ; 60 h de formation d’adaptation à l’emploi au minimum."
+      - "Recrutement avec un diplôme d’aide à la personne, le baccalauréat ou 9 mois d’expérience de l’accompagnement. **60 h de formation d’adaptation à l’emploi** au moins, sur le temps de service, pour celles et ceux qui n’ont pas de diplôme d’aide à la personne (décret n° 2014-724, art. 2 et 8)."
       - "**Mutuelle obligatoire.** Dispense possible (complémentaire santé solidaire, contrat du ou de la conjoint·e, CDD déjà couvert : un an au plus), **à redemander chaque année**."
       - "**Subrogation** (salaire maintenu par l’employeur en arrêt maladie) : repoussée à 2029. D’ici là, des trop-perçus peuvent être repris sur le salaire."
-      - "Prime REP ou REP+ au prorata du temps passé dans l’établissement. **AESH référent·e** : pair sans autorité hiérarchique, prime de 55 € brut par mois. La **CCP** (élu·es AESH et AED) est consultée sur les licenciements et les sanctions (sauf avertissement et blâme)."
+      - "Prime REP ou REP+ au prorata. **AESH référent·e** : pair sans autorité hiérarchique (prime de 55 € brut par mois). La **CCP** est consultée sur les licenciements et les sanctions (sauf avertissement et blâme)."
     agir:
-      - "Dispense de mutuelle : redemandez-la chaque année."
       - "Avenant au contrat (quotité, lieu de travail) dans le cadre du PAS : faites-le relire par la section avant de signer. Le refuser peut conduire à un licenciement."
     snes: "Le SNES-FSU et le SNUEP-FSU revendiquent un statut de fonctionnaire de catégorie B, un temps plein à 24 h d’accompagnement sur 36 semaines et une forte hausse des salaires."
     liens:
       - { libelle: "AESH : le dossier du SNES-FSU", url: "https://www.snes.edu/metiers/aesh/" }
     source:
+      - { doc: decret_aesh, ref: "art. 2, 3, 6, 8" }
+      - { doc: code_education, ref: "art. L.917-1" }
       - { doc: aesh, pages: "2 à 4, 7" }
       - { doc: abecedaire, pages: "4, 20" }
       - { doc: agir_ca, pages: "18" }

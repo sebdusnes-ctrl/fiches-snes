@@ -23,22 +23,24 @@ fiches:
 
   - id: arret-maladie
     titre: "Arrêt maladie et temps partiel thérapeutique"
-    resume: "Délai de 48 h, jour de carence, salaire à 90 %, reprise en temps partiel thérapeutique."
+    resume: "Délai de 48 h, jour de carence, 90 % du traitement pendant trois mois, temps partiel thérapeutique."
     en_bref:
       - "Transmettez l’avis d’arrêt de travail (3e volet) à l’établissement **dans les 48 heures**."
-      - "Un **jour de carence** s’applique, puis le traitement est maintenu **à 90 %** (au lieu de 100 % avant le 1er mars 2025)."
+      - "Un **jour de carence** s’applique. Ensuite, sur douze mois consécutifs : **90 % du traitement pendant trois mois**, puis la moitié pendant neuf mois (CGFP, art. L.822-3, depuis le 1er mars 2025 ; c’était 100 % auparavant). Supplément familial et indemnité de résidence sont maintenus en entier."
       - "Depuis 2026, une prolongation n’est sans jour de carence que si elle est prescrite par le médecin de l’arrêt initial ou par votre médecin traitant (sauf impossibilité justifiée)."
     textes:
-      - "**Temps partiel thérapeutique** : sur certificat médical précisant la quotité (de 50 % à 90 %), l’organisation (demi-journées ou jours) et la durée."
-      - "Si vous le demandez sans être déjà en congé maladie, il n’est plus de droit : l’administration a 30 jours pour répondre, après avis d’un·e médecin agréé·e."
-      - "Il est renouvelable dans la limite d’un an au total. Un nouveau droit s’ouvre un an après une période de 12 mois entièrement utilisée."
+      - "**Temps partiel thérapeutique** (CGFP, art. L.823-1 à L.823-6) : au moins un mi-temps, **avec l’intégralité du traitement**, sur certificat médical précisant la quotité, l’organisation et la durée."
+      - "Selon le SNES-FSU, si vous le demandez sans être déjà en congé maladie, l’administration a 30 jours pour répondre, après avis d’un·e médecin agréé·e."
+      - "Il peut être exercé de manière continue ou discontinue, **un an au maximum au total** ; une nouvelle autorisation est possible après un délai d’un an (art. L.823-5 et L.823-6)."
       - "**Contractuel·les** : si vous avez touché votre salaire **et** les indemnités journalières de la Sécurité sociale, vous devrez rembourser le doublon."
     agir:
       - "Pour une prolongation, retournez si possible chez le médecin qui a prescrit l’arrêt, ou chez votre médecin traitant."
       - "Pensez au temps partiel thérapeutique pour reprendre progressivement après un arrêt."
       - "En cas de retenue ou de remboursement réclamé, contactez la section."
     snes: "Le SNES-FSU, avec la FSU, dénonce le jour de carence et la baisse à 90 % du traitement en arrêt maladie."
-    source: { doc: abecedaire, pages: "8, 25" }
+    source:
+      - { doc: cgfp, ref: "art. L.822-1 à L.822-3, L.823-1 à L.823-6" }
+      - { doc: abecedaire, pages: "8, 25" }
 
   - id: naissance-adoption
     titre: "Naissance et adoption : vos congés"
@@ -46,13 +48,15 @@ fiches:
     en_bref:
       - "**Maternité** : 16 semaines pour un 1er ou 2e enfant (6 avant, 10 après), 26 semaines à partir du 3e, 34 pour des jumeaux, 46 pour des triplés ou plus."
       - "**Paternité et accueil de l’enfant** : 25 jours calendaires (32 en cas de naissances multiples), en plus des **3 jours** de congé pour naissance."
-      - "**Nouveau congé de naissance** (depuis juillet 2026) : 1 à 2 mois par parent, payé 70 % du traitement le 1er mois puis 60 % (dans la limite du plafond de la Sécurité sociale), à prendre dans les 9 mois."
+      - "**Congé supplémentaire de naissance** (depuis juillet 2026, CGFP art. L.631-3 et L.631-9) : selon le SNES-FSU, 1 à 2 mois par parent, payé 70 % du traitement le 1er mois puis 60 % (dans la limite du plafond de la Sécurité sociale), à prendre dans les 9 mois."
     textes:
       - "Maternité : jusqu’à 3 semaines du congé prénatal peuvent être reportées après la naissance, sur avis favorable du professionnel de santé."
-      - "Un état pathologique lié à la grossesse peut ajouter jusqu’à 2 semaines avant et 4 semaines après, sans entamer vos droits à congé maladie."
+      - "Un état pathologique résultant de la grossesse, attesté par certificat médical, augmente le congé de maternité **dans la limite de trois semaines avant** l’accouchement et de quatre semaines après (CGFP, art. L.631-3)."
       - "Paternité : 4 jours sont à prendre dès la naissance, le reste dans les 6 mois, en une ou deux périodes d’au moins 5 jours. Ce congé s’ouvre aussi à la personne qui vit en couple avec la mère."
-      - "Adoption : les 3 jours vont au parent qui ne prend pas le congé d’adoption, dans les 15 jours qui entourent l’arrivée de l’enfant."
+      - "Adoption : congé de 3 jours pour l’arrivée de l’enfant, à prendre dans les 15 jours qui l’entourent, à la demande du parent adoptant (art. L.631-7) ; congé d’adoption (art. L.631-8)."
     agir:
       - "Paternité : faites la demande **au moins un mois avant**, au recteur ou à la rectrice, par la voie hiérarchique."
       - "Congé de naissance : demande **au moins un mois avant** (15 jours s’il suit directement un congé de paternité ou d’adoption)."
-    source: { doc: abecedaire, pages: "8" }
+    source:
+      - { doc: cgfp, ref: "art. L.631-3 à L.631-9" }
+      - { doc: abecedaire, pages: "8" }
