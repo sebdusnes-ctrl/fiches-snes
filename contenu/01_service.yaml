@@ -125,7 +125,7 @@ fiches:
       - "L’IMP figure sur votre état VS. Une mission particulière ne peut pas être payée en HSE."
     agir:
       - "**Les écrits font les bons amis** : avant de vous engager dans une mission, un projet ou un dispositif, déclarez-le par écrit à la direction avec la rémunération attendue, et attendez sa réponse écrite. Vous éviterez le « il n’y a plus d’argent »."
-      - "Vérifiez que l’IMP apparaît bien sur votre état VS."
+      - "**Attention aux mots** : une « demi-IMP » vaut **625 € par an**. Certaines directions annoncent une « demi-IMP » qui correspond en réalité à un quart (312,50 €). Exigez **le montant annuel en euros**, et vérifiez qu’il figure sur votre état VS : seuls les cinq montants ci-dessus existent."
       - "En CA, le vote porte sur les missions et leur taux, jamais sur les noms (voir la fiche [« IMP et décharges : ce que vote le CA »](fiche:imp-en-ca))."
     source:
       - { doc: decret_ors, ref: "art. 3" }
