@@ -64,6 +64,22 @@ sources:
     titre: "Circulaire n° 2015-057 du 29 avril 2015 (missions et obligations de service)"
     detail: "BO n° 18 du 30 avril 2015"
     url: "https://www.education.gouv.fr/bo/15/Hebdo14/MENH1506031C.htm"
+  cgfp:
+    titre: "Code général de la fonction publique"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000044416551"
+  circ_his:
+    titre: "Circulaire n° 2014-120 du 16 septembre 2014 (réunions d’information syndicale)"
+    detail: "BO n° 34 du 18 septembre 2014"
+    url: "https://www.education.gouv.fr/bo/14/Hebdo34/MENH1417839C.htm"
+  circ_imp:
+    titre: "Circulaire n° 2015-058 du 29 avril 2015 (missions particulières, IMP)"
+    detail: "BO n° 18 du 30 avril 2015"
+    url: "https://www.education.gouv.fr/bo/15/Hebdo14/MENH1506032C.htm"
+  code_defense:
+    titre: "Code de la défense"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006071307"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"

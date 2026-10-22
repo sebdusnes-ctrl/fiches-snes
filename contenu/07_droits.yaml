@@ -7,62 +7,72 @@ theme:
 fiches:
   - id: heure-information-syndicale
     titre: "L’heure d’information syndicale (HIS)"
-    resume: "Une heure par mois sur votre temps de service, sans avoir à vous justifier."
+    resume: "Une heure par mois sur votre temps de service. Enseignant·es : prévenir la direction 48 h avant."
     en_bref:
-      - "Chaque collègue, **titulaire ou non, enseignant·e ou non**, peut assister à une heure d’information syndicale **par mois, sur son temps de service**."
-      - "La section prévient par écrit la direction **au moins une semaine avant**. L’ordre du jour n’a pas à être communiqué."
-      - "Si vous avez cours, prévenez vos élèves et/ou la vie scolaire. Si vous n’avez pas cours, vous n’avez rien à déclarer."
+      - "Chaque agent public, **titulaire ou non, enseignant·e ou non**, a le droit de participer à une réunion mensuelle d’information syndicale, **dans la limite d’une heure par mois**, sur son temps de service (CGFP, art. R.215-12)."
+      - "La section organise la réunion **en concertation avec le chef d’établissement, au moins une semaine avant** la date retenue (circulaire n° 2014-120)."
+      - "**Enseignant·es** : vous devez **prévenir le chef d’établissement au moins 48 heures avant** si vous souhaitez y participer (même circulaire). CPE, documentalistes, AED, personnels administratifs : droit commun, une heure par mois."
+    textes:
+      - "La réunion ne doit pas entraîner la fermeture de l’établissement : l’accueil et la surveillance des élèves restent assurés (circulaire n° 2014-120)."
+      - "**Avant les élections professionnelles** (six semaines avant le scrutin), chaque agent peut assister en plus à une réunion d’information spéciale d’une heure (CGFP, art. R.215-14)."
+      - "Selon le SNES-FSU, l’ordre du jour de la réunion n’a pas à être communiqué à la direction."
     agir:
       - "Surveillez le panneau syndical : les dates des HIS y sont affichées."
-      - "En cas de difficulté avec la direction, la section départementale ou académique intervient."
+      - "Prévenez la direction 48 h avant par écrit (un simple courriel suffit), et vos élèves si vous avez cours."
     liens:
       - { libelle: "Le droit syndical dans l’établissement", url: "https://www.snes.edu/agissons/outils/le-droit-syndical-dans-l-etablissement" }
-    source: { doc: abecedaire, pages: "14" }
+    source:
+      - { doc: cgfp, ref: "art. R.215-12 à R.215-14" }
+      - { doc: circ_his, ref: "2.1 et 2.2" }
 
   - id: stage-syndical
     titre: "Stage de formation syndicale : 12 jours par an"
-    resume: "Un droit individuel, ouvert à tous, adhérent·e ou non."
+    resume: "Un droit pour tout agent en activité, adhérent·e ou non. Demande écrite un mois avant."
     en_bref:
-      - "Tous les personnels, **titulaires ou non**, ont droit à **12 jours de formation syndicale par an**."
-      - "La demande est déposée auprès du recteur ou de la rectrice **un mois avant** le stage."
-      - "C’est l’occasion de rompre l’isolement, d’échanger entre collègues et de construire des analyses communes."
+      - "Tout agent public en activité, **titulaire ou contractuel**, a droit à un congé pour formation syndicale **avec traitement**, de **12 jours ouvrables par an** au plus (CGFP, art. L.215-1)."
+      - "La demande est adressée **par écrit au moins un mois avant** le stage. **Sans réponse le 15e jour avant le stage, le congé est accordé** (art. R.215-3)."
+      - "Il ne peut être refusé que si **les nécessités du fonctionnement du service** s’y opposent ; le refus est motivé et communiqué à la commission paritaire (art. R.215-4)."
+    textes:
+      - "Le stage doit être organisé par un centre ou institut figurant sur une liste arrêtée par le ministre (art. R.215-1). La section vous indique les modalités pour chaque stage."
+      - "À la fin du stage, une attestation de présence vous est remise : donnez-la à votre administration à votre retour (art. R.215-5)."
     agir:
-      - "Repérez les stages proposés par la section départementale ou académique, puis remplissez la demande d’autorisation d’absence."
-      - "Respectez le délai d’un mois : passé ce délai, l’absence peut être refusée."
-    source: { doc: abecedaire, pages: "13" }
+      - "Repérez les stages proposés par la section départementale ou académique, et envoyez votre demande dans les délais."
+      - "Refus : demandez-en le motif écrit et contactez la section."
+    source: { doc: cgfp, ref: "art. L.215-1, R.215-1 à R.215-5" }
 
   - id: devoir-de-reserve
-    titre: "« Devoir de réserve », « obéissance » : que dit vraiment le droit ?"
-    resume: "Aucun texte statutaire n’impose aux enseignant·es ni réserve ni obéissance."
+    titre: "Obéir, se conformer, « devoir de réserve » : ce que dit vraiment le droit"
+    resume: "Les militaires obéissent. Les professeur·es se conforment aux instructions, avec la liberté pédagogique dans la manière d’y parvenir."
     en_bref:
-      - "Le « devoir de réserve » a été **supprimé du statut général** de la fonction publique en 1983."
-      - "Il s’impose aux hauts fonctionnaires qui représentent l’État : recteurs et rectrices, préfet·es, et leurs délégataires (DASEN, chef·fes d’établissement…)."
-      - "Invoquer un « devoir de loyauté » envers le ou la chef·fe d’établissement ou l’inspection est une **interprétation abusive**."
+      - "**Les militaires obéissent** : ils « doivent obéissance aux ordres de leurs supérieurs » (code de la défense, art. L.4122-1)."
+      - "**Les agents publics se conforment** : « L’agent public doit **se conformer aux instructions** de son supérieur hiérarchique, sauf dans le cas où l’ordre donné est manifestement illégal et de nature à compromettre gravement un intérêt public » (CGFP, art. L.121-10). Le mot « obéissance » ne figure pas dans le statut."
+      - "**Les professeur·es gardent la liberté de la manière** : « la liberté pédagogique de l’enseignant s’exerce dans le respect des programmes et des instructions » (code de l’éducation, art. L.912-1-1). Le conseil pédagogique ne peut y porter atteinte."
     textes:
-      - "La jurisprudence en garde une trace, surtout dans l’exercice des fonctions."
-      - "C’est l’**intérêt général** qui guide ce à quoi chaque fonctionnaire doit loyauté, dans le cadre de ses missions."
-      - "**Obéissance** : seul le statut de Vichy (1941) imposait une « obéissance entière ». Depuis 1946, le fonctionnaire reçoit des tâches. Depuis 1983, sa liberté d’opinion est garantie."
-      - "Code général de la fonction publique : dignité, impartialité, probité (art. L.121-1), neutralité (art. L.121-2). L’agent « doit se conformer aux instructions de son supérieur hiérarchique » (art. L.121-10) : se conformer à des instructions conformes aux textes n’est pas obéir à tout ordre."
+      - "**Pas de « devoir de réserve » dans le statut** : le Code général de la fonction publique n’en parle pas. C’est une construction de la jurisprudence, appréciée au cas par cas et bien plus stricte pour les hauts fonctionnaires qui représentent l’État. La liberté d’opinion est garantie (art. L.111-1)."
+      - "Le code impose en revanche : dignité, impartialité, intégrité et probité (art. L.121-1) ; neutralité et laïcité dans l’exercice des fonctions (art. L.121-2) ; discrétion professionnelle (art. L.121-7) ; secret professionnel (art. L.121-6)."
+      - "Une instruction doit rester dans le cadre de vos missions et de votre statut. Hors du cas d’un ordre manifestement illégal, on s’y conforme d’abord, puis on la conteste."
     agir:
-      - "Si l’on vous oppose un « devoir de réserve », de « loyauté » ou d’« obéissance », **demandez sur quel texte repose l’instruction** et contactez la section."
+      - "Si l’on vous oppose un « devoir de réserve », de « loyauté » ou d’« obéissance », demandez sur quel texte il repose."
+      - "Instruction qui touche à vos choix pédagogiques ou sort de vos missions : demandez-la par écrit et contactez la section."
     source:
-      - { doc: abecedaire, pages: "10" }
+      - { doc: cgfp, ref: "art. L.111-1, L.121-1 à L.121-10" }
+      - { doc: code_education, ref: "art. L.912-1-1" }
+      - { doc: code_defense, ref: "art. L.4122-1" }
       - { doc: obeissance, ref: "3 pages" }
 
   - id: cumul-activites
     titre: "Cumul d’activités : ce qui est permis"
-    resume: "Les œuvres de l’esprit sont libres. Des cours en plus, c’est possible avec autorisation."
+    resume: "Les œuvres de l’esprit sont libres. Une activité accessoire, comme des cours, demande une autorisation."
     en_bref:
-      - "En principe, un·e fonctionnaire consacre toute son activité professionnelle à ses fonctions."
-      - "Les **œuvres de l’esprit** (écrire, composer, créer…) ne sont **pas concernées** par l’interdiction de cumul."
-      - "Des **activités d’enseignement** à côté peuvent être autorisées, à condition de rester « accessoires »."
+      - "Un agent public ne peut pas exercer, à titre professionnel, une activité privée lucrative, sauf exceptions (CGFP, art. L.123-1)."
+      - "La **production d’œuvres de l’esprit** (écrire, composer, créer…) **s’exerce librement**, dans le respect de la discrétion et du secret professionnels (art. L.123-2)."
+      - "Une **activité accessoire** (par exemple des cours ailleurs) peut être **autorisée** par votre hiérarchie si elle est compatible avec vos fonctions et figure sur la liste des activités autorisées (art. L.123-7)."
     textes:
-      - "Décret n° 2017-105 du 27 janvier 2017."
-      - "Les activités autorisées doivent être occasionnelles, ou régulières mais limitées dans le temps, et compatibles avec votre service."
-      - "Être à temps partiel n’empêche pas d’obtenir l’autorisation."
+      - "Le décret n° 2017-105 cité par d’anciennes publications a été **abrogé** : les règles sont désormais dans le Code général de la fonction publique (art. L.123-1 à L.123-8) et le décret n° 2020-69 du 30 janvier 2020."
+      - "Il est interdit de cumuler deux emplois permanents à temps complet (art. L.123-1, 5°)."
     agir:
       - "Demandez l’autorisation **avant** de commencer, avec l’imprimé académique de demande de cumul."
-    source: { doc: abecedaire, pages: "10" }
+    source: { doc: cgfp, ref: "art. L.123-1 à L.123-8" }
 
   - id: elections-professionnelles
     titre: "Élections professionnelles : du 3 au 10 décembre 2026"

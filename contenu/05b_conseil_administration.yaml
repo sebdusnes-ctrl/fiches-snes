@@ -19,7 +19,7 @@ fiches:
     agir:
       - "Une décision qui relève du CA (organisation des groupes, journée banalisée, convention…) ne peut pas être prise par la direction seule : demandez son inscription à l’ordre du jour."
       - "Faites voter des vœux et transmettez-les à la section départementale ou académique."
-      - "Une délibération illégale peut être contestée dans les 15 jours auprès du DASEN ou du recteur (voir la fiche « Faire vivre le CA »)."
+      - "Les délibérations sur le règlement intérieur, la structure pédagogique, la DHG, le temps scolaire et le projet d’établissement deviennent exécutoires **15 jours après leur transmission** au recteur, qui peut les annuler dans ce délai si elles sont illégales (art. L.421-14 et R.421-55). C’est le moment de le saisir."
     source: { doc: agir_ca, pages: "2, 4, 6, 15, 21, 22, 30" }
 
   - id: ca-fonctionnement
@@ -30,7 +30,7 @@ fiches:
       - "**Quorum** : la majorité des membres (16 sur 30, calculée sur les membres effectivement en place). S’il n’est pas atteint, un nouveau CA est convoqué dans les 5 à 8 jours et délibère quel que soit le nombre de présent·es."
       - "Votes : **à bulletin secret dès qu’un membre le demande**, pas de procuration. Les abstentions, blancs et nuls ne comptent pas. En cas d’égalité, la voix du président l’emporte."
     textes:
-      - "**Ordre du jour** : depuis le décret de 2020, le chef d’établissement le fixe, mais le Conseil d’État (décision n° 449941 du 5 novembre 2021) rappelle qu’il **doit tenir compte des demandes** d’inscription."
+      - "**Ordre du jour** : le chef d’établissement le fixe « en tenant compte, au titre des questions diverses, des demandes d’inscription que lui ont adressées les membres du conseil » (art. R.421-25). Le Conseil d’État l’a confirmé (décision n° 449941 du 5 novembre 2021)."
       - "**CA extraordinaire** : de droit à la demande de la moitié au moins des membres, sur un ordre du jour déterminé, même sans l’accord du chef d’établissement."
       - "Le **procès-verbal** retrace les échanges, les délibérations, les avis et les résultats des votes. Il est adopté au CA suivant : c’est le moment de demander des rectificatifs."
       - "Les **actes** du CA (distincts du PV) ont seuls valeur juridique. Ceux qui sont transmis à l’autorité académique deviennent exécutoires 15 jours après. Le chef d’établissement doit en assurer la publicité."
@@ -62,12 +62,12 @@ fiches:
     resume: "Calendrier, documents à exiger, et ce que le vote du CA permet de peser."
     en_bref:
       - "En janvier-février, l’établissement reçoit sa **dotation horaire globale (DHG)** : des heures-postes et des heures supplémentaires (HSA), plus une enveloppe d’IMP."
-      - "Le CA **vote obligatoirement la répartition** de la DHG entre disciplines et l’organisation en classes et en groupes. **Son vote est décisif** : la commission permanente peut étudier des amendements, mais le CA garde toute liberté d’amendement et de vote."
-      - "Les propositions pédagogiques (heures globalisées, groupes…) doivent venir **des équipes**, pas du chef d’établissement ni du conseil pédagogique."
+      - "Le CA **vote la répartition** de la DHG et l’organisation en classes et en groupes (art. R.421-2 et R.421-20). Si sa proposition est rejetée, le chef d’établissement doit en présenter une **nouvelle**, votée **dans les 10 jours**. **En cas de second rejet, il arrête seul l’emploi des heures** (art. R.421-9, 7°)."
+      - "Pour le SNES-FSU, les propositions pédagogiques (heures globalisées, groupes…) doivent venir **des équipes** : le conseil pédagogique est seulement consulté (art. R.421-41-3)."
     textes:
       - "Art. R.421-2 du code de l’éducation : l’emploi des dotations horaires et l’organisation en classes et groupes font partie de l’autonomie de l’établissement, donc des compétences du CA."
       - "Calendrier : décembre, enveloppes académiques ; janvier-février, DHG des établissements (avis des CSA départementaux pour les collèges) ; février-mars, vote en CA ; fin mars-avril, CSA sur les postes ; juin-juillet, CA d’ajustement si la dotation change."
-      - "Le ministère a reconnu que l’emploi de la dotation « doit être décidé dans les meilleurs délais » : faire voter le tableau de répartition (TRMD) en juin ou juillet n’est pas acceptable."
+      - "Selon le SNES-FSU, le ministère a reconnu que l’emploi de la dotation « doit être décidé dans les meilleurs délais » : faire voter le tableau de répartition (TRMD) en juin ou juillet n’est pas acceptable."
       - "Documents à exiger : dotation détaillée (heures-postes, HSA, IMP, missions du Pacte), structure et effectifs prévus, propositions de répartition."
     agir:
       - "Tenez une **heure d’information syndicale** dès réception de la DHG pour construire les propositions avec les collègues."
@@ -84,22 +84,25 @@ fiches:
       - "Pour une mission lourde (laboratoires, coordination numérique…), le CA peut proposer un **allègement de service** au lieu d’une IMP. C’est le recteur qui décide."
     textes:
       - "Art. 3 du décret n° 2014-940 : l’allègement de service pour mission particulière est décidé par le recteur sur proposition du CA. IMP et décharge sont exclusives l’une de l’autre pour une même mission."
-      - "Le montant de l’IMP relève du seul recteur. Pour une même mission, la rémunération ne peut pas varier selon l’appréciation du chef d’établissement."
-      - "EPS : une IMP de coordination à partir de trois enseignant·es assurant au moins 50 h ; deux IMP au-delà de quatre équivalents temps plein ; forfait AS (UNSS) de 3 h indivisible pour chaque enseignant·e d’EPS."
+      - "Le chef d’établissement propose les attributions individuelles, que le recteur valide. Le taux « n’a pas vocation à varier en fonction de la manière de servir » et n’est pas proratisé pour un temps partiel (circulaire n° 2015-058). La procédure se déroule entre février et juin."
+      - "EPS : la coordination est mise en place dès 3 enseignant·es assurant au moins 50 h hebdomadaires, au taux de 1 250 €, ou 2 500 € au-delà de quatre équivalents temps plein (circulaire n° 2015-058)."
     agir:
       - "Exigez la transparence : liste des missions, taux d’IMP, éventuelles « briques » du Pacte."
       - "Faites valoir les missions nécessaires au fonctionnement des enseignements comme prioritaires."
-    source: { doc: agir_ca, pages: "30, 31" }
+    source:
+      - { doc: decret_ors, ref: "art. 3" }
+      - { doc: circ_imp, ref: "I" }
+      - { doc: agir_ca, pages: "30, 31" }
 
   - id: budget-etablissement
     titre: "Le budget de l’établissement"
     resume: "Un vote unique avant décembre. Voter contre ne bloque pas l’établissement."
     en_bref:
-      - "La collectivité communique sa dotation **avant le 1er novembre**. Le CA vote le budget **dans le mois** qui suit. Il devient exécutoire le 1er janvier. Le projet est transmis **au moins 8 jours avant** le CA."
+      - "La collectivité notifie sa participation **avant le 1er novembre** ; elle ne peut plus la réduire ensuite. Le CA vote le budget **dans les 30 jours** qui suivent. Documents envoyés **au moins 8 jours avant** le CA (art. L.421-11 et R.421-25)."
       - "**Un seul vote** porte sur l’ensemble du budget (recettes et dépenses, tous services). Le budget doit être sincère et en équilibre."
-      - "Voter **contre** ne paralyse pas l’établissement : dès le 1er janvier, le chef d’établissement peut engager les dépenses de fonctionnement dans la limite du budget de l’année précédente."
+      - "Si le budget **n’est pas adopté dans les 30 jours**, il est **réglé conjointement par la collectivité et l’autorité académique** (art. L.421-11, f). Un vote contre est donc un acte politique fort, qui transfère la décision à ces autorités."
     textes:
-      - "Trois services généraux : **AP** (activités pédagogiques), **VE** (vie de l’élève, dont fonds sociaux) et **ALO** (administration et logistique). Exigez le détail par domaines et activités (instruction M9.6) : sans lui, un vote contre s’impose."
+      - "Trois services généraux : **AP** (activités pédagogiques), **VE** (vie de l’élève, dont fonds sociaux) et **ALO** (administration et logistique). Exigez le détail par domaines et activités (instruction M9.6) : sans lui, le SNES-FSU conseille de voter contre."
       - "Les virements à l’intérieur d’un service sont faits par le chef d’établissement, qui en rend compte. Les **décisions budgétaires modificatives** (virements entre services, prélèvement sur le fonds de roulement…) sont votées par le CA."
       - "Au printemps, le **compte financier** retrace l’exécution du budget de l’année précédente. Les membres du CA ont accès à toutes les pièces comptables."
       - "Une commission d’appel d’offres (5 membres du CA) attribue les marchés au-delà du seuil fixé par le CA (221 000 € HT à défaut)."
@@ -116,13 +119,13 @@ fiches:
     resume: "Pas de sanction sans base dans le RI. Le CA ne décide pas à votre place de l’usage du portable en classe."
     en_bref:
       - "Le **règlement intérieur** (RI) est voté par le CA. **Aucune punition ni sanction ne peut être prise si elle n’y figure pas.** Les punitions collectives sont interdites."
-      - "**Portable** : la loi du 26 août 2026 interdit son **usage** par les élèves de la maternelle au lycée. Le RI fixe les modalités et les exceptions. **Tant que le CA n’a pas modifié le RI, les pratiques habituelles continuent.**"
+      - "**Portable** : la loi du 24 août 2026 interdit son **usage** par les élèves, de la maternelle au lycée et pendant les activités d’enseignement à l’extérieur. Le RI fixe les modalités et les exceptions (art. L.511-5). Selon le SNES-FSU, tant que le CA n’a pas modifié le RI, les pratiques habituelles continuent."
       - "Faites inscrire dans le RI : « Dans le cadre de son enseignement ou de son activité, c’est le personnel d’éducation et d’enseignement qui autorise ou pas l’usage par les élèves d’un téléphone mobile ou de tout autre équipement terminal de communications électroniques. »"
     textes:
       - "Art. L.511-5 du code de l’éducation. Peuvent confisquer un appareil : personnels de direction, d’enseignement, d’éducation ou de surveillance. Le RI fixe les modalités de confiscation et de restitution."
       - "Sanctions : avertissement, blâme, mesure de responsabilisation (20 h au plus, hors cours), exclusion temporaire (8 jours au plus) ou définitive. Elles sont effacées du dossier au plus tard après la 2e année scolaire suivante, sauf l’exclusion définitive."
-      - "Depuis le décret du 1er juillet 2025, la saisine du conseil de discipline est **obligatoire** en cas de détention ou d’introduction d’une arme blanche."
-      - "Le RI est révisable chaque année, après consultation obligatoire des délégué·es élèves (CVL au lycée, CVC au collège)."
+      - "La saisine du conseil de discipline est **obligatoire** quand un élève introduit une arme dans l’établissement ou porte une arme sur lui, ou quand un personnel est victime de violence physique (art. R.421-10, version du 1er juillet 2025)."
+      - "Le RI est révisable chaque année, après consultation obligatoire des délégué·es des élèves (conseil de la vie collégienne au collège)."
     agir:
       - "Demandez que le RI soit soumis pour avis à la commission permanente avant le vote."
       - "Refusez toute interdiction globale, dans le RI ou le projet d’établissement, qui permettrait de contester vos choix pédagogiques."

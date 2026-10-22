@@ -10,25 +10,27 @@ fiches:
     resume: "Maxima de service, réductions et pondérations auxquelles vous avez droit."
     en_bref:
       - "Votre service est fixé **à la semaine, pour l’année**. Il part d’un maximum hebdomadaire, diminué des réductions auxquelles vous avez droit."
-      - "Maxima : **18 h** pour les certifié·es, **15 h** pour les agrégé·es, **30 h + 6 h** pour les professeur·es documentalistes, **35 h** pour les CPE, **27 h** pour les Psy-ÉN."
+      - "Maxima (décret n° 2014-940, art. 2) : **18 h** certifié·es et PLP, **15 h** agrégé·es, **20 h** professeur·es d’EPS, **17 h** agrégé·es d’EPS, **30 h + 6 h** professeur·es documentalistes. CPE (35 h) et Psy-ÉN (27 h) relèvent d’autres textes."
       - "Toute heure d’enseignement au-delà de ce maximum recalculé est une **heure supplémentaire**."
     textes:
       - "Décret n° 2014-940 du 20 août 2014 et circulaire n° 2015-057 : obligations de service des enseignant·es."
       - "**Heure « de vaisselle »** : − 1 h pour les professeur·es de SVT ou de physique-chimie qui font au moins 8 h en collège, s’il n’y a pas de personnel de laboratoire."
       - "**Complément de service** : − 1 h s’il a lieu dans une autre commune, ou dans deux autres établissements (hors même cité scolaire). Il ne peut être attribué que par le recteur et uniquement dans votre discipline de recrutement. Dans une autre discipline, **votre accord est obligatoire**."
-      - "**Pondération REP+** : chaque heure faite en REP+ compte pour 1,1 h. Le temps ainsi libéré vous appartient : vous n’avez rien à « rendre »."
+      - "**Pondération REP+** : chaque heure faite en REP+ compte pour 1,1 h (art. 8), « afin de tenir compte du temps consacré au travail en équipe » et aux relations avec les parents. Selon le SNES-FSU, ce temps ne se traduit par aucune comptabilisation d’heures à rendre."
     agir:
       - "Vérifiez que toutes vos réductions figurent sur votre **état VS** avant de le signer."
-      - "Un complément de service et des heures supplémentaires dans la même discipline : ce cumul est contraire à l’esprit du décret de 2014. Signalez-le."
+      - "Un complément de service et des heures supplémentaires dans la même discipline : pour le SNES-FSU, ce cumul est contraire à l’esprit du décret. Signalez-le."
       - "En cas de doute sur le calcul, faites-le vérifier par la section."
-    source: { doc: abecedaire, pages: "7, 15, 19, 24" }
+    source:
+      - { doc: decret_ors, ref: "art. 2, 4, 8, 9" }
+      - { doc: abecedaire, pages: "7, 15, 19, 24" }
 
   - id: heures-supplementaires
     titre: "Heures supplémentaires : HSA et HSE"
     resume: "Ce qu’on peut vous imposer… et ce que vous pouvez refuser."
     en_bref:
-      - "**HSA** : heures inscrites à votre emploi du temps pour l’année et portées sur l’état VS. **Seules 2 HSA peuvent vous être imposées.**"
-      - "**HSE** : heures ponctuelles payées à l’unité. **Une activité proposée en HSE peut toujours être refusée.**"
+      - "**HSA** : heures inscrites à votre emploi du temps pour l’année et portées sur l’état VS. **Deux heures supplémentaires hebdomadaires au plus peuvent vous être imposées, « sauf empêchement pour raison de santé »** (décret n° 2014-940, art. 4-III)."
+      - "**HSE** : heures ponctuelles payées à l’unité. Pour le SNES-FSU, une activité proposée en HSE peut toujours être refusée : seules les deux heures hebdomadaires ci-dessus peuvent être imposées."
       - "Seule la première HSA est majorée de 20 %. Les suivantes sont moins bien payées qu’une heure ordinaire."
     textes:
       - "Décret n° 2014-940 : est supplémentaire toute heure faite au-delà du maximum de service, réductions et pondérations comprises."
@@ -38,10 +40,12 @@ fiches:
       - "**Heures de vie de classe** : la circulaire n° 2015-057 les classe parmi les missions liées couvertes par l’ISOE ; le SNES-FSU en revendique le paiement en HSE quand elles s’ajoutent au service (voir la fiche dédiée)."
     agir:
       - "Plus de 2 HSA sur votre VS sans votre accord : vous pouvez refuser celles qui dépassent."
-      - "Certaines situations permettent d’être exempté·e d’heures supplémentaires : renseignez-vous auprès de la section."
+      - "Raison de santé : elle vous dispense des heures imposées (art. 4-III). Faites-la valoir par écrit, avec un justificatif médical."
       - "Notez vos HSE (date, objet) pour vérifier qu’elles sont bien payées."
     snes: "Les heures supplémentaires imposées alourdissent la charge de travail et sont un facteur majeur d’épuisement professionnel. Le SNES-FSU demande des postes, pas des heures supplémentaires."
-    source: { doc: abecedaire, pages: "15" }
+    source:
+      - { doc: decret_ors, ref: "art. 4" }
+      - { doc: abecedaire, pages: "15" }
 
   - id: etat-vs-emploi-du-temps
     titre: "État VS et emploi du temps"
@@ -86,17 +90,18 @@ fiches:
     en_bref:
       - "Coordination de discipline, de cycle ou de niveau, entretien des laboratoires ou du cabinet d’histoire-géographie, référent·e culture, numérique, décrochage… : ces missions reposent sur le **volontariat**."
       - "Elles sont payées par l’**indemnité pour mission particulière (IMP)**, sans décharge de service."
-      - "Taux plein : 1 250 € brut par an. Il peut être divisé (quart ou demi-taux) ou multiplié (double, triple), selon l’importance de la mission."
+      - "Cinq taux annuels : **312,50 €, 625 €, 1 250 €, 2 500 € et 3 750 €** brut, selon la charge de travail. Le taux **n’est pas proratisé** si vous êtes à temps partiel, et ne varie pas selon la « manière de servir » (circulaire n° 2015-058)."
     textes:
-      - "Circulaire n° 2015-058 (BOEN n° 18 du 30 avril 2015) : elle indique le taux préconisé pour chaque mission."
-      - "Le montant n’a pas été revalorisé depuis 2017."
+      - "Décret n° 2014-940, art. 3 : les missions particulières s’exercent « avec leur accord ». La circulaire n° 2015-058 indique le taux préconisé pour chaque mission."
+      - "Selon le SNES-FSU, le montant n’a pas été revalorisé depuis 2017."
       - "L’IMP figure sur votre état VS. Une mission particulière ne peut pas être payée en HSE."
     agir:
       - "**Les écrits font les bons amis** : avant de vous engager dans une mission, un projet ou un dispositif, déclarez-le par écrit à la direction avec la rémunération attendue, et attendez sa réponse écrite. Vous éviterez le « il n’y a plus d’argent »."
       - "Vérifiez que l’IMP apparaît bien sur votre état VS."
       - "En CA, le vote porte sur les missions et leur taux, jamais sur les noms (voir la fiche « IMP et décharges : ce que vote le CA »)."
     source:
-      - { doc: abecedaire, pages: "17" }
+      - { doc: decret_ors, ref: "art. 3" }
+      - { doc: circ_imp, ref: "I et II" }
       - { doc: s3_lille, ref: "Bulletin académique n° 333" }
 
   - id: reunions-obligatoires
@@ -108,7 +113,7 @@ fiches:
       - "La circulaire n° 2015-057 cite parmi les missions liées : les réunions d’équipes pédagogiques (**conseils d’enseignement, conseils de classe**), la participation à des **dispositifs d’évaluation**, les **échanges avec les familles, notamment les réunions parents-professeurs**, et les heures de vie de classe."
     textes:
       - "Les équipes pédagogiques « sont réunies sous la présidence du chef d’établissement » (art. R.421-49). Le SNES-FSU Lille en déduit qu’un conseil d’enseignement n’engage que s’il est présidé par la direction et porte sur la coordination entre enseignant·es."
-      - "**Conseil pédagogique** : les équipes proposent des volontaires dans les 15 jours après la rentrée ; à défaut, le chef d’établissement choisit parmi les enseignant·es (art. R.421-41-1). Proposer des volontaires évite les désignations d’office."
+      - "**Conseil pédagogique, conseil école-collège, conseil de cycle 3** : la direction peut désigner des membres (art. R.421-41-1 et R.421-41-3), mais ces instances **ne figurent pas** parmi les missions liées énumérées par la circulaire n° 2015-057. Être désigné·e ne rend donc pas la présence obligatoire. Les équipes ont 15 jours après la rentrée pour proposer des volontaires."
       - "**Journée de solidarité** : 2 demi-journées de concertation sur le projet d’établissement, à une date fixée après consultation des équipes et annoncée en CA (selon le SNES-FSU Lille : arrêté du 4 novembre 2005, note de service n° 2005-182)."
       - "**Journée banalisée** : elle touche à l’organisation du temps scolaire, qui relève de l’autonomie de l’établissement et donc du CA (art. R.421-2)."
     agir:
