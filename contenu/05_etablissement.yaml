@@ -1,0 +1,84 @@
+theme:
+  id: etablissement
+  titre: "Vie de l’établissement"
+  description: "Conseils, organisation pédagogique, Devoirs faits, cahier de textes, Pronote."
+  couleur: "#b5651d"
+
+fiches:
+  - id: conseil-de-classe
+    titre: "Conseils de classe"
+    resume: "Ils font partie du service, mais aucun nombre minimum n’est fixé."
+    en_bref:
+      - "Participer aux conseils de classe fait partie des **missions liées au service** d’enseignement."
+      - "**Aucun texte ne fixe un nombre minimum** de conseils à faire."
+      - "Avec beaucoup de classes ou des contraintes familiales, vous pouvez **transmettre vos appréciations par écrit** à la place."
+    textes:
+      - "Circulaire n° 2015-057 du 29 avril 2015."
+    agir:
+      - "Prévenez le ou la PP et transmettez vos observations écrites quand vous ne pouvez pas venir."
+      - "Le conseil peut être un vrai moment d’échange entre collègues, pas une simple chambre d’enregistrement."
+    source: { doc: abecedaire, pages: "9" }
+
+  - id: conseil-pedagogique
+    titre: "Conseil pédagogique"
+    resume: "Une instance consultative : elle propose, c’est le CA qui décide."
+    en_bref:
+      - "Le conseil pédagogique est présidé par le ou la chef·fe d’établissement. Il réunit au moins un·e PP par niveau, un·e professeur·e par champ disciplinaire et un·e CPE."
+      - "Les équipes pédagogiques ont **15 jours après la rentrée** pour proposer des volontaires, que la direction désigne ensuite."
+      - "Il **donne des avis et fait des propositions** au conseil d’administration. Il ne décide pas à sa place."
+    textes:
+      - "Loi d’orientation de 2005, décret du 27 janvier 2010, modifié par le décret du 22 octobre 2014."
+      - "Sa mission : favoriser la concertation et coordonner les enseignements. Il prépare la partie pédagogique du projet d’établissement."
+    agir:
+      - "La **liberté pédagogique**, reconnue par la loi, doit être respectée : le conseil pédagogique ne peut pas imposer des pratiques ou des modes d’évaluation."
+      - "Refusez toute « hiérarchie intermédiaire » entre collègues."
+      - "Ce qui relève du CA (ou de la commission permanente) doit y être débattu et voté."
+    snes: "Le SNES-FSU s’est opposé à la création de ce conseil, qui sert plus souvent à imposer qu’à concerter."
+    source: { doc: abecedaire, pages: "9" }
+
+  - id: organisation-pedagogique
+    titre: "Groupes de besoins, soutien, AP : c’est le CA qui décide"
+    resume: "Depuis mars 2026, les groupes de besoins sont facultatifs. L’organisation se vote en CA."
+    en_bref:
+      - "Le décret et l’arrêté du **10 mars 2026** rendent les **groupes de besoins facultatifs** en 6e et 5e."
+      - "C’est le **conseil d’administration**, et non le ou la chef·fe d’établissement, qui choisit la forme de l’organisation pédagogique."
+      - "Le **soutien** (jusqu’à 2 h par semaine) et l’heure de **soutien ou approfondissement** en 6e sont eux aussi facultatifs, et sans moyens dédiés."
+    textes:
+      - "L’**accompagnement personnalisé** n’est plus maintenu qu’en 4e et 3e (décret du 4 avril 2025). Il est organisé par le conseil pédagogique et acté par le CA, sans moyens dédiés."
+      - "Le « renforcement » en 4e et 3e n’a pas d’organisation précise : il peut correspondre à Devoirs faits ou au soutien."
+      - "Le **projet local d’évaluation** (PLE) et tout protocole d’harmonisation des évaluations **n’ont aucune existence réglementaire au collège**."
+    agir:
+      - "Soyez vigilant·es en CA : rien de tout cela ne peut être imposé sans vote."
+      - "Refusez collectivement un PLE ou un protocole d’harmonisation des évaluations."
+    snes: "Le SNES-FSU demande que l’aide aux élèves se fasse dans le temps de la classe, avec des effectifs allégés et des dédoublements financés, sans réduire les horaires disciplinaires."
+    source: { doc: abecedaire, pages: "3, 12, 14, 22, 24" }
+
+  - id: devoirs-faits
+    titre: "Devoirs faits"
+    resume: "Obligatoire pour les élèves de 6e, volontaire pour les enseignant·es."
+    en_bref:
+      - "Devoirs faits est **obligatoire pour les élèves de 6e** et volontaire pour les autres niveaux."
+      - "Pour les enseignant·es, c’est du **volontariat**, payé en **HSE** ou dans le cadre du Pacte (mission de 24 h par an)."
+      - "Il existe une enveloppe d’HSE dédiée à Devoirs faits : mieux vaut l’utiliser que le Pacte."
+    textes:
+      - "Professeur·es, CPE, assistant·es pédagogiques et AED peuvent l’encadrer, ainsi que des volontaires du service civique (au plus deux par établissement) et des associations agréées."
+      - "Le livret qui prévoit l’intervention des AESH n’a **aucune valeur réglementaire** : elles et ils peuvent refuser."
+    agir:
+      - "À la rentrée, demandez comment Devoirs faits est organisé dans l’établissement."
+      - "Si vous encadrez des volontaires du service civique, demandez à être rémunéré·e pour ce tutorat."
+    source: { doc: abecedaire, pages: "3, 10" }
+
+  - id: cahier-de-textes-pronote
+    titre: "Cahier de textes, Pronote : vos obligations"
+    resume: "Contenu des séances et travail à faire : oui. Mettre tout son cours en ligne : non."
+    en_bref:
+      - "Remplir le **cahier de textes numérique** est une obligation de service depuis 2010."
+      - "Il doit indiquer **le contenu de la séance** et **le travail à faire**, ainsi que les sujets des devoirs et des contrôles."
+      - "**Aucune obligation d’y déposer votre cours**, même au nom de la « continuité pédagogique »."
+    textes:
+      - "C’est une circulaire qui encadre le cahier de textes : les documents et ressources supplémentaires sont « à l’initiative du professeur »."
+      - "Pronote n’est pas un ENT. Le choix d’y recourir devrait au moins être débattu en conseil d’administration."
+    agir:
+      - "Le paramétrage de Pronote (évaluation, messagerie) doit respecter votre **droit à la déconnexion** : il ne peut pas dicter vos pratiques."
+      - "Vous pouvez demander que l’usage de Pronote et son paramétrage soient discutés en CA."
+    source: { doc: abecedaire, pages: "5, 21" }

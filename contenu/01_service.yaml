@@ -1,0 +1,97 @@
+theme:
+  id: service
+  titre: "Mon service"
+  description: "Maxima d’heures, heures supplémentaires, état VS, Pacte, missions."
+  couleur: "#c8102e"
+
+fiches:
+  - id: maxima-de-service
+    titre: "Combien d’heures dois-je faire ?"
+    resume: "Maxima de service, réductions et pondérations auxquelles vous avez droit."
+    en_bref:
+      - "Votre service est fixé **à la semaine, pour l’année**. Il part d’un maximum hebdomadaire, diminué des réductions auxquelles vous avez droit."
+      - "Maxima : **18 h** pour les certifié·es, **15 h** pour les agrégé·es, **30 h + 6 h** pour les professeur·es documentalistes, **35 h** pour les CPE, **27 h** pour les Psy-ÉN."
+      - "Toute heure d’enseignement au-delà de ce maximum recalculé est une **heure supplémentaire**."
+    textes:
+      - "Décret n° 2014-940 du 20 août 2014 et circulaire n° 2015-057 : obligations de service des enseignant·es."
+      - "**Heure « de vaisselle »** : − 1 h pour les professeur·es de SVT ou de physique-chimie qui font au moins 8 h en collège, s’il n’y a pas de personnel de laboratoire."
+      - "**Complément de service** : − 1 h s’il a lieu dans une autre commune, ou dans deux autres établissements (hors même cité scolaire). Il ne peut être attribué que par le recteur et uniquement dans votre discipline de recrutement. Dans une autre discipline, **votre accord est obligatoire**."
+      - "**Pondération REP+** : chaque heure faite en REP+ compte pour 1,1 h. Le temps ainsi libéré vous appartient : vous n’avez rien à « rendre »."
+    agir:
+      - "Vérifiez que toutes vos réductions figurent sur votre **état VS** avant de le signer."
+      - "Un complément de service et des heures supplémentaires dans la même discipline : ce cumul est contraire à l’esprit du décret de 2014. Signalez-le."
+      - "En cas de doute sur le calcul, faites-le vérifier par la section."
+    source: { doc: abecedaire, pages: "7, 15, 19, 24" }
+
+  - id: heures-supplementaires
+    titre: "Heures supplémentaires : HSA et HSE"
+    resume: "Ce qu’on peut vous imposer… et ce que vous pouvez refuser."
+    en_bref:
+      - "**HSA** : heures inscrites à votre emploi du temps pour l’année et portées sur l’état VS. **Seules 2 HSA peuvent vous être imposées.**"
+      - "**HSE** : heures ponctuelles payées à l’unité. **Une activité proposée en HSE peut toujours être refusée.**"
+      - "Seule la première HSA est majorée de 20 %. Les suivantes sont moins bien payées qu’une heure ordinaire."
+    textes:
+      - "Décret n° 2014-940 : est supplémentaire toute heure faite au-delà du maximum de service, réductions et pondérations comprises."
+      - "En cas de pondération, la première HSA se compte après le calcul des pondérations."
+      - "Les stagiaires ne sont pas censé·es avoir d’HSA."
+      - "Une HSE ne peut pas servir à payer une mission particulière : celle-ci relève de l’IMP."
+      - "**Heures de vie de classe** : aucun moyen horaire n’est prévu, elles ne peuvent pas vous être imposées. Si vous les faites, exigez d’être payé·e en HSE."
+    agir:
+      - "Plus de 2 HSA sur votre VS sans votre accord : vous pouvez refuser celles qui dépassent."
+      - "Certaines situations permettent d’être exempté·e d’heures supplémentaires : renseignez-vous auprès de la section."
+      - "Notez vos HSE (date, objet) pour vérifier qu’elles sont bien payées."
+    snes: "Les heures supplémentaires imposées alourdissent la charge de travail et sont un facteur majeur d’épuisement professionnel. Le SNES-FSU demande des postes, pas des heures supplémentaires."
+    source: { doc: abecedaire, pages: "15" }
+
+  - id: etat-vs-emploi-du-temps
+    titre: "État VS et emploi du temps"
+    resume: "Les deux documents officiels de votre service, à vérifier avant de signer."
+    en_bref:
+      - "L’**état VS** (ventilation de service) récapitule vos classes, effectifs, heures, pondérations, réductions, HSA et IMP. Il part au rectorat et **sert à calculer votre paie**."
+      - "Il doit vous être **soumis pour approbation et signature**."
+      - "Avec l’état VS, l’**emploi du temps** forme le descriptif officiel de votre service pour l’année."
+    textes:
+      - "L’emploi du temps est établi par le ou la chef·fe d’établissement à partir des vœux des personnels."
+      - "Il est fixé pour l’année (ou le semestre) et n’a pas vocation à changer. Toute modification doit rester exceptionnelle, motivée, anticipée, et **suppose l’accord des collègues concerné·es**. Un délai de prévenance d’au moins une semaine est raisonnable."
+      - "Disposer d’au moins trois demi-journées libres est souhaitable, mais aucun texte ne l’impose."
+    agir:
+      - "Vérifiez votre VS ligne par ligne : effectifs, heures, pondérations, réductions, nombre d’HSA, IMP."
+      - "Les missions du Pacte figurent sur une annexe : vérifiez qu’**aucune mission n’y a été inscrite contre votre gré**."
+      - "En cas de désaccord, signez avec la mention « Vu et pris connaissance le… » et contactez la section."
+    source: { doc: abecedaire, pages: "12" }
+
+  - id: pacte-remplacements
+    titre: "Pacte et remplacements de courte durée"
+    resume: "Le Pacte est facultatif, et remplacer un·e collègue absent·e aussi."
+    en_bref:
+      - "Le Pacte repose sur le **volontariat**. Chaque mission (remplacements, Devoirs faits, stages de réussite, découverte des métiers…) est payée 1 250 € brut par an. On peut n’en prendre qu’une moitié."
+      - "Une mission « remplacement » = s’engager à faire **18 h de remplacement** dans l’année (9 h pour une demi-mission), sur des créneaux que vous avez donnés."
+      - "Hors Pacte, un remplacement ponctuel est payé en **HSE** et reste **volontaire**."
+    textes:
+      - "Décrets d’août 2023 : le ou la chef·fe d’établissement présente au **conseil d’administration** un plan annuel de remplacement de courte durée, après consultation du conseil pédagogique."
+      - "Le Pacte est payé en 9 fois (d’octobre à juin), à condition d’accomplir la mission prévue… ou une autre mission du Pacte proposée par la direction."
+      - "Les missions du Pacte sont inscrites sur une annexe de l’état VS."
+    agir:
+      - "Personne ne peut vous obliger à signer le Pacte, ni vous pénaliser si vous refusez."
+      - "En CA, veillez à ce que le plan de remplacement **n’impose rien aux collègues qui n’ont pas signé** ni à la vie scolaire."
+      - "Vérifiez votre VS : aucune mission du Pacte ne doit y figurer sans votre accord."
+    snes: "Le Pacte fait passer une partie de nos missions sous contrat individuel : c’est une attaque contre le statut. Le SNES-FSU appelle à le refuser."
+    liens:
+      - { libelle: "Plan de remplacement : l’analyse du SNES-FSU", url: "https://r.snes.edu/PlanRemplacement" }
+    source: { doc: abecedaire, pages: "9, 17, 19, 22" }
+
+  - id: missions-particulieres-imp
+    titre: "Missions particulières (IMP)"
+    resume: "Coordination, référent·e, laboratoires : sur la base du volontariat, avec indemnité."
+    en_bref:
+      - "Coordination de discipline, de cycle ou de niveau, entretien des laboratoires ou du cabinet d’histoire-géographie, référent·e culture, numérique, décrochage… : ces missions reposent sur le **volontariat**."
+      - "Elles sont payées par l’**indemnité pour mission particulière (IMP)**, sans décharge de service."
+      - "Taux plein : 1 250 € brut par an. Il peut être divisé (quart ou demi-taux) ou multiplié (double, triple), selon l’importance de la mission."
+    textes:
+      - "Circulaire n° 2015-058 (BOEN n° 18 du 30 avril 2015) : elle indique le taux préconisé pour chaque mission."
+      - "Le montant n’a pas été revalorisé depuis 2017."
+      - "L’IMP figure sur votre état VS. Une mission particulière ne peut pas être payée en HSE."
+    agir:
+      - "Avant d’accepter, demandez par écrit le contenu de la mission et le taux d’IMP prévu."
+      - "Vérifiez que l’IMP apparaît bien sur votre état VS."
+    source: { doc: abecedaire, pages: "17" }

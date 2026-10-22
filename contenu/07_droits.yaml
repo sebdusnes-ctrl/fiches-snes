@@ -1,0 +1,73 @@
+theme:
+  id: droits
+  titre: "Droits syndicaux et libertés"
+  description: "Heure d’info syndicale, stages, devoir de réserve, cumul, élections."
+  couleur: "#a3195b"
+
+fiches:
+  - id: heure-information-syndicale
+    titre: "L’heure d’information syndicale (HIS)"
+    resume: "Une heure par mois sur votre temps de service, sans avoir à vous justifier."
+    en_bref:
+      - "Chaque collègue, **titulaire ou non, enseignant·e ou non**, peut assister à une heure d’information syndicale **par mois, sur son temps de service**."
+      - "La section prévient par écrit la direction **au moins une semaine avant**. L’ordre du jour n’a pas à être communiqué."
+      - "Si vous avez cours, prévenez vos élèves et/ou la vie scolaire. Si vous n’avez pas cours, vous n’avez rien à déclarer."
+    agir:
+      - "Surveillez le panneau syndical : les dates des HIS y sont affichées."
+      - "En cas de difficulté avec la direction, la section départementale ou académique intervient."
+    liens:
+      - { libelle: "Le droit syndical dans l’établissement", url: "https://www.snes.edu/agissons/outils/le-droit-syndical-dans-l-etablissement" }
+    source: { doc: abecedaire, pages: "14" }
+
+  - id: stage-syndical
+    titre: "Stage de formation syndicale : 12 jours par an"
+    resume: "Un droit individuel, ouvert à tous, adhérent·e ou non."
+    en_bref:
+      - "Tous les personnels, **titulaires ou non**, ont droit à **12 jours de formation syndicale par an**."
+      - "La demande est déposée auprès du recteur ou de la rectrice **un mois avant** le stage."
+      - "C’est l’occasion de rompre l’isolement, d’échanger entre collègues et de construire des analyses communes."
+    agir:
+      - "Repérez les stages proposés par la section départementale ou académique, puis remplissez la demande d’autorisation d’absence."
+      - "Respectez le délai d’un mois : passé ce délai, l’absence peut être refusée."
+    source: { doc: abecedaire, pages: "13" }
+
+  - id: devoir-de-reserve
+    titre: "« Devoir de réserve » : que dit vraiment le droit ?"
+    resume: "Pour les enseignant·es, il n’est inscrit dans aucun texte statutaire."
+    en_bref:
+      - "Le « devoir de réserve » a été **supprimé du statut général** de la fonction publique en 1983."
+      - "Il s’impose aux hauts fonctionnaires qui représentent l’État : recteurs et rectrices, préfet·es, et leurs délégataires (DASEN, chef·fes d’établissement…)."
+      - "Invoquer un « devoir de loyauté » envers le ou la chef·fe d’établissement ou l’inspection est une **interprétation abusive**."
+    textes:
+      - "La jurisprudence en garde une trace, surtout dans l’exercice des fonctions."
+      - "C’est l’**intérêt général** qui guide ce à quoi chaque fonctionnaire doit loyauté, dans le cadre de ses missions."
+    agir:
+      - "Si l’on vous oppose un « devoir de réserve » ou de « loyauté », demandez sur quel texte il repose et contactez la section."
+    source: { doc: abecedaire, pages: "10" }
+
+  - id: cumul-activites
+    titre: "Cumul d’activités : ce qui est permis"
+    resume: "Les œuvres de l’esprit sont libres. Des cours en plus, c’est possible avec autorisation."
+    en_bref:
+      - "En principe, un·e fonctionnaire consacre toute son activité professionnelle à ses fonctions."
+      - "Les **œuvres de l’esprit** (écrire, composer, créer…) ne sont **pas concernées** par l’interdiction de cumul."
+      - "Des **activités d’enseignement** à côté peuvent être autorisées, à condition de rester « accessoires »."
+    textes:
+      - "Décret n° 2017-105 du 27 janvier 2017."
+      - "Les activités autorisées doivent être occasionnelles, ou régulières mais limitées dans le temps, et compatibles avec votre service."
+      - "Être à temps partiel n’empêche pas d’obtenir l’autorisation."
+    agir:
+      - "Demandez l’autorisation **avant** de commencer, avec l’imprimé académique de demande de cumul."
+    source: { doc: abecedaire, pages: "10" }
+
+  - id: elections-professionnelles
+    titre: "Élections professionnelles : du 3 au 10 décembre 2026"
+    resume: "Vote électronique pour élire vos représentant·es."
+    en_bref:
+      - "Le **vote électronique** a lieu **du 3 au 10 décembre 2026**."
+      - "Vous élisez vos représentant·es aux **CSA** (comités sociaux d’administration), aux **CAP** (commissions administratives paritaires) et aux **CCP** (pour les contractuel·les)."
+      - "Ces élu·es vous défendent sur les mutations, les carrières, les conditions de travail et la santé au travail."
+    agir:
+      - "Vérifiez dès maintenant que vous avez accès à votre messagerie professionnelle : c’est là que vous recevrez vos identifiants."
+      - "Votez, et faites voter autour de vous !"
+    source: { doc: abecedaire, pages: "11" }

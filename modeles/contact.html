@@ -1,0 +1,9 @@
+<section class="contact" aria-labelledby="contact-titre">
+  <h2 id="contact-titre">Une question ? Contactez la section</h2>
+  <ul>
+    {% if config.contact.correspondant %}<li><strong>Vos correspondant·es :</strong> {{ config.contact.correspondant }}</li>{% endif %}
+    {% if config.contact.courriel %}<li><strong>Courriel :</strong> <a href="mailto:{{ config.contact.courriel }}">{{ config.contact.courriel }}</a></li>{% endif %}
+    {% if config.contact.permanence %}<li>{{ config.contact.permanence }}</li>{% endif %}
+    {% for lien in config.contact.autres %}<li><a href="{{ lien.url }}" target="_blank" rel="noopener">{{ lien.libelle }}</a></li>{% endfor %}
+  </ul>
+</section>

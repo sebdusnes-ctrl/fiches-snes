@@ -1,0 +1,25 @@
+theme:
+  id: eleves
+  titre: "Élèves à besoins particuliers"
+  description: "PAI, PPS, ULIS, inclusion."
+  couleur: "#4a6a8a"
+
+fiches:
+  - id: pai-pps
+    titre: "PAI et PPS : quelles différences ?"
+    resume: "Le PAI concerne la santé, le PPS le handicap. Les deux engagent l’établissement."
+    en_bref:
+      - "**PAI** (projet d’accueil individualisé) : aménagements pour un·e élève atteint·e d’un **trouble de santé** (asthme, diabète, allergie, intolérance alimentaire…)."
+      - "**PPS** (projet personnalisé de scolarisation) : aménagements pour un·e élève **en situation de handicap** (accompagnement humain, matériel adapté, dispenses…). Il est élaboré par la **MDPH** et **opposable en droit**."
+      - "Les élèves en situation de handicap ont le droit d’être scolarisé·es en milieu ordinaire chaque fois que c’est possible : en classe, en ULIS ou en unité externalisée."
+    textes:
+      - "PAI : circulaire n° 2003-135 du 8 septembre 2003. Il est élaboré avec l’accord de la famille, sous la responsabilité du ou de la chef·fe d’établissement. Il doit être revu avant un voyage scolaire."
+      - "PPS : articles D. 351-3 à D. 351-9 du code de l’éducation et circulaire n° 2017-084. Il suit l’élève pendant toute sa scolarité."
+      - "Le GEVA-Sco n’est **pas** un document opposable, contrairement au PPS."
+    agir:
+      - "Demandez à consulter le PAI ou le PPS de vos élèves : vous devez connaître les aménagements à appliquer."
+      - "Avant une sortie ou un voyage, vérifiez que le PAI a été adapté."
+      - "Si les moyens manquent (AESH, matériel, formation), signalez-le au registre SST et à la section."
+    liens:
+      - { libelle: "Scolarisation des élèves à besoins particuliers (SNES-FSU)", url: "https://r.snes.edu/ScolarisationEBEP" }
+    source: { doc: abecedaire, pages: "14, 21" }

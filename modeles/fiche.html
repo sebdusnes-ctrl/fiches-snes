@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block titre %}{{ fiche.titre }} · {{ config.titre_site }}{% endblock %}
+{% block description %}{{ fiche.resume }}{% endblock %}
+{% block classe %}page-fiche{% endblock %}
+{% block contenu %}
+<article class="fiche" style="--c: {{ fiche.theme.couleur }}">
+  <nav class="fil" aria-label="Fil d’Ariane">
+    <a href="../index.html#{{ fiche.theme.id }}">← {{ fiche.theme.titre }}</a>
+  </nav>
+
+  <header class="fiche-tete">
+    <p class="fiche-theme">{{ fiche.theme.titre }}</p>
+    <h1>{{ fiche.titre|typo }}</h1>
+    <p class="fiche-resume">{{ fiche.resume|typo }}</p>
+  </header>
+
+  {% if fiche.a_jour %}<p class="alerte">⚠ {{ fiche.a_jour|typo }}</p>{% endif %}
+
+  <section class="bloc bloc-bref">
+    <h2>En bref</h2>
+    <ul>{% for l in fiche.en_bref %}<li>{{ l|fmt }}</li>{% endfor %}</ul>
+  </section>
+
+  {% if fiche.textes %}
+  <section class="bloc">
+    <h2>Ce que disent les textes</h2>
+    <ul>{% for l in fiche.textes %}<li>{{ l|fmt }}</li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+
+  {% if fiche.agir %}
+  <section class="bloc bloc-agir">
+    <h2>Ce que vous pouvez faire</h2>
+    <ul>{% for l in fiche.agir %}<li>{{ l|fmt }}</li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+
+  {% if fiche.snes %}
+  <section class="bloc bloc-snes">
+    <h2>Position du SNES-FSU</h2>
+    <p>{{ fiche.snes|fmt }}</p>
+  </section>
+  {% endif %}
+
+  {% if fiche.liens %}
+  <section class="bloc">
+    <h2>Pour aller plus loin</h2>
+    <ul class="liens">{% for l in fiche.liens %}<li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.libelle }}</a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+
+  <p class="source">Source :
+    {% for s in fiche.sources %}{% set d = config.sources[s.doc] %}<a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.titre }}</a> ({{ d.detail }}), p. {{ s.pages }}{% if not loop.last %} ; {% endif %}{% endfor %}.
+  </p>
+
+  <div class="actions">
+    <button type="button" onclick="window.print()">Imprimer la fiche</button>
+    <button type="button" id="partager" hidden>Partager</button>
+  </div>
+
+  <div class="impression-pied">
+    {{ qr|safe }}
+    <p>{{ config.section }}<br>{% if url_page %}{{ url_page }}{% endif %}</p>
+  </div>
+</article>
+{% endblock %}
+{% block scripts %}<script src="../static/partage.js"></script>{% endblock %}

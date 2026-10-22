@@ -1,0 +1,58 @@
+theme:
+  id: absences
+  titre: "Absences et congés"
+  description: "Enfant malade, arrêt maladie, naissance, PMA."
+  couleur: "#1d6fa5"
+
+fiches:
+  - id: autorisations-absence
+    titre: "Enfant malade, PMA : les autorisations d’absence"
+    resume: "Jusqu’à 6 jours par an pour garder un enfant malade, et des absences pour PMA."
+    en_bref:
+      - "**Enfant malade** (moins de 16 ans, sans limite d’âge en cas de handicap) : autorisation d’absence par journée ou demi-journée, **sur certificat médical**."
+      - "Jusqu’à **6 jours ouvrés par an** pour un temps complet, **12 jours** si vous assumez seul·e la charge de l’enfant."
+      - "**PMA** : la personne qui reçoit les soins a droit à des absences pour chaque acte médical. Son ou sa conjoint·e (marié·e ou pacsé·e) peut s’absenter pour **3 actes au plus** par protocole."
+    textes:
+      - "Le contingent « enfant malade » est calculé pour un temps complet."
+      - "**À partir du 1er janvier 2027**, le doublement ne sera plus possible lorsque le ou la conjoint·e cherche un emploi ou n’a aucun droit de ce type. Il restera possible pour un parent seul."
+    agir:
+      - "Prévenez l’établissement dès que possible, puis transmettez le certificat médical."
+      - "Gardez un décompte de vos jours utilisés dans l’année."
+    snes: "Le SNES-FSU dénonce la suppression du doublement au 1er janvier 2027."
+    source: { doc: abecedaire, pages: "4" }
+
+  - id: arret-maladie
+    titre: "Arrêt maladie et temps partiel thérapeutique"
+    resume: "Délai de 48 h, jour de carence, salaire à 90 %, reprise en temps partiel thérapeutique."
+    en_bref:
+      - "Transmettez l’avis d’arrêt de travail (3e volet) à l’établissement **dans les 48 heures**."
+      - "Un **jour de carence** s’applique, puis le traitement est maintenu **à 90 %** (au lieu de 100 % avant le 1er mars 2025)."
+      - "Depuis 2026, une prolongation n’est sans jour de carence que si elle est prescrite par le médecin de l’arrêt initial ou par votre médecin traitant (sauf impossibilité justifiée)."
+    textes:
+      - "**Temps partiel thérapeutique** : sur certificat médical précisant la quotité (de 50 % à 90 %), l’organisation (demi-journées ou jours) et la durée."
+      - "Si vous le demandez sans être déjà en congé maladie, il n’est plus de droit : l’administration a 30 jours pour répondre, après avis d’un·e médecin agréé·e."
+      - "Il est renouvelable dans la limite d’un an au total. Un nouveau droit s’ouvre un an après une période de 12 mois entièrement utilisée."
+      - "**Contractuel·les** : si vous avez touché votre salaire **et** les indemnités journalières de la Sécurité sociale, vous devrez rembourser le doublon."
+    agir:
+      - "Pour une prolongation, retournez si possible chez le médecin qui a prescrit l’arrêt, ou chez votre médecin traitant."
+      - "Pensez au temps partiel thérapeutique pour reprendre progressivement après un arrêt."
+      - "En cas de retenue ou de remboursement réclamé, contactez la section."
+    snes: "Le SNES-FSU, avec la FSU, dénonce le jour de carence et la baisse à 90 % du traitement en arrêt maladie."
+    source: { doc: abecedaire, pages: "8, 25" }
+
+  - id: naissance-adoption
+    titre: "Naissance et adoption : vos congés"
+    resume: "Maternité, paternité, congé de naissance : durées et délais de demande."
+    en_bref:
+      - "**Maternité** : 16 semaines pour un 1er ou 2e enfant (6 avant, 10 après), 26 semaines à partir du 3e, 34 pour des jumeaux, 46 pour des triplés ou plus."
+      - "**Paternité et accueil de l’enfant** : 25 jours calendaires (32 en cas de naissances multiples), en plus des **3 jours** de congé pour naissance."
+      - "**Nouveau congé de naissance** (depuis juillet 2026) : 1 à 2 mois par parent, payé 70 % du traitement le 1er mois puis 60 % (dans la limite du plafond de la Sécurité sociale), à prendre dans les 9 mois."
+    textes:
+      - "Maternité : jusqu’à 3 semaines du congé prénatal peuvent être reportées après la naissance, sur avis favorable du professionnel de santé."
+      - "Un état pathologique lié à la grossesse peut ajouter jusqu’à 2 semaines avant et 4 semaines après, sans entamer vos droits à congé maladie."
+      - "Paternité : 4 jours sont à prendre dès la naissance, le reste dans les 6 mois, en une ou deux périodes d’au moins 5 jours. Ce congé s’ouvre aussi à la personne qui vit en couple avec la mère."
+      - "Adoption : les 3 jours vont au parent qui ne prend pas le congé d’adoption, dans les 15 jours qui entourent l’arrivée de l’enfant."
+    agir:
+      - "Paternité : faites la demande **au moins un mois avant**, au recteur ou à la rectrice, par la voie hiérarchique."
+      - "Congé de naissance : demande **au moins un mois avant** (15 jours s’il suit directement un congé de paternité ou d’adoption)."
+    source: { doc: abecedaire, pages: "8" }

@@ -1,0 +1,78 @@
+theme:
+  id: remuneration
+  titre: "Salaire et indemnités"
+  description: "Bulletin de paie, ISOE, REP/REP+, frais de déplacement."
+  couleur: "#2e7d4f"
+
+fiches:
+  - id: bulletin-de-paie
+    titre: "Ma paie : bulletin, retards, erreurs"
+    resume: "Où trouver son bulletin, à quoi s’attendre à l’arrivée, que faire en cas de retard."
+    en_bref:
+      - "Votre bulletin de paie est consultable sur **ensap.gouv.fr**."
+      - "Après une mutation ou une première affectation, le **procès-verbal d’installation** signé par la direction déclenche votre paie. Vérifiez-le."
+      - "Pour un premier poste, le premier versement est souvent un **acompte**. Le reste et les indemnités arrivent le mois suivant."
+    textes:
+      - "Après une mutation, l’ancien gestionnaire vous paie jusqu’au 30 septembre, le nouveau à partir du 1er octobre."
+      - "Le traitement, les heures supplémentaires et les indemnités dues sont normalement payés avant le 30 du mois. Un changement d’échelon est payable dès la fin du mois où paraît l’arrêté."
+      - "Depuis 1980, un·e fonctionnaire peut demander des **intérêts de retard** sur les sommes payées en retard par l’État (lettre du Premier ministre du 24 septembre 1980)."
+    agir:
+      - "Gardez vos états VS et comparez-les à vos bulletins : les erreurs sont fréquentes."
+      - "En cas de retard ou d’erreur, demandez les bases de calcul au service gestionnaire, puis écrivez par la voie hiérarchique en envoyant un double à la section."
+      - "Une lettre recommandée demandant des intérêts de retard oblige l’administration à répondre."
+    liens:
+      - { libelle: "ENSAP : bulletins de paie en ligne", url: "https://ensap.gouv.fr/" }
+    source: { doc: abecedaire, pages: "3, 5, 20" }
+
+  - id: isoe-professeur-principal
+    titre: "ISOE et professeur·e principal·e"
+    resume: "Une part fixe pour tous, une part modulable pour les PP. Aucune tâche en plus ne peut être imposée."
+    en_bref:
+      - "**Part fixe de l’ISOE** : 2 550 € brut par an, versée chaque mois à tout·e enseignant·e (au prorata en cas de temps partiel). Elle ne peut faire l’objet d’aucune liste de tâches."
+      - "**Part modulable** : versée aux **professeur·es principaux et principales**. Son montant varie selon le niveau."
+      - "**Part fonctionnelle** : c’est la rémunération des missions du Pacte (1 250 € brut par mission)."
+    textes:
+      - "Le ou la PP est désigné·e par le ou la chef·fe d’établissement **avec l’accord de l’intéressé·e** (décret n° 93-55)."
+      - "Circulaire n° 2018-108 : elle précise les missions du ou de la PP (coordination de l’équipe, suivi des élèves, orientation) **sans créer de nouvelle obligation**. Aucune autre tâche ne peut lui être imposée."
+      - "Les professeur·es documentalistes qui sont PP peuvent percevoir la part modulable depuis la rentrée 2024."
+      - "Les parts modulable et fonctionnelle sont versées en 9 fois à partir d’octobre, après inscription sur l’état VS."
+    agir:
+      - "Vous pouvez refuser d’être PP."
+      - "Si vous êtes PP, vérifiez que la part modulable figure bien sur votre VS."
+    snes: "Le rôle du ou de la Psy-ÉN dans l’orientation est essentiel : le travail du ou de la PP ne peut que le compléter, pas s’y substituer."
+    liens:
+      - { libelle: "Mémo rémunérations et carrières (SNES-FSU)", url: "https://r.snes.edu/RemuneraCarrieres" }
+    source: { doc: abecedaire, pages: "15, 20" }
+
+  - id: rep-rep-plus
+    titre: "Exercer en REP ou en REP+"
+    resume: "Montants des indemnités et pondération des heures en REP+."
+    en_bref:
+      - "**REP** : indemnité de 1 734 € brut par an (1 106 € pour les AED et AESH)."
+      - "**REP+** : part fixe de 5 114 € brut par an (3 263 € pour les AED et AESH), plus une part modulable de 234 € à 702 € fixée par le ou la DASEN."
+      - "En REP+, **chaque heure de cours compte pour 1,1 h** dans le calcul de votre service."
+    textes:
+      - "Décret n° 2015-1087 du 28 août 2015, étendu aux AED et aux AESH par le décret n° 2022-1534."
+      - "Depuis le 1er janvier 2023, ces indemnités sont calculées au prorata du temps passé dans l’établissement REP ou REP+."
+      - "Dans les établissements à la fois « sensibles » et REP, c’est une NBI de 30 points qui est versée. Elle est plus favorable, car elle compte pour la retraite."
+    agir:
+      - "Partagé·e entre plusieurs établissements : vérifiez le prorata appliqué."
+      - "En REP+, vérifiez que la pondération figure sur votre état VS."
+    snes: "Le SNES-FSU demande que l’indemnité soit versée en entier à toutes et tous, sans prorata, et qu’elle soit transformée en NBI."
+    source: { doc: abecedaire, pages: "15, 19, 20" }
+
+  - id: frais-de-deplacement
+    titre: "Frais de déplacement et trajets domicile-travail"
+    resume: "Complément de service, jurys, formations, abonnement de transport, forfait vélo ou covoiturage."
+    en_bref:
+      - "Vous vous déplacez hors de votre commune pour le service (complément de service, jury d’examen, formation sur convocation…) ? Vos **frais de transport sont remboursés**, au tarif des indemnités kilométriques."
+      - "En complément de service dans une autre commune, vous avez droit à une **indemnité de repas** pour chaque jour où vous devez déjeuner hors de votre commune."
+      - "**Abonnement de transport en commun ou de vélo en libre-service** : 75 % remboursés, dans la limite de 104,04 € par mois."
+    textes:
+      - "Le remboursement d’abonnement est mensuel. Il n’est pas versé pendant les congés, sauf si une partie du mois a été travaillée."
+      - "**Forfait mobilités durables** : jusqu’à 300 € par an, sur justificatif, si vous venez à vélo ou en covoiturage."
+    agir:
+      - "Demandez le formulaire de prise en charge de l’abonnement au secrétariat."
+      - "Gardez vos justificatifs (convocations, billets, tickets) pour chaque déplacement."
+      - "Paiement en retard ou refusé : contactez la section."
+    source: { doc: abecedaire, pages: "10, 13" }

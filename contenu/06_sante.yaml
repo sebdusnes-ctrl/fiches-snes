@@ -1,0 +1,53 @@
+theme:
+  id: sante
+  titre: "Santé et sécurité au travail"
+  description: "Registre SST, F3SCT, protection fonctionnelle, canicule."
+  couleur: "#0f7c7c"
+
+fiches:
+  - id: registre-sst
+    titre: "Le registre santé et sécurité au travail (RSST)"
+    resume: "Signaler une situation dégradée ou dangereuse, et laisser une trace."
+    en_bref:
+      - "Le **RSST** doit être **accessible à tous les personnels**."
+      - "On y signale toute situation de travail **dégradée ou dangereuse**, et tout ce qui améliorerait les conditions de travail : locaux, chaleur, charge de travail, tensions…"
+      - "Les élu·es FSU à la **F3SCT** s’appuient sur ces fiches pour interpeller l’administration."
+    textes:
+      - "Le RSST ne remplace ni un rapport d’incident ni un dépôt de plainte."
+      - "La F3SCT (formation spécialisée en santé, sécurité et conditions de travail) veille à la santé physique et mentale des personnels, y compris au droit à la déconnexion."
+    agir:
+      - "Demandez où se trouve le registre (papier ou en ligne) et remplissez une fiche à chaque problème."
+      - "Signalez à plusieurs une même situation : cela pèse davantage."
+      - "Envoyez une copie de votre fiche à la section : nous suivons les réponses de l’administration."
+    source: { doc: abecedaire, pages: "13, 22" }
+
+  - id: protection-fonctionnelle
+    titre: "Agressé·e, menacé·e, diffamé·e : la protection fonctionnelle"
+    resume: "L’employeur doit vous protéger, y compris en payant les frais d’avocat."
+    en_bref:
+      - "Victime de **violences, harcèlement, menaces, injures ou diffamation** dans votre travail, quel qu’en soit l’auteur ? Demandez la **protection fonctionnelle**."
+      - "**Une plainte n’est pas nécessaire** pour la demander."
+      - "Le recteur ou la rectrice **doit l’accorder**, sauf motif solide et incontestable."
+    textes:
+      - "Articles L. 134-5 et L. 134-6 du code général de la fonction publique : l’administration doit protéger « sans délai » les agent·es qu’elle emploie."
+      - "Elle peut aussi être accordée lorsqu’un tiers vous poursuit en justice pour des faits liés à votre fonction."
+    agir:
+      - "Faites la demande par écrit au recteur ou à la rectrice, **par la voie hiérarchique**, en joignant les faits et les preuves."
+      - "Remplissez aussi le registre santé et sécurité au travail."
+      - "Contactez la section **avant** d’envoyer la demande : nous vous aidons à la rédiger."
+    source: { doc: abecedaire, pages: "21" }
+
+  - id: canicule
+    titre: "Canicule : que faire ?"
+    resume: "Pas de solution toute faite au niveau national : agir localement et laisser des traces."
+    en_bref:
+      - "Le plan ministériel de mai 2026 laisse les établissements s’organiser localement."
+      - "Des adaptations sont possibles : **horaires aménagés, service minimum, fermeture**. C’est à l’administration de les décider."
+      - "Le SNES-FSU publie une **carte des températures** et des outils pour agir dans les établissements."
+    agir:
+      - "Relevez les températures dans vos salles (date, heure, salle) et inscrivez-les au **registre santé et sécurité au travail**."
+      - "Demandez à la direction les mesures prévues et faites remonter la situation à la section."
+      - "Posez la question de l’adaptation du bâti scolaire en conseil d’administration."
+    liens:
+      - { libelle: "Canicule : vos droits, nos interventions", url: "https://www.snes.edu/article/canicule-vos-droits-nos-interventions/" }
+    source: { doc: abecedaire, pages: "5" }

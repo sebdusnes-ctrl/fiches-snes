@@ -1,0 +1,45 @@
+theme:
+  id: tzr
+  titre: "TZR"
+  description: "Affectations, avis de suppléance, ISSR, frais."
+  couleur: "#5b5b5b"
+
+fiches:
+  - id: tzr-affectation
+    titre: "TZR : affectation et suppléances"
+    resume: "Pas de suppléance sans écrit du rectorat, jamais de refus, un temps de préparation."
+    a_jour: "Mémo TZR 2024-2025 : vérifiez auprès de la section les règles propres à l’académie de Lille."
+    en_bref:
+      - "Seul le **rectorat** vous affecte, même pour un remplacement court. Un coup de téléphone d’un·e chef·fe d’établissement ne suffit pas."
+      - "**Ne rejoignez une suppléance qu’avec un écrit du rectorat** (avis de suppléance ou arrêté). C’est votre ordre de mission : il couvre aussi un éventuel accident de trajet."
+      - "**Ne refusez jamais une affectation** : ce serait un abandon de poste. Demandez plutôt au rectorat s’il existe une autre suppléance, et contactez la section."
+    textes:
+      - "Votre maximum de service est celui de votre corps : 18 h pour les certifié·es, 15 h pour les agrégé·es. Vous gardez vos réductions et pondérations (REP+, complément de service, heure de laboratoire…)."
+      - "Affecté·e à l’année : **2 HSA au plus** peuvent vous être imposées."
+      - "Une affectation hors de votre discipline, ou en documentation, exige votre accord."
+      - "Votre établissement de rattachement ne peut pas être changé sans votre demande."
+      - "Service incomplet : pas de « rattrapage » d’heures (le service est hebdomadaire, il ne s’annualise pas). Les tâches confiées doivent être pédagogiques, dans votre discipline, avec un emploi du temps."
+      - "Note de service n° 99-152 : un **temps de préparation** doit vous être accordé avant de commencer."
+    agir:
+      - "Ne signez jamais un avis de suppléance non daté. Écrivez « Vu et pris connaissance le… » avec la date réelle."
+      - "Chaque prolongation est une nouvelle suppléance : elle doit faire l’objet d’un nouvel avis du rectorat."
+      - "Gardez tous vos avis de suppléance et états VS pour contrôler vos paies."
+    source: { doc: memo_tzr, pages: "5 à 9" }
+
+  - id: tzr-indemnites
+    titre: "TZR : ISSR et frais de déplacement"
+    resume: "L’indemnité journalière de remplacement, et le remboursement des trajets en affectation à l’année."
+    a_jour: "Montants du Mémo TZR 2024-2025, à vérifier pour l’année en cours."
+    en_bref:
+      - "**ISSR** (indemnité de sujétions spéciales de remplacement) : une indemnité **par jour de remplacement**, hors de votre établissement de rattachement. Son montant dépend de la distance."
+      - "Elle est due pour une **suppléance de courte ou moyenne durée**, ou pour une affectation à l’année **commencée après la rentrée**."
+      - "Elle n’est **pas** due pour une affectation à l’année dès la rentrée, ni pour une suppléance dans votre établissement de rattachement."
+    textes:
+      - "Taux journaliers (2024) : moins de 10 km = 15,94 € ; 10-19 km = 21,04 € ; 20-29 km = 26,16 € ; 30-39 km = 30,87 € ; 40-49 km = 36,86 € ; 50-59 km = 42,89 € ; 60-80 km = 49,24 € ; + 7,34 € par tranche de 20 km au-delà."
+      - "La distance retenue est la distance par la route entre la commune de rattachement et celle du remplacement."
+      - "**Affectation à l’année hors de votre commune** : vos frais de déplacement sont remboursés (au tarif des indemnités kilométriques s’il n’y a pas de transport en commun adapté), ainsi que vos repas pris hors de la commune entre 11 h et 14 h."
+    agir:
+      - "Remplacement commencé après la rentrée et prévu jusqu’en fin d’année : vérifiez que l’arrêté n’est **pas antidaté** au 1er septembre. C’est une manœuvre pour ne pas payer l’ISSR."
+      - "Faites indiquer sur le procès-verbal d’installation la date réelle de votre prise de fonctions."
+      - "ISSR non versée : réclamez-la au service gestionnaire du rectorat et prévenez la section."
+    source: { doc: memo_tzr, pages: "12 à 14" }

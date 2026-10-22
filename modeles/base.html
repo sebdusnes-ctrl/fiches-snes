@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block titre %}{{ config.titre_site }}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{ config.accroche }}{% endblock %}">
+<link rel="stylesheet" href="{{ racine }}static/style.css">
+</head>
+<body class="{% block classe %}{% endblock %}">
+<header class="bandeau">
+  <div class="conteneur">
+    <a class="marque" href="{{ racine }}index.html">
+      <span class="marque-section">{{ config.section }}</span>
+      <span class="marque-titre">{{ config.titre_site }}</span>
+    </a>
+  </div>
+</header>
+<main class="conteneur">
+{% block contenu %}{% endblock %}
+</main>
+<footer class="pied">
+  <div class="conteneur">
+    {% include "contact.html" %}
+    <p class="pied-note">Fiches de synthèse rédigées par la section à partir des publications nationales du SNES-FSU. En cas de doute, la publication d’origine et la section font foi.</p>
+  </div>
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

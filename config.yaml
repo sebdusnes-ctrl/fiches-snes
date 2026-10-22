@@ -1,0 +1,30 @@
+# Réglages du site — à compléter avant publication.
+
+# Adresse publique du site (GitHub Pages). Sert à fabriquer les QR codes :
+# tant qu'elle n'est pas renseignée, les QR codes ne sont pas générés.
+url_site: ""            # ex. "https://mon-compte.github.io/fiches-snes/"
+
+titre_site: "Fiches pratiques SNES-FSU"
+section: "SNES-FSU — section du collège Joséphine Baker"
+accroche: "Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU."
+
+contact:
+  # Laisser vide ce qui ne doit pas apparaître en ligne.
+  correspondant: ""     # ex. "Prénom N. (anglais), Prénom N. (SVT)"
+  courriel: ""          # adresse de la section (éviter une adresse personnelle)
+  permanence: "Panneau syndical en salle des professeurs"
+  autres:
+    - libelle: "SNES-FSU Lille (section académique)"
+      url: "https://lille.snes.edu/"
+    - libelle: "SNES-FSU national"
+      url: "https://www.snes.edu/"
+
+sources:
+  abecedaire:
+    titre: "Abécédaire rentrée 2026"
+    detail: "supplément à L’US n° 873 du 22 août 2026"
+    url: "https://www.snes.edu/"
+  memo_tzr:
+    titre: "Mémo TZR 2024-2025"
+    detail: "supplément à L’US n° 850 du 12 octobre 2024"
+    url: "https://r.snes.edu/MemoTZR2425"

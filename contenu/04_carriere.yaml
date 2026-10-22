@@ -1,0 +1,43 @@
+theme:
+  id: carriere
+  titre: "Carrière"
+  description: "Rendez-vous de carrière, hors-classe, classe exceptionnelle."
+  couleur: "#7a4fb0"
+
+fiches:
+  - id: rendez-vous-de-carriere
+    titre: "Les rendez-vous de carrière"
+    resume: "Trois évaluations aux 6e, 8e et 9e échelons, qui pèsent sur votre avancement."
+    en_bref:
+      - "En classe normale, trois **rendez-vous de carrière** ont lieu, au cours des **6e, 8e et 9e échelons**."
+      - "Ils servent à l’évaluation professionnelle. L’administration s’en sert aussi pour **accélérer un avancement d’échelon** ou pour la **promotion à la hors-classe**."
+      - "Un rendez-vous comprend une inspection, des entretiens, puis un compte rendu avec une appréciation finale."
+    textes:
+      - "Les éléments de l’évaluation professionnelle peuvent faire l’objet d’une **demande de révision**, puis d’un recours devant la CAP."
+    agir:
+      - "Relisez votre compte rendu dès qu’il vous est notifié et notez la date : les délais de recours partent de là."
+      - "Avant le rendez-vous comme après, la section peut vous aider à le préparer ou à rédiger un recours."
+    snes: "Le SNES-FSU défend la liberté pédagogique et la séparation entre l’évaluation et le déroulement de carrière."
+    liens:
+      - { libelle: "Rendez-vous de carrière : le dossier du SNES-FSU", url: "https://r.snes.edu/RendezVousDeCarriere" }
+    source:
+      - { doc: abecedaire, pages: "22" }
+      - { doc: memo_tzr, pages: "11" }
+
+  - id: promotions-de-grade
+    titre: "Échelons, hors-classe, classe exceptionnelle"
+    resume: "Comment progresse votre carrière, et qui peut être promu."
+    en_bref:
+      - "Trois grades : la **classe normale**, la **hors-classe** (accessible à toutes et à tous avant la retraite) et la **classe exceptionnelle**."
+      - "Hors-classe : 23 % des promouvables sont promu·es en 2025 et 2026 (contre 18 % en 2022)."
+      - "Classe exceptionnelle : promouvable à partir du **5e échelon de la hors-classe** (4e pour les agrégé·es). Ratios : 9,5 % pour les certifié·es, CPE et Psy-ÉN, 13,5 % pour les agrégé·es."
+    textes:
+      - "Le droit à la carrière est statutaire. Les règles d’avancement sont les mêmes pour toutes et tous."
+      - "Protocole PPCR (2017) : une carrière complète doit se dérouler sur au moins deux grades."
+    agir:
+      - "Vérifiez chaque année sur I-Prof si vous êtes promouvable et ce que contient votre dossier."
+      - "Faites vérifier votre situation par la section au moment des campagnes de promotion."
+    snes: "Le SNES-FSU demande que l’accès à la classe exceptionnelle devienne la norme en fin de carrière."
+    liens:
+      - { libelle: "Mémo rémunérations et carrières (SNES-FSU)", url: "https://r.snes.edu/RemuneraCarrieres" }
+    source: { doc: abecedaire, pages: "6, 21" }
