@@ -167,6 +167,7 @@ body::before {
 .bloc-snes p { font-style: italic; }
 
 .liens a { color: var(--accent); }
+.lien-fiche { color: var(--accent); font-weight: 600; text-underline-offset: 2px; }
 .source { font-size: .88rem; color: var(--texte-doux); }
 .source a { color: inherit; }
 

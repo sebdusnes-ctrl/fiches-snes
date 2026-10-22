@@ -10,7 +10,7 @@ fiches:
     resume: "Une demande n’est pas un ordre ; une convocation n’oblige que dans le cadre de votre service. Écrit, report, accompagnement : vos droits."
     en_bref:
       - "**Une demande, une invitation, un « passez me voir » ne sont pas des convocations.** Vous pouvez décliner, ou proposer un autre moment."
-      - "**Une convocation n’oblige que si elle relève de votre service** (décret n° 2014-940, art. 2) : le chef d’établissement « fixe le service des personnels **dans le respect du statut** » (art. R.421-10) et ne peut pas en ajouter. Et même dans ce cadre, les textes imposent souvent une **participation**, pas une **présence** : conseils de classe et rencontres avec les parents (fiche « Réunions »)."
+      - "**Une convocation n’oblige que si elle relève de votre service** (décret n° 2014-940, art. 2) : le chef d’établissement « fixe le service des personnels **dans le respect du statut** » (art. R.421-10) et ne peut pas en ajouter. Et même dans ce cadre, les textes imposent souvent une **participation**, pas une **présence** : conseils de classe et rencontres avec les parents ([fiche « Réunions »](fiche:reunions-obligatoires))."
       - "**Un ordre de mission ne crée aucune obligation de service.** Il concerne un « agent en service » qui se déplace « pour l’exécution du service, hors de sa résidence administrative et hors de sa résidence familiale » (décret n° 2006-781, art. 2) : il règle déplacement, frais et couverture en cas d’accident. Dans votre établissement, il n’a pas lieu d’être."
     textes:
       - "**Refuser** : vous devez vous conformer aux instructions, sauf ordre manifestement illégal (CGFP, art. L.121-10), mais une instruction doit rester dans le cadre de votre service. Hors de ce cadre, demandez le texte qui fonde l’obligation : sans texte, pas d’obligation."
@@ -59,7 +59,7 @@ fiches:
       - "En cas de pondération, la première HSA se compte après le calcul des pondérations."
       - "Les stagiaires ne sont pas censé·es avoir d’HSA."
       - "Une HSE ne peut pas servir à payer une mission particulière : celle-ci relève de l’IMP."
-      - "**Heures de vie de classe** : la circulaire n° 2015-057 les classe parmi les missions liées couvertes par l’ISOE ; le SNES-FSU en revendique le paiement en HSE quand elles s’ajoutent au service (voir la fiche dédiée)."
+      - "**Heures de vie de classe** : la circulaire n° 2015-057 les classe parmi les missions liées couvertes par l’ISOE ; le SNES-FSU en revendique le paiement en HSE quand elles s’ajoutent au service (voir la [fiche dédiée](fiche:heure-de-vie-de-classe))."
     agir:
       - "Plus de 2 HSA sur votre VS sans votre accord : vous pouvez refuser celles qui dépassent."
       - "Raison de santé : elle vous dispense des heures imposées (art. 4-III). Faites-la valoir par écrit, avec un justificatif médical."
@@ -120,7 +120,7 @@ fiches:
     agir:
       - "**Les écrits font les bons amis** : avant de vous engager dans une mission, un projet ou un dispositif, déclarez-le par écrit à la direction avec la rémunération attendue, et attendez sa réponse écrite. Vous éviterez le « il n’y a plus d’argent »."
       - "Vérifiez que l’IMP apparaît bien sur votre état VS."
-      - "En CA, le vote porte sur les missions et leur taux, jamais sur les noms (voir la fiche « IMP et décharges : ce que vote le CA »)."
+      - "En CA, le vote porte sur les missions et leur taux, jamais sur les noms (voir la fiche [« IMP et décharges : ce que vote le CA »](fiche:imp-en-ca))."
     source:
       - { doc: decret_ors, ref: "art. 3" }
       - { doc: circ_imp, ref: "I et II" }
@@ -154,7 +154,7 @@ fiches:
     textes:
       - "Surveillance : obligatoire « dès lors qu’il y a une convocation ». Le chef de centre établit le planning en respectant en principe votre emploi du temps habituel, sans y être tenu. Vous ne surveillez pas vos propres élèves de l’année (vade-mecum)."
       - "Dispense : à demander au recteur, sous couvert du chef d’établissement ; elle n’est accordée qu’à titre exceptionnel (vade-mecum)."
-      - "Les **épreuves « blanches »** (brevet blanc, oral blanc) ne sont pas des examens : voir la fiche « Devoirs communs, brevets blancs »."
+      - "Les **épreuves « blanches »** (brevet blanc, oral blanc) ne sont pas des examens : voir la fiche [« Devoirs communs, brevets blancs »](fiche:devoirs-communs-examens-blancs)."
     agir:
       - "Pas de surveillance ni de jury sans convocation nominative écrite ; gardez-la : elle vous couvre en cas d’accident."
       - "Heures de surveillance au-delà de votre maximum de service dans la semaine : signalez-le à la section."

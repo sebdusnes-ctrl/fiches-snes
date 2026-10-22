@@ -34,6 +34,9 @@ def formater(texte):
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
     t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)",
                r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
+    # Lien vers une autre fiche : [texte](fiche:identifiant) ; les pages sont toutes dans fiches/.
+    t = re.sub(r"\[([^\]]+)\]\(fiche:([a-z0-9-]+)\)",
+               r'<a class="lien-fiche" href="\2.html">\1</a>', t)
     return t
 
 
@@ -96,6 +99,13 @@ def charger():
                     erreurs.append(f"{fichier.name} : source inconnue « {s.get('doc')} » ({f.get('id')})")
             f["theme"] = theme
         themes.append(theme)
+    # Les liens [texte](fiche:id) doivent viser une fiche existante.
+    for theme in themes:
+        for f in theme["fiches"]:
+            morceaux = f.get("en_bref", []) + f.get("textes", []) + f.get("agir", []) + [f.get("snes", "")]
+            for cible in re.findall(r"\]\(fiche:([a-z0-9-]+)\)", " ".join(map(str, morceaux))):
+                if cible not in ids:
+                    erreurs.append(f"fiche {f['id']} : lien vers une fiche inconnue « {cible} »")
     if erreurs:
         sys.exit("Contenu invalide :\n  " + "\n  ".join(erreurs))
     return config, themes

@@ -146,7 +146,7 @@ fiches:
       - "Recours : la décision peut être déférée au recteur dans les **8 jours** suivant sa notification (art. R.511-49)."
       - "**Commission éducative** (art. R.511-19-1) : composition arrêtée par le CA et inscrite au règlement intérieur, avec au moins un·e professeur·e et un parent ; elle cherche une réponse éducative personnalisée."
     agir:
-      - "Une autre sanction est évoquée pendant les débats ? Demandez qu’elle soit mise aux voix. Avec un sursis, vérifiez que sa durée est fixée (fiche « Sanctions disciplinaires et sursis »)."
+      - "Une autre sanction est évoquée pendant les débats ? Demandez qu’elle soit mise aux voix. Avec un sursis, vérifiez que sa durée est fixée (fiche [« Sanctions disciplinaires et sursis »](fiche:sanctions-et-sursis))."
       - "Membre du conseil, vous avez demandé la comparution de l’élève : votre suppléant·e siège à votre place (art. D.511-34). Les membres peuvent consulter le dossier (art. D.511-32) et sont tenus au secret (art. D.511-41)."
     source:
       - { doc: code_education, ref: "art. R.421-10, R.511-13 à R.511-27, D.511-30 à D.511-41, R.511-49" }

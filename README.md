@@ -32,7 +32,7 @@ Dans le fichier du thème, chaque fiche a la forme :
     source: { doc: abecedaire, pages: "12" }   # ou une liste de sources
 ```
 
-Mise en forme possible dans les textes : `**gras**` et `[texte du lien](https://…)`.
+Mise en forme possible dans les textes : `**gras**`, `[texte du lien](https://…)` et, pour renvoyer vers une autre fiche, `[texte](fiche:identifiant-de-la-fiche)` (le générateur refuse un lien vers une fiche qui n'existe pas).
 Toujours mettre les textes entre guillemets droits `"…"` (le « : » français casse sinon le YAML).
 
 Puis : `python build.py` (contrôle les champs obligatoires et les identifiants en double).
