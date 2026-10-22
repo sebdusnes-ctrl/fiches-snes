@@ -101,6 +101,15 @@ body::before {
 
 .aucun { color: var(--texte-doux); padding: 16px 0; }
 
+.une {
+  margin-top: 22px; padding: 14px 16px 16px; border-radius: var(--rayon);
+  background: color-mix(in srgb, var(--snes-framboise) 8%, var(--surface));
+  border: 2px solid var(--snes-framboise);
+}
+.une h2 { margin: 0 0 10px; font-size: 1.1rem; color: var(--snes-framboise); }
+.une .cartes { grid-template-columns: 1fr; }
+.une .carte a { border-color: color-mix(in srgb, var(--snes-framboise) 40%, var(--bordure)); }
+
 .theme { padding-top: 22px; scroll-margin-top: 8px; }
 .theme h2 { margin: 0; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
 .theme h2::before { content: ""; width: 6px; height: 1.1em; border-radius: 3px; background: var(--c); }
@@ -234,6 +243,7 @@ body::before {
   .bloc h2 { margin: 2.5mm 0 1mm; font-size: 11pt; }
   .bloc li { margin: 1mm 0; }
   .bloc-bref, .bloc-agir li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .source { font-size: 7.5pt; line-height: 1.3; margin: 2mm 0 0; }
   .liens a::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #444; word-break: break-all; }
   .impression-pied {
     display: flex; align-items: center; gap: 4mm; margin-top: 2mm;

@@ -23,5 +23,7 @@
       total += visibles;
     });
     aucun.hidden = total !== 0;
+    var une = document.querySelector(".une");
+    if (une) une.hidden = mots.length > 0;
   });
 })();

@@ -4,6 +4,10 @@
 # tant qu'elle n'est pas renseignée, les QR codes ne sont pas générés.
 url_site: "https://sebdusnes-ctrl.github.io/fiches-snes/" # ex. "https://mon-compte.github.io/fiches-snes/"
 
+# Fiches mises en avant en haut de l’accueil (identifiants).
+a_la_une:
+  - suis-je-oblige
+
 titre_site: "Fiches pratiques SNES-FSU"
 section: "SNES-FSU — section du collège Joséphine Baker"
 accroche: "Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU."
@@ -116,6 +120,14 @@ sources:
     titre: "Vade-mecum examens du SNES-FSU"
     detail: "snes.edu, 2024"
     url: "https://www.snes.edu/wp-content/uploads/2024/04/Vademecum-examens-2024.pdf"
+  decret_86_83:
+    titre: "Décret n° 86-83 du 17 janvier 1986 (agents contractuels de l’État)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000699956"
+  decret_deplacements:
+    titre: "Décret n° 2006-781 du 3 juillet 2006 (frais de déplacement, ordre de mission)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000242359"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"

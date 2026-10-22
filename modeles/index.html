@@ -8,6 +8,21 @@
     <span class="visuellement-cache">Rechercher une fiche</span>
     <input id="recherche" type="search" placeholder="Rechercher : HSA, enfant malade, Pacte…" autocomplete="off">
   </label>
+{% if une %}
+  <section class="une" aria-labelledby="une-titre">
+    <h2 id="une-titre">À lire en priorité</h2>
+    <ul class="cartes">
+      {% for f in une %}
+      <li class="carte" style="--c: {{ f.theme.couleur }}">
+        <a href="fiches/{{ f.id }}.html">
+          <span class="carte-titre">{{ f.titre|typo }}</span>
+          <span class="carte-resume">{{ f.resume|typo }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
   <nav class="themes-nav" aria-label="Thèmes">
     {% for t in themes %}<a href="#{{ t.id }}" style="--c: {{ t.couleur }}">{{ t.titre }}</a>{% endfor %}
   </nav>

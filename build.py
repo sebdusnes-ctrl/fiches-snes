@@ -129,8 +129,10 @@ def construire():
     commun = dict(config=config, themes=themes, v=empreinte.hexdigest()[:8],
                   nb_fiches=sum(len(t["fiches"]) for t in themes))
 
+    par_id = {f["id"]: f for th in themes for f in th["fiches"]}
+    une = [par_id[i] for i in (config.get("a_la_une") or []) if i in par_id]
     page = env.get_template("index.html").render(
-        racine="", url_page=url, **commun)
+        racine="", url_page=url, une=une, **commun)
     (SORTIE / "index.html").write_text(page, encoding="utf-8")
 
     for theme in themes:

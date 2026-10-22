@@ -75,6 +75,11 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Conseil pédagogique, CEC, conseil de cycle 3 : la direction peut désigner, mais ces instances ne figurent pas dans la liste des missions liées → présence non obligatoire | R.421-41-1, R.421-41-3, circ. 2015-057 II | 🔧 |
 | | Convocation : le chef « a autorité sur l'ensemble des personnels » et « fixe le service […] dans le respect du statut » → peut convoquer dans le cadre du service, pas au-delà | R.421-10 | ✅ 🔧 (ajouté) |
 | | Examens : DNB sous l'autorité du recteur (jury) ; chef de centre ; convocation nominative ; jurys = « charge normale d'emploi » | D.332-19, D.911-31 ; vade-mecum examens SNES | ✅ 🔧 |
+| suis-je-oblige (nouvelle, « À lire en priorité ») | Demande ≠ convocation ; convocation dans le cadre du service seulement | R.421-10, décret 2014-940 art. 2, circ. 2015-057 | ✅ |
+| | Ordre de mission : agent **en service** se déplaçant hors de ses résidences administrative et familiale ; ne crée pas d'obligation | décret 2006-781 art. 2 | ✅ |
+| | Refus : se conformer sauf ordre manifestement illégal ; instruction dans le cadre du service | CGFP L.121-10 | ✅ |
+| | Report : aucun texte pour un simple entretien ; contractuels : 5 jours ouvrables, objet indiqué | décret 86-83 art. 47 | ✅ |
+| | Accompagnement : droit en discipline (L.532-4 ; 86-83 art. 44), entretien préalable au licenciement (art. 47), rupture conventionnelle ; simple entretien : ni garanti ni interdit | CGFP, décret 86-83 | ✅ |
 | demi-journees-banalisees (nouvelle) | Journée de solidarité « hors temps scolaire », date fixée après consultation des équipes | arrêté du 4/11/2005 art. 1 | ✅ |
 | | Demi-journées académiques « prises en dehors des heures de cours » | arrêté du 22/10/2025 (calendrier 2026-2027) | ✅ |
 | | Demi-journée banalisée : organisation du temps scolaire → CA | R.421-2, R.421-20 | ✅ |
