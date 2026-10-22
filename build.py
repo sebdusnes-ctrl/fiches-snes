@@ -3,6 +3,7 @@
 Usage : python build.py
 Contenu : config.yaml + contenu/*.yaml (un fichier par thème).
 """
+import hashlib
 import html
 import re
 import shutil
@@ -118,7 +119,14 @@ def construire():
     shutil.copytree(RACINE / "static", SORTIE / "static")
     (SORTIE / ".nojekyll").write_text("", encoding="utf-8")
 
-    commun = dict(config=config, themes=themes,
+    # Empreinte des fichiers statiques : change à chaque modification, ce qui
+    # oblige les navigateurs à recharger CSS et scripts (pas de cache périmé).
+    empreinte = hashlib.sha1()
+    for f in sorted((RACINE / "static").rglob("*")):
+        if f.is_file():
+            empreinte.update(f.read_bytes())
+
+    commun = dict(config=config, themes=themes, v=empreinte.hexdigest()[:8],
                   nb_fiches=sum(len(t["fiches"]) for t in themes))
 
     page = env.get_template("index.html").render(

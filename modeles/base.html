@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block titre %}{{ config.titre_site }}{% endblock %}</title>
 <meta name="description" content="{% block description %}{{ config.accroche }}{% endblock %}">
-<link rel="stylesheet" href="{{ racine }}static/style.css">
+<link rel="stylesheet" href="{{ racine }}static/style.css?v={{ v }}">
 </head>
 <body class="{% block classe %}{% endblock %}">
 <header class="bandeau">
