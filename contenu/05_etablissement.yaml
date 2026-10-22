@@ -32,10 +32,10 @@ fiches:
     en_bref:
       - "**Punition ≠ sanction.** Les punitions visent « les manquements mineurs » et « les légères perturbations ». Ce sont de « simples mesures d’ordre intérieur » : pas de recours devant le juge, pas d’inscription au dossier de l’élève. Les sanctions relèvent du chef d’établissement ou du conseil de discipline (fiche [« Sanctions disciplinaires et sursis »](fiche:sanctions-et-sursis))."
       - "**Elles relèvent de vous** : les punitions « peuvent être prononcées par les personnels de direction, d’éducation, de surveillance et par les enseignants, **à leur propre initiative** ». « Le respect des règles applicables dans la classe est de la responsabilité de l’enseignant »."
-      - "**Liste indicative**, à reprendre dans le règlement intérieur : rapport sur le carnet de correspondance ; excuse publique orale ou écrite ; devoir supplémentaire (corrigé par qui l’a donné), avec ou sans retenue ; retenue pour un travail non fait. D’autres punitions sont possibles."
+      - "**Liste** : inscription sur le carnet de correspondance ; excuse publique orale ou écrite ; devoir supplémentaire (corrigé par qui l’a donné) ; retenue ; **exclusion de cours**. La punition doit être prévue par le **règlement intérieur**. Les parents en sont informés par le carnet, qu’ils signent."
     textes:
-      - "**Exclusion ponctuelle de cours** : « dans des cas très exceptionnels », elle « s’accompagne **nécessairement** d’une prise en charge de l’élève dans le cadre d’un dispositif prévu à cet effet et connu de tous » ; vous demandez à l’élève un travail en lien avec votre matière. Ne pas la confondre avec l’exclusion temporaire **de la classe**, qui est une sanction."
-      - "**Interdits** : la note zéro pour un motif exclusivement disciplinaire, les punitions collectives. Toute punition fait l’objet d’une **information écrite des parents**."
+      - "**Exclusion de cours** : « dans des cas très exceptionnels », elle « s’accompagne **nécessairement** d’une prise en charge de l’élève dans le cadre d’un dispositif prévu à cet effet et connu de tous » (circulaire n° 2014-059) ; l’élève « doit réaliser un devoir **dans l’établissement** pendant son exclusion » (service-public.fr). Ne pas la confondre avec l’exclusion temporaire **de la classe**, qui est une sanction."
+      - "**Interdits** : la note zéro pour un motif exclusivement disciplinaire ; les punitions collectives (une punition est individuelle, mais peut concerner plusieurs élèves)."
       - "**Rôle de la direction** : soumettre au CA les principes de choix des punitions, et organiser le dispositif de prise en charge des élèves exclus de cours. **Aucun texte ne prévoit qu’elle annule une punition** prononcée par un·e enseignant·e."
     agir:
       - "Élève exclu de cours « ramené » en classe sans votre accord : rappelez par écrit que l’exclusion « s’accompagne nécessairement d’une prise en charge », et demandez quel est le dispositif prévu."
@@ -43,6 +43,7 @@ fiches:
       - "Manquements répétés ou graves : demandez par écrit une procédure disciplinaire ; un refus doit être motivé (art. D.511-30, fiche [« Conseil de discipline »](fiche:conseil-de-discipline))."
     source:
       - { doc: circ_regle, ref: "I-2 « Le régime des punitions »" }
+      - { doc: service_public_punitions, ref: "« La punition »" }
       - { doc: code_education, ref: "art. R.421-5, D.511-30" }
 
   - id: conseil-pedagogique

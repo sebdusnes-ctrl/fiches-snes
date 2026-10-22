@@ -148,6 +148,10 @@ sources:
     titre: "Circulaire n° 2014-059 du 27 mai 2014 (application de la règle, mesures de prévention et sanctions)"
     detail: "BO n° 22 du 29 mai 2014"
     url: "https://www.education.gouv.fr/bo/14/Hebdo22/MENE1406107C.htm"
+  service_public_punitions:
+    titre: "Quelles sont les punitions ou sanctions applicables au collège ou au lycée ?"
+    detail: "service-public.gouv.fr (DILA), vérifié le 14 août 2026"
+    url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F21057"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"
