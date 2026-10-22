@@ -47,8 +47,8 @@ fiches:
     titre: "Groupes de besoins, soutien, AP : c’est le CA qui décide"
     resume: "Depuis mars 2026, les groupes de besoins sont facultatifs. L’organisation se vote en CA."
     en_bref:
-      - "Le décret et l’arrêté du **10 mars 2026** rendent les **groupes de besoins facultatifs** en 6e et 5e."
-      - "C’est le **conseil d’administration**, et non le ou la chef·fe d’établissement, qui choisit la forme de l’organisation pédagogique."
+      - "Depuis l’arrêté du **10 mars 2026**, l’accompagnement en français et mathématiques en 6e et 5e « **peut** donner lieu » à des groupes à effectifs réduits ou constitués selon les besoins : les **groupes de besoins sont facultatifs** (arrêté du 19 mai 2015 modifié)."
+      - "L’organisation en classes et en groupes relève de l’autonomie de l’établissement, donc du **conseil d’administration** (code de l’éducation, art. R.421-2 et R.421-20), et non du seul chef d’établissement."
       - "Le **soutien** (jusqu’à 2 h par semaine) et l’heure de **soutien ou approfondissement** en 6e sont eux aussi facultatifs, et sans moyens dédiés."
     textes:
       - "L’**accompagnement personnalisé** n’est plus maintenu qu’en 4e et 3e (décret du 4 avril 2025). Il est organisé par le conseil pédagogique et acté par le CA, sans moyens dédiés."
@@ -60,7 +60,10 @@ fiches:
       - "Soyez vigilant·es en CA : rien de tout cela ne peut être imposé sans vote."
       - "Refusez collectivement un PLE ou un protocole d’harmonisation des évaluations."
     snes: "Le SNES-FSU demande que l’aide aux élèves se fasse dans le temps de la classe, avec des effectifs allégés et des dédoublements financés, sans réduire les horaires disciplinaires."
-    source: { doc: abecedaire, pages: "3, 12, 14, 22, 24" }
+    source:
+      - { doc: arrete_college, ref: "version en vigueur" }
+      - { doc: code_education, ref: "art. R.421-2, R.421-20" }
+      - { doc: abecedaire, pages: "3, 12, 14, 22, 24" }
 
   - id: devoirs-faits
     titre: "Devoirs faits"

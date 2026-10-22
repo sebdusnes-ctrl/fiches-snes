@@ -139,7 +139,8 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Taux journaliers | arrêté (montants 2024) | ⏳ |
 
 ## Reste à auditer (⏳)
-- Vie de l'établissement : organisation pédagogique (arrêté du 19 mai 2015 modifié le 10 mars 2026 : groupes de besoins, soutien), Devoirs faits, cahier de textes, continuité pédagogique, devoirs communs, sorties (circulaires 2023/2024), quart d'heure lecture, manuels.
-- Santé et sécurité : RSST et F3SCT (décret 82-453), protection fonctionnelle (✅ CGFP L.134-4 à L.134-6, à reporter dans la fiche), canicule.
+- ✅ Fait : organisation pédagogique (groupes de besoins « peut » ; soutien « peuvent » ; CA via R.421-2/R.421-20) et protection fonctionnelle (CGFP L.134-4 à L.134-6).
+- Vie de l'établissement : Devoirs faits, cahier de textes, continuité pédagogique, devoirs communs, sorties (circulaires 2023/2024), quart d'heure lecture, manuels.
+- Santé et sécurité : RSST et F3SCT (décret 82-453), canicule.
 - Mon service : état VS / emploi du temps (aucun texte national précis : à présenter comme pratique), Pacte et RCD (décret 2005-1035 modifié en 2023).
 - Montants et barèmes signalés ⏳ ci-dessus.

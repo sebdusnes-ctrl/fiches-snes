@@ -29,13 +29,15 @@ fiches:
       - "**Une plainte n’est pas nécessaire** pour la demander."
       - "Le recteur ou la rectrice **doit l’accorder**, sauf motif solide et incontestable."
     textes:
-      - "Articles L. 134-5 et L. 134-6 du code général de la fonction publique : l’administration doit protéger « sans délai » les agent·es qu’elle emploie."
-      - "Elle peut aussi être accordée lorsqu’un tiers vous poursuit en justice pour des faits liés à votre fonction."
+      - "CGFP, art. L.134-5 : la collectivité publique « est tenue de protéger l’agent public contre les atteintes volontaires à l’intégrité de sa personne, les violences, les agissements constitutifs de harcèlement, les menaces, les injures, les diffamations ou les outrages », sans faute personnelle de sa part, et de réparer le préjudice. Art. L.134-6 : en cas de risque manifeste d’atteinte grave, elle prend « sans délai » des mesures d’urgence."
+      - "Poursuivi·e pénalement pour des faits qui ne constituent pas une faute personnelle détachable du service, vous y avez aussi droit (art. L.134-4)."
     agir:
       - "Faites la demande par écrit au recteur ou à la rectrice, **par la voie hiérarchique**, en joignant les faits et les preuves."
       - "Remplissez aussi le registre santé et sécurité au travail."
       - "Contactez la section **avant** d’envoyer la demande : nous vous aidons à la rédiger."
-    source: { doc: abecedaire, pages: "21" }
+    source:
+      - { doc: cgfp, ref: "art. L.134-4 à L.134-6" }
+      - { doc: abecedaire, pages: "21" }
 
   - id: canicule
     titre: "Canicule : que faire ?"
