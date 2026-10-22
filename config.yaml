@@ -56,10 +56,18 @@ sources:
     titre: "AESH"
     detail: "pages spéciales de L’US n° 874 du 19 septembre 2026"
     url: "https://www.snes.edu/metiers/aesh/"
+  decret_ors:
+    titre: "Décret n° 2014-940 du 20 août 2014 (obligations de service)"
+    detail: "Légifrance"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000029390906"
+  circ_ors:
+    titre: "Circulaire n° 2015-057 du 29 avril 2015 (missions et obligations de service)"
+    detail: "BO n° 18 du 30 avril 2015"
+    url: "https://www.education.gouv.fr/bo/15/Hebdo14/MENH1506031C.htm"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"
-    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016607"
+    url: "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006071191"
   eduscol_sursis:
     titre: "Ressource sur les sanctions disciplinaires, fiche n° 2 : le sursis"
     detail: "Éduscol, 2023"

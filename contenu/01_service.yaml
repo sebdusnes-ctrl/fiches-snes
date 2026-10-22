@@ -35,7 +35,7 @@ fiches:
       - "En cas de pondération, la première HSA se compte après le calcul des pondérations."
       - "Les stagiaires ne sont pas censé·es avoir d’HSA."
       - "Une HSE ne peut pas servir à payer une mission particulière : celle-ci relève de l’IMP."
-      - "**Heures de vie de classe** : aucun moyen horaire n’est prévu, elles ne peuvent pas vous être imposées. Si vous les faites, exigez d’être payé·e en HSE."
+      - "**Heures de vie de classe** : la circulaire n° 2015-057 les classe parmi les missions liées couvertes par l’ISOE ; le SNES-FSU en revendique le paiement en HSE quand elles s’ajoutent au service (voir la fiche dédiée)."
     agir:
       - "Plus de 2 HSA sur votre VS sans votre accord : vous pouvez refuser celles qui dépassent."
       - "Certaines situations permettent d’être exempté·e d’heures supplémentaires : renseignez-vous auprès de la section."
@@ -100,38 +100,42 @@ fiches:
       - { doc: s3_lille, ref: "Bulletin académique n° 333" }
 
   - id: reunions-obligatoires
-    titre: "Réunions : lesquelles sont obligatoires ?"
-    resume: "Conseils de classe et d’enseignement, oui, sous conditions. Le reste, non."
+    titre: "Réunions : convoqué·e ou convié·e ? Obligatoire ou non ?"
+    resume: "Une invitation n’oblige à rien. Une convocation doit reposer sur vos obligations de service."
     en_bref:
-      - "Votre service = des **heures d’enseignement hebdomadaires** (elles ne s’annualisent pas) + des **missions liées**. Ces missions ne se comptent pas en heures : pas de « 1 607 heures » pour les enseignant·es."
-      - "**Obligatoires** : les **conseils de classe** et les **conseils d’enseignement**, ces derniers seulement si le ou la chef·fe d’établissement est présent·e **et** si l’ordre du jour porte sur la coordination entre enseignant·es (art. R.421-49)."
-      - "**Pas obligatoires** : le conseil pédagogique, le conseil école-collège et le conseil de cycle 3 (volontariat), les créneaux hebdomadaires de « concertation », les réunions d’**auto-évaluation**."
+      - "**Convié·e ≠ convoqué·e.** Être « convié·e » ou « invité·e », c’est recevoir une invitation : elle n’oblige à rien. Une **convocation** est une instruction de service ; elle doit se rattacher à vos obligations de service. Aucun texte ne définit ces deux mots : demandez toujours lequel s’applique."
+      - "Votre service = des heures d’enseignement **hebdomadaires** + des **missions liées** (décret n° 2014-940, art. 2). Celles-ci ne se comptent pas en heures."
+      - "La circulaire n° 2015-057 cite parmi les missions liées : les réunions d’équipes pédagogiques (**conseils d’enseignement, conseils de classe**), la participation à des **dispositifs d’évaluation**, les **échanges avec les familles, notamment les réunions parents-professeurs**, et les heures de vie de classe."
     textes:
-      - "Décret n° 2014-940 du 20 août 2014 : les missions liées se limitent, pour les réunions, au travail en équipes pédagogiques (même classes ou même champ disciplinaire)."
-      - "**Journée de solidarité** : 2 demi-journées hors temps scolaire consacrées à la concertation sur le projet d’établissement. La date est fixée **après consultation des équipes**, avant la fin du 1er trimestre, et annoncée en CA (arrêté du 4 novembre 2005, note de service n° 2005-182). Selon le SNES-FSU Lille, aucune ne peut donc être imposée avant janvier."
-      - "Les **2 demi-journées « rectorales »** de réflexion et de formation ne peuvent être organisées que **sur instruction écrite du recteur** (arrêté du 7 décembre 2022)."
-      - "Une **journée banalisée** touche à l’organisation du temps scolaire : elle doit être décidée **au préalable par le CA** (art. R.421-2)."
-      - "REP+ : la pondération reconnaît le travail en équipe, mais n’impose aucun créneau hebdomadaire de réunion (circulaire n° 2014-077)."
+      - "Les équipes pédagogiques « sont réunies sous la présidence du chef d’établissement » (art. R.421-49). Le SNES-FSU Lille en déduit qu’un conseil d’enseignement n’engage que s’il est présidé par la direction et porte sur la coordination entre enseignant·es."
+      - "**Conseil pédagogique** : les équipes proposent des volontaires dans les 15 jours après la rentrée ; à défaut, le chef d’établissement choisit parmi les enseignant·es (art. R.421-41-1). Proposer des volontaires évite les désignations d’office."
+      - "**Journée de solidarité** : 2 demi-journées de concertation sur le projet d’établissement, à une date fixée après consultation des équipes et annoncée en CA (selon le SNES-FSU Lille : arrêté du 4 novembre 2005, note de service n° 2005-182)."
+      - "**Journée banalisée** : elle touche à l’organisation du temps scolaire, qui relève de l’autonomie de l’établissement et donc du CA (art. R.421-2)."
     agir:
-      - "Convoqué·e à une réunion le soir ou en visio ? Demandez sur quel texte elle repose."
-      - "Formations placées le mercredi après-midi ou pendant les vacances : contactez la section."
-    source: { doc: reunions, pages: "1" }
+      - "Pour toute réunion hors de ce cadre (réunion du soir, visio, « temps de concertation », auto-évaluation) : demandez par écrit s’il s’agit d’une convocation, et sur quel texte elle repose."
+      - "En cas de doute, contactez la section avant de refuser : nous vérifions avec vous le fondement de la convocation."
+    source:
+      - { doc: decret_ors, ref: "art. 2" }
+      - { doc: circ_ors, ref: "II" }
+      - { doc: code_education, ref: "art. R.421-2, R.421-41-1, R.421-49" }
+      - { doc: reunions, pages: "1" }
 
   - id: heure-de-vie-de-classe
-    titre: "Heure de vie de classe : pas de travail gratuit"
-    resume: "Hors de votre service, elle se paie en HSE. L’ISOE ne la couvre pas."
+    titre: "Heure de vie de classe : ce que dit la circulaire, ce que revendique le SNES"
+    resume: "Pour l’administration, c’est une mission liée couverte par l’ISOE. Le SNES-FSU exige le paiement en HSE quand elle s’ajoute au service."
     en_bref:
-      - "Au moins **10 heures par an** de « vie de classe » figurent à l’emploi du temps des élèves."
-      - "Le ou la **professeur·e principal·e l’organise**, mais n’est pas obligé·e de toutes les animer. CPE, Psy-ÉN, infirmier·e, autres collègues ou intervenant·es peuvent s’en charger."
-      - "**Faite en plus de votre service, elle est payée en HSE.** Faite à la place d’une heure de cours, elle relève du traitement normal."
+      - "Circulaire n° 2015-057 : les heures de vie de classe **« n’entrent pas dans le service d’enseignement stricto sensu »** des enseignant·es qui les animent."
+      - "**Mais** la même circulaire les range parmi les **missions liées**, qui « relèvent pleinement du service […] sans faire l’objet d’une rémunération spécifique supplémentaire autre que l’indemnité de suivi et d’orientation des élèves ». C’est la position officielle."
+      - "**Le SNES-FSU conteste cette lecture** et demande le paiement en **HSE** de toute HVC faite en plus du service. Ce n’est pas acquis : c’est une revendication à porter collectivement."
     textes:
-      - "Circulaire n° 2015-057 : les heures de vie de classe « n’entrent pas dans le service d’enseignement stricto sensu »."
-      - "Le décret n° 93-55 sur l’ISOE ne les mentionne pas : **l’ISOE ne les rémunère pas**. Deux ministres l’ont confirmé (L. Chatel, 2010 ; V. Peillon, 2013)."
-      - "Note de service n° 99-073 : elles sont organisées sous la responsabilité du PP ou des CPE, avec le concours de l’équipe."
+      - "Le décret n° 2014-940 (art. 2-II), qui fixe les missions liées, **ne mentionne pas** les heures de vie de classe ; le décret n° 93-55 sur l’ISOE non plus. Seule la circulaire, texte d’application, les y rattache."
+      - "Deux réponses ministérielles citées par le SNES-FSU, **antérieures** à cette circulaire, allaient dans le sens du SNES-FSU : paiement en HSE « dès lors qu’elles sont assurées en dépassement [du] temps de service obligatoire » (L. Chatel, 2010) ; l’ISOE « n’a donc pas pour vocation de rémunérer ces heures » (V. Peillon, 2013)."
+      - "Note de service n° 99-073 : les HVC sont organisées sous la responsabilité du ou de la professeur·e principal·e ou des CPE, avec le concours de l’équipe. Le ou la PP n’est pas tenu·e de toutes les animer."
     agir:
       - "Comptez les HVC faites en plus de votre service."
-      - "Avec la section, adressez une **lettre collective** à la direction : rappel des textes, nombre d’heures faites, demande de paiement en HSE."
-      - "Prévenez la section départementale ou académique pour qu’elle relaie la demande."
+      - "Avec la section, adressez une **lettre collective** à la direction : nombre d’heures faites, demande de paiement en HSE, arguments ci-dessus. Prévenez la section départementale ou académique."
     source:
+      - { doc: circ_ors, ref: "I-B-1 et II" }
+      - { doc: decret_ors, ref: "art. 2" }
       - { doc: faq_snes, ref: "« Heure de vie de classe »" }
       - { doc: s3_lille, ref: "Bulletin académique n° 333" }

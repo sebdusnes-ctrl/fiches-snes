@@ -131,22 +131,23 @@ fiches:
 
   - id: conseil-de-discipline
     titre: "Commission éducative et conseil de discipline"
-    resume: "Composition, déroulement, et ce que peut faire un·e élu·e."
+    resume: "Composition, saisine, vote : ce que disent exactement les textes."
     en_bref:
-      - "La **commission éducative** (prévue par le RI, avec au moins un·e professeur·e et un parent) cherche une réponse éducative personnalisée. Le **conseil de discipline**, convoqué par le chef d’établissement, compte autant de personnels que d’usagers, élus parmi les membres du CA."
-      - "**Le conseil peut prononcer les six sanctions** : avertissement, blâme, mesure de responsabilisation (20 h au plus), exclusion temporaire de la classe ou de l’établissement (8 jours au plus), **exclusion définitive**. Toutes, sauf l’avertissement et le blâme, avec ou sans **sursis**."
-      - "S’il refuse de convoquer le conseil après une **demande écrite d’un personnel**, le chef d’établissement doit en donner le motif par écrit."
+      - "Le **conseil de discipline** compte 14 membres, dont **5 représentant·es des personnels** (4 d’enseignement et d’éducation, 1 des autres personnels), élu·es chaque année par les membres du CA de leur catégorie (art. R.511-20 et R.511-21)."
+      - "Il peut prononcer **toutes les sanctions** de l’article R.511-13 (art. R.511-27). Le chef d’établissement peut prononcer **seul** les cinq premières ; **l’exclusion définitive relève du seul conseil** (art. R.511-14)."
+      - "**C’est le conseil qui décide**, par des votes **à bulletins secrets, à la majorité des suffrages exprimés** ; abstentions, blancs et nuls ne comptent pas (art. D.511-41). En cas de partage égal des voix, le président a voix prépondérante (art. R.511-27)."
     textes:
-      - "Art. R.511-13 : le chef d’établissement peut prononcer **seul** les cinq premières sanctions. **L’exclusion définitive relève du seul conseil de discipline.** Saisine du conseil obligatoire en cas de violence physique contre un personnel (art. R.421-10) ou d’arme blanche (décret du 1er juillet 2025)."
-      - "**C’est le conseil qui décide de la sanction**, à **bulletin secret** et à la **majorité des suffrages exprimés** (art. D.511-41). Quorum : la majorité des membres. Voix prépondérante du président en cas d’égalité. Membres tenus au secret."
-      - "**Aucun texte ne réserve au chef d’établissement le choix de la sanction mise aux voix.** Comme président, il met aux voix ce qui ressort de la discussion, et ne peut pas refuser de soumettre au vote une sanction évoquée. Usage (non réglementaire) : commencer par la plus lourde, puis descendre."
-      - "Pas de sanction pour des faits déjà sanctionnés. Recours : devant le recteur, puis seulement ensuite devant le tribunal administratif."
+      - "**Saisine obligatoire du conseil** quand un membre du personnel est victime de violence physique, ou quand un élève introduit une arme dans l’établissement ou porte une arme sur lui (art. R.421-10, version du 1er juillet 2025). Violence verbale envers un personnel, acte grave, atteinte grave aux principes de la République, harcèlement : procédure disciplinaire obligatoire, mais le chef peut la mener seul."
+      - "Saisi **par écrit** d’une demande de conseil de discipline par un membre de la communauté éducative, le chef d’établissement qui refuse doit lui notifier une **décision motivée** (art. D.511-30)."
+      - "Déroulement : convocations au moins 5 jours avant (art. D.511-31) ; le président « donne lecture du rapport motivant la proposition de sanction » (art. D.511-38) ; le conseil entend l’élève, deux professeur·es de la classe et les délégué·es (art. D.511-39). **Aucun texte ne limite le vote à cette proposition.**"
+      - "Recours : la décision peut être déférée au recteur dans les **8 jours** suivant sa notification (art. R.511-49)."
+      - "**Commission éducative** (art. R.511-19-1) : composition arrêtée par le CA et inscrite au règlement intérieur, avec au moins un·e professeur·e et un parent ; elle cherche une réponse éducative personnalisée."
     agir:
-      - "Une sanction a été évoquée pendant les débats ? Demandez qu’elle soit mise aux voix. Avec un sursis, vérifiez que sa durée est fixée (voir la fiche « Sanctions disciplinaires et sursis »)."
-      - "Un·e professeur·e de la classe peut siéger, sauf s’il ou elle a demandé la tenue du conseil : son suppléant·e le remplace alors."
+      - "Une autre sanction est évoquée pendant les débats ? Demandez qu’elle soit mise aux voix. Avec un sursis, vérifiez que sa durée est fixée (fiche « Sanctions disciplinaires et sursis »)."
+      - "Membre du conseil, vous avez demandé la comparution de l’élève : votre suppléant·e siège à votre place (art. D.511-34). Les membres peuvent consulter le dossier (art. D.511-32) et sont tenus au secret (art. D.511-41)."
     source:
+      - { doc: code_education, ref: "art. R.421-10, R.511-13 à R.511-27, D.511-30 à D.511-41, R.511-49" }
       - { doc: agir_ca, pages: "11, 23" }
-      - { doc: code_education, ref: "art. R.511-13, R.421-10, D.511-41" }
 
   - id: sanctions-et-sursis
     titre: "Sanctions disciplinaires et sursis"

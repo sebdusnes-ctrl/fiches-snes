@@ -6,18 +6,25 @@ theme:
 
 fiches:
   - id: conseil-de-classe
-    titre: "Conseils de classe"
-    resume: "Ils font partie du service, mais aucun nombre minimum n’est fixé."
+    titre: "Conseils de classe : participation n’est pas présence"
+    resume: "Les textes parlent de « participation ». Aucun n’emploie le mot « présence » ni ne fixe de nombre minimum."
     en_bref:
-      - "Participer aux conseils de classe fait partie des **missions liées au service** d’enseignement."
-      - "**Aucun texte ne fixe un nombre minimum** de conseils à faire."
-      - "Avec beaucoup de classes ou des contraintes familiales, vous pouvez **transmettre vos appréciations par écrit** à la place."
+      - "Les enseignant·es de la classe sont **membres** du conseil de classe (art. R.421-50). Il se réunit **au moins trois fois par an**, et chaque fois que le chef d’établissement le juge utile (art. R.421-51)."
+      - "Les textes de service parlent de **« participation »** : la circulaire n° 2015-057 range dans les missions liées « la participation aux réunions d’équipes pédagogiques, qu’elles prennent ou non la forme d’instances identifiées telles que […] les conseils de classe »."
+      - "**Aucun texte n’emploie le mot « présence »** à propos des conseils de classe, et aucun ne fixe un nombre minimum de conseils à suivre. Les chefs d’établissement jouent souvent sur ces mots."
     textes:
-      - "Circulaire n° 2015-057 du 29 avril 2015."
+      - "Décret n° 2014-940, art. 2-II : les missions liées comprennent « le travail au sein d’équipes pédagogiques constituées d’enseignants ayant en charge les mêmes classes ou groupes d’élèves »."
+      - "Art. R.421-51 : le conseil examine le suivi des acquis et la scolarité de chaque élève. Le ou la **professeur·e principal·e, ou un représentant de l’équipe pédagogique**, expose les résultats : le texte ne suppose pas que chaque enseignant·e présente lui-même ses élèves."
+      - "Lecture du SNES-FSU : participer peut prendre la forme d’une **contribution écrite** (appréciations, observations transmises) quand la présence est impossible (nombre de classes, contraintes familiales)."
     agir:
-      - "Prévenez le ou la PP et transmettez vos observations écrites quand vous ne pouvez pas venir."
+      - "Si l’on vous parle de « présence obligatoire », demandez le texte : les textes disent « participation »."
+      - "Absent·e, transmettez vos appréciations et observations par écrit au ou à la professeur·e principal·e, et gardez une trace de cet envoi."
       - "Le conseil peut être un vrai moment d’échange entre collègues, pas une simple chambre d’enregistrement."
-    source: { doc: abecedaire, pages: "9" }
+    source:
+      - { doc: code_education, ref: "art. R.421-50 et R.421-51" }
+      - { doc: decret_ors, ref: "art. 2" }
+      - { doc: circ_ors, ref: "II" }
+      - { doc: abecedaire, pages: "9" }
 
   - id: conseil-pedagogique
     titre: "Conseil pédagogique"
