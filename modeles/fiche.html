@@ -50,7 +50,7 @@
   {% endif %}
 
   <p class="source">Source :
-    {% for s in fiche.sources %}{% set d = config.sources[s.doc] %}<a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.titre }}</a> ({{ d.detail }}), p. {{ s.pages }}{% if not loop.last %} ; {% endif %}{% endfor %}.
+    {% for s in fiche.sources %}{% set d = config.sources[s.doc] %}<a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.titre }}</a> ({{ d.detail }}){% if s.pages %}, p. {{ s.pages }}{% endif %}{% if s.ref %}, {{ s.ref }}{% endif %}{% if not loop.last %} ; {% endif %}{% endfor %}.
   </p>
 
   <div class="actions">

@@ -32,8 +32,8 @@ fiches:
     source: { doc: abecedaire, pages: "13" }
 
   - id: devoir-de-reserve
-    titre: "« Devoir de réserve » : que dit vraiment le droit ?"
-    resume: "Pour les enseignant·es, il n’est inscrit dans aucun texte statutaire."
+    titre: "« Devoir de réserve », « obéissance » : que dit vraiment le droit ?"
+    resume: "Aucun texte statutaire n’impose aux enseignant·es ni réserve ni obéissance."
     en_bref:
       - "Le « devoir de réserve » a été **supprimé du statut général** de la fonction publique en 1983."
       - "Il s’impose aux hauts fonctionnaires qui représentent l’État : recteurs et rectrices, préfet·es, et leurs délégataires (DASEN, chef·fes d’établissement…)."
@@ -41,9 +41,13 @@ fiches:
     textes:
       - "La jurisprudence en garde une trace, surtout dans l’exercice des fonctions."
       - "C’est l’**intérêt général** qui guide ce à quoi chaque fonctionnaire doit loyauté, dans le cadre de ses missions."
+      - "**Obéissance** : seul le statut de Vichy (1941) imposait une « obéissance entière ». Depuis 1946, le fonctionnaire reçoit des tâches. Depuis 1983, sa liberté d’opinion est garantie."
+      - "Code général de la fonction publique : dignité, impartialité, probité (art. L.121-1), neutralité (art. L.121-2). L’agent « doit se conformer aux instructions de son supérieur hiérarchique » (art. L.121-10) : se conformer à des instructions conformes aux textes n’est pas obéir à tout ordre."
     agir:
-      - "Si l’on vous oppose un « devoir de réserve » ou de « loyauté », demandez sur quel texte il repose et contactez la section."
-    source: { doc: abecedaire, pages: "10" }
+      - "Si l’on vous oppose un « devoir de réserve », de « loyauté » ou d’« obéissance », **demandez sur quel texte repose l’instruction** et contactez la section."
+    source:
+      - { doc: abecedaire, pages: "10" }
+      - { doc: obeissance, ref: "3 pages" }
 
   - id: cumul-activites
     titre: "Cumul d’activités : ce qui est permis"

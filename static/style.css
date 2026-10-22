@@ -185,12 +185,12 @@ a { color: inherit; }
 
 /* --- Impression --- */
 @media print {
-  @page { size: A4; margin: 14mm 14mm 16mm; }
+  @page { size: A4; margin: 11mm 13mm 12mm; }
   :root {
     --fond: #fff; --surface: #fff; --texte: #000; --texte-doux: #333;
     --bordure: #bbb; --ombre: none;
   }
-  body { font-size: 10.5pt; line-height: 1.4; }
+  body { font-size: 10pt; line-height: 1.35; }
   .bandeau { background: none; color: #000; border-bottom: 2px solid #c8102e; }
   .bandeau .conteneur { padding: 0 0 2mm; }
   .conteneur { max-width: none; padding: 0; }
@@ -205,10 +205,10 @@ a { color: inherit; }
   .bloc-bref, .bloc-agir li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .liens a::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #444; word-break: break-all; }
   .impression-pied {
-    display: flex; align-items: center; gap: 4mm; margin-top: 4mm;
-    padding-top: 3mm; border-top: 1px solid #bbb; break-inside: avoid; font-size: 9pt;
+    display: flex; align-items: center; gap: 4mm; margin-top: 2mm;
+    padding-top: 2mm; border-top: 1px solid #bbb; break-inside: avoid; font-size: 9pt;
   }
-  .impression-pied .qr { width: 24mm; height: 24mm; }
+  .impression-pied .qr { width: 20mm; height: 20mm; }
   .impression-pied p { margin: 0; }
 
   .affiche { background: #fff; }

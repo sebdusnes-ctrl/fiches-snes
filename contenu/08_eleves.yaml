@@ -23,3 +23,19 @@ fiches:
     liens:
       - { libelle: "Scolarisation des élèves à besoins particuliers (SNES-FSU)", url: "https://r.snes.edu/ScolarisationEBEP" }
     source: { doc: abecedaire, pages: "14, 21" }
+
+  - id: robot-ted-i
+    titre: "Robot de téléprésence (Ted-I) : volontariat obligatoire"
+    resume: "Filmer la classe pour un élève hospitalisé suppose votre accord et celui des élèves."
+    en_bref:
+      - "Ted-I est un robot (écran et caméra) qui diffuse le cours en direct à un élève gravement malade."
+      - "La circulaire du 3 août 2020 est claire : **« Les enseignants sont volontaires »**. Le dispositif ne peut pas vous être imposé."
+      - "Votre **image et votre voix** sont protégées, comme celles des élèves : leur diffusion suppose une autorisation."
+    textes:
+      - "Circulaire du 3 août 2020 sur l’accompagnement pédagogique à domicile, à l’hôpital ou à l’école (Apadhe)."
+      - "Art. 9 du code civil : « Chacun a droit au respect de sa vie privée ». La jurisprudence permet de s’opposer à la diffusion de son image et de sa voix sans autorisation."
+    agir:
+      - "« C’est obligatoire », « sinon l’élève ne pourra pas passer son examen », « la famille portera plainte » : ces arguments ne reposent sur aucun texte."
+      - "Exigez que les autorisations d’enregistrement et de diffusion soient recueillies (personnels et élèves) avant toute utilisation."
+    snes: "Un dispositif technologique ne remplace pas un accompagnement humain. Le SNES-FSU demande de la formation et des moyens pour une inclusion réelle, sans management par la culpabilisation."
+    source: { doc: s3_lille, ref: "Bulletin académique n° 341, mars 2026" }

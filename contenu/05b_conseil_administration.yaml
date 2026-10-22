@@ -1,0 +1,184 @@
+theme:
+  id: ca
+  titre: "Conseil d’administration"
+  description: "Ce que le CA décide, DHG, budget, règlement intérieur, élections."
+  couleur: "#8a6d00"
+
+fiches:
+  - id: ca-ce-qu-il-decide
+    titre: "Le CA : ce qu’il décide, ce qu’il ne décide pas"
+    resume: "Seule instance où les votes sont décisionnaires. Le chef d’établissement exécute ses délibérations."
+    en_bref:
+      - "Le conseil d’administration est la **seule instance de l’établissement dont les votes sont décisionnaires**. Le ou la chef·fe d’établissement en est l’exécutif : il ou elle « exécute les délibérations du CA »."
+      - "Le CA **vote** notamment : la répartition de la **DHG** et l’organisation en classes et en groupes, le **budget**, le **règlement intérieur**, le **projet d’établissement** et le **contrat d’objectifs**, la programmation et le financement des **voyages scolaires**, les contrats et conventions."
+      - "Le CA **n’a pas compétence sur les choix pédagogiques** de chaque enseignant·e : ils relèvent de la liberté pédagogique."
+    textes:
+      - "Code de l’éducation : art. R.421-2 (domaines d’autonomie de l’établissement), R.421-9 (le chef d’établissement exécute les délibérations), R.421-20 (compétences du CA)."
+      - "Art. R.421-23 : le CA donne son **avis** sur les principes de choix des manuels, logiciels et outils pédagogiques. Il peut aussi, **à sa propre initiative**, adopter des **vœux** sur toute question intéressant la vie de l’établissement."
+      - "Art. L.912-1-1 : « Le conseil pédagogique […] ne peut porter atteinte à [la] liberté [pédagogique]. »"
+    agir:
+      - "Une décision qui relève du CA (organisation des groupes, journée banalisée, convention…) ne peut pas être prise par la direction seule : demandez son inscription à l’ordre du jour."
+      - "Faites voter des vœux et transmettez-les à la section départementale ou académique."
+      - "Une délibération illégale peut être contestée dans les 15 jours auprès du DASEN ou du recteur (voir la fiche « Faire vivre le CA »)."
+    source: { doc: agir_ca, pages: "2, 4, 6, 15, 21, 22, 30" }
+
+  - id: ca-fonctionnement
+    titre: "Faire vivre le CA : convocation, quorum, votes, procès-verbal"
+    resume: "Les règles à faire respecter, et les recours en cas de manquement."
+    en_bref:
+      - "Convocation, ordre du jour et **documents préparatoires au moins 8 jours avant** le CA. Les documents doivent être clairs et complets."
+      - "**Quorum** : la majorité des membres (16 sur 30, calculée sur les membres effectivement en place). S’il n’est pas atteint, un nouveau CA est convoqué dans les 5 à 8 jours et délibère quel que soit le nombre de présent·es."
+      - "Votes : **à bulletin secret dès qu’un membre le demande**, pas de procuration. Les abstentions, blancs et nuls ne comptent pas. En cas d’égalité, la voix du président l’emporte."
+    textes:
+      - "**Ordre du jour** : depuis le décret de 2020, le chef d’établissement le fixe, mais le Conseil d’État (décision n° 449941 du 5 novembre 2021) rappelle qu’il **doit tenir compte des demandes** d’inscription."
+      - "**CA extraordinaire** : de droit à la demande de la moitié au moins des membres, sur un ordre du jour déterminé, même sans l’accord du chef d’établissement."
+      - "Le **procès-verbal** retrace les échanges, les délibérations, les avis et les résultats des votes. Il est adopté au CA suivant : c’est le moment de demander des rectificatifs."
+      - "Les **actes** du CA (distincts du PV) ont seuls valeur juridique. Ceux qui sont transmis à l’autorité académique deviennent exécutoires 15 jours après. Le chef d’établissement doit en assurer la publicité."
+      - "Art. R.421-22 à R.421-25 du code de l’éducation ; circulaire du 27 décembre 1985."
+    agir:
+      - "Déposez vos questions diverses **par écrit, avant le CA**, et vérifiez qu’elles figurent à l’ordre du jour."
+      - "Tout membre peut demander une **suspension de séance** pour se concerter."
+      - "Manquement (délais, documents absents…) : faites-le inscrire au PV, puis écrivez à la DSDEN ou au rectorat, en prévenant la section. Ne rencontrez **jamais seul·e** le chef d’établissement : venez en délégation."
+      - "Refuser de siéger n’a d’effet que si le quorum n’est pas atteint : organisez-le avec les autres élu·es et les parents."
+    source: { doc: agir_ca, pages: "9, 15, 16, 17" }
+
+  - id: commission-permanente
+    titre: "Commission permanente : la faire exister"
+    resume: "Trois votes à préparer au premier CA pour garder un lieu de débat avant les décisions."
+    en_bref:
+      - "Au premier CA qui suit les élections, le CA **se prononce sur la création d’une commission permanente** (CP) et sur les compétences qu’il lui délègue."
+      - "Attention : une compétence déléguée est ensuite décidée par la CP **seule**. Mieux vaut ne lui déléguer qu’une compétence accessoire."
+      - "Le plus important : faire voter la **liste des questions sur lesquelles la CP doit être consultée pour avis**, notamment la préparation de rentrée et la répartition de la DHG."
+    textes:
+      - "Art. R.421-22 du code de l’éducation. Compétences délégables : 6°, 7°, 8°, 9°, 10° et 12° de l’art. R.421-20. Les 9° (dons, legs, actions en justice) ou 10° (organe de concertation avec le monde économique) conviennent comme compétence accessoire."
+      - "Selon le SNES-FSU, le CA peut même créer une CP **sans lui déléguer de compétence**, et la saisir pour avis."
+    agir:
+      - "Préparez avec les autres élu·es **trois votes** : création de la CP, délégation d’une compétence accessoire, liste des questions qui lui sont soumises pour avis."
+      - "Le CA peut modifier cette liste en cours d’année par un nouveau vote."
+    source: { doc: agir_ca, pages: "9" }
+
+  - id: dhg-repartition
+    titre: "DHG : la répartition des heures se vote en CA"
+    resume: "Calendrier, documents à exiger, et ce que le vote du CA permet de peser."
+    en_bref:
+      - "En janvier-février, l’établissement reçoit sa **dotation horaire globale (DHG)** : des heures-postes et des heures supplémentaires (HSA), plus une enveloppe d’IMP."
+      - "Le CA **vote obligatoirement la répartition** de la DHG entre disciplines et l’organisation en classes et en groupes. **Son vote est décisif** : la commission permanente peut étudier des amendements, mais le CA garde toute liberté d’amendement et de vote."
+      - "Les propositions pédagogiques (heures globalisées, groupes…) doivent venir **des équipes**, pas du chef d’établissement ni du conseil pédagogique."
+    textes:
+      - "Art. R.421-2 du code de l’éducation : l’emploi des dotations horaires et l’organisation en classes et groupes font partie de l’autonomie de l’établissement, donc des compétences du CA."
+      - "Calendrier : décembre, enveloppes académiques ; janvier-février, DHG des établissements (avis des CSA départementaux pour les collèges) ; février-mars, vote en CA ; fin mars-avril, CSA sur les postes ; juin-juillet, CA d’ajustement si la dotation change."
+      - "Le ministère a reconnu que l’emploi de la dotation « doit être décidé dans les meilleurs délais » : faire voter le tableau de répartition (TRMD) en juin ou juillet n’est pas acceptable."
+      - "Documents à exiger : dotation détaillée (heures-postes, HSA, IMP, missions du Pacte), structure et effectifs prévus, propositions de répartition."
+    agir:
+      - "Tenez une **heure d’information syndicale** dès réception de la DHG pour construire les propositions avec les collègues."
+      - "Défendez les postes implantés et les disciplines fragiles ; demandez la **transformation d’HSA en heures-postes**."
+      - "Faites voter le CA sur les créations et suppressions de postes : sa position sera relayée par les élu·es FSU en CSA."
+    source: { doc: agir_ca, pages: "5, 29, 30" }
+
+  - id: imp-en-ca
+    titre: "IMP et décharges : ce que vote le CA"
+    resume: "Le CA donne son avis sur les missions, jamais sur les noms."
+    en_bref:
+      - "Le chef d’établissement présente **pour avis** au CA, après avis du conseil pédagogique, les missions particulières prévues et leurs modalités, dans l’enveloppe notifiée par le recteur."
+      - "Le CA se prononce sur l’**attribution des IMP par mission**, pas sur l’attribution **nominative**."
+      - "Pour une mission lourde (laboratoires, coordination numérique…), le CA peut proposer un **allègement de service** au lieu d’une IMP. C’est le recteur qui décide."
+    textes:
+      - "Art. 3 du décret n° 2014-940 : l’allègement de service pour mission particulière est décidé par le recteur sur proposition du CA. IMP et décharge sont exclusives l’une de l’autre pour une même mission."
+      - "Le montant de l’IMP relève du seul recteur. Pour une même mission, la rémunération ne peut pas varier selon l’appréciation du chef d’établissement."
+      - "EPS : une IMP de coordination à partir de trois enseignant·es assurant au moins 50 h ; deux IMP au-delà de quatre équivalents temps plein ; forfait AS (UNSS) de 3 h indivisible pour chaque enseignant·e d’EPS."
+    agir:
+      - "Exigez la transparence : liste des missions, taux d’IMP, éventuelles « briques » du Pacte."
+      - "Faites valoir les missions nécessaires au fonctionnement des enseignements comme prioritaires."
+    source: { doc: agir_ca, pages: "30, 31" }
+
+  - id: budget-etablissement
+    titre: "Le budget de l’établissement"
+    resume: "Un vote unique avant décembre. Voter contre ne bloque pas l’établissement."
+    en_bref:
+      - "La collectivité communique sa dotation **avant le 1er novembre**. Le CA vote le budget **dans le mois** qui suit. Il devient exécutoire le 1er janvier. Le projet est transmis **au moins 8 jours avant** le CA."
+      - "**Un seul vote** porte sur l’ensemble du budget (recettes et dépenses, tous services). Le budget doit être sincère et en équilibre."
+      - "Voter **contre** ne paralyse pas l’établissement : dès le 1er janvier, le chef d’établissement peut engager les dépenses de fonctionnement dans la limite du budget de l’année précédente."
+    textes:
+      - "Trois services généraux : **AP** (activités pédagogiques), **VE** (vie de l’élève, dont fonds sociaux) et **ALO** (administration et logistique). Exigez le détail par domaines et activités (instruction M9.6) : sans lui, un vote contre s’impose."
+      - "Les virements à l’intérieur d’un service sont faits par le chef d’établissement, qui en rend compte. Les **décisions budgétaires modificatives** (virements entre services, prélèvement sur le fonds de roulement…) sont votées par le CA."
+      - "Au printemps, le **compte financier** retrace l’exécution du budget de l’année précédente. Les membres du CA ont accès à toutes les pièces comptables."
+      - "Une commission d’appel d’offres (5 membres du CA) attribue les marchés au-delà du seuil fixé par le CA (221 000 € HT à défaut)."
+      - "Les tarifs de demi-pension sont fixés par la collectivité, pas par le CA. Le CA peut voter un vœu. Loi EGAlim : 50 % de produits labellisés dont 20 % de bio, un menu végétarien par semaine."
+      - "Art. L.421-11 et R.421-58 et suivants du code de l’éducation ; décret n° 2012-1193 (RCBC)."
+    agir:
+      - "Recensez avant le CA les besoins des collègues (reprographie, matériel, logiciels…) et chiffrez-les."
+      - "Vérifiez la part des dépenses pédagogiques (AP) face à ALO, le montant du fonds de roulement et l’usage des fonds sociaux."
+      - "Expliquez votre vote par une motion chiffrée. Un vote contre vise les choix de la collectivité ou la présentation incomplète, pas le travail du ou de la gestionnaire."
+    source: { doc: agir_ca, pages: "24 à 28" }
+
+  - id: reglement-interieur
+    titre: "Règlement intérieur, sanctions, portable"
+    resume: "Pas de sanction sans base dans le RI. Le CA ne décide pas à votre place de l’usage du portable en classe."
+    en_bref:
+      - "Le **règlement intérieur** (RI) est voté par le CA. **Aucune punition ni sanction ne peut être prise si elle n’y figure pas.** Les punitions collectives sont interdites."
+      - "**Portable** : la loi du 26 août 2026 interdit son **usage** par les élèves de la maternelle au lycée. Le RI fixe les modalités et les exceptions. **Tant que le CA n’a pas modifié le RI, les pratiques habituelles continuent.**"
+      - "Faites inscrire dans le RI : « Dans le cadre de son enseignement ou de son activité, c’est le personnel d’éducation et d’enseignement qui autorise ou pas l’usage par les élèves d’un téléphone mobile ou de tout autre équipement terminal de communications électroniques. »"
+    textes:
+      - "Art. L.511-5 du code de l’éducation. Peuvent confisquer un appareil : personnels de direction, d’enseignement, d’éducation ou de surveillance. Le RI fixe les modalités de confiscation et de restitution."
+      - "Sanctions : avertissement, blâme, mesure de responsabilisation (20 h au plus, hors cours), exclusion temporaire (8 jours au plus) ou définitive. Elles sont effacées du dossier au plus tard après la 2e année scolaire suivante, sauf l’exclusion définitive."
+      - "Depuis le décret du 1er juillet 2025, la saisine du conseil de discipline est **obligatoire** en cas de détention ou d’introduction d’une arme blanche."
+      - "Le RI est révisable chaque année, après consultation obligatoire des délégué·es élèves (CVL au lycée, CVC au collège)."
+    agir:
+      - "Demandez que le RI soit soumis pour avis à la commission permanente avant le vote."
+      - "Refusez toute interdiction globale, dans le RI ou le projet d’établissement, qui permettrait de contester vos choix pédagogiques."
+      - "Un élève ne peut jamais être exclu d’une activité parce qu’il n’a pas l’équipement demandé."
+    source: { doc: agir_ca, pages: "4, 11, 23" }
+
+  - id: conseil-de-discipline
+    titre: "Commission éducative et conseil de discipline"
+    resume: "Composition, déroulement, et ce que peut faire un·e élu·e."
+    en_bref:
+      - "La **commission éducative**, prévue par le règlement intérieur, cherche une réponse éducative personnalisée pour un élève dont le comportement pose problème. Elle comprend au moins un·e professeur·e et un parent."
+      - "Le **conseil de discipline** est convoqué par le chef d’établissement. Les personnels y ont une représentation égale à celle des usagers. Ses membres sont élus parmi les membres du CA."
+      - "S’il refuse de le convoquer après une **demande écrite d’un personnel**, le chef d’établissement doit en donner le motif par écrit."
+    textes:
+      - "Art. R.511-20 à D.511-43 du code de l’éducation. Quorum : la majorité des membres. Le président a voix prépondérante en cas d’égalité."
+      - "Le chef d’établissement propose une sanction et la met aux voix. Si elle est rejetée, il doit en proposer d’autres jusqu’à ce qu’une majorité se dégage. Le conseil ne peut pas statuer sur des faits déjà sanctionnés."
+      - "Les membres sont tenus au secret. La confidentialité des votes doit être préservée (art. D.511-41)."
+      - "Recours : devant le recteur, puis seulement ensuite devant le tribunal administratif."
+    agir:
+      - "Un·e professeur·e de la classe peut siéger, sauf s’il ou elle a demandé la tenue du conseil : son suppléant·e le remplace alors."
+      - "Faites préciser dans le RI la composition, les délais de convocation et les compétences de la commission éducative."
+    source: { doc: agir_ca, pages: "11, 23" }
+
+  - id: projet-etablissement
+    titre: "Projet d’établissement, contrat d’objectifs, auto-évaluation"
+    resume: "Le CA adopte ou rejette. Rien ne vous oblige à participer à l’auto-évaluation."
+    en_bref:
+      - "Le **projet d’établissement** (3 à 5 ans) et le **contrat d’objectifs** sont **soumis au vote du CA**, qui peut les amender, les adopter ou les rejeter."
+      - "Les conclusions de l’**auto-évaluation** et de l’évaluation externe **ne s’imposent pas** : le CA n’a aucune obligation de les intégrer."
+      - "**Les personnels n’ont aucune obligation statutaire de participer aux réunions d’auto-évaluation**, ni même d’y être présents."
+    textes:
+      - "Art. R.421-3 (projet d’établissement) et R.421-20 (compétences du CA) du code de l’éducation ; circulaire du 1er juillet 2024 sur l’auto-évaluation."
+      - "Le conseil pédagogique prépare la partie pédagogique du projet ; il n’a aucun pouvoir de décision."
+      - "Aucune forme d’évaluation des élèves (suppression des notes, compétences…) ni aucune pratique ne peut être imposée par le projet : cela relève de la liberté pédagogique (art. L.912-1-1)."
+    agir:
+      - "Demandez l’ensemble des indicateurs dont dispose la direction pour un vrai diagnostic partagé."
+      - "Opposez-vous en CA à un projet calqué sur le contrat d’objectifs ou le rapport d’évaluation."
+      - "Le CA ne peut pas interdire l’auto-évaluation (dispositif administratif), mais il peut voter un vœu qui soutient les personnels et dénonce la démarche."
+    source:
+      - { doc: agir_ca, pages: "2, 3" }
+      - { doc: reunions, pages: "1" }
+
+  - id: elections-ca
+    titre: "Élections au CA : listes, vote, mandat"
+    resume: "Calendrier, constitution de la liste, calcul des sièges, et que faire en cas de démission."
+    en_bref:
+      - "Élections **avant la fin de la 7e semaine** de l’année scolaire. Délais : liste électorale affichée à J − 20, candidatures déposées à J − 10, matériel de vote envoyé à J − 6."
+      - "Liste : **de 2 noms jusqu’au double des sièges** (14 pour le 1er collège, 12 dans un collège de moins de 600 élèves sans SEGPA), **en une seule colonne**, sans distinguer titulaires et suppléant·es."
+      - "Sièges répartis au **plus fort reste**. Le vote par correspondance est un droit."
+    textes:
+      - "Art. R.421-25 à R.421-36 du code de l’éducation."
+      - "Votent notamment : titulaires (y compris en congé maladie ou maternité), TZR affecté·es plus de 30 jours, stagiaires, contractuel·les, AED et AESH faisant au moins 150 h par an."
+      - "Irrégularité : réserve au procès-verbal de dépouillement, puis contestation auprès du rectorat dans les **5 jours ouvrables**."
+      - "Le mandat court jusqu’à l’installation du nouveau CA. En cas de démission ou d’empêchement, le premier ou la première suppléant·e de la liste remplace l’élu·e (art. R.421-35)."
+    agir:
+      - "Constituez une liste syndicale (FSU ou SNES-FSU) plutôt qu’une liste « maison » : elle affiche ses positions et légitime les élu·es."
+      - "Pensez à toutes les catégories : CPE, AED, AESH, documentalistes."
+      - "Demandez que les suppléant·es soient convoqué·es automatiquement quand un·e titulaire est empêché·e."
+    source: { doc: agir_ca, pages: "6, 7, 8, 15" }

@@ -52,6 +52,15 @@ Après chaque modification : `python build.py`, commit, push. L’adresse ne cha
 - `docs/qr/accueil.png` et `docs/qr/<id>.png` : QR en image (pour un document, un mail…).
 - Chaque fiche imprimée porte son propre QR code en pied de page.
 
+## Corpus des sources (pour rédiger les fiches)
+
+`python outils/corpus.py "E:/Ressources Collège/SNES/Mémos_SNES"` écrit dans `sources/`
+le texte de chaque PDF du dossier des Mémos (une page par bloc, origine indiquée) :
+texte direct pour les PDF numériques, OCR Tesseract (fra, pages tournées redressées) pour les scans.
+Un 2e argument facultatif pointe vers des retranscriptions relues (`<section data-pages="N">`),
+prioritaires sur l'OCR. `sources/` est **exclu de git** : ce sont les textes intégraux des publications.
+L'OCR peut mélanger les encadrés pleine largeur : vérifier chiffres et dates sur le PDF.
+
 ## Points de vigilance
 
 - Le Mémo TZR date de 2024-2025 : les montants d’ISSR sont à vérifier chaque année.

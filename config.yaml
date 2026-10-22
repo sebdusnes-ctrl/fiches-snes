@@ -28,3 +28,27 @@ sources:
     titre: "Mémo TZR 2024-2025"
     detail: "supplément à L’US n° 850 du 12 octobre 2024"
     url: "https://r.snes.edu/MemoTZR2425"
+  agir_ca:
+    titre: "Courrier de l’établissement n° 2 : Conseil d’administration"
+    detail: "pages spéciales de L’US n° 874, rentrée 2026"
+    url: "https://www.snes.edu/article/ca-faire-vivre-la-democratie/"
+  faq_snes:
+    titre: "Foire aux questions du SNES-FSU"
+    detail: "snes.edu"
+    url: "https://www.snes.edu/"
+  continuite:
+    titre: "Une « continuité pédagogique » individualisée et permanente ?"
+    detail: "SNES-FSU, 8 mai 2022"
+    url: "https://www.snes.edu/"
+  obeissance:
+    titre: "Fonctionnaire et obéissance : quel lien ?"
+    detail: "SNES-FSU, 6 septembre 2026"
+    url: "https://www.snes.edu/"
+  s3_lille:
+    titre: "Publications du SNES-FSU Lille"
+    detail: "Bulletin académique et fiches de la section académique"
+    url: "https://lille.snes.edu/"
+  reunions:
+    titre: "Les réunions obligatoires… et celles qui ne le sont pas"
+    detail: "SNES-FSU Lille, 2025-2026"
+    url: "https://lille.snes.edu/"

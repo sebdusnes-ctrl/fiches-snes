@@ -72,7 +72,7 @@ fiches:
       - "Le Pacte est payé en 9 fois (d’octobre à juin), à condition d’accomplir la mission prévue… ou une autre mission du Pacte proposée par la direction."
       - "Les missions du Pacte sont inscrites sur une annexe de l’état VS."
     agir:
-      - "Personne ne peut vous obliger à signer le Pacte, ni vous pénaliser si vous refusez."
+      - "Personne ne peut vous obliger à signer le Pacte, ni vous pénaliser si vous refusez. **Sans Pacte, un·e chef·fe d’établissement ne peut pas vous imposer de remplacement.**"
       - "En CA, veillez à ce que le plan de remplacement **n’impose rien aux collègues qui n’ont pas signé** ni à la vie scolaire."
       - "Vérifiez votre VS : aucune mission du Pacte ne doit y figurer sans votre accord."
     snes: "Le Pacte fait passer une partie de nos missions sous contrat individuel : c’est une attaque contre le statut. Le SNES-FSU appelle à le refuser."
@@ -92,6 +92,46 @@ fiches:
       - "Le montant n’a pas été revalorisé depuis 2017."
       - "L’IMP figure sur votre état VS. Une mission particulière ne peut pas être payée en HSE."
     agir:
-      - "Avant d’accepter, demandez par écrit le contenu de la mission et le taux d’IMP prévu."
+      - "**Les écrits font les bons amis** : avant de vous engager dans une mission, un projet ou un dispositif, déclarez-le par écrit à la direction avec la rémunération attendue, et attendez sa réponse écrite. Vous éviterez le « il n’y a plus d’argent »."
       - "Vérifiez que l’IMP apparaît bien sur votre état VS."
-    source: { doc: abecedaire, pages: "17" }
+      - "En CA, le vote porte sur les missions et leur taux, jamais sur les noms (voir la fiche « IMP et décharges : ce que vote le CA »)."
+    source:
+      - { doc: abecedaire, pages: "17" }
+      - { doc: s3_lille, ref: "Bulletin académique n° 333" }
+
+  - id: reunions-obligatoires
+    titre: "Réunions : lesquelles sont obligatoires ?"
+    resume: "Conseils de classe et d’enseignement, oui, sous conditions. Le reste, non."
+    en_bref:
+      - "Votre service = des **heures d’enseignement hebdomadaires** (elles ne s’annualisent pas) + des **missions liées**. Ces missions ne se comptent pas en heures : pas de « 1 607 heures » pour les enseignant·es."
+      - "**Obligatoires** : les **conseils de classe** et les **conseils d’enseignement**, ces derniers seulement si le ou la chef·fe d’établissement est présent·e **et** si l’ordre du jour porte sur la coordination entre enseignant·es (art. R.421-49)."
+      - "**Pas obligatoires** : le conseil pédagogique, le conseil école-collège et le conseil de cycle 3 (volontariat), les créneaux hebdomadaires de « concertation », les réunions d’**auto-évaluation**."
+    textes:
+      - "Décret n° 2014-940 du 20 août 2014 : les missions liées se limitent, pour les réunions, au travail en équipes pédagogiques (même classes ou même champ disciplinaire)."
+      - "**Journée de solidarité** : 2 demi-journées hors temps scolaire consacrées à la concertation sur le projet d’établissement. La date est fixée **après consultation des équipes**, avant la fin du 1er trimestre, et annoncée en CA (arrêté du 4 novembre 2005, note de service n° 2005-182). Selon le SNES-FSU Lille, aucune ne peut donc être imposée avant janvier."
+      - "Les **2 demi-journées « rectorales »** de réflexion et de formation ne peuvent être organisées que **sur instruction écrite du recteur** (arrêté du 7 décembre 2022)."
+      - "Une **journée banalisée** touche à l’organisation du temps scolaire : elle doit être décidée **au préalable par le CA** (art. R.421-2)."
+      - "REP+ : la pondération reconnaît le travail en équipe, mais n’impose aucun créneau hebdomadaire de réunion (circulaire n° 2014-077)."
+    agir:
+      - "Convoqué·e à une réunion le soir ou en visio ? Demandez sur quel texte elle repose."
+      - "Formations placées le mercredi après-midi ou pendant les vacances : contactez la section."
+    source: { doc: reunions, pages: "1" }
+
+  - id: heure-de-vie-de-classe
+    titre: "Heure de vie de classe : pas de travail gratuit"
+    resume: "Hors de votre service, elle se paie en HSE. L’ISOE ne la couvre pas."
+    en_bref:
+      - "Au moins **10 heures par an** de « vie de classe » figurent à l’emploi du temps des élèves."
+      - "Le ou la **professeur·e principal·e l’organise**, mais n’est pas obligé·e de toutes les animer. CPE, Psy-ÉN, infirmier·e, autres collègues ou intervenant·es peuvent s’en charger."
+      - "**Faite en plus de votre service, elle est payée en HSE.** Faite à la place d’une heure de cours, elle relève du traitement normal."
+    textes:
+      - "Circulaire n° 2015-057 : les heures de vie de classe « n’entrent pas dans le service d’enseignement stricto sensu »."
+      - "Le décret n° 93-55 sur l’ISOE ne les mentionne pas : **l’ISOE ne les rémunère pas**. Deux ministres l’ont confirmé (L. Chatel, 2010 ; V. Peillon, 2013)."
+      - "Note de service n° 99-073 : elles sont organisées sous la responsabilité du PP ou des CPE, avec le concours de l’équipe."
+    agir:
+      - "Comptez les HVC faites en plus de votre service."
+      - "Avec la section, adressez une **lettre collective** à la direction : rappel des textes, nombre d’heures faites, demande de paiement en HSE."
+      - "Prévenez la section départementale ou académique pour qu’elle relaie la demande."
+    source:
+      - { doc: faq_snes, ref: "« Heure de vie de classe »" }
+      - { doc: s3_lille, ref: "Bulletin académique n° 333" }

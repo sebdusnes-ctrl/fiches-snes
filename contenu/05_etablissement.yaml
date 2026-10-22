@@ -84,3 +84,92 @@ fiches:
       - "Le paramétrage de Pronote (évaluation, messagerie) doit respecter votre **droit à la déconnexion** : il ne peut pas dicter vos pratiques."
       - "Vous pouvez demander que l’usage de Pronote et son paramétrage soient discutés en CA."
     source: { doc: abecedaire, pages: "5, 21" }
+
+  - id: continuite-pedagogique
+    titre: "Élève absent : faut-il tout mettre en ligne ?"
+    resume: "Non. La « continuité pédagogique » ne vise pas les absences individuelles d’élèves."
+    en_bref:
+      - "Dans les textes officiels, la **continuité pédagogique ne s’applique pas aux absences d’un ou de quelques élèves**."
+      - "Le cahier de textes doit indiquer le contenu de la séance, le travail à faire et les documents distribués qui ne sont pas dans le manuel. Il **n’a pas à contenir l’intégralité du cours**."
+      - "Aucun texte ne permet d’exiger que vous mettiez en ligne votre cours, la trace écrite ou les activités de la séance."
+    textes:
+      - "Circulaire de 2010 sur le cahier de textes numérique : quand elle parle de continuité, c’est pour la **suppléance d’un professeur** absent ou muté, pas pour un élève absent."
+      - "En cas de fermeture d’établissement, les personnels restent maîtres des modalités : **la visio ne peut pas être imposée**. La liberté pédagogique (art. L.912-1-1 du code de l’éducation) reste la règle."
+    agir:
+      - "Face à une demande de famille relayée par la direction, rappelez le cadre : contenu de séance, travail à faire, documents distribués."
+      - "Aider un élève absent longtemps est une **responsabilité de l’institution** (dispositifs, moyens), pas une tâche individuelle à absorber en plus."
+    snes: "Créer des cours pour l’ENT ou pour des élèves absents est un autre métier que d’enseigner en classe. C’est du travail invisible, que l’institution laisse glisser vers les enseignant·es."
+    source:
+      - { doc: continuite, ref: "4 pages" }
+      - { doc: s3_lille, ref: "« Continuité pédagogique, fermeture des établissements » (2021)" }
+
+  - id: devoirs-communs-examens-blancs
+    titre: "Devoirs communs, brevets blancs : obligatoires ?"
+    resume: "Non. Ils relèvent de l’initiative des équipes, et leur surveillance hors service se paie en HSE."
+    en_bref:
+      - "Devoirs communs et examens blancs sont **une modalité possible, non obligatoire**, de l’évaluation des élèves."
+      - "C’est **aux équipes pédagogiques, et à elles seules**, de décider s’il y en a, d’en fixer les modalités, le contenu et la répartition des tâches."
+      - "Le chef d’établissement peut faciliter leur organisation, mais **ne peut en imposer ni le principe ni les modalités**."
+    textes:
+      - "Art. L.912-1 du code de l’éducation : les professeur·es procèdent à l’évaluation de leurs élèves. Décret n° 2014-940 : c’est une mission liée."
+      - "La circulaire n° 2015-057 parle de « la participation à des dispositifs d’évaluation », c’est-à-dire **certains**, pas tous : le SNES-FSU a obtenu que les examens blancs n’y soient pas mentionnés."
+      - "Le conseil pédagogique ne peut porter atteinte à la liberté pédagogique (art. L.912-1-1). Le projet d’établissement doit « respecter le caractère individuel de l’acte pédagogique » (circulaire n° 90-108)."
+    agir:
+      - "**Surveillance** : sur vos heures de cours, à la place de ces heures, pas de paiement supplémentaire. **En dehors de votre service**, elle ne peut pas vous être imposée et doit être payée en **HSE**."
+      - "L’évaluation du contrôle continu (DNB compris) relève de la seule responsabilité des professeur·es."
+    source:
+      - { doc: faq_snes, ref: "« Devoirs communs, brevets ou bacs blancs »" }
+      - { doc: reunions, pages: "1" }
+
+  - id: sorties-et-voyages
+    titre: "Sorties et voyages scolaires"
+    resume: "Liberté pédagogique, vote du CA, et rien à « rattraper »."
+    en_bref:
+      - "Organiser une sortie ou un voyage relève de la **liberté pédagogique** : personne ne peut vous l’imposer."
+      - "Le CA donne son accord sur la **programmation et le financement**. Le chef d’établissement autorise la sortie. Tout l’argent passe par l’agent·e comptable (jamais par un FSE ou une coopérative)."
+      - "Le coût du voyage des **accompagnateurs** est pris sur le budget de l’établissement : **vous n’avez pas à payer pour travailler**."
+    textes:
+      - "Circulaires du 13 juin 2023 et du 16 juillet 2024 ; guide Éduscol des sorties et voyages dans le second degré. Depuis le décret du 13 mai 2026, un questionnaire « Brisons le silence » est remis aux élèves après chaque voyage."
+      - "Une sortie sur le temps scolaire qui complète l’enseignement est obligatoire, donc gratuite. Les fonds sociaux peuvent aider les familles."
+      - "**Votre classe est partie sans vous ?** Vous ne devez aucune heure : présent·e dans l’établissement mais sans élèves, vous êtes en service. Le service est hebdomadaire et ne s’annualise pas (décret n° 2014-940)."
+      - "Le chef d’établissement peut **déplacer** le cours sur un autre créneau de la même semaine, avec un délai de prévenance d’au moins 48 h ouvrables et une modification écrite de la VS. Une modification sur Pronote ne fait pas foi."
+      - "Prendre une autre classe, ou une de vos classes en plus de votre horaire, suppose **votre accord** et se paie en **HSE**."
+    agir:
+      - "Refusez qu’un voyage soit conditionné au remplacement des collègues absents, ou qu’on impose aux accompagnateurs de « rattraper » leurs cours : rien de tout cela n’est réglementaire."
+      - "Faites voter en début d’année une programmation de principe des sorties, et la prise en charge des accompagnateurs au budget."
+      - "En formation (EAFC) : pas d’heure à rattraper non plus."
+    source:
+      - { doc: agir_ca, pages: "22" }
+      - { doc: faq_snes, ref: "« Rattrapage des cours après une sortie »" }
+      - { doc: s3_lille, ref: "Bulletins académiques n° 326 et 333" }
+
+  - id: quart-heure-lecture
+    titre: "« Quart d’heure lecture » : peut-on l’imposer ?"
+    resume: "Aucun texte ne l’impose : c’est un choix d’équipe volontaire, pas une injonction."
+    en_bref:
+      - "Le « quart d’heure lecture » (« Silence, on lit », « Chut, on lit » dans l’académie de Lille) **ne fait l’objet d’aucune réglementation** : rien ne permet de l’imposer."
+      - "Mis en place par un travail collectif ou par des collègues volontaires hors des cours, il relève de la **liberté pédagogique**."
+      - "Pris sur les heures de cours, il **réduit des horaires disciplinaires** pourtant obligatoires."
+    textes:
+      - "C’est une commande institutionnelle (courrier ministériel de 2018, incitations rectorales). L’association « Silence, on lit » n’a pas d’agrément de l’Éducation nationale."
+      - "Aucune étude étayée n’en mesure les effets : il n’existe que des témoignages."
+    agir:
+      - "Pressions en conseil pédagogique ou en CA pour le généraliser : rappelez qu’aucun texte ne l’impose et que les horaires d’enseignement sont réglementaires."
+      - "Si le climat scolaire est en cause, demandez de vrais moyens : vie scolaire, effectifs réduits, dédoublements."
+    snes: "Un dispositif « magique » ne remplace ni l’accompagnement des élèves en difficulté de lecture, ni les moyens."
+    source: { doc: s3_lille, ref: "« Silence on lit, Quart d’heure lecture… De quoi parle-t-on ? »" }
+
+  - id: manuels-numerique
+    titre: "Manuels et outils numériques : qui choisit ?"
+    resume: "Le CA donne un avis sur les principes. Ce sont les équipes qui choisissent."
+    en_bref:
+      - "Le CA donne son **avis sur les principes** de choix des manuels, logiciels et outils pédagogiques, y compris numériques (art. R.421-23). **Ce sont les équipes qui choisissent** ce qu’elles utilisent."
+      - "Au collège, les manuels sont gratuits pour les familles : l’État verse une subvention à chaque établissement."
+      - "Rentrée 2026 : environ **41 € par élève de 5e** pour renouveler deux manuels (français et maths). Les crédits pédagogiques de l’État sont en forte baisse."
+    textes:
+      - "Les outils numériques relèvent du choix des enseignant·es et de leur liberté pédagogique : une collectivité ne peut pas imposer des manuels, logiciels ou applications non choisis par les équipes."
+      - "Reproduction d’œuvres protégées : circulaire n° 2004-055 du 25 mars 2004."
+    agir:
+      - "En CA, demandez le montant de l’enveloppe reçue pour les manuels et expliquez aux parents ce qu’elle permet réellement."
+      - "Défendez la liberté de choix entre papier et numérique."
+    source: { doc: agir_ca, pages: "21" }
