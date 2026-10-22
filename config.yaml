@@ -128,6 +128,10 @@ sources:
     titre: "Décret n° 2006-781 du 3 juillet 2006 (frais de déplacement, ordre de mission)"
     detail: "Légifrance, version en vigueur"
     url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000242359"
+  ddhc:
+    titre: "Déclaration des droits de l’homme et du citoyen de 1789"
+    detail: "bloc de constitutionnalité, Légifrance"
+    url: "https://www.legifrance.gouv.fr/contenu/menu/droit-national-en-vigueur/constitution/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"
