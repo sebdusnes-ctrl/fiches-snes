@@ -24,11 +24,10 @@ async def main(paires):
             await pg.wait_for_timeout(5000)
             liens = await pg.eval_on_selector_all(
                 "a[href*='/loda/id/']", "es => es.map(e => [e.href, e.innerText.trim()])")
-            numero = re.search(r"\d{2,4}-\d+", titre).group(0)
             norm = lambda s: re.sub(r"\s+", "", s).lower()
             liens = [l for l in liens if norm(l[1]).startswith(norm(titre.split(" du ")[0]))]
             if not liens:
-                print(nom, "aucun résultat contenant", numero)
+                print(nom, "aucun résultat")
                 continue
             url, libelle = liens[0]
             await pg.goto(url, wait_until="domcontentloaded", timeout=60000)

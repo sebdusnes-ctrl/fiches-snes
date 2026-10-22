@@ -106,23 +106,44 @@ fiches:
 
   - id: reunions-obligatoires
     titre: "Réunions : convoqué·e ou convié·e ? Obligatoire ou non ?"
-    resume: "Une invitation n’oblige à rien. Une convocation doit reposer sur vos obligations de service."
+    resume: "Une invitation n’oblige à rien. Une convocation doit reposer sur vos obligations de service. Les examens relèvent du recteur."
     en_bref:
-      - "**Convié·e ≠ convoqué·e.** Être « convié·e » ou « invité·e », c’est recevoir une invitation : elle n’oblige à rien. Une **convocation** est une instruction de service ; elle doit se rattacher à vos obligations de service. Aucun texte ne définit ces deux mots : demandez toujours lequel s’applique."
-      - "Votre service = des heures d’enseignement **hebdomadaires** + des **missions liées** (décret n° 2014-940, art. 2). Celles-ci ne se comptent pas en heures."
-      - "La circulaire n° 2015-057 cite parmi les missions liées : les réunions d’équipes pédagogiques (**conseils d’enseignement, conseils de classe**), la participation à des **dispositifs d’évaluation**, les **échanges avec les familles, notamment les réunions parents-professeurs**, et les heures de vie de classe."
+      - "**Convié·e ≠ convoqué·e.** Une invitation n’oblige à rien. Une **convocation** est une instruction de service, qui doit se rattacher à vos obligations de service. Aucun texte ne définit ces deux mots : demandez toujours lequel s’applique."
+      - "**Dans le cadre du service**, le chef d’établissement peut convoquer : il « a autorité sur l’ensemble des personnels » et « fixe le service des personnels dans le respect du statut » (art. R.421-10). La circulaire n° 2015-057 range dans les missions liées les **conseils de classe et d’enseignement**, les dispositifs d’évaluation, les **réunions parents-professeurs** et les heures de vie de classe. **Au-delà, il ne peut pas créer d’obligation.**"
+      - "**Examens (DNB)** : ils relèvent du **recteur**, qui préside le jury ou y délègue le DASEN et en nomme les membres (art. D.332-19). Le chef d’établissement vous convoque alors comme **chef de centre** ; la convocation doit être **nominative**. Participer aux jurys d’examen est une « charge normale d’emploi » (art. D.911-31)."
     textes:
-      - "Les équipes pédagogiques « sont réunies sous la présidence du chef d’établissement » (art. R.421-49). Le SNES-FSU Lille en déduit qu’un conseil d’enseignement n’engage que s’il est présidé par la direction et porte sur la coordination entre enseignant·es."
-      - "**Conseil pédagogique, conseil école-collège, conseil de cycle 3** : la direction peut désigner des membres (art. R.421-41-1 et R.421-41-3), mais ces instances **ne figurent pas** parmi les missions liées énumérées par la circulaire n° 2015-057. Être désigné·e ne rend donc pas la présence obligatoire. Les équipes ont 15 jours après la rentrée pour proposer des volontaires."
-      - "**Journée de solidarité** : 2 demi-journées de concertation sur le projet d’établissement, à une date fixée après consultation des équipes et annoncée en CA (selon le SNES-FSU Lille : arrêté du 4 novembre 2005, note de service n° 2005-182)."
-      - "**Journée banalisée** : elle touche à l’organisation du temps scolaire, qui relève de l’autonomie de l’établissement et donc du CA (art. R.421-2)."
+      - "Les équipes pédagogiques « sont réunies sous la présidence du chef d’établissement » (art. R.421-49). Pour le SNES-FSU Lille, un conseil d’enseignement n’engage que s’il est présidé par la direction et porte sur la coordination entre enseignant·es."
+      - "**Conseil pédagogique, conseil école-collège, conseil de cycle 3** : la direction peut désigner des membres (art. R.421-41-1 et R.421-41-3), mais ces instances **ne figurent pas** parmi les missions liées de la circulaire n° 2015-057. Être désigné·e ne rend pas la présence obligatoire."
+      - "Surveillance d’examen : obligatoire « dès lors qu’il y a une convocation » ; une dispense ne peut être demandée qu’au recteur, sous couvert du chef d’établissement (vade-mecum examens du SNES-FSU). Les **épreuves « blanches »** ne sont pas des examens : voir la fiche « Devoirs communs, brevets blancs »."
+      - "Journée de solidarité, demi-journées académiques et demi-journées banalisées : voir la fiche dédiée."
     agir:
       - "Pour toute réunion hors de ce cadre (réunion du soir, visio, « temps de concertation », auto-évaluation) : demandez par écrit s’il s’agit d’une convocation, et sur quel texte elle repose."
-      - "En cas de doute, contactez la section avant de refuser : nous vérifions avec vous le fondement de la convocation."
+      - "Pas de surveillance ni de jury d’examen sans convocation nominative écrite."
     source:
-      - { doc: decret_ors, ref: "art. 2" }
+      - { doc: code_education, ref: "art. R.421-10, R.421-41-1, R.421-49, D.332-19, D.911-31" }
       - { doc: circ_ors, ref: "II" }
-      - { doc: code_education, ref: "art. R.421-2, R.421-41-1, R.421-49" }
+      - { doc: vademecum_examens, ref: "« Pendant les épreuves »" }
+      - { doc: reunions, pages: "1" }
+
+  - id: demi-journees-banalisees
+    titre: "Demi-journées banalisées, journée de solidarité, journées académiques : qui doit venir ?"
+    resume: "Trois cas différents. Ce qui compte : le texte qui les fonde, et si vous aviez cours à ce moment-là."
+    en_bref:
+      - "**Journée de solidarité** : une journée, éventuellement en deux demi-journées, « **hors temps scolaire** », consacrée à la concertation sur le projet d’établissement, le contrat d’objectifs et l’orientation. Sa date est fixée par le chef d’établissement « **après consultation des équipes pédagogiques** » (arrêté du 4 novembre 2005)."
+      - "**Demi-journées académiques** : jusqu’à deux demi-journées (ou un horaire équivalent) « **prises en dehors des heures de cours** », pour « des temps de réflexion et de formation sur des sujets proposés par les autorités académiques » (arrêté du 22 octobre 2025, calendrier 2026-2027)."
+      - "**Demi-journée banalisée** : les cours sont suspendus pour un temps de travail commun. Elle touche à « l’organisation du temps scolaire », qui relève de l’autonomie de l’établissement, donc d’une **décision du conseil d’administration** (art. R.421-2 et R.421-20)."
+    textes:
+      - "**Vous aviez cours à ce moment-là** : vous êtes en service. Le temps commun remplace vos heures de cours ; il n’y a rien à « rattraper »."
+      - "**Vous n’aviez pas cours à ce moment-là** : pour le SNES-FSU Lille, une demi-journée banalisée se déroule « suivant notre emploi du temps ». Aucun texte ne vous oblige à venir sur un créneau où vous n’avez pas de service. La journée de solidarité et les demi-journées académiques, elles, sont prévues **hors des heures de cours** : elles s’imposent indépendamment de votre emploi du temps."
+      - "Selon le SNES-FSU Lille, la date de la journée de solidarité doit être fixée avant la fin du premier trimestre et annoncée en CA (note de service n° 2005-182), et les demi-journées académiques supposent une **instruction écrite du recteur**."
+    agir:
+      - "Demi-journée banalisée annoncée : demandez si le CA l’a votée."
+      - "Journée de solidarité : vérifiez que les équipes ont été consultées sur la date."
+      - "Demi-journée « académique » : demandez l’instruction écrite du recteur et le sujet proposé."
+    source:
+      - { doc: arrete_solidarite, ref: "art. 1" }
+      - { doc: calendrier, ref: "dispositions relatives aux enseignants" }
+      - { doc: code_education, ref: "art. R.421-2, R.421-20" }
       - { doc: reunions, pages: "1" }
 
   - id: heure-de-vie-de-classe

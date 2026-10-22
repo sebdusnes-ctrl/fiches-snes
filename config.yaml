@@ -104,6 +104,18 @@ sources:
     titre: "Circulaire n° 2018-108 du 10 octobre 2018 (rôle du professeur principal)"
     detail: "BO n° 37 du 11 octobre 2018"
     url: "https://www.education.gouv.fr/bo/18/Hebdo33/MENE1823888C.htm"
+  arrete_solidarite:
+    titre: "Arrêté du 4 novembre 2005 fixant la journée de solidarité (éducation nationale)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000451367"
+  calendrier:
+    titre: "Arrêté du 22 octobre 2025 fixant le calendrier scolaire 2026-2027"
+    detail: "Légifrance"
+    url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052416058"
+  vademecum_examens:
+    titre: "Vade-mecum examens du SNES-FSU"
+    detail: "snes.edu, 2024"
+    url: "https://www.snes.edu/wp-content/uploads/2024/04/Vademecum-examens-2024.pdf"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"

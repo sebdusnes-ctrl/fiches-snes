@@ -73,7 +73,13 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | reunions-obligatoires | Missions liées : réunions d'équipes (conseils de classe, d'enseignement), dispositifs d'évaluation, **réunions parents-professeurs**, HVC | décret 2014-940 art. 2-II, circ. 2015-057 II | 🔧 (réunions parents-profs manquaient) |
 | | Convoqué/convié : aucun texte ne définit ces termes | — | 🔧 (présenté comme tel) |
 | | Conseil pédagogique, CEC, conseil de cycle 3 : la direction peut désigner, mais ces instances ne figurent pas dans la liste des missions liées → présence non obligatoire | R.421-41-1, R.421-41-3, circ. 2015-057 II | 🔧 |
-| | Journée de solidarité, demi-journées rectorales | arrêtés cités par le SNES Lille | ⏳ |
+| | Convocation : le chef « a autorité sur l'ensemble des personnels » et « fixe le service […] dans le respect du statut » → peut convoquer dans le cadre du service, pas au-delà | R.421-10 | ✅ 🔧 (ajouté) |
+| | Examens : DNB sous l'autorité du recteur (jury) ; chef de centre ; convocation nominative ; jurys = « charge normale d'emploi » | D.332-19, D.911-31 ; vade-mecum examens SNES | ✅ 🔧 |
+| demi-journees-banalisees (nouvelle) | Journée de solidarité « hors temps scolaire », date fixée après consultation des équipes | arrêté du 4/11/2005 art. 1 | ✅ |
+| | Demi-journées académiques « prises en dehors des heures de cours » | arrêté du 22/10/2025 (calendrier 2026-2027) | ✅ |
+| | Demi-journée banalisée : organisation du temps scolaire → CA | R.421-2, R.421-20 | ✅ |
+| | Banalisée hors de son emploi du temps : pas d'obligation de venir | lecture SNES Lille | 🟡 |
+| | Date de la solidarité avant fin du 1er trimestre, annonce en CA (NS 2005-182) ; instruction écrite du recteur | cités par le SNES Lille | ⏳ |
 | heure-de-vie-de-classe | **Au moins 10 h annuelles de vie de classe par niveau** dues aux élèves | arrêté du 19 mai 2015 (annexes, version en vigueur) | ✅ 🔧 (ajouté) |
 | | PP désigné « avec l'accord des intéressés » | code de l'éducation D.421-49-1 (2025) ; circ. 2018-108 | ✅ 🔧 (ajouté ; ce n'est pas le décret 93-55) |
 | | Le PP « **peut être conduit à** organiser et animer » les HVC, avec le CPE et la direction : pas une obligation | circ. 2018-108, 1.3 | 🔧 (remplace la note 99-073, qui vise le lycée) |
