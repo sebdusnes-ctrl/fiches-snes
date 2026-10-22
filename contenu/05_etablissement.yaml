@@ -15,13 +15,13 @@ fiches:
     textes:
       - "Décret n° 2014-940, art. 2-II : les missions liées comprennent « le travail au sein d’équipes pédagogiques constituées d’enseignants ayant en charge les mêmes classes ou groupes d’élèves »."
       - "Art. R.421-51 : le conseil examine le suivi des acquis et la scolarité de chaque élève. Le ou la **professeur·e principal·e, ou un représentant de l’équipe pédagogique**, expose les résultats : le texte ne suppose pas que chaque enseignant·e présente lui-même ses élèves."
-      - "Lecture du SNES-FSU : participer peut prendre la forme d’une **contribution écrite** (appréciations, observations transmises) quand la présence est impossible (nombre de classes, contraintes familiales)."
+      - "Participer passe d’abord par vos **appréciations au livret scolaire**, par lequel les parents sont informés (art. D.111-3). C’est la direction qui a l’obligation de réunir le conseil ; votre obligation est d’y contribuer, pas d’y être physiquement présent·e."
     agir:
       - "Si l’on vous parle de « présence obligatoire », demandez le texte : les textes disent « participation »."
       - "Absent·e, transmettez vos appréciations et observations par écrit au ou à la professeur·e principal·e, et gardez une trace de cet envoi."
       - "Le conseil peut être un vrai moment d’échange entre collègues, pas une simple chambre d’enregistrement."
     source:
-      - { doc: code_education, ref: "art. R.421-50 et R.421-51" }
+      - { doc: code_education, ref: "art. R.421-50, R.421-51, D.111-3" }
       - { doc: decret_ors, ref: "art. 2" }
       - { doc: circ_ors, ref: "II" }
       - { doc: abecedaire, pages: "9" }

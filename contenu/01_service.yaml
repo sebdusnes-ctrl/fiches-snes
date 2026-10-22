@@ -10,7 +10,7 @@ fiches:
     resume: "Une demande n’est pas un ordre ; une convocation n’oblige que dans le cadre de votre service. Écrit, report, accompagnement : vos droits."
     en_bref:
       - "**Une demande, une invitation, un « passez me voir » ne sont pas des convocations.** Vous pouvez décliner, ou proposer un autre moment."
-      - "**Une convocation n’oblige que si elle relève de votre service** : vos heures d’enseignement et les missions liées (conseils de classe et d’enseignement, réunions parents-professeurs…) (décret n° 2014-940, art. 2 ; circulaire n° 2015-057). Le chef d’établissement « fixe le service des personnels **dans le respect du statut** » (art. R.421-10) : il ne peut pas en ajouter."
+      - "**Une convocation n’oblige que si elle relève de votre service** (décret n° 2014-940, art. 2) : le chef d’établissement « fixe le service des personnels **dans le respect du statut** » (art. R.421-10) et ne peut pas en ajouter. Et même dans ce cadre, les textes imposent souvent une **participation**, pas une **présence** : conseils de classe et rencontres avec les parents (fiche « Réunions »)."
       - "**Un ordre de mission ne crée aucune obligation de service.** Il concerne un « agent en service » qui se déplace « pour l’exécution du service, hors de sa résidence administrative et hors de sa résidence familiale » (décret n° 2006-781, art. 2) : il règle le déplacement, les frais et la couverture en cas d’accident. Dans votre propre établissement, il n’a pas lieu d’être."
     textes:
       - "**Refuser** : vous devez vous conformer aux instructions de votre supérieur, sauf ordre manifestement illégal (CGFP, art. L.121-10). Mais une instruction doit rester dans le cadre de votre service : hors de ce cadre, demandez le texte qui fonde l’obligation. Sans texte, pas d’obligation."
@@ -128,24 +128,39 @@ fiches:
 
   - id: reunions-obligatoires
     titre: "Réunions : convoqué·e ou convié·e ? Obligatoire ou non ?"
-    resume: "Une invitation n’oblige à rien. Une convocation doit reposer sur vos obligations de service. Les examens relèvent du recteur."
+    resume: "Une invitation n’oblige à rien. Une convocation doit reposer sur vos obligations de service. Participer n’est pas être présent."
     en_bref:
       - "**Convié·e ≠ convoqué·e.** Une invitation n’oblige à rien. Une **convocation** est une instruction de service, qui doit se rattacher à vos obligations de service. Aucun texte ne définit ces deux mots : demandez toujours lequel s’applique."
-      - "**Dans le cadre du service**, le chef d’établissement peut convoquer : il « a autorité sur l’ensemble des personnels » et « fixe le service des personnels dans le respect du statut » (art. R.421-10). La circulaire n° 2015-057 range dans les missions liées les **conseils de classe et d’enseignement**, les dispositifs d’évaluation, les **réunions parents-professeurs** et les heures de vie de classe. **Au-delà, il ne peut pas créer d’obligation.**"
-      - "**Examens (DNB)** : ils relèvent du **recteur**, qui préside le jury ou y délègue le DASEN et en nomme les membres (art. D.332-19). Le chef d’établissement vous convoque alors comme **chef de centre** ; la convocation doit être **nominative**. Participer aux jurys d’examen est une « charge normale d’emploi » (art. D.911-31)."
+      - "**Dans le cadre du service**, le chef d’établissement peut convoquer : il « a autorité sur l’ensemble des personnels » et « fixe le service des personnels dans le respect du statut » (art. R.421-10). **Au-delà, il ne peut pas créer d’obligation.** Mais « participer » n’est pas « être présent » : voir ci-dessous."
     textes:
+      - "**Conseils de classe** : la direction doit les réunir au moins trois fois par an (art. R.421-51). Vous devez y **participer** (circulaire n° 2015-057), notamment par vos appréciations au livret scolaire (art. D.111-3). Aucun texte n’impose la présence."
+      - "**Parents** : c’est la direction qui organise au moins deux rencontres par an et par classe, « qui peut prendre différentes formes » (art. D.111-2). Les enseignant·es veillent à ce « qu’une réponse soit donnée aux demandes d’information et d’entrevues présentées par les parents » ; « toute réponse négative doit être motivée » (art. D.111-4). La circulaire n° 2015-057 cite « notamment les réunions parents-professeurs » parmi les échanges avec les familles, sans en faire une obligation de présence : la réunion est un moyen de répondre, pas le seul."
       - "Les équipes pédagogiques « sont réunies sous la présidence du chef d’établissement » (art. R.421-49). Pour le SNES-FSU Lille, un conseil d’enseignement n’engage que s’il est présidé par la direction et porte sur la coordination entre enseignant·es."
-      - "**Conseil pédagogique, conseil école-collège, conseil de cycle 3** : la direction peut désigner des membres (art. R.421-41-1 et R.421-41-3), mais ces instances **ne figurent pas** parmi les missions liées de la circulaire n° 2015-057. Être désigné·e ne rend pas la présence obligatoire."
-      - "Surveillance d’examen : obligatoire « dès lors qu’il y a une convocation » ; une dispense ne peut être demandée qu’au recteur, sous couvert du chef d’établissement (vade-mecum examens du SNES-FSU). Les **épreuves « blanches »** ne sont pas des examens : voir la fiche « Devoirs communs, brevets blancs »."
-      - "Journée de solidarité, demi-journées académiques et demi-journées banalisées : voir la fiche dédiée."
+      - "**Conseil pédagogique, conseil école-collège, conseil de cycle 3** : la direction peut désigner des membres (art. R.421-41-1), mais ces instances ne figurent pas parmi les missions liées (circulaire n° 2015-057) : être désigné·e ne rend pas la présence obligatoire."
     agir:
       - "Pour toute réunion hors de ce cadre (réunion du soir, visio, « temps de concertation », auto-évaluation) : demandez par écrit s’il s’agit d’une convocation, et sur quel texte elle repose."
-      - "Pas de surveillance ni de jury d’examen sans convocation nominative écrite."
     source:
-      - { doc: code_education, ref: "art. R.421-10, R.421-41-1, R.421-49, D.332-19, D.911-31" }
+      - { doc: code_education, ref: "art. R.421-10, R.421-41-1, R.421-49, R.421-51, D.111-2 à D.111-4" }
       - { doc: circ_ors, ref: "II" }
-      - { doc: vademecum_examens, ref: "« Pendant les épreuves »" }
       - { doc: reunions, pages: "1" }
+
+  - id: examens-dnb
+    titre: "Examens (DNB) : surveillance, jury, convocation"
+    resume: "Obligatoires sur convocation nominative du chef de centre, sous l’autorité du recteur. Les épreuves « blanches » ne sont pas des examens."
+    en_bref:
+      - "Le DNB relève du **recteur** : le jury est « présidé par le recteur d’académie ou par le directeur académique des services de l’éducation nationale », qui en nomme les membres (art. D.332-19)."
+      - "Participer aux jurys des examens est une « **charge normale d’emploi** » pour les personnels qualifiés (art. D.911-31)."
+      - "Le chef d’établissement vous convoque alors **en tant que chef de centre**. La convocation doit être **écrite et nominative** : sans elle, pas de surveillance ni de jury (vade-mecum examens du SNES-FSU)."
+    textes:
+      - "Surveillance : obligatoire « dès lors qu’il y a une convocation ». Le chef de centre établit le planning en respectant en principe votre emploi du temps habituel, sans y être tenu. Vous ne surveillez pas vos propres élèves de l’année (vade-mecum)."
+      - "Dispense : à demander au recteur, sous couvert du chef d’établissement ; elle n’est accordée qu’à titre exceptionnel (vade-mecum)."
+      - "Les **épreuves « blanches »** (brevet blanc, oral blanc) ne sont pas des examens : voir la fiche « Devoirs communs, brevets blancs »."
+    agir:
+      - "Pas de surveillance ni de jury sans convocation nominative écrite ; gardez-la : elle vous couvre en cas d’accident."
+      - "Heures de surveillance au-delà de votre maximum de service dans la semaine : signalez-le à la section."
+    source:
+      - { doc: code_education, ref: "art. D.332-19, D.911-31" }
+      - { doc: vademecum_examens, ref: "« Est-ce une obligation ? », « Pendant les épreuves »" }
 
   - id: demi-journees-banalisees
     titre: "Demi-journées banalisées, journée de solidarité, journées académiques : qui doit venir ?"

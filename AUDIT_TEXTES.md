@@ -75,6 +75,10 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Conseil pédagogique, CEC, conseil de cycle 3 : la direction peut désigner, mais ces instances ne figurent pas dans la liste des missions liées → présence non obligatoire | R.421-41-1, R.421-41-3, circ. 2015-057 II | 🔧 |
 | | Convocation : le chef « a autorité sur l'ensemble des personnels » et « fixe le service […] dans le respect du statut » → peut convoquer dans le cadre du service, pas au-delà | R.421-10 | ✅ 🔧 (ajouté) |
 | | Examens : DNB sous l'autorité du recteur (jury) ; chef de centre ; convocation nominative ; jurys = « charge normale d'emploi » | D.332-19, D.911-31 ; vade-mecum examens SNES | ✅ 🔧 |
+| reunions / suis-je-oblige / conseil-de-classe | Conseil de classe : la direction le réunit (R.421-51) ; l'enseignant y **participe** (circ. 2015-057), notamment par le livret scolaire (D.111-3) ; présence non imposée par les textes | R.421-51, D.111-3, circ. 2015-057 | 🔧 (la fiche « suis-je obligé » laissait entendre une présence obligatoire) |
+| | Parents : la direction organise ≥ 2 rencontres/an/classe, « qui peut prendre différentes formes » ; les enseignants veillent à ce qu'une réponse soit donnée aux demandes, toute réponse négative motivée | D.111-2, D.111-4 | ✅ 🔧 |
+| | Circ. 2015-057 cite « notamment les réunions parents-professeurs » parmi les échanges avec les familles, sans obligation de présence | circ. 2015-057 II | ✅ (cité tel quel) |
+| examens-dnb (nouvelle, issue de « Réunions ») | DNB sous l'autorité du recteur ; jurys = charge normale d'emploi ; convocation nominative du chef de centre | D.332-19, D.911-31 ; vade-mecum SNES | ✅ |
 | suis-je-oblige (nouvelle, « À lire en priorité ») | Demande ≠ convocation ; convocation dans le cadre du service seulement | R.421-10, décret 2014-940 art. 2, circ. 2015-057 | ✅ |
 | | Ordre de mission : agent **en service** se déplaçant hors de ses résidences administrative et familiale ; ne crée pas d'obligation | décret 2006-781 art. 2 | ✅ |
 | | Refus : se conformer sauf ordre manifestement illégal ; instruction dans le cadre du service | CGFP L.121-10 | ✅ |
