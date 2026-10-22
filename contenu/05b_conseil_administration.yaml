@@ -148,6 +148,26 @@ fiches:
       - "Faites préciser dans le RI la composition, les délais de convocation et les compétences de la commission éducative."
     source: { doc: agir_ca, pages: "11, 23" }
 
+  - id: sanctions-et-sursis
+    titre: "Sanctions disciplinaires et sursis"
+    resume: "Les six sanctions possibles, qui les prononce, et les règles du sursis, exclusion définitive comprise."
+    en_bref:
+      - "Six sanctions seulement : **avertissement**, **blâme**, **mesure de responsabilisation** (20 h au plus, hors des heures de cours), **exclusion temporaire de la classe** et **exclusion temporaire de l’établissement** (8 jours au plus chacune), **exclusion définitive** (art. R.511-13). Elles doivent figurer dans le règlement intérieur."
+      - "Seul le **conseil de discipline** peut prononcer une **exclusion définitive**, et seul lui peut lever le sursis qui l’accompagne."
+      - "Toutes les sanctions, **sauf l’avertissement et le blâme**, peuvent être assorties d’un **sursis** total ou partiel."
+    textes:
+      - "**Durée du sursis** (art. R.511-13-1) : fixée au moment de la sanction, elle va **au minimum jusqu’à la fin de l’année scolaire en cours**, et au maximum jusqu’à la fin de la durée d’inscription de la sanction au dossier de l’élève."
+      - "**Exclusion définitive avec sursis** : la période pendant laquelle le sursis peut être levé **ne peut pas dépasser la fin de la deuxième année scolaire suivant** la sanction. Une décision qui ne fixe aucune durée est irrégulière."
+      - "**Effacement du dossier** (art. R.511-13, IV) : avertissement, à la fin de l’année scolaire ; blâme et mesure de responsabilisation, à la fin de l’année scolaire suivante ; autres sanctions (sauf exclusion définitive), à la fin de la 2e année scolaire suivante. Exclusion définitive avec sursis non exécutée : effacée au terme du sursis. Tout est effacé à la fin de la scolarité dans le second degré."
+      - "**Levée du sursis** : en cas de nouveaux faits justifiant une sanction de niveau égal ou supérieur, l’autorité disciplinaire peut lever le sursis, seul ou avec une nouvelle sanction. Les deux exclusions cumulées ne peuvent pas dépasser 8 jours. Une simple punition ne peut jamais faire lever un sursis."
+      - "**Mesure alternative** : une exclusion peut être remplacée par une mesure de responsabilisation, si l’élève s’y engage par écrit. S’il la respecte, seule celle-ci figure au dossier."
+    agir:
+      - "En conseil de discipline, vérifiez que la décision de sursis **fixe bien sa durée**, et qu’elle respecte le minimum et le maximum."
+      - "Le chef d’établissement doit informer l’élève (et ses représentants légaux) de ce qu’entraînerait un nouveau manquement : demandez que ce soit fait."
+    source:
+      - { doc: code_education, ref: "art. R.511-13 et R.511-13-1" }
+      - { doc: eduscol_sursis, ref: "fiche n° 2" }
+
   - id: projet-etablissement
     titre: "Projet d’établissement, contrat d’objectifs, auto-évaluation"
     resume: "Le CA adopte ou rejette. Rien ne vous oblige à participer à l’auto-évaluation."

@@ -48,6 +48,14 @@ sources:
     titre: "Publications du SNES-FSU Lille"
     detail: "Bulletin académique et fiches de la section académique"
     url: "https://lille.snes.edu/"
+  code_education:
+    titre: "Code de l’éducation"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016607"
+  eduscol_sursis:
+    titre: "Ressource sur les sanctions disciplinaires, fiche n° 2 : le sursis"
+    detail: "Éduscol, 2023"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/2-le-sursis-90366.pdf"
   reunions:
     titre: "Les réunions obligatoires… et celles qui ne le sont pas"
     detail: "SNES-FSU Lille, 2025-2026"
