@@ -84,6 +84,8 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Refus : se conformer sauf ordre manifestement illégal ; instruction dans le cadre du service | CGFP L.121-10 | ✅ |
 | | Report : aucun texte pour un simple entretien ; contractuels : 5 jours ouvrables, objet indiqué | décret 86-83 art. 47 | ✅ |
 | | Accompagnement : droit en discipline (L.532-4 ; 86-83 art. 44), entretien préalable au licenciement (art. 47), rupture conventionnelle ; simple entretien : ni garanti ni interdit | CGFP, décret 86-83 | ✅ |
+| | Accompagnement à un simple entretien : rien ne l'interdit (DDHC art. 5) ; représentant extérieur : prévenir ≥ 24 h (règle des réunions syndicales appliquée par analogie) | DDHC art. 5 ; CGFP R.213-36 | ✅ 🟡 (analogie signalée) |
+| heure-information-syndicale | Représentant syndical extérieur mandaté : libre accès, administration informée ≥ 24 h avant | CGFP R.213-36 | ✅ 🔧 (ajouté) |
 | demi-journees-banalisees (nouvelle) | Journée de solidarité « hors temps scolaire », date fixée après consultation des équipes | arrêté du 4/11/2005 art. 1 | ✅ |
 | | Demi-journées académiques « prises en dehors des heures de cours » | arrêté du 22/10/2025 (calendrier 2026-2027) | ✅ |
 | | Demi-journée banalisée : organisation du temps scolaire → CA | R.421-2, R.421-20 | ✅ |

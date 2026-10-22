@@ -14,6 +14,7 @@ fiches:
       - "**Enseignant·es** : vous devez **prévenir le chef d’établissement au moins 48 heures avant** si vous souhaitez y participer (même circulaire). CPE, documentalistes, AED, personnels administratifs : droit commun, une heure par mois."
     textes:
       - "La réunion ne doit pas entraîner la fermeture de l’établissement : l’accueil et la surveillance des élèves restent assurés (circulaire n° 2014-120)."
+      - "Un·e **représentant·e syndical·e extérieur·e** à l’établissement, mandaté·e par le syndicat, peut animer la réunion : la direction doit être informée de sa venue **au moins 24 heures avant** (CGFP, art. R.213-36)."
       - "**Avant les élections professionnelles** (six semaines avant le scrutin), chaque agent peut assister en plus à une réunion d’information spéciale d’une heure (CGFP, art. R.215-14)."
       - "Selon le SNES-FSU, l’ordre du jour de la réunion n’a pas à être communiqué à la direction."
     agir:
@@ -22,7 +23,7 @@ fiches:
     liens:
       - { libelle: "Le droit syndical dans l’établissement", url: "https://www.snes.edu/agissons/outils/le-droit-syndical-dans-l-etablissement" }
     source:
-      - { doc: cgfp, ref: "art. R.215-12 à R.215-14" }
+      - { doc: cgfp, ref: "art. R.213-36, R.215-12 à R.215-14" }
       - { doc: circ_his, ref: "2.1 et 2.2" }
 
   - id: stage-syndical

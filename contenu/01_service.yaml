@@ -11,19 +11,18 @@ fiches:
     en_bref:
       - "**Une demande, une invitation, un « passez me voir » ne sont pas des convocations.** Vous pouvez décliner, ou proposer un autre moment."
       - "**Une convocation n’oblige que si elle relève de votre service** (décret n° 2014-940, art. 2) : le chef d’établissement « fixe le service des personnels **dans le respect du statut** » (art. R.421-10) et ne peut pas en ajouter. Et même dans ce cadre, les textes imposent souvent une **participation**, pas une **présence** : conseils de classe et rencontres avec les parents (fiche « Réunions »)."
-      - "**Un ordre de mission ne crée aucune obligation de service.** Il concerne un « agent en service » qui se déplace « pour l’exécution du service, hors de sa résidence administrative et hors de sa résidence familiale » (décret n° 2006-781, art. 2) : il règle le déplacement, les frais et la couverture en cas d’accident. Dans votre propre établissement, il n’a pas lieu d’être."
+      - "**Un ordre de mission ne crée aucune obligation de service.** Il concerne un « agent en service » qui se déplace « pour l’exécution du service, hors de sa résidence administrative et hors de sa résidence familiale » (décret n° 2006-781, art. 2) : il règle déplacement, frais et couverture en cas d’accident. Dans votre établissement, il n’a pas lieu d’être."
     textes:
-      - "**Refuser** : vous devez vous conformer aux instructions de votre supérieur, sauf ordre manifestement illégal (CGFP, art. L.121-10). Mais une instruction doit rester dans le cadre de votre service : hors de ce cadre, demandez le texte qui fonde l’obligation. Sans texte, pas d’obligation."
+      - "**Refuser** : vous devez vous conformer aux instructions, sauf ordre manifestement illégal (CGFP, art. L.121-10), mais une instruction doit rester dans le cadre de votre service. Hors de ce cadre, demandez le texte qui fonde l’obligation : sans texte, pas d’obligation."
       - "**Reporter** : aucun texte ne fixe de délai pour un simple entretien ; vous pouvez demander une autre date, par exemple pour venir accompagné·e. Contractuel·les : l’entretien préalable au licenciement a lieu au moins **5 jours ouvrables** après la convocation, qui en indique l’objet (décret n° 86-83, art. 47)."
-      - "**Être accompagné·e** : c’est un **droit** dans une procédure disciplinaire (« défenseurs de son choix » : CGFP, art. L.532-4 ; décret n° 86-83, art. 44), à l’entretien préalable au licenciement d’un·e contractuel·le (« la ou les personnes de son choix », art. 47) et lors d’une rupture conventionnelle (conseiller syndical). Pour un simple entretien, **aucun texte ne l’interdit** : « tout ce qui n’est pas défendu par la loi ne peut être empêché » (Déclaration de 1789, art. 5). Venez avec un·e collègue ou un·e représentant·e syndical·e, de l’établissement ou extérieur. En cas de refus, demandez-le par écrit et ne poursuivez pas l’entretien seul·e."
+      - "**Être accompagné·e** : c’est un **droit** dans une procédure disciplinaire (« défenseurs de son choix » : CGFP, art. L.532-4 ; décret n° 86-83, art. 44), à l’entretien préalable au licenciement d’un·e contractuel·le (« la ou les personnes de son choix », art. 47) et en rupture conventionnelle. Pour un simple entretien, **aucun texte ne l’interdit** : « tout ce qui n’est pas défendu par la loi ne peut être empêché » (Déclaration de 1789, art. 5). Venez avec un·e collègue ou un·e représentant·e syndical·e, de l’établissement ou extérieur ; pour un·e représentant·e extérieur·e, **prévenez la direction par écrit au moins 24 h avant** (règle des réunions syndicales, CGFP art. R.213-36). En cas de refus, demandez-le par écrit et ne poursuivez pas l’entretien seul·e."
     agir:
       - "Demandez **toujours par écrit** l’objet et le fondement : « S’agit-il d’une convocation ? Sur quel texte repose-t-elle ? »"
       - "Avant de refuser une convocation, contactez la section : elle vérifie avec vous et peut vous accompagner. Après un entretien, envoyez un courriel récapitulatif."
     source:
       - { doc: code_education, ref: "art. R.421-10" }
       - { doc: decret_ors, ref: "art. 2" }
-      - { doc: circ_ors, ref: "II" }
-      - { doc: cgfp, ref: "art. L.121-10, L.532-4" }
+      - { doc: cgfp, ref: "art. L.121-10, L.532-4, R.213-36" }
       - { doc: decret_86_83, ref: "art. 44 et 47" }
       - { doc: decret_deplacements, ref: "art. 2" }
       - { doc: ddhc, ref: "art. 5" }
