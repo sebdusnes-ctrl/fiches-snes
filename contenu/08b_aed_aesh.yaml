@@ -1,0 +1,128 @@
+theme:
+  id: aed-aesh
+  titre: "AED et AESH"
+  description: "Contrats, missions, emploi du temps, ce qu’on ne peut pas vous imposer."
+  couleur: "#f78513"
+
+fiches:
+  - id: aed-contrat
+    titre: "AED : contrat, temps de travail, rémunération"
+    resume: "CDD voté en CA, 1 607 h annuelles, 200 h de crédit formation, CDI après six ans."
+    en_bref:
+      - "Les assistant·es d’éducation (AED) sont recruté·es en **CDD par le ou la chef·fe d’établissement**, après **vote du CA** sur le recrutement et les termes du contrat. Le CDD dure 3 ans au plus, renouvelable dans la limite de 6 ans."
+      - "**Temps plein : 1 607 heures par an**, réparties sur 39 à 45 semaines au plus. Un contrat plus court que l’année scolaire doit rester rarissime et justifié."
+      - "**Crédit de formation : 200 heures** pour un temps plein, à déduire du temps de travail (AED en CDD uniquement)."
+    textes:
+      - "Décret n° 2003-484 du 6 juin 2003, modifié notamment par le décret n° 2022-1140 du 9 août 2022."
+      - "**Après six ans de CDD, un CDI** peut être signé avec le recteur ou la rectrice."
+      - "Rémunération : indice 366 au minimum en CDD, 375 en CDI, sans grille nationale ni progression garantie. Les AED touchent l’indemnité REP ou REP+, au prorata du temps passé dans l’établissement."
+      - "Licenciement après la période d’essai ou sanction disciplinaire (sauf avertissement et blâme) : la **commission consultative paritaire** (CCP), où siègent des élu·es AED et AESH, doit être consultée."
+      - "Comme tous les personnels : une heure d’information syndicale par mois sur le temps de travail, 12 jours de formation syndicale par an."
+    agir:
+      - "En CA, le recrutement des AED doit être voté : c’est l’occasion d’améliorer le contrat (crédit d’heures de formation effectivement accordé, congés pour examens et concours)."
+      - "Une menace, même implicite, de non-renouvellement du contrat pour obtenir quelque chose : alertez immédiatement la section."
+    snes: "Le SNES-FSU exige le CDI de droit pour tous les AED qui le souhaitent et une grille de rémunération nationale."
+    liens:
+      - { libelle: "AED : le dossier du SNES-FSU", url: "https://www.snes.edu/metiers/aed/" }
+    source:
+      - { doc: abecedaire, pages: "4, 20" }
+      - { doc: agir_ca, pages: "18" }
+      - { doc: aesh, pages: "4" }
+
+  - id: aed-missions
+    titre: "AED : vos missions, et rien que vos missions"
+    resume: "Six missions fixées par décret, et celles inscrites dans votre contrat. Un emploi du temps ne change pas au pied levé."
+    en_bref:
+      - "Le décret de 2003 fixe **six missions** : encadrement et surveillance des élèves (internat compris, et hors de l’établissement pour des activités qui l’exigent) ; appui aux enseignant·es pour le soutien et l’accompagnement ; accompagnement aux usages du numérique ; activités éducatives, sportives, sociales, artistiques ou culturelles ; aide aux devoirs ; actions de prévention et de sécurité."
+      - "Votre **contrat** précise vos fonctions et les établissements ou écoles où vous exercez : **ce qui n’y figure pas ne peut pas vous être demandé**."
+      - "Votre **emploi du temps** vous est communiqué avant la prise de poste. Une modification doit intervenir **dans un délai raisonnable, par écrit**, et tenir compte autant que possible de vos contraintes personnelles."
+    textes:
+      - "Décret n° 2003-484 du 6 juin 2003 ; cadre de gestion ministériel des AED du 17 septembre 2025."
+      - "En cas de difficultés graves, le chef d’établissement peut interdire l’accès aux locaux ou suspendre des activités (art. R.421-12 du code de l’éducation). **Rien ne lui permet de réquisitionner des AED** ou de leur demander d’aller au-delà de leurs missions."
+      - "Les missions de vigile ou de service d’ordre ne font pas partie des missions des AED."
+    agir:
+      - "Une injonction de dernière minute à venir à d’autres horaires : demandez une modification écrite de l’emploi du temps."
+      - "Mission ou lieu d’exercice absent de votre contrat : vous pouvez refuser. Contactez la section."
+    source: { doc: aed, ref: "4 pages" }
+
+  - id: aed-limites
+    titre: "AED : vidéosurveillance, mobilisations, grève à l’internat"
+    resume: "Visionner les caméras, ficher des élèves, filmer avec votre téléphone : non. La grève à l’internat : mode d’emploi."
+    en_bref:
+      - "**Vidéoprotection** : seules les personnes désignées par l’**arrêté préfectoral** d’autorisation peuvent visionner les images. L’ordre d’un·e chef·fe d’établissement ne suffit pas."
+      - "**Mobilisations d’élèves** : votre rôle est éducatif, pas policier. Vous n’avez pas à dresser la liste des élèves mobilisé·es ni à rechercher les responsables d’un blocage."
+      - "On ne peut pas vous imposer d’utiliser **votre téléphone personnel** pour filmer ou photographier des élèves ou d’autres mineurs."
+    textes:
+      - "Art. L.252-2 du code de la sécurité intérieure : l’autorisation préfectorale précise qui peut exploiter le système et visionner les images. Voir aussi la CNIL sur la vidéoprotection."
+      - "**Grève** : aucune déclaration préalable n’est due, à l’internat comme à l’externat. Juridiquement, un préavis couvre une journée, de 0 h à 23 h 59."
+      - "À l’internat, l’usage local est que la grève porte sur un seul service de nuit, le plus souvent celui de la veille de la journée de grève. Ne pas respecter cet usage peut exposer à une retenue de deux jours, l’absence couvrant deux jours calendaires."
+    agir:
+      - "Demandée de visionner les caméras ? Citez l’article L.252-2 et demandez à voir l’arrêté préfectoral."
+      - "Avant une grève, renseignez-vous sur l’usage de l’établissement et accordez-vous entre collègues."
+      - "Pression ou menace de non-renouvellement : contactez la section académique."
+    liens:
+      - { libelle: "CNIL : la vidéoprotection", url: "https://www.cnil.fr/fr/la-videoprotection" }
+    source: { doc: aed, ref: "4 pages" }
+
+  - id: aesh-contrat
+    titre: "AESH : contrat, salaire, mutuelle"
+    resume: "Recrutement par le rectorat, CDD de 3 ans puis CDI, temps incomplets, mutuelle obligatoire, subrogation repoussée."
+    en_bref:
+      - "Les AESH sont des contractuel·les de l’Éducation nationale : **CDD de 3 ans, puis CDI**. Depuis le 1er janvier 2025, ils et elles sont recruté·es par le **rectorat ou la DSDEN**, et rattaché·es à un PIAL ou à un PAS qui organise leur service."
+      - "Temps plein fixé à 1 607 h (39 h 10 sur 41 semaines), mais la plupart des contrats sont à **temps incomplet**, le plus souvent à 63 % (24 h par semaine)."
+    textes:
+      - "Décret n° 2014-724 du 27 juin 2014 modifié. Recrutement avec le baccalauréat, un diplôme d’aide à la personne ou 9 mois d’expérience ; 60 h de formation d’adaptation à l’emploi au minimum."
+      - "**Mutuelle obligatoire.** Dispense possible (complémentaire santé solidaire, contrat du ou de la conjoint·e, CDD déjà couvert : un an au plus), **à redemander chaque année**."
+      - "**Subrogation** (salaire maintenu par l’employeur en arrêt maladie) : repoussée à 2029. D’ici là, des trop-perçus peuvent être repris sur le salaire."
+      - "Prime REP ou REP+ au prorata du temps passé dans l’établissement. **AESH référent·e** : pair sans autorité hiérarchique, prime de 55 € brut par mois. La **CCP** (élu·es AESH et AED) est consultée sur les licenciements et les sanctions (sauf avertissement et blâme)."
+    agir:
+      - "Dispense de mutuelle : redemandez-la chaque année."
+      - "Avenant au contrat (quotité, lieu de travail) dans le cadre du PAS : faites-le relire par la section avant de signer. Le refuser peut conduire à un licenciement."
+    snes: "Le SNES-FSU et le SNUEP-FSU revendiquent un statut de fonctionnaire de catégorie B, un temps plein à 24 h d’accompagnement sur 36 semaines et une forte hausse des salaires."
+    liens:
+      - { libelle: "AESH : le dossier du SNES-FSU", url: "https://www.snes.edu/metiers/aesh/" }
+    source:
+      - { doc: aesh, pages: "2 à 4, 7" }
+      - { doc: abecedaire, pages: "4, 20" }
+      - { doc: agir_ca, pages: "18" }
+
+  - id: aesh-emploi-du-temps
+    titre: "AESH : emploi du temps et temps de travail"
+    resume: "Emploi du temps signé, pause méridienne payée, activités connexes libres, pas de journée de solidarité."
+    en_bref:
+      - "Votre **emploi du temps est une annexe à votre contrat**. Il est visé par le ou la chef·fe d’établissement et **signé par vous**. Vous en recevez une copie, même pour le plus petit changement."
+      - "L’accompagnement sur le **temps méridien** doit figurer à votre emploi du temps, être compté comme du travail **et payé**."
+      - "Les **activités connexes** (réunions, ESS, formation, autoformation…) correspondent à 5 semaines sur 41. Vous en disposez librement : elles **ne figurent pas à l’emploi du temps** et ne peuvent pas être transformées en accompagnement."
+    textes:
+      - "Loi du 27 mai 2024 : l’État prend en charge l’accompagnement pendant la pause méridienne. Pas plus de 10 h de travail par jour, et une pause de 20 minutes consécutives après 6 h."
+      - "**Journée de solidarité** : vous n’avez pas à y participer, votre contrat annuel la prend déjà en compte."
+      - "**Droit à la déconnexion** : vous n’avez pas à être joint·e ni à consulter la messagerie professionnelle en dehors de vos horaires."
+      - "**Grève** : aucune déclaration préalable, même dans le premier degré. Une journée de grève = retenue de 1/30e de la rémunération."
+    agir:
+      - "Modification d’emploi du temps : exigez une nouvelle version signée et sa copie."
+      - "On vous demande de « rendre » vos heures d’activités connexes en accompagnement : refusez et prévenez la section."
+    source:
+      - { doc: aesh, pages: "4, 5, 7" }
+      - { doc: abecedaire, pages: "4" }
+      - { doc: agir_ca, pages: "18" }
+
+  - id: aesh-missions
+    titre: "AESH : vos missions et leurs limites"
+    resume: "Accompagner les élèves notifiés, pas surveiller la cour. Examens, PFMP, ESS : vos droits."
+    en_bref:
+      - "Vos missions : accompagner les élèves **en situation de handicap** dans les **actes de la vie quotidienne**, l’**accès aux apprentissages** et la **vie sociale et relationnelle** (circulaire n° 2017-084)."
+      - "**Surveillance** : seulement des élèves que vous accompagnez, et si leur PPS ou leur GEVA-sco le prévoit. La récréation devient alors du temps de travail. **Jamais la cour ni la permanence** : c’est le rôle de la vie scolaire."
+      - "Avec le **PAS**, on peut vous confier des élèves sans notification MDPH : votre cadre d’emploi reste l’accompagnement des élèves en situation de handicap. Prévenez la section si cela arrive."
+    textes:
+      - "**Examens** : vous devez connaître les aménagements accordés (secrétaire, reformulation…), recevoir une convocation (horaires, lieu), un ordre de mission, et le remboursement de vos frais hors de votre PIAL ou PAS. Vous ne devez jamais être seul·e avec l’élève, ni surveiller l’épreuve, ni faire partie d’un jury."
+      - "**PFMP** (stages) : l’accompagnement doit figurer sur la convention de stage. Une lettre de mission (horaires, lieu) vous est remise, et vos frais de transport sont remboursés."
+      - "**ESS** (équipe de suivi de scolarisation, au moins une fois par an, animée par l’enseignant·e référent·e) : votre présence est indispensable pour faire le point sur l’élève."
+      - "En lycée professionnel, SEGPA ou EREA, l’établissement doit vous fournir les **équipements de protection individuelle** obligatoires sur les plateaux techniques."
+      - "**Devoirs faits** : le livret qui prévoit l’intervention des AESH n’a aucune valeur réglementaire. Vous pouvez refuser."
+    agir:
+      - "Menaces, violences physiques ou verbales : remplissez le **registre santé et sécurité au travail** et alertez la section."
+      - "Demandez à être convoqué·e aux ESS des élèves que vous accompagnez."
+    snes: "Le SNES-FSU et le SNUEP-FSU demandent l’abandon des PIAL, du PAS et du dispositif d’autorégulation (DAR), qui organisent une inclusion à moindre coût, et l’accès des AESH au livret de parcours inclusif."
+    source:
+      - { doc: aesh, pages: "4 à 6" }
+      - { doc: abecedaire, pages: "4, 10, 18" }

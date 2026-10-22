@@ -48,6 +48,14 @@ sources:
     titre: "Publications du SNES-FSU Lille"
     detail: "Bulletin académique et fiches de la section académique"
     url: "https://lille.snes.edu/"
+  aed:
+    titre: "AED : n’acceptez plus ce qui sort de vos missions !"
+    detail: "SNES-FSU, 2025-2026"
+    url: "https://www.snes.edu/metiers/aed/"
+  aesh:
+    titre: "AESH"
+    detail: "pages spéciales de L’US n° 874 du 19 septembre 2026"
+    url: "https://www.snes.edu/metiers/aesh/"
   code_education:
     titre: "Code de l’éducation"
     detail: "Légifrance, version en vigueur"
