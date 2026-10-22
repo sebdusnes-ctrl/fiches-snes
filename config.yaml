@@ -2,7 +2,7 @@
 
 # Adresse publique du site (GitHub Pages). Sert à fabriquer les QR codes :
 # tant qu'elle n'est pas renseignée, les QR codes ne sont pas générés.
-url_site: ""            # ex. "https://mon-compte.github.io/fiches-snes/"
+url_site: "https://sebdusnes-ctrl.github.io/fiches-snes/" # ex. "https://mon-compte.github.io/fiches-snes/"
 
 titre_site: "Fiches pratiques SNES-FSU"
 section: "SNES-FSU — section du collège Joséphine Baker"
