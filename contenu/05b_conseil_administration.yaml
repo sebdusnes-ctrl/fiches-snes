@@ -133,20 +133,20 @@ fiches:
     titre: "Commission éducative et conseil de discipline"
     resume: "Composition, déroulement, et ce que peut faire un·e élu·e."
     en_bref:
-      - "La **commission éducative**, prévue par le règlement intérieur, cherche une réponse éducative personnalisée pour un élève dont le comportement pose problème. Elle comprend au moins un·e professeur·e et un parent."
-      - "Le **conseil de discipline** est convoqué par le chef d’établissement. Les personnels y ont une représentation égale à celle des usagers. Ses membres sont élus parmi les membres du CA."
-      - "S’il refuse de le convoquer après une **demande écrite d’un personnel**, le chef d’établissement doit en donner le motif par écrit."
+      - "La **commission éducative** (prévue par le RI, avec au moins un·e professeur·e et un parent) cherche une réponse éducative personnalisée. Le **conseil de discipline**, convoqué par le chef d’établissement, compte autant de personnels que d’usagers, élus parmi les membres du CA."
+      - "**Le conseil peut prononcer les six sanctions** : avertissement, blâme, mesure de responsabilisation (20 h au plus), exclusion temporaire de la classe ou de l’établissement (8 jours au plus), **exclusion définitive**. Toutes, sauf l’avertissement et le blâme, avec ou sans **sursis**."
+      - "S’il refuse de convoquer le conseil après une **demande écrite d’un personnel**, le chef d’établissement doit en donner le motif par écrit."
     textes:
-      - "Art. R.511-20 à D.511-43 du code de l’éducation. Quorum : la majorité des membres. Le président a voix prépondérante en cas d’égalité."
-      - "**C’est le conseil qui décide de la sanction**, par un vote **à bulletin secret, à la majorité des suffrages exprimés** (art. D.511-41). Les membres sont tenus au secret."
-      - "**Aucun texte ne réserve au chef d’établissement le choix de la sanction mise aux voix.** Comme président, il organise la discussion et met aux voix ce qui en ressort. Il ne peut pas refuser de soumettre au vote une sanction évoquée pendant la délibération."
-      - "Usage (non réglementaire) : commencer par la sanction la plus lourde évoquée, puis descendre tant qu’aucune majorité ne se dégage. Le conseil ne peut pas statuer sur des faits déjà sanctionnés."
-      - "Recours : devant le recteur, puis seulement ensuite devant le tribunal administratif."
+      - "Art. R.511-13 : le chef d’établissement peut prononcer **seul** les cinq premières sanctions. **L’exclusion définitive relève du seul conseil de discipline.** Saisine du conseil obligatoire en cas de violence physique contre un personnel (art. R.421-10) ou d’arme blanche (décret du 1er juillet 2025)."
+      - "**C’est le conseil qui décide de la sanction**, à **bulletin secret** et à la **majorité des suffrages exprimés** (art. D.511-41). Quorum : la majorité des membres. Voix prépondérante du président en cas d’égalité. Membres tenus au secret."
+      - "**Aucun texte ne réserve au chef d’établissement le choix de la sanction mise aux voix.** Comme président, il met aux voix ce qui ressort de la discussion, et ne peut pas refuser de soumettre au vote une sanction évoquée. Usage (non réglementaire) : commencer par la plus lourde, puis descendre."
+      - "Pas de sanction pour des faits déjà sanctionnés. Recours : devant le recteur, puis seulement ensuite devant le tribunal administratif."
     agir:
-      - "Une sanction a été évoquée pendant les débats ? Demandez qu’elle soit mise aux voix."
+      - "Une sanction a été évoquée pendant les débats ? Demandez qu’elle soit mise aux voix. Avec un sursis, vérifiez que sa durée est fixée (voir la fiche « Sanctions disciplinaires et sursis »)."
       - "Un·e professeur·e de la classe peut siéger, sauf s’il ou elle a demandé la tenue du conseil : son suppléant·e le remplace alors."
-      - "Faites préciser dans le RI la composition, les délais de convocation et les compétences de la commission éducative."
-    source: { doc: agir_ca, pages: "11, 23" }
+    source:
+      - { doc: agir_ca, pages: "11, 23" }
+      - { doc: code_education, ref: "art. R.511-13, R.421-10, D.511-41" }
 
   - id: sanctions-et-sursis
     titre: "Sanctions disciplinaires et sursis"
