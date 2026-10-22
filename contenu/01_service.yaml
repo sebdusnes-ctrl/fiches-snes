@@ -2,7 +2,7 @@ theme:
   id: service
   titre: "Mon service"
   description: "Maxima d’heures, heures supplémentaires, état VS, Pacte, missions."
-  couleur: "#c8102e"
+  couleur: "#3067b7"
 
 fiches:
   - id: maxima-de-service

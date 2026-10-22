@@ -1,13 +1,20 @@
 /* Fiches pratiques SNES-FSU — feuille de style unique (écran, mobile, impression). */
 
 :root {
-  --fond: #f6f4f1;
+  /* Les 4 couleurs du logo SNES-FSU */
+  --snes-bleu: #3067b7;
+  --snes-vert: #32b158;
+  --snes-framboise: #ed0f4c;
+  --snes-orange: #f78513;
+
+  --fond: #f5f7fa;
   --surface: #ffffff;
+  --surface-voile: rgba(255, 255, 255, .92);
   --texte: #1d1d1f;
   --texte-doux: #5c5c63;
-  --bordure: #e3dfd9;
-  --accent: #c8102e;
-  --accent-texte: #ffffff;
+  --bordure: #dfe3ea;
+  --accent: var(--snes-bleu);
+  --filigrane-opacite: .07;
   --alerte-fond: #fff4d6;
   --alerte-texte: #6b4e00;
   --rayon: 12px;
@@ -17,12 +24,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fond: #16161a;
-    --surface: #212127;
+    --fond: #15171c;
+    --surface: #20232a;
+    --surface-voile: rgba(32, 35, 42, .92);
     --texte: #ececf0;
     --texte-doux: #a5a5ae;
-    --bordure: #34343c;
-    --accent: #e8455f;
+    --bordure: #343842;
+    --accent: #6d9be0;
+    --filigrane-opacite: .05;
     --alerte-fond: #3a3016;
     --alerte-texte: #f3d98a;
     --ombre: none;
@@ -50,12 +59,26 @@ a { color: inherit; }
   clip: rect(0 0 0 0); white-space: nowrap;
 }
 
+/* --- Filigrane : logo du SNES-FSU Lille en fond, fixe et très pâle --- */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: url("snes_lille_fond.png") no-repeat right -30px bottom -10px / min(85vw, 520px) auto;
+  opacity: var(--filigrane-opacite);
+}
+
 /* --- Bandeau --- */
-.bandeau { background: var(--accent); color: var(--accent-texte); }
-.bandeau .conteneur { padding-top: 14px; padding-bottom: 14px; }
-.marque { display: flex; flex-direction: column; text-decoration: none; }
-.marque-section { font-size: .8rem; opacity: .9; letter-spacing: .02em; }
-.marque-titre { font-size: 1.25rem; font-weight: 700; }
+.bandeau { background: #fff; color: #1d1d1f; }
+.bandeau .conteneur { padding-top: 10px; padding-bottom: 10px; }
+.marque { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.marque-logo { width: 96px; height: auto; flex: none; }
+.marque-texte { display: flex; flex-direction: column; min-width: 0; }
+.marque-section { font-size: .8rem; color: #5c5c63; letter-spacing: .02em; }
+.marque-titre { font-size: 1.2rem; font-weight: 700; color: var(--snes-bleu); }
+.bande-couleurs { display: block; width: 100%; height: 5px; }
+@media (max-width: 420px) {
+  .marque-logo { width: 76px; }
+  .marque-titre { font-size: 1.05rem; }
+}
 
 /* --- Accueil --- */
 .intro { padding: 28px 0 8px; }
@@ -103,7 +126,9 @@ a { color: inherit; }
 .fiche-tete { margin: 14px 0 18px; }
 .fiche-theme {
   display: inline-block; margin: 0 0 8px; padding: 2px 10px; border-radius: 999px;
-  font-size: .8rem; font-weight: 600; color: #fff; background: var(--c);
+  font-size: .8rem; font-weight: 600; color: var(--texte);
+  background: color-mix(in srgb, var(--c) 16%, var(--surface));
+  border: 1.5px solid var(--c);
 }
 .fiche h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 8px; }
 .fiche-resume { margin: 0; color: var(--texte-doux); font-size: 1.05rem; }
@@ -161,10 +186,13 @@ a { color: inherit; }
   background: #fff; color: #1d1d1f; text-align: center;
   display: flex; flex-direction: column; align-items: center;
 }
-.affiche-section { margin: 0; font-size: 15pt; color: #c8102e; font-weight: 600; }
+.affiche-logo { width: 62mm; height: auto; }
+.affiche-page .bande-couleurs { width: 100%; height: 3mm; margin: 4mm 0 5mm;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.affiche-section { margin: 0; font-size: 15pt; color: #3067b7; font-weight: 600; }
 .affiche-page h1 { font-size: 32pt; margin: 4mm 0 2mm; line-height: 1.1; }
 .affiche-accroche { font-size: 17pt; margin: 0 0 8mm; }
-.affiche-qr { width: 105mm; }
+.affiche-qr { width: 92mm; }
 .affiche-qr .qr { width: 100%; height: auto; }
 .affiche-url { font-size: 12pt; color: #555; margin: 3mm 0 8mm; word-break: break-all; }
 .affiche-themes {
@@ -191,8 +219,11 @@ a { color: inherit; }
     --bordure: #bbb; --ombre: none;
   }
   body { font-size: 10pt; line-height: 1.35; }
-  .bandeau { background: none; color: #000; border-bottom: 2px solid #c8102e; }
+  body::before { display: none; }
+  .bandeau { background: none; color: #000; }
   .bandeau .conteneur { padding: 0 0 2mm; }
+  .marque-logo { width: 20mm; }
+  .bande-couleurs { height: 1.5mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .conteneur { max-width: none; padding: 0; }
   .fil, .actions, .pied, .themes-nav, .recherche { display: none !important; }
   .fiche { padding: 0; }
@@ -212,7 +243,10 @@ a { color: inherit; }
   .impression-pied p { margin: 0; }
 
   .affiche { background: #fff; }
-  .affiche-page { margin: 0; width: auto; min-height: 265mm; padding: 0; }
+  .affiche-page { margin: 0; width: auto; min-height: 0; padding: 0; }
+  .affiche-page > * { flex-shrink: 0; }
+  .affiche-qr { width: 85mm; }
+  .affiche-contact { margin-top: 6mm; }
   .affiche-aide { display: none; }
   .affiche-themes li { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }

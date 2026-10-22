@@ -2,7 +2,7 @@ theme:
   id: tzr
   titre: "TZR"
   description: "Affectations, avis de suppléance, ISSR, frais."
-  couleur: "#5b5b5b"
+  couleur: "#32b158"
 
 fiches:
   - id: tzr-affectation

@@ -2,7 +2,7 @@ theme:
   id: ca
   titre: "Conseil d’administration"
   description: "Ce que le CA décide, DHG, budget, règlement intérieur, élections."
-  couleur: "#8a6d00"
+  couleur: "#32b158"
 
 fiches:
   - id: ca-ce-qu-il-decide

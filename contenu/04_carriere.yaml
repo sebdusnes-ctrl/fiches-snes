@@ -2,7 +2,7 @@ theme:
   id: carriere
   titre: "Carrière"
   description: "Rendez-vous de carrière, hors-classe, classe exceptionnelle."
-  couleur: "#7a4fb0"
+  couleur: "#ed0f4c"
 
 fiches:
   - id: rendez-vous-de-carriere

@@ -11,10 +11,14 @@
 <header class="bandeau">
   <div class="conteneur">
     <a class="marque" href="{{ racine }}index.html">
-      <span class="marque-section">{{ config.section }}</span>
-      <span class="marque-titre">{{ config.titre_site }}</span>
+      <img class="marque-logo" src="{{ racine }}static/snes_lille.png" alt="SNES-FSU Lille" width="118" height="72">
+      <span class="marque-texte">
+        <span class="marque-section">{{ config.section }}</span>
+        <span class="marque-titre">{{ config.titre_site }}</span>
+      </span>
     </a>
   </div>
+  {% include "bande.html" %}
 </header>
 <main class="conteneur">
 {% block contenu %}{% endblock %}

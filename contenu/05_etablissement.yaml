@@ -2,7 +2,7 @@ theme:
   id: etablissement
   titre: "Vie de l’établissement"
   description: "Conseils, organisation pédagogique, Devoirs faits, cahier de textes, Pronote."
-  couleur: "#b5651d"
+  couleur: "#3067b7"
 
 fiches:
   - id: conseil-de-classe

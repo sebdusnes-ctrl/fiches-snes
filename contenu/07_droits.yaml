@@ -2,7 +2,7 @@ theme:
   id: droits
   titre: "Droits syndicaux et libertés"
   description: "Heure d’info syndicale, stages, devoir de réserve, cumul, élections."
-  couleur: "#a3195b"
+  couleur: "#ed0f4c"
 
 fiches:
   - id: heure-information-syndicale

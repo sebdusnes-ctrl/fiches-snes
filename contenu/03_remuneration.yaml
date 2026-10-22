@@ -2,7 +2,7 @@ theme:
   id: remuneration
   titre: "Salaire et indemnités"
   description: "Bulletin de paie, ISOE, REP/REP+, frais de déplacement."
-  couleur: "#2e7d4f"
+  couleur: "#f78513"
 
 fiches:
   - id: bulletin-de-paie

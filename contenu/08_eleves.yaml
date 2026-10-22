@@ -2,7 +2,7 @@ theme:
   id: eleves
   titre: "Élèves à besoins particuliers"
   description: "PAI, PPS, ULIS, inclusion."
-  couleur: "#4a6a8a"
+  couleur: "#3067b7"
 
 fiches:
   - id: pai-pps

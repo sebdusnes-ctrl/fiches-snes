@@ -2,7 +2,7 @@ theme:
   id: sante
   titre: "Santé et sécurité au travail"
   description: "Registre SST, F3SCT, protection fonctionnelle, canicule."
-  couleur: "#0f7c7c"
+  couleur: "#f78513"
 
 fiches:
   - id: registre-sst

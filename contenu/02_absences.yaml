@@ -2,7 +2,7 @@ theme:
   id: absences
   titre: "Absences et congés"
   description: "Enfant malade, arrêt maladie, naissance, PMA."
-  couleur: "#1d6fa5"
+  couleur: "#32b158"
 
 fiches:
   - id: autorisations-absence
