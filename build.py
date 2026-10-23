@@ -79,6 +79,11 @@ def charger():
     if url and not url.endswith("/"):
         url += "/"
     config["url_site"] = url
+    # Adresses de la section : liste « courriels » (ou ancienne clé « courriel »), jointes pour le mailto.
+    contact = config.setdefault("contact", {})
+    adresses = contact.get("courriels") or ([contact["courriel"]] if contact.get("courriel") else [])
+    contact["courriels"] = adresses
+    contact["mailto"] = ",".join(adresses)
 
     themes, ids, erreurs = [], set(), []
     for fichier in sorted((RACINE / "contenu").glob("*.yaml")):

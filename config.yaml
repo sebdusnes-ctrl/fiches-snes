@@ -15,7 +15,9 @@ accroche: "Vos droits, vos obligations, en clair. Fiches tirées des publication
 contact:
   # Laisser vide ce qui ne doit pas apparaître en ligne.
   correspondant: ""     # ex. "Prénom N. (anglais), Prénom N. (SVT)"
-  courriel: ""          # adresse de la section (éviter une adresse personnelle)
+  courriels:            # adresses de la section : le bouton « Écrire à la section » écrit à toutes
+    - "sebdusnes@gmail.com"
+    - "ludivine.pedro@gmail.com"
   permanence: "Panneau syndical en salle des professeurs"
   autres:
     - libelle: "SNES-FSU Lille (section académique)"
