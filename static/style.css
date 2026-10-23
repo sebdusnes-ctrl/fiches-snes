@@ -178,6 +178,11 @@ body::before {
   background: var(--surface); color: var(--texte);
 }
 .actions button:hover { border-color: var(--accent); }
+.bouton-ecrire {
+  font-size: .95rem; padding: 9px 16px; border-radius: var(--rayon); text-decoration: none;
+  background: var(--accent); color: #fff; border: 1px solid var(--accent); font-weight: 600;
+}
+.bouton-ecrire:hover { filter: brightness(1.08); }
 
 .impression-pied { display: none; }
 .qr { display: block; }

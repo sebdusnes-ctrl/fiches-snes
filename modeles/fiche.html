@@ -56,6 +56,11 @@
   <div class="actions">
     <button type="button" onclick="window.print()">Imprimer la fiche</button>
     <button type="button" id="partager" hidden>Partager</button>
+    {% if config.contact.courriel %}<a class="bouton-ecrire" href="mailto:{{ config.contact.courriel }}?subject={{ ('Question sur la fiche : ' ~ fiche.titre)|urlencode }}&amp;body={{ ('Bonjour,
+
+Ma question concerne la fiche « ' ~ fiche.titre ~ ' » (' ~ url_page ~ ').
+
+')|urlencode }}">Écrire à la section</a>{% endif %}
   </div>
 
   <div class="impression-pied">
