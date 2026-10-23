@@ -31,6 +31,7 @@ fiches:
     resume: "Un droit pour tout agent en activité, adhérent·e ou non. Demande écrite un mois avant."
     en_bref:
       - "Tout agent public en activité, **titulaire ou contractuel**, a droit à un congé pour formation syndicale **avec traitement**, de **12 jours ouvrables par an** au plus (CGFP, art. L.215-1)."
+      - "**Une formation sur le temps de service** : le ministère pousse à organiser la formation continue (PAF) **hors du face-à-face pédagogique** (le soir, le mercredi, à distance en asynchrone). Le stage syndical est désormais quasiment la seule formation qui se déroule sur le temps de service."
       - "La demande est adressée **par écrit au moins un mois avant** le stage. **Sans réponse le 15e jour avant le stage, le congé est accordé** (art. R.215-3)."
       - "Il ne peut être refusé que si **les nécessités du fonctionnement du service** s’y opposent ; le refus est motivé et communiqué à la commission paritaire (art. R.215-4)."
     textes:
@@ -44,7 +45,9 @@ fiches:
       - { libelle: "Stages du SNES-FSU Lille 2026-2027 (liste et programmes)", url: "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html" }
       - { libelle: "Inscription en ligne, ouverte aux non-adhérent·es", url: "https://adherent.snes.edu/Public/indexStages.php?Aca=15" }
       - { libelle: "Stages FSU 59/62 2026-2027", url: "https://lille.snes.edu/Stages-FSU-59-62-2026-2027.html" }
-    source: { doc: cgfp, ref: "art. L.215-1, R.215-1 à R.215-5" }
+    source:
+      - { doc: cgfp, ref: "art. L.215-1, R.215-1 à R.215-5" }
+      - { doc: reunions }
 
   - id: devoir-de-reserve
     titre: "Obéir, se conformer, « devoir de réserve » : ce que dit vraiment le droit"
