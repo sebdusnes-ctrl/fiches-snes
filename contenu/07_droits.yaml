@@ -37,8 +37,12 @@ fiches:
       - "Le stage doit être organisé par un centre ou institut figurant sur une liste arrêtée par le ministre (art. R.215-1). La section vous indique les modalités pour chaque stage."
       - "À la fin du stage, une attestation de présence vous est remise : conservez-la."
     agir:
-      - "Repérez les stages proposés par la section départementale ou académique, et envoyez votre demande dans les délais."
+      - "Choisissez un stage dans la liste ci-dessous, inscrivez-vous (adhérent·e ou non), puis envoyez votre demande d’absence un mois avant."
       - "Refus : demandez-en le motif écrit et contactez la section."
+    liens:
+      - { libelle: "Stages du SNES-FSU Lille 2026-2027 (liste et programmes)", url: "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html" }
+      - { libelle: "Inscription en ligne, ouverte aux non-adhérent·es", url: "https://adherent.snes.edu/Public/indexStages.php?Aca=15" }
+      - { libelle: "Stages FSU 59/62 2026-2027", url: "https://lille.snes.edu/Stages-FSU-59-62-2026-2027.html" }
     source: { doc: cgfp, ref: "art. L.215-1, R.215-1 à R.215-5" }
 
   - id: devoir-de-reserve
