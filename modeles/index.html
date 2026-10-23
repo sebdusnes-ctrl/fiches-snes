@@ -8,7 +8,7 @@
     <span class="visuellement-cache">Rechercher une fiche</span>
     <input id="recherche" type="search" placeholder="Rechercher : HSA, enfant malade, Pacte…" autocomplete="off">
   </label>
-{% if une %}
+{% if une or avec_stages %}
   <section class="une" aria-labelledby="une-titre">
     <h2 id="une-titre">À lire en priorité</h2>
     <ul class="cartes">
@@ -20,6 +20,14 @@
         </a>
       </li>
       {% endfor %}
+      {% if avec_stages %}
+      <li class="carte">
+        <a href="stages.html">
+          <span class="carte-titre">Stages syndicaux : calendrier et disponibilités</span>
+          <span class="carte-resume">Les stages du SNES-FSU Lille, vérifiés chaque jour, avec la date limite pour la demande d’absence.</span>
+        </a>
+      </li>
+      {% endif %}
     </ul>
   </section>
   {% endif %}

@@ -3,7 +3,9 @@
 Usage : python build.py
 Contenu : config.yaml + contenu/*.yaml (un fichier par thème).
 """
+import datetime as dt
 import hashlib
+import json
 import html
 import re
 import shutil
@@ -116,6 +118,79 @@ def charger():
     return config, themes
 
 
+# --- Stages syndicaux (contenu/stages.json, relevé par outils/stages.py) ------
+
+MOIS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
+           "septembre", "octobre", "novembre", "décembre"]
+JOURS_FR = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+SIGLES = {"TZR", "CPE", "AESH", "SNES", "FSU", "CA", "AED", "SNUEP"}
+
+
+def date_fr(d, jour=True):
+    if not d:
+        return ""
+    return (f"{JOURS_FR[d.weekday()]} " if jour else "") + f"{d.day} {MOIS_FR[d.month - 1]} {d.year}"
+
+
+def moins_un_mois(d):
+    """Même jour du mois précédent (ou dernier jour de ce mois s'il est plus court)."""
+    a, m = (d.year, d.month - 1) if d.month > 1 else (d.year - 1, 12)
+    j = d.day
+    while True:
+        try:
+            return dt.date(a, m, j)
+        except ValueError:  # 31 mars → 28/29 février, etc.
+            j -= 1
+
+
+def titre_lisible(t):
+    mots = [m if m.strip("()«»,.") in SIGLES else m.lower() for m in t.split()]
+    s = " ".join(mots)
+    return s[:1].upper() + s[1:]
+
+
+def preparer_stages(aujourdhui):
+    fichier = RACINE / "contenu" / "stages.json"
+    if not fichier.exists():
+        return None
+    d = json.loads(fichier.read_text(encoding="utf-8"))
+    liste = []
+    for s in d["stages"]:
+        s = dict(s)
+        s["titre_affiche"] = titre_lisible(s["titre"])
+        jour = dt.date.fromisoformat(s["date"]) if s.get("date") else None
+        s["date_fr"] = date_fr(jour)
+        s["date_initiale_fr"] = date_fr(dt.date.fromisoformat(s["date_initiale"])) if s.get("date_initiale") else ""
+        if jour is None:
+            s["statut"], s["statut_libelle"] = "info", "Date à préciser"
+        else:
+            limite = moins_un_mois(jour)
+            s["limite_fr"] = date_fr(limite, jour=False)
+            if jour < aujourdhui:
+                s["statut"], s["statut_libelle"] = "termine", "Terminé"
+            elif aujourdhui > limite:
+                s["statut"], s["statut_libelle"] = "depasse", "Délai dépassé"
+            elif (limite - aujourdhui).days <= 7:
+                s["statut"], s["statut_libelle"] = "proche", "Derniers jours"
+            else:
+                s["statut"], s["statut_libelle"] = "ouvert", "Ouvert"
+        modif = dt.date.fromisoformat(s["modifie_le"]) if s.get("modifie_le") else None
+        s["recent"] = bool(modif and (aujourdhui - modif).days <= 30)
+        s["modifie_fr"] = date_fr(modif, jour=False) if modif else ""
+        liste.append((jour or dt.date.max, s))
+    d["liste"] = [s for _, s in sorted(liste, key=lambda x: x[0])]
+    for e in d.get("journal", []):
+        e["jour_fr"] = date_fr(dt.date.fromisoformat(e["jour"]), jour=False)
+        e["stage_affiche"] = titre_lisible(e["stage"])
+    v = d.get("verifie_le", "")
+    try:
+        vd = dt.datetime.strptime(v, "%Y-%m-%d %H:%M")
+        d["verifie_le_fr"] = f"{date_fr(vd.date(), jour=False)} à {vd:%H:%M}"
+    except ValueError:
+        d["verifie_le_fr"] = v
+    return d
+
+
 # --- Génération --------------------------------------------------------------
 
 def construire():
@@ -146,8 +221,10 @@ def construire():
 
     par_id = {f["id"]: f for th in themes for f in th["fiches"]}
     une = [par_id[i] for i in (config.get("a_la_une") or []) if i in par_id]
+    aujourdhui = dt.date.today()
+    stages = preparer_stages(aujourdhui)
     page = env.get_template("index.html").render(
-        racine="", url_page=url, une=une, **commun)
+        racine="", url_page=url, une=une, avec_stages=bool(stages), **commun)
     (SORTIE / "index.html").write_text(page, encoding="utf-8")
 
     for theme in themes:
@@ -165,7 +242,14 @@ def construire():
     if url:
         qr_png(url, SORTIE / "qr" / "accueil.png")
 
-    print(f"{commun['nb_fiches']} fiches, {len(themes)} thèmes → {SORTIE}")
+    if stages:
+        page = env.get_template("stages.html").render(
+            racine="", url_page=f"{url}stages.html" if url else "", stages=stages,
+            aujourdhui_fr=date_fr(aujourdhui, jour=False), **commun)
+        (SORTIE / "stages.html").write_text(page, encoding="utf-8")
+
+    print(f"{commun['nb_fiches']} fiches, {len(themes)} thèmes → {SORTIE}"
+          + (f" ; {len(stages['liste'])} stages" if stages else ""))
     if not url:
         print("⚠ url_site vide dans config.yaml : QR codes non générés.")
 

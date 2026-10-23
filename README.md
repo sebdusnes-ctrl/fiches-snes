@@ -52,6 +52,22 @@ Après chaque modification : `python build.py`, commit, push. L’adresse ne cha
 - `docs/qr/accueil.png` et `docs/qr/<id>.png` : QR en image (pour un document, un mail…).
 - Chaque fiche imprimée porte son propre QR code en pied de page.
 
+## Stages syndicaux (`stages.html`, mis à jour chaque jour)
+
+`python outils/stages.py` relève la page des stages du SNES-FSU Lille
+(`PAGE` dans le script : **à changer à chaque rentrée**, ex. `Stages-SNES-FSU-2027-2028.html`)
+et écrit `contenu/stages.json` : date, lieu, horaires, ancienne date ou ancien lieu barrés,
+et un journal des changements (stage ajouté ou retiré, date reportée, lieu ou horaires modifiés).
+`build.py` en tire `docs/stages.html` : la disponibilité de chaque stage est calculée le jour
+de la construction (demande d'absence au plus tard un mois avant, CGFP art. R.215-3).
+
+Le workflow `.github/workflows/stages.yml` fait tout cela chaque matin sur GitHub et publie
+le résultat (bouton « Run workflow » dans l'onglet Actions pour le lancer à la main).
+Si la page du SNES-FSU Lille est injoignable ou a changé de forme, le site est quand même
+reconstruit, puis le workflow échoue : GitHub envoie un courriel d'alerte.
+
+Le robot faisant des commits, **toujours `git pull --rebase` avant de pousser** ses propres modifications.
+
 ## Corpus des sources (pour rédiger les fiches)
 
 `python outils/corpus.py "E:/Ressources Collège/SNES/Mémos_SNES"` écrit dans `sources/`

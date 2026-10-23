@@ -187,6 +187,41 @@ body::before {
 .impression-pied { display: none; }
 .qr { display: block; }
 
+/* --- Page des stages --- */
+.stages { padding: 18px 0 8px; }
+.stages h1 { font-size: 1.5rem; line-height: 1.25; margin: 12px 0 8px; }
+.stages-intro { color: var(--texte-doux); }
+.stages-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.stages-actions a:not(.bouton-ecrire) { color: var(--accent); }
+.stages-maj { font-size: .85rem; color: var(--texte-doux); }
+.legende { list-style: none; padding: 0; margin: 10px 0 16px; display: grid; gap: 6px; font-size: .88rem; }
+.badge { display: inline-block; padding: 1px 9px; border-radius: 999px; font-size: .78rem; font-weight: 700;
+  border: 1.5px solid currentColor; white-space: nowrap; }
+.badge.ouvert { color: #1f7a3f; background: color-mix(in srgb, #32b158 14%, var(--surface)); }
+.badge.proche { color: #a85a00; background: color-mix(in srgb, #f78513 16%, var(--surface)); }
+.badge.depasse { color: #b30d3c; background: color-mix(in srgb, #ed0f4c 12%, var(--surface)); }
+.badge.termine { color: var(--texte-doux); background: var(--surface); }
+.badge.info { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+.table-stages { display: grid; gap: 10px; }
+.table-stages .ligne { display: grid; gap: 6px; padding: 12px 14px; background: var(--surface);
+  border: 1px solid var(--bordure); border-radius: var(--rayon); box-shadow: var(--ombre); }
+.table-stages .entete { display: none; }
+.table-stages .ligne > span { display: flex; flex-direction: column; gap: 3px; align-items: flex-start; }
+.table-stages small { color: var(--texte-doux); }
+.table-stages del { color: var(--texte-doux); }
+.table-stages .c-titre a { font-size: .85rem; color: var(--accent); }
+.table-stages .modifie { color: var(--accent); font-weight: 600; }
+.statut-termine { opacity: .6; }
+@media (min-width: 760px) {
+  .table-stages { gap: 0; border: 1px solid var(--bordure); border-radius: var(--rayon); overflow: hidden; }
+  .table-stages .ligne { grid-template-columns: 2fr 1.4fr 1.6fr 1.4fr; gap: 14px; border: 0;
+    border-bottom: 1px solid var(--bordure); border-radius: 0; box-shadow: none; }
+  .table-stages .entete { display: grid; font-weight: 700; font-size: .85rem; background: var(--fond); }
+}
+.journal { margin-top: 22px; }
+.journal h2 { font-size: 1.05rem; }
+.journal ul { padding-left: 1.2em; font-size: .9rem; }
+
 /* --- Pied de page --- */
 .pied { margin-top: 36px; padding: 8px 0 28px; border-top: 1px solid var(--bordure); }
 .contact h2 { font-size: 1.05rem; margin: 18px 0 6px; }

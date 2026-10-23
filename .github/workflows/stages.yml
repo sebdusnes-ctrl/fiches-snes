@@ -1,0 +1,64 @@
+# Chaque matin : relève les stages du SNES-FSU Lille, recalcule les disponibilités
+# (délais de demande d'absence) et republie le site si quelque chose a changé.
+name: Stages syndicaux
+
+on:
+  schedule:
+    - cron: "30 4 * * *"   # 5 h 30 ou 6 h 30, heure de Paris
+  workflow_dispatch:         # bouton « Run workflow » dans l'onglet Actions
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: stages
+  cancel-in-progress: false
+
+jobs:
+  stages:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Paris
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install pyyaml jinja2 qrcode markupsafe certifi
+
+      # Si la page du SNES-FSU Lille est injoignable ou a changé de forme, on
+      # reconstruit quand même (les délais avancent) puis le workflow échoue
+      # à la fin : GitHub envoie alors un courriel d'alerte.
+      - name: Relevé des stages
+        id: releve
+        continue-on-error: true
+        run: python outils/stages.py
+
+      - name: Construction du site
+        run: python build.py
+
+      - name: Publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add contenu/stages.json docs
+          if git diff --cached --quiet; then
+            echo "Rien à publier."
+            exit 0
+          fi
+          git commit -m "Stages : relevé du $(date +%d/%m/%Y)"
+          git push
+          # Les push faits avec le jeton du workflow ne relancent pas toujours GitHub Pages.
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+
+      - name: Alerte si le relevé a échoué
+        if: steps.releve.outcome == 'failure'
+        run: |
+          echo "::error::Relevé des stages impossible : page du SNES-FSU Lille injoignable ou modifiée."
+          exit 1

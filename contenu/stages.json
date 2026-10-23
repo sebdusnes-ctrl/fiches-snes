@@ -1,0 +1,152 @@
+{
+ "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
+ "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
+ "verifie_le": "2026-10-23 10:40",
+ "stages": [
+  {
+   "id": "reunion_tzr-4",
+   "titre": "RÉUNION TZR",
+   "date": "2026-09-02",
+   "date_initiale": null,
+   "horaires": "14h-17h",
+   "lieu": "LILLE · Siège du SNES · +VISIO",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/reunion_tzr-4.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_droits_syndicaux_ca",
+   "titre": "STAGE DROITS SYNDICAUX",
+   "date": "2026-10-12",
+   "date_initiale": null,
+   "horaires": "14h-17h",
+   "lieu": "ÉCUIRES (Montreuil) · Collège du Bras d’Or",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_droits_syndicaux_ca.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_rdvc-3",
+   "titre": "STAGE RENDEZ-VOUS DE CARRIÈRE",
+   "date": "2026-10-15",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "LILLE · Siège du SNES + VISIO",
+   "lieu_barre": "Lycée Montebello",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_rdvc-3.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_animer_le_s1-5",
+   "titre": "STAGE ANIMER LA SECTION SYNDICALE",
+   "date": "2026-10-16",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "RONCHIN · Collège Anatole France",
+   "lieu_barre": "LILLE · Lycée Baggio",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_animer_le_s1-5.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_cpe-5",
+   "titre": "RENCONTRE CPE",
+   "date": "2026-11-03",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "LILLE · Lycée Pasteur",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_cpe-5.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_preparer_sa_retraite",
+   "titre": "STAGE PRÉPARER SA RETRAITE",
+   "date": "2026-12-03",
+   "date_initiale": "2026-11-05",
+   "horaires": "9h-17h",
+   "lieu": "Lieu à définir",
+   "lieu_barre": "LILLE · Collège Nina Simone",
+   "reporte": true,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_preparer_sa_retraite.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_non-tit-2",
+   "titre": "STAGE NON-TITULAIRES",
+   "date": "2026-11-06",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "LILLE · Siège du SNES",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_non-tit-2.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_proxi_2026-27",
+   "titre": "STAGES PRÈS DE CHEZ VOUS",
+   "date": "2026-11-09",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "ARRAS · DUNKERQUE · VALENCIENNES",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_proxi_2026-27.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_stagiaires_inter_snuep",
+   "titre": "STAGE ENTRÉE DANS LE MÉTIER",
+   "date": "2026-11-13",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "LILLE · Siège du SNES · +VISIO",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_stagiaires_inter_snuep.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_aesh-5",
+   "titre": "STAGE AESH",
+   "date": "2026-11-17",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "LENS · Collège Jean Jaurès",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_aesh-5.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_carriere-6",
+   "titre": "STAGE CARRIÈRE",
+   "date": "2026-11-20",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "MONS en BAROEUL · Collège Rabelais",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_carriere-6.pdf",
+   "modifie_le": null
+  },
+  {
+   "id": "stage_aesh_2",
+   "titre": "STAGE AESH",
+   "date": "2026-11-30",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "CALAIS · Lycée Léonard de Vinci",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_aesh_2.pdf",
+   "modifie_le": null
+  }
+ ],
+ "journal": []
+}

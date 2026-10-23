@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block titre %}Stages syndicaux · {{ config.titre_site }}{% endblock %}
+{% block description %}Calendrier des stages du SNES-FSU Lille et délais pour la demande d’absence.{% endblock %}
+{% block classe %}page-stages{% endblock %}
+{% block contenu %}
+<section class="stages">
+  <nav class="fil" aria-label="Fil d’Ariane"><a href="index.html">← Accueil</a></nav>
+  <h1>Stages syndicaux : calendrier et disponibilités</h1>
+  <p class="stages-intro">Tout agent, titulaire ou non, a droit à 12 jours de formation syndicale par an. Si vous travaillez le jour du stage, la demande d’absence doit partir <strong>au moins un mois avant</strong> (CGFP, art. R.215-3). Voir la fiche <a class="lien-fiche" href="fiches/stage-syndical.html">« Stage de formation syndicale »</a>.</p>
+  <p class="stages-actions">
+    <a class="bouton-ecrire" href="{{ stages.inscription }}" target="_blank" rel="noopener">S’inscrire (adhérent·e ou non)</a>
+    <a href="{{ stages.source }}" target="_blank" rel="noopener">Page du SNES-FSU Lille</a>
+  </p>
+  <p class="stages-maj">Vérifié le {{ stages.verifie_le_fr }} sur la page du SNES-FSU Lille. Disponibilités calculées le {{ aujourdhui_fr }}.</p>
+
+  <ul class="legende">
+    <li><span class="badge ouvert">Ouvert</span> demande d’absence encore dans les délais</li>
+    <li><span class="badge proche">Derniers jours</span> moins d’une semaine pour la demande</li>
+    <li><span class="badge depasse">Délai dépassé</span> plus de demande d’absence possible ; inscription possible si vous ne travaillez pas ce jour-là</li>
+    <li><span class="badge termine">Terminé</span></li>
+  </ul>
+
+  <div class="table-stages" role="table" aria-label="Stages">
+    <div class="ligne entete" role="row">
+      <span role="columnheader">Stage</span><span role="columnheader">Date</span><span role="columnheader">Lieu</span><span role="columnheader">Disponibilité</span>
+    </div>
+    {% for s in stages.liste %}
+    <div class="ligne statut-{{ s.statut }}" role="row">
+      <span class="c-titre" role="cell">
+        <strong>{{ s.titre_affiche }}</strong>
+        <a href="{{ s.programme }}" target="_blank" rel="noopener">Programme (PDF)</a>
+      </span>
+      <span class="c-date" role="cell">
+        {% if s.date_initiale %}<del>{{ s.date_initiale_fr }}</del><br>{% endif %}
+        {{ s.date_fr or "Date à préciser" }}{% if s.horaires %}<br><small>{{ s.horaires }}</small>{% endif %}
+        {% if s.reporte %}<br><span class="badge info">Reporté</span>{% endif %}
+      </span>
+      <span class="c-lieu" role="cell">
+        {% if s.lieu_barre %}<del>{{ s.lieu_barre }}</del><br>{% endif %}
+        {{ s.lieu or "—" }}
+        {% if s.lieu == "Lieu à définir" %}<br><span class="badge info">Lieu à définir</span>{% elif s.lieu_barre %}<br><span class="badge info">Lieu modifié</span>{% endif %}
+      </span>
+      <span class="c-statut" role="cell">
+        <span class="badge {{ s.statut }}">{{ s.statut_libelle }}</span>
+        {% if s.statut in ("ouvert", "proche") %}<small>Demande d’absence avant le {{ s.limite_fr }}</small>{% endif %}
+        {% if s.statut == "depasse" %}<small>Limite : {{ s.limite_fr }}</small>{% endif %}
+        {% if s.recent %}<small class="modifie">Modifié le {{ s.modifie_fr }}</small>{% endif %}
+      </span>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if stages.journal %}
+  <section class="journal">
+    <h2>Dernières modifications repérées</h2>
+    <ul>{% for e in stages.journal[:10] %}<li><strong>{{ e.jour_fr }}</strong> · {{ e.stage_affiche }} : {{ e.changement }}</li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+</section>
+{% endblock %}

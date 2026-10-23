@@ -40,6 +40,7 @@ fiches:
       - "Choisissez un stage dans la liste ci-dessous, inscrivez-vous (adhérent·e ou non), puis envoyez votre demande d’absence un mois avant."
       - "Refus : demandez-en le motif écrit et contactez la section."
     liens:
+      - { libelle: "Calendrier des stages et disponibilités (vérifié chaque jour)", url: "https://sebdusnes-ctrl.github.io/fiches-snes/stages.html" }
       - { libelle: "Stages du SNES-FSU Lille 2026-2027 (liste et programmes)", url: "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html" }
       - { libelle: "Inscription en ligne, ouverte aux non-adhérent·es", url: "https://adherent.snes.edu/Public/indexStages.php?Aca=15" }
       - { libelle: "Stages FSU 59/62 2026-2027", url: "https://lille.snes.edu/Stages-FSU-59-62-2026-2027.html" }
