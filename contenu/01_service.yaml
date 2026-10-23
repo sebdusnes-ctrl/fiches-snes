@@ -42,6 +42,7 @@ fiches:
     agir:
       - "Vérifiez que toutes vos réductions figurent sur votre **état VS** avant de le signer."
       - "Un complément de service et des heures supplémentaires dans la même discipline : pour le SNES-FSU, ce cumul est contraire à l’esprit du décret. Signalez-le."
+      - "**Cours annulé par une sortie scolaire** sans que vous l’accompagniez : vous ne devez aucune heure, et **une HSE faite dans la même semaine ou le même mois ne peut pas être « compensée »** par ce cours supprimé. Les maxima sont **hebdomadaires** (décret n° 2014-940, art. 2) et aucun texte ne permet cette compensation (fiche [« Sorties et voyages scolaires »](fiche:sorties-et-voyages))."
       - "En cas de doute sur le calcul, faites-le vérifier par la section."
     source:
       - { doc: decret_ors, ref: "art. 2, 4, 8, 9" }
