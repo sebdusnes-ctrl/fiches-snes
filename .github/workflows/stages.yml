@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   stages:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # version figée : ubuntu-latest passe à Ubuntu 26 (oct. 2026)
     env:
       TZ: Europe/Paris
       PYTHONIOENCODING: utf-8
