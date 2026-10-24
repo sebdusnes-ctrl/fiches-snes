@@ -22,13 +22,13 @@ jobs:
       TZ: Europe/Paris
       PYTHONIOENCODING: utf-8
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
-      - run: pip install pyyaml jinja2 qrcode markupsafe certifi
+      - run: pip install -r requirements.txt
 
       # Si la page du SNES-FSU Lille est injoignable ou a changé de forme, on
       # reconstruit quand même (les délais avancent) puis le workflow échoue
