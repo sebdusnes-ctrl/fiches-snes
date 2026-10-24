@@ -157,20 +157,21 @@ fiches:
     en_bref:
       - "Organiser une sortie ou un voyage relève de la **liberté pédagogique** : personne ne peut vous l’imposer."
       - "Le CA donne son accord sur la **programmation et le financement**. Le chef d’établissement autorise la sortie. Tout l’argent passe par l’agent·e comptable (jamais par un FSE ou une coopérative)."
-      - "**La régie** : un·e **régisseur**, nommé·e par le chef d’établissement avec l’agrément de l’agent·e comptable (art. R.421-70), peut encaisser les paiements des familles (régie de **recettes**) ou emporter une somme pour payer sur place (régie d’**avances**). Hors régie, ne collectez jamais d’argent vous-même."
+      - "**La régie** : un·e **régisseur**, nommé·e par le chef d’établissement avec l’agrément de l’agent·e comptable (art. R.421-70), encaisse les paiements des familles (régie de **recettes**) ou paie sur place (régie d’**avances**). Hors régie, ne collectez jamais d’argent."
       - "Le coût du voyage des **accompagnateurs** est pris sur le budget de l’établissement : **vous n’avez pas à payer pour travailler**."
     textes:
-      - "Circulaires du 13 juin 2023 et du 16 juillet 2024 ; guide Éduscol des sorties et voyages dans le second degré. Depuis le décret du 13 mai 2026, un questionnaire « Brisons le silence » est remis aux élèves après chaque voyage."
-      - "Une sortie sur le temps scolaire qui complète l’enseignement est obligatoire, donc gratuite. Sorties facultatives (payantes) : les **fonds sociaux** peuvent aider les familles ; aucun élève ne devrait rester au collège faute de pouvoir payer."
-      - "**Votre classe est partie sans vous ?** Vous ne devez aucune heure : présent·e dans l’établissement mais sans élèves, vous êtes en service. Le service est hebdomadaire et ne s’annualise pas (décret n° 2014-940)."
-      - "Le chef d’établissement peut **déplacer** le cours sur un autre créneau de la même semaine, avec un délai de prévenance d’au moins 48 h ouvrables et une modification écrite de la VS. **Une modification sur Pronote ne fait pas foi, un planning envoyé par courriel non plus.** Le SNES-FSU rappelle que l’agent doit être consulté avant toute modification de son emploi du temps."
-      - "Prendre une autre classe, ou une de vos classes en plus de votre horaire, suppose **votre accord** et se paie en **HSE**. Cette HSE ne peut pas être « compensée » par le cours supprimé pendant la sortie : aucun texte ne le permet. En cas de refus, contactez sans hésiter la section de l’établissement ou directement la permanence du SNES-FSU."
+      - "Circulaires du 13 juin 2023 et du 16 juillet 2024, guide Éduscol. Après chaque voyage, questionnaire « Brisons le silence » remis aux élèves (décret du 13 mai 2026)."
+      - "Une sortie sur le temps scolaire qui complète l’enseignement est obligatoire, donc gratuite. Sorties facultatives : les **fonds sociaux** peuvent aider les familles qui ne peuvent pas payer."
+      - "**Votre classe est partie sans vous ?** Vous ne devez aucune heure : présent·e dans l’établissement, vous êtes en service, et le service est hebdomadaire (décret n° 2014-940). Idem en formation (EAFC)."
+      - "S’il souhaite **déplacer le cours** sur un autre créneau de la même semaine, le chef d’établissement doit obtenir **votre accord**, respecter un délai de prévenance d’au moins 48 h ouvrables et vous remettre une **modification écrite de la VS**, contre signature, sans dépasser votre horaire hebdomadaire. **Une modification sur Pronote ne fait pas foi, un planning envoyé par courriel non plus.**"
+      - "**Pourquoi la VS ?** Elle fonde votre paie et atteste où et quand vous êtes en service (accident) : **rien n’y change sans votre signature**. Sinon, soyez simplement présent·e sur le créneau libéré ([État VS et emploi du temps](fiche:etat-vs-emploi-du-temps))."
+      - "Prendre une autre classe, ou une de vos classes en plus de votre horaire, suppose **votre accord** et se paie en **HSE**. Cette HSE ne peut pas être « compensée » par le cours supprimé pendant la sortie : aucun texte ne le permet. En cas de refus, contactez la section ou la permanence du SNES-FSU."
     agir:
       - "Refusez qu’un voyage soit conditionné au remplacement des collègues absents, ou qu’on impose aux accompagnateurs de « rattraper » leurs cours : rien de tout cela n’est réglementaire."
       - "Faites voter en début d’année une programmation de principe des sorties, et la prise en charge des accompagnateurs au budget."
-      - "En formation (EAFC) : pas d’heure à rattraper non plus."
     source:
       - { doc: agir_ca, pages: "22" }
+      - { doc: abecedaire, pages: "12" }
       - { doc: code_education, ref: "art. R.421-70" }
       - { doc: faq_snes, ref: "« Rattrapage des cours après une sortie »" }
       - { doc: s3_lille, ref: "Bulletins académiques n° 326 et 333" }
