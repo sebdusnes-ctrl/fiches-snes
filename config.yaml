@@ -11,6 +11,8 @@ a_la_une:
 titre_site: "Fiches pratiques SNES-FSU"
 section: "SNES-FSU — section du collège Joséphine Baker"
 accroche: "Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU."
+# Affiché sur l’accueil et en bas de chaque fiche (écran seulement).
+esprit: "**Faire valoir ses droits, ce n’est pas entrer en conflit.** Dans bien des établissements, le dialogue avec la direction est bon, et un échange cordial règle souvent les choses. Mais la bonne entente ne remplace pas les textes : ce sont eux qui protègent chacun·e, quelles que soient les personnes en poste. Cordialement, mais fermement."
 
 contact:
   # Laisser vide ce qui ne doit pas apparaître en ligne.

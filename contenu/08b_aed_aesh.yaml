@@ -104,7 +104,7 @@ fiches:
       - "**Droit à la déconnexion** : vous n’avez pas à être joint·e ni à consulter la messagerie professionnelle en dehors de vos horaires."
       - "**Grève** : aucune déclaration préalable, même dans le premier degré. Une journée de grève = retenue de 1/30e de la rémunération."
     agir:
-      - "Modification d’emploi du temps : exigez une nouvelle version signée et sa copie."
+      - "Modification d’emploi du temps : demandez une nouvelle version signée et sa copie."
       - "On vous demande de « rendre » vos heures d’activités connexes en accompagnement : refusez et prévenez la section."
     source:
       - { doc: aesh, pages: "4, 5, 7" }

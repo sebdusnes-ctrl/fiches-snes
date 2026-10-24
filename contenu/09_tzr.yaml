@@ -7,12 +7,12 @@ theme:
 fiches:
   - id: tzr-affectation
     titre: "TZR : affectation et suppléances"
-    resume: "Pas de suppléance sans écrit du rectorat, jamais de refus, un temps de préparation."
+    resume: "Une suppléance se rejoint, sur écrit du rectorat, après un temps de préparation."
     a_jour: "Mémo TZR 2024-2025 : vérifiez auprès de la section les règles propres à l’académie de Lille."
     en_bref:
       - "Seul le **rectorat** vous affecte, même pour un remplacement court. Un coup de téléphone d’un·e chef·fe d’établissement ne suffit pas."
       - "**Ne rejoignez une suppléance qu’avec un écrit du rectorat** (avis de suppléance ou arrêté). C’est votre ordre de mission : il couvre aussi un éventuel accident de trajet."
-      - "**Ne refusez jamais une affectation** : ce serait un abandon de poste. Demandez plutôt au rectorat s’il existe une autre suppléance, et contactez la section."
+      - "**Rejoignez toujours votre affectation**, même si elle ne vous convient pas : un refus serait considéré comme un abandon de poste. Demandez plutôt au rectorat s’il existe une autre suppléance, et contactez la section."
     textes:
       - "Votre maximum de service est celui de votre corps (18 h certifié·es, 15 h agrégé·es), avec vos réductions et pondérations. Affecté·e à l’année : **2 HSA au plus** peuvent vous être imposées."
       - "Une affectation hors de votre discipline, ou en documentation, exige votre accord. Votre établissement de rattachement ne peut pas être changé sans votre demande (CAA Nantes, 19 février 2004)."
@@ -22,8 +22,8 @@ fiches:
       - "Un **temps de préparation** préalable doit vous être accordé (note de service n° 99-152). Aucun texte n’en fixe la durée : **48 h** sont souvent admises ; le SNES-FSU demande qu’elles deviennent réglementaires."
       - "**Service déjà complet** dans l’établissement de rattachement ? La suppléance ne s’y ajoute pas, elle le remplace ; au-delà, ce sont des heures supplémentaires."
     agir:
-      - "Exigez par écrit un **emploi du temps hebdomadaire** et un **état VS**, y compris entre deux remplacements : ils prouvent votre service et couvrent un éventuel accident de service."
-      - "Ne signez jamais un avis de suppléance non daté : écrivez « Vu et pris connaissance le… » avec la date réelle, et gardez avis et états VS pour contrôler vos paies."
+      - "Demandez par écrit un **emploi du temps hebdomadaire** et un **état VS**, y compris entre deux remplacements : ils prouvent votre service et couvrent un éventuel accident de service."
+      - "Datez toujours votre signature de l’avis de suppléance : écrivez « Vu et pris connaissance le… » avec la date réelle, et gardez avis et états VS pour contrôler vos paies."
     source:
       - { doc: decret_tzr, ref: "art. 3 à 5" }
       - { doc: memo_tzr, pages: "5 à 9" }
@@ -41,7 +41,7 @@ fiches:
       - "La distance retenue est la distance par la route entre la commune de rattachement et celle du remplacement."
       - "**Affectation à l’année hors de votre commune** : vos frais de déplacement sont remboursés (au tarif des indemnités kilométriques s’il n’y a pas de transport en commun adapté), ainsi que vos repas pris hors de la commune entre 11 h et 14 h."
     agir:
-      - "Remplacement commencé après la rentrée et prévu jusqu’en fin d’année : vérifiez que l’arrêté n’est **pas antidaté** au 1er septembre. C’est une manœuvre pour ne pas payer l’ISSR."
+      - "Remplacement commencé après la rentrée et prévu jusqu’en fin d’année : vérifiez que l’arrêté n’est **pas antidaté** au 1er septembre. Cela vous priverait de l’ISSR."
       - "Faites indiquer sur le procès-verbal d’installation la date réelle de votre prise de fonctions."
       - "ISSR non versée : réclamez-la au service gestionnaire du rectorat et prévenez la section."
     source:

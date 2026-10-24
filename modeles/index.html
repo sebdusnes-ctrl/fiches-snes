@@ -4,6 +4,7 @@
 <section class="intro">
   <h1>{{ config.accroche }}</h1>
   <p class="intro-meta">{{ nb_fiches }} fiches · {{ themes|length }} thèmes</p>
+  {% if config.esprit %}<p class="esprit">{{ config.esprit|fmt }}</p>{% endif %}
   <label class="recherche">
     <span class="visuellement-cache">Rechercher une fiche</span>
     <input id="recherche" type="search" placeholder="Rechercher : HSA, enfant malade, Pacte…" autocomplete="off">

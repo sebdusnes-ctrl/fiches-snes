@@ -9,7 +9,7 @@ fiches:
     titre: "Convocation, ordre de mission : suis-je obligé·e ?"
     resume: "Une demande n’est pas un ordre ; une convocation n’oblige que pour votre service."
     en_bref:
-      - "**Une demande, une invitation, un « passez me voir », une conversation au détour d’un couloir ne sont pas des convocations** : vous pouvez décliner ou proposer un autre moment. Surtout sans témoin, ne prenez aucun engagement oral et demandez un écrit. **Cela vaut dans les deux sens** : une promesse orale de la direction peut être reniée à tout moment ; faites-la confirmer par écrit."
+      - "**Une demande, une invitation, un « passez me voir », une conversation au détour d’un couloir ne sont pas des convocations** : vous pouvez décliner ou proposer un autre moment. Rien n’oblige à répondre sur-le-champ : prenez le temps, et demandez un écrit. **L’écrit protège les deux parties** : un accord oral, même sincère, s’oublie ou se discute ; faites-le confirmer par écrit."
       - "**Une convocation n’oblige que si elle relève de votre service** (décret n° 2014-940, art. 2) : le chef d’établissement « fixe le service des personnels **dans le respect du statut** » (art. R.421-10) et ne peut pas en ajouter. Et même dans ce cadre, les textes imposent souvent une **participation**, pas une **présence** : conseils de classe et rencontres avec les parents ([fiche « Réunions »](fiche:reunions-obligatoires))."
       - "**Un ordre de mission ne crée aucune obligation de service.** Il concerne un « agent en service » qui se déplace « pour l’exécution du service, hors de sa résidence administrative et hors de sa résidence familiale » (décret n° 2006-781, art. 2) : il règle déplacement, frais et couverture en cas d’accident. Dans votre établissement, il n’a pas lieu d’être."
     textes:
@@ -38,8 +38,8 @@ fiches:
       - "**Contractuel·les, entretien préalable au licenciement** : la convocation, par lettre recommandée ou remise contre signature, « **indique l’objet** » ; l’entretien a lieu au moins **5 jours ouvrables** après ; vous pouvez venir avec « la ou les personnes de [votre] choix » (décret n° 86-83, art. 47). Accompagnement prévu aussi en rupture conventionnelle."
       - "**Représentant·e extérieur·e** : prévenez la direction par écrit au moins **24 h avant** (règle des réunions syndicales, CGFP, art. R.213-36)."
     agir:
-      - "Accompagnement refusé : demandez le refus par écrit et ne poursuivez pas l’entretien seul·e."
-      - "Ne signez rien sur le moment, sauf la mention « **Pris connaissance le** [date] » : elle n’engage à rien et atteste seulement que vous savez que le document existe. Prenez des notes ; après l’entretien, envoyez un **courriel récapitulatif** à la direction."
+      - "Si l’on refuse votre accompagnement, proposez de reporter l’entretien et contactez la section."
+      - "Vous n’avez rien à signer sur le moment. Si on vous le demande, la mention « **Pris connaissance le** [date] » suffit : elle n’engage à rien et atteste seulement que vous savez que le document existe. Prenez des notes ; après l’entretien, envoyez un **courriel récapitulatif** à la direction."
       - "Contactez la section avant l’entretien : elle peut vous accompagner. Voir aussi [« Suis-je obligé·e ? »](fiche:suis-je-oblige)."
     source:
       - { doc: cgfp, ref: "art. L.532-1, L.532-4, R.213-36" }
@@ -151,7 +151,7 @@ fiches:
       - "L’IMP figure sur votre état VS. Une mission particulière ne peut pas être payée en HSE."
     agir:
       - "**Les écrits font les bons amis** : avant de vous engager dans une mission, un projet ou un dispositif, déclarez-le par écrit à la direction avec la rémunération attendue, et attendez sa réponse écrite. Vous éviterez le « il n’y a plus d’argent »."
-      - "**Attention aux mots** : une « demi-IMP » vaut **625 € par an**. Certaines directions annoncent une « demi-IMP » qui correspond en réalité à un quart (312,50 €). Exigez **le montant annuel en euros**, et vérifiez qu’il figure sur votre état VS : seuls les cinq montants ci-dessus existent."
+      - "**Attention aux mots** : une « demi-IMP » vaut **625 € par an**. Certaines directions annoncent une « demi-IMP » qui correspond en réalité à un quart (312,50 €). Demandez **le montant annuel en euros**, et vérifiez qu’il figure sur votre état VS : seuls les cinq montants ci-dessus existent."
       - "En CA, le vote porte sur les missions et leur taux, jamais sur les noms (voir la fiche [« IMP et décharges : ce que vote le CA »](fiche:imp-en-ca))."
     source:
       - { doc: decret_ors, ref: "art. 3" }

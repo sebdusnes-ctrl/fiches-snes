@@ -53,6 +53,8 @@
     {% for s in fiche.sources %}{% set d = config.sources[s.doc] %}<a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.titre }}</a> ({{ d.detail }}){% if s.pages %}, p. {{ s.pages }}{% endif %}{% if s.ref %}, {{ s.ref }}{% endif %}{% if not loop.last %} ; {% endif %}{% endfor %}.
   </p>
 
+  {% if config.esprit %}<p class="esprit">{{ config.esprit|fmt }}</p>{% endif %}
+
   <div class="actions">
     <button type="button" onclick="window.print()">Imprimer la fiche</button>
     <button type="button" id="partager" hidden>Partager</button>
