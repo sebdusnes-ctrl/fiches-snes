@@ -80,7 +80,7 @@ fiches:
     resume: "Les deux documents officiels de votre service, à vérifier avant de signer."
     en_bref:
       - "L’**état VS** (ventilation de service) récapitule vos classes, effectifs, heures, pondérations, réductions, HSA et IMP. Il part au rectorat et **sert à calculer votre paie**."
-      - "Il doit vous être **soumis pour approbation et signature**."
+      - "Il doit vous être **soumis pour approbation et signature**. Établi par l’établissement, signé par vous et transmis au rectorat, **ce n’est pas un simple bout de papier** : le SNES-FSU rappelle que votre service est « attesté et opposable juridiquement » par la VS."
       - "Avec l’état VS, l’**emploi du temps** forme le descriptif officiel de votre service pour l’année."
     textes:
       - "L’emploi du temps est établi par le ou la chef·fe d’établissement à partir des vœux des personnels."
@@ -90,8 +90,11 @@ fiches:
       - "Vérifiez votre VS ligne par ligne : effectifs, heures, pondérations, réductions, nombre d’HSA, IMP."
       - "Les missions du Pacte figurent sur une annexe : vérifiez qu’**aucune mission n’y a été inscrite contre votre gré**."
       - "En cas de désaccord, signez avec la mention « Vu et pris connaissance le… » et contactez la section."
-      - "Cours déplacé en cours d’année (sortie, voyage…) : seule une **VS modifiée, remise contre votre signature**, change votre service. Pronote ou un courriel ne font pas foi : sans votre accord, rien ne change."
-    source: { doc: abecedaire, pages: "12" }
+      - "Cours déplacé en cours d’année (sortie, voyage…) : le SNES-FSU rappelle que seule une **VS modifiée, remise contre votre signature**, a un caractère légal. Pronote ou un courriel ne font pas foi : sans votre accord, rien ne change."
+    source:
+      - { doc: abecedaire, pages: "12" }
+      - { doc: faq_snes, ref: "« Rattrapage des cours après une sortie »" }
+      - { doc: s3_lille, ref: "Bulletin académique n° 333" }
 
   - id: pacte-remplacements
     titre: "Pacte et remplacements de courte durée"
