@@ -3,7 +3,7 @@
 {% block contenu %}
 <section class="intro">
   <h1>{{ config.accroche }}</h1>
-  <p class="intro-meta">{{ nb_fiches }} fiches · {{ themes|length }} thèmes</p>
+  <p class="intro-meta">{{ nb_fiches }} fiches · {{ themes|length }} thèmes · <a href="inscription.html">Recevoir les infos par courriel</a></p>
   {% if config.esprit %}<p class="esprit">{{ config.esprit|fmt }}</p>{% endif %}
   <label class="recherche">
     <span class="visuellement-cache">Rechercher une fiche</span>

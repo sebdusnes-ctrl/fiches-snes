@@ -84,6 +84,16 @@ body::before {
 .intro { padding: 28px 0 8px; }
 .intro h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 6px; }
 .intro-meta { color: var(--texte-doux); margin: 0 0 18px; font-size: .95rem; }
+.formulaire { display: grid; gap: 6px; max-width: 520px; margin: 18px 0 24px; }
+.formulaire label { font-weight: 600; margin-top: 8px; }
+.formulaire input[type=email], .formulaire select { font: inherit; padding: 10px 12px; border: 1px solid var(--bordure); border-radius: 8px; background: var(--surface); color: var(--texte); }
+.formulaire .case { display: flex; gap: 8px; align-items: flex-start; font-weight: normal; line-height: 1.45; }
+.formulaire .case input { margin-top: 4px; }
+.formulaire button { justify-self: start; margin-top: 10px; font: inherit; cursor: pointer; border: 0; }
+.formulaire button:disabled { opacity: .6; cursor: wait; }
+.formulaire .pot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.inscription-message { min-height: 1.5em; font-weight: 600; }
+.donnees { margin-top: 28px; font-size: .95rem; }
 .esprit { border-left: 4px solid var(--snes-vert); padding: 8px 12px; margin: 0 0 18px; font-size: .95rem; line-height: 1.5; background: color-mix(in srgb, var(--snes-vert) 9%, var(--surface)); border-radius: 0 6px 6px 0; }
 
 .recherche input {

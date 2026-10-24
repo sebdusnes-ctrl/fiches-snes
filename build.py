@@ -86,6 +86,9 @@ def charger():
     adresses = contact.get("courriels") or ([contact["courriel"]] if contact.get("courriel") else [])
     contact["courriels"] = adresses
     contact["mailto"] = ",".join(adresses)
+    liste = config.setdefault("liste_diffusion", {})
+    liste.setdefault("url", "")
+    liste.setdefault("statuts", [])
 
     themes, ids, erreurs = [], set(), []
     for fichier in sorted((RACINE / "contenu").glob("*.yaml")):
@@ -241,6 +244,10 @@ def construire():
     (SORTIE / "affiche.html").write_text(page, encoding="utf-8")
     if url:
         qr_png(url, SORTIE / "qr" / "accueil.png")
+
+    page = env.get_template("inscription.html").render(
+        racine="", url_page=f"{url}inscription.html" if url else "", **commun)
+    (SORTIE / "inscription.html").write_text(page, encoding="utf-8")
 
     if stages:
         page = env.get_template("stages.html").render(

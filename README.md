@@ -68,6 +68,13 @@ reconstruit, puis le workflow échoue : GitHub envoie un courriel d'alerte.
 
 Le robot faisant des commits, **toujours `git pull --rebase` avant de pousser** ses propres modifications.
 
+## Liste de diffusion (HIS, stages)
+
+Page `inscription.html` (facultative), feuille Google et envois Gmail : installation et usage dans
+[outils/liste_diffusion/LISEZMOI.md](outils/liste_diffusion/LISEZMOI.md). Le relevé quotidien
+appelle `outils/alertes.py` (secrets GitHub `LISTE_URL` et `LISTE_CLE`) pour prévenir les inscrit·es
+des nouveaux stages et des changements de date ou de lieu.
+
 ## Corpus des sources (pour rédiger les fiches)
 
 `python outils/corpus.py "E:/Ressources Collège/SNES/Mémos_SNES"` écrit dans `sources/`

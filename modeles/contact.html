@@ -3,6 +3,7 @@
   <ul>
     {% if config.contact.correspondant %}<li><strong>Vos correspondant·es :</strong> {{ config.contact.correspondant }}</li>{% endif %}
     {% if config.contact.mailto %}<li><strong>Écrire à la section :</strong> <a href="mailto:{{ config.contact.mailto }}?subject={{ 'Question à la section SNES-FSU'|urlencode }}">{{ config.contact.courriels|join(', ') }}</a></li>{% endif %}
+    <li><a href="{{ racine }}inscription.html">Recevoir les infos de la section par courriel</a> (HIS, stages)</li>
     {% if config.contact.permanence %}<li>{{ config.contact.permanence }}</li>{% endif %}
     {% for lien in config.contact.autres %}<li><a href="{{ lien.url }}" target="_blank" rel="noopener">{{ lien.libelle }}</a></li>{% endfor %}
   </ul>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_top">
+<style>
+  body { font-family: system-ui, sans-serif; font-size: 14px; margin: 0; padding: 4px 8px; color: #1d1d1f; }
+  label { display: block; margin: 10px 0 3px; font-weight: 600; }
+  input, textarea { width: 100%; box-sizing: border-box; padding: 6px; font: inherit; border: 1px solid #bbb; border-radius: 6px; }
+  .ligne { display: flex; gap: 8px; }
+  .ligne > div { flex: 1; }
+  fieldset { border: 1px solid #ddd; border-radius: 6px; margin: 12px 0; padding: 6px 10px; }
+  fieldset label { font-weight: normal; margin: 4px 0; }
+  fieldset input { width: auto; margin-right: 6px; }
+  .boutons { display: flex; gap: 8px; margin-top: 12px; }
+  button { padding: 8px 14px; border-radius: 8px; border: 1px solid #3067b7; background: #fff; color: #3067b7; font: inherit; cursor: pointer; }
+  button.principal { background: #3067b7; color: #fff; }
+  #message { margin-top: 10px; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="ligne">
+    <div><label for="date">Date</label><input id="date" type="date" required></div>
+    <div><label for="debut">Début</label><input id="debut" placeholder="12h30" required></div>
+    <div><label for="fin">Fin</label><input id="fin" placeholder="13h30"></div>
+  </div>
+  <label for="lieu">Lieu</label>
+  <input id="lieu" placeholder="Salle des professeurs">
+  <label for="odj">Ordre du jour (facultatif)</label>
+  <textarea id="odj" rows="4"></textarea>
+  <fieldset id="statuts"><legend>Destinataires (inscrit·es confirmé·es)</legend></fieldset>
+  <div class="boutons">
+    <button type="button" onclick="envoyer(true)">M’envoyer un test</button>
+    <button type="button" class="principal" onclick="envoyer(false)">Envoyer</button>
+  </div>
+  <p id="message"></p>
+<script>
+  google.script.run.withSuccessHandler(function (n) {
+    var f = document.getElementById('statuts');
+    n.statuts.forEach(function (s) {
+      var l = document.createElement('label');
+      l.innerHTML = '<input type="checkbox" checked value="' + s + '">' + s + ' (' + (n[s] || 0) + ')';
+      f.appendChild(l);
+    });
+  }).effectifs();
+
+  function envoyer(test) {
+    var d = {
+      date: document.getElementById('date').value,
+      debut: document.getElementById('debut').value.trim(),
+      fin: document.getElementById('fin').value.trim(),
+      lieu: document.getElementById('lieu').value.trim(),
+      odj: document.getElementById('odj').value.trim(),
+      statuts: Array.prototype.map.call(document.querySelectorAll('#statuts input:checked'), function (c) { return c.value; }),
+      test: test
+    };
+    var m = document.getElementById('message');
+    if (!d.date || !d.debut) { m.textContent = 'Indiquez au moins la date et l’heure de début.'; return; }
+    if (!test && !confirm('Envoyer l’annonce à ' + d.statuts.length + ' statut(s) sélectionné(s) ?')) return;
+    m.textContent = 'Envoi en cours…';
+    google.script.run
+      .withSuccessHandler(function (n) { m.textContent = test ? 'Test envoyé dans votre boîte.' : 'Annonce envoyée à ' + n + ' personne(s).'; })
+      .withFailureHandler(function (e) { m.textContent = 'Erreur : ' + e.message; })
+      .envoyerHIS(d);
+  }
+</script>
+</body>
+</html>

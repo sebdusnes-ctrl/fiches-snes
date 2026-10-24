@@ -2,7 +2,8 @@
 
 Usage : python outils/stages.py [--fichier page.html]
 Écrit contenu/stages.json : la liste des stages, la date de la vérification et le journal
-(stage ajouté, retiré, date reportée, lieu modifié). Lancé chaque jour par GitHub Actions.
+(stage ajouté, retiré, date reportée, lieu modifié). Lancé chaque jour par GitHub Actions ;
+--nouveautes écrit les changements du jour pour outils/alertes.py.
 """
 import argparse
 import datetime as dt
@@ -119,6 +120,17 @@ def analyser(page):
     return stages
 
 
+def lisible(champ, valeur):
+    """Valeur pour le journal : dates en toutes lettres (« 5 novembre 2026 »)."""
+    if not valeur:
+        return "?"
+    if champ == "date":
+        d = dt.date.fromisoformat(valeur)
+        noms = {i: m for m, i in MOIS.items()}
+        return f"{d.day} {noms[d.month]} {d.year}"
+    return valeur
+
+
 def comparer(anciens, nouveaux, jour):
     """Entrées de journal entre deux relevés."""
     av = {s["id"]: s for s in anciens}
@@ -127,16 +139,17 @@ def comparer(anciens, nouveaux, jour):
     for i, s in ap.items():
         if i not in av:
             if anciens:
-                journal.append({"jour": jour, "stage": s["titre"], "changement": "nouveau stage publié"})
+                journal.append({"jour": jour, "id": i, "type": "nouveau", "stage": s["titre"],
+                                "changement": "nouveau stage publié"})
             continue
         a = av[i]
         for champ, nom in (("date", "date"), ("lieu", "lieu"), ("horaires", "horaires")):
             if a.get(champ) != s.get(champ):
-                journal.append({"jour": jour, "stage": s["titre"],
-                                "changement": f"{nom} : {a.get(champ) or '?'} → {s.get(champ) or '?'}"})
+                journal.append({"jour": jour, "id": i, "type": champ, "stage": s["titre"],
+                                "changement": f"{nom} : {lisible(champ, a.get(champ))} → {lisible(champ, s.get(champ))}"})
     for i, a in av.items():
         if i not in ap:
-            journal.append({"jour": jour, "stage": a["titre"],
+            journal.append({"jour": jour, "id": i, "type": "retire", "stage": a["titre"],
                             "changement": "retiré de la page du SNES-FSU Lille"})
     return journal
 
@@ -144,6 +157,7 @@ def comparer(anciens, nouveaux, jour):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fichier", help="page HTML déjà téléchargée (test)")
+    ap.add_argument("--nouveautes", help="écrit aussi les changements du jour dans ce fichier (alertes)")
     args = ap.parse_args()
     page = (Path(args.fichier).read_text(encoding="utf-8", errors="replace")
             if args.fichier else telecharger())
@@ -169,6 +183,8 @@ def main():
         "journal": journal[:30],
     }
     SORTIE.write_text(json.dumps(donnees, ensure_ascii=False, indent=1), encoding="utf-8")
+    if args.nouveautes:
+        Path(args.nouveautes).write_text(json.dumps(nouvelles, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(stages)} stages relevés ; {len(nouvelles)} changement(s) détecté(s).")
     for e in nouvelles:
         print(f"  - {e['stage']} : {e['changement']}")

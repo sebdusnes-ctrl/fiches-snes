@@ -36,7 +36,7 @@ jobs:
       - name: Relevé des stages
         id: releve
         continue-on-error: true
-        run: python outils/stages.py
+        run: python outils/stages.py --nouveautes nouveautes.json
 
       - name: Construction du site
         run: python build.py
@@ -56,6 +56,14 @@ jobs:
           git push
           # Les push faits avec le jeton du workflow ne relancent pas toujours GitHub Pages.
           gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+
+      # Liste de diffusion : nouveaux stages, dates et lieux modifiés (secrets LISTE_URL, LISTE_CLE).
+      - name: Courriels aux inscrit·es
+        if: steps.releve.outcome == 'success'
+        env:
+          LISTE_URL: ${{ secrets.LISTE_URL }}
+          LISTE_CLE: ${{ secrets.LISTE_CLE }}
+        run: python outils/alertes.py nouveautes.json
 
       - name: Alerte si le relevé a échoué
         if: steps.releve.outcome == 'failure'

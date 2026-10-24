@@ -27,6 +27,21 @@ contact:
     - libelle: "SNES-FSU national"
       url: "https://www.snes.edu/"
 
+# Liste de diffusion (HIS, stages) : script Google, voir outils/liste_diffusion/LISEZMOI.md.
+# Tant que « url » est vide, la page d’inscription annonce une ouverture prochaine.
+liste_diffusion:
+  url: ""   # adresse « /exec » du déploiement Web du script Google
+  responsable: "la section SNES-FSU (S1) du collège Joséphine Baker"
+  statuts:  # doit rester identique à STATUTS dans Code.gs
+    - "Professeur·e titulaire"
+    - "Professeur·e contractuel·le"
+    - "CPE"
+    - "Psy-ÉN"
+    - "AED"
+    - "AESH"
+    - "Personnel administratif, social ou de santé"
+    - "Autre"
+
 sources:
   abecedaire:
     titre: "Abécédaire rentrée 2026"

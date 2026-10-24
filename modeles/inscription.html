@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block titre %}Recevoir les infos · {{ config.titre_site }}{% endblock %}
+{% block description %}Inscription facultative à la liste de la section : HIS et stages syndicaux.{% endblock %}
+{% block classe %}page-inscription{% endblock %}
+{% block contenu %}
+{% set liste = config.liste_diffusion %}
+<section class="inscription">
+  <nav class="fil" aria-label="Fil d’Ariane"><a href="index.html">← Accueil</a></nav>
+  <h1>Recevoir les informations de la section</h1>
+  <p><strong>Facultatif</strong> : le site reste entièrement consultable sans inscription. En vous inscrivant, vous êtes prévenu·e par courriel :</p>
+  <ul>
+    <li>des <strong>heures d’information syndicale</strong> (HIS) organisées dans l’établissement ;</li>
+    <li>des <strong>nouveaux stages syndicaux</strong>, et de leurs changements de date ou de lieu (<a href="stages.html">calendrier</a>).</li>
+  </ul>
+  <p>Syndiqué·e ou non, tout le monde peut s’inscrire. Votre statut sert seulement à ne vous envoyer que ce qui vous concerne (par exemple, un stage réservé aux AESH).</p>
+
+  {% if liste.url %}
+  <form id="form-inscription" class="formulaire" action="{{ liste.url }}" method="post">
+    <label for="courriel">Adresse électronique</label>
+    <input id="courriel" type="email" name="courriel" required autocomplete="email" placeholder="prenom.nom@exemple.fr">
+    <label for="statut">Vous êtes</label>
+    <select id="statut" name="statut" required>
+      <option value="">Choisir…</option>
+      {% for s in liste.statuts %}<option>{{ s }}</option>{% endfor %}
+    </select>
+    <p class="pot" aria-hidden="true"><label>Ne pas remplir <input name="site" tabindex="-1" autocomplete="off"></label></p>
+    <label class="case"><input type="checkbox" name="consentement" value="oui" required> J’accepte que {{ liste.responsable }} conserve mon adresse et mon statut pour m’envoyer ces informations.</label>
+    <button type="submit" class="bouton-ecrire">S’inscrire</button>
+    <p id="inscription-message" class="inscription-message" role="status"></p>
+  </form>
+  {% else %}
+  <p class="alerte">L’inscription ouvrira très prochainement.</p>
+  {% endif %}
+
+  <section class="donnees">
+    <h2>Vos données</h2>
+    <ul>
+      <li><strong>Responsable</strong> : {{ liste.responsable }}{% if config.contact.mailto %} ({{ config.contact.courriels|join(', ') }}){% endif %}.</li>
+      <li><strong>Données</strong> : votre adresse électronique et votre statut, rien d’autre.</li>
+      <li><strong>Usage</strong> : uniquement les envois décrits ci-dessus. Aucune transmission à qui que ce soit, ni à la direction, ni au SNES-FSU national.</li>
+      <li><strong>Hébergement</strong> : une feuille Google du compte de la section ; les courriels partent de sa messagerie Gmail.</li>
+      <li><strong>Durée</strong> : jusqu’à votre désinscription. Sans confirmation de votre part, l’adresse est effacée sous 7 jours.</li>
+      <li><strong>Désinscription</strong> : un lien dans chaque courriel, qui efface votre adresse. Vous pouvez aussi écrire à la section pour consulter ou supprimer vos données.</li>
+    </ul>
+  </section>
+</section>
+{% endblock %}
+{% block scripts %}<script src="static/inscription.js?v={{ v }}"></script>{% endblock %}
