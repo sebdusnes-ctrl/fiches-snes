@@ -13,18 +13,36 @@ fiches:
       - "**Une convocation n’oblige que si elle relève de votre service** (décret n° 2014-940, art. 2) : le chef d’établissement « fixe le service des personnels **dans le respect du statut** » (art. R.421-10) et ne peut pas en ajouter. Et même dans ce cadre, les textes imposent souvent une **participation**, pas une **présence** : conseils de classe et rencontres avec les parents ([fiche « Réunions »](fiche:reunions-obligatoires))."
       - "**Un ordre de mission ne crée aucune obligation de service.** Il concerne un « agent en service » qui se déplace « pour l’exécution du service, hors de sa résidence administrative et hors de sa résidence familiale » (décret n° 2006-781, art. 2) : il règle déplacement, frais et couverture en cas d’accident. Dans votre établissement, il n’a pas lieu d’être."
     textes:
+      - "**Le motif est essentiel** : sans objet ni fondement, impossible de savoir si la convocation relève de votre service. Demandez-les **par écrit** avant de vous y rendre."
       - "**Refuser** : vous devez vous conformer aux instructions, sauf ordre manifestement illégal (CGFP, art. L.121-10), mais une instruction doit rester dans le cadre de votre service. Hors de ce cadre, demandez le texte qui fonde l’obligation : sans texte, pas d’obligation."
-      - "**Reporter** : aucun texte ne fixe de délai pour un simple entretien ; vous pouvez demander une autre date, par exemple pour venir accompagné·e. Contractuel·les : l’entretien préalable au licenciement a lieu au moins **5 jours ouvrables** après la convocation (décret n° 86-83, art. 47)."
-      - "**Être accompagné·e** : c’est un **droit** dans une procédure disciplinaire (« défenseurs de son choix » : CGFP, art. L.532-4 ; décret n° 86-83, art. 44), à l’entretien préalable au licenciement d’un·e contractuel·le (« la ou les personnes de son choix », art. 47) et en rupture conventionnelle. Pour un simple entretien, **aucun texte ne l’interdit** : « tout ce qui n’est pas défendu par la loi ne peut être empêché » (Déclaration de 1789, art. 5). Venez avec un·e collègue ou un·e représentant·e syndical·e, interne ou extérieur ; pour un·e représentant·e extérieur·e, **prévenez la direction par écrit au moins 24 h avant** (CGFP, art. R.213-36). En cas de refus, demandez-le par écrit et ne poursuivez pas l’entretien seul·e."
+      - "**Vous êtes convoqué·e à un entretien ?** Motif, report, accompagnement, trace écrite : voir la fiche [« Entretien avec la direction »](fiche:entretien-direction)."
     agir:
-      - "Demandez **toujours par écrit** l’objet et le fondement : « S’agit-il d’une convocation ? Sur quel texte repose-t-elle ? »"
-      - "Avant de refuser une convocation, contactez la section. Après un entretien ou une promesse orale, envoyez un courriel récapitulatif."
+      - "Demandez **toujours par écrit** l’objet et le fondement : « S’agit-il d’une convocation ? Quel en est l’objet ? Sur quel texte repose-t-elle ? »"
+      - "Avant de refuser une convocation, contactez la section : elle vérifie avec vous et peut vous accompagner."
     source:
       - { doc: code_education, ref: "art. R.421-10" }
       - { doc: decret_ors, ref: "art. 2" }
-      - { doc: cgfp, ref: "art. L.121-10, L.532-4, R.213-36" }
-      - { doc: decret_86_83, ref: "art. 44 et 47" }
+      - { doc: cgfp, ref: "art. L.121-10" }
       - { doc: decret_deplacements, ref: "art. 2" }
+
+  - id: entretien-direction
+    titre: "Entretien avec la direction : vos droits"
+    resume: "Connaître le motif, reporter, venir accompagné·e, garder une trace."
+    en_bref:
+      - "**Le motif d’abord** : demandez **par écrit l’objet** de l’entretien avant de vous y rendre. Tout en dépend : simple échange, question de service, ou début d’une procédure (disciplinaire, licenciement) qui vous ouvre des droits précis."
+      - "**Vous pouvez venir accompagné·e** d’un·e collègue ou d’un·e représentant·e syndical·e, de l’établissement ou extérieur. Pour un simple entretien, **aucun texte ne l’interdit** : « tout ce qui n’est pas défendu par la loi ne peut être empêché » (Déclaration de 1789, art. 5)."
+      - "**Vous pouvez demander un report**, par exemple pour venir accompagné·e : aucun texte ne fixe de délai pour un simple entretien."
+    textes:
+      - "**Procédure disciplinaire** : droit à la « communication de l’intégralité de son dossier individuel » et à « l’assistance de défenseurs de son choix » (CGFP, art. L.532-4 ; contractuel·les : décret n° 86-83, art. 44)."
+      - "**Contractuel·les, entretien préalable au licenciement** : la convocation, par lettre recommandée ou remise contre signature, « **indique l’objet** » ; l’entretien a lieu au moins **5 jours ouvrables** après ; vous pouvez venir avec « la ou les personnes de [votre] choix » (décret n° 86-83, art. 47). Accompagnement prévu aussi en rupture conventionnelle."
+      - "**Représentant·e extérieur·e** : prévenez la direction par écrit au moins **24 h avant** (règle des réunions syndicales, CGFP, art. R.213-36)."
+    agir:
+      - "Accompagnement refusé : demandez le refus par écrit et ne poursuivez pas l’entretien seul·e."
+      - "Ne signez rien sur le moment. Prenez des notes ; après l’entretien, envoyez un **courriel récapitulatif** à la direction."
+      - "Contactez la section avant l’entretien : elle peut vous accompagner. Voir aussi [« Suis-je obligé·e ? »](fiche:suis-je-oblige)."
+    source:
+      - { doc: cgfp, ref: "art. L.532-4, R.213-36" }
+      - { doc: decret_86_83, ref: "art. 44 et 47" }
       - { doc: ddhc, ref: "art. 5" }
 
   - id: maxima-de-service
