@@ -14,15 +14,15 @@ fiches:
       - "**Ne rejoignez une suppléance qu’avec un écrit du rectorat** (avis de suppléance ou arrêté). C’est votre ordre de mission : il couvre aussi un éventuel accident de trajet."
       - "**Ne refusez jamais une affectation** : ce serait un abandon de poste. Demandez plutôt au rectorat s’il existe une autre suppléance, et contactez la section."
     textes:
-      - "Votre maximum de service est celui de votre corps (18 h certifié·es, 15 h agrégé·es), avec vos réductions et pondérations."
-      - "Affecté·e à l’année : **2 HSA au plus** peuvent vous être imposées."
-      - "Une affectation hors de votre discipline, ou en documentation, exige votre accord. Selon la jurisprudence citée par le SNES-FSU, votre établissement de rattachement ne peut pas être changé sans votre demande."
-      - "**Entre deux remplacements**, vous pouvez être chargé·e « d’activités de nature pédagogique » dans votre établissement de rattachement, « dans la limite de [votre] obligation de service statutaire et conformément à [votre] qualification » ; chaque heure compte comme une heure de service (décret n° 99-823, art. 5). Exigez un **emploi du temps hebdomadaire** et un **état VS**."
-      - "**Remplacements de courte durée** : si vous n’êtes pas volontaire, ils ne peuvent vous être imposés qu’en attente de suppléance ou avec un service incomplet, et **uniquement par arrêté rectoral**. Sans arrêté, la direction ne peut pas vous les imposer."
-      - "Si vous remplacez un·e collègue qui a signé le Pacte, vous n’avez pas à reprendre ses engagements : le Pacte est individuel."
-      - "Note de service n° 99-152 : un **temps de préparation** doit vous être accordé avant de commencer."
+      - "Votre maximum de service est celui de votre corps (18 h certifié·es, 15 h agrégé·es), avec vos réductions et pondérations. Affecté·e à l’année : **2 HSA au plus** peuvent vous être imposées."
+      - "Une affectation hors de votre discipline, ou en documentation, exige votre accord. Votre établissement de rattachement ne peut pas être changé sans votre demande (CAA Nantes, 19 février 2004)."
+      - "**Entre deux remplacements**, vous pouvez être chargé·e « d’activités de nature pédagogique » dans votre établissement de rattachement, « dans la limite de [votre] obligation de service statutaire et conformément à [votre] qualification » ; chaque heure compte comme une heure de service (décret n° 99-823, art. 5)."
+      - "**Remplacements de courte durée** : si vous n’êtes pas volontaire, ils ne peuvent vous être imposés qu’en attente de suppléance ou avec un service incomplet, et **uniquement par arrêté rectoral**, jamais par la seule direction."
+      - "Remplaçant·e d’un·e signataire du Pacte : vous ne reprenez pas ses engagements (le Pacte est individuel)."
+      - "Un **temps de préparation** préalable doit vous être accordé (note de service n° 99-152). Aucun texte n’en fixe la durée : **48 h** sont souvent admises ; le SNES-FSU demande qu’elles deviennent réglementaires."
+      - "**Service déjà complet** dans l’établissement de rattachement ? La suppléance ne s’y ajoute pas, elle le remplace ; au-delà, ce sont des heures supplémentaires."
     agir:
-      - "Demandez par écrit votre emploi du temps et votre état VS : ils prouvent votre service et couvrent un éventuel accident de service."
+      - "Exigez par écrit un **emploi du temps hebdomadaire** et un **état VS**, y compris entre deux remplacements : ils prouvent votre service et couvrent un éventuel accident de service."
       - "Ne signez jamais un avis de suppléance non daté : écrivez « Vu et pris connaissance le… » avec la date réelle, et gardez avis et états VS pour contrôler vos paies."
     source:
       - { doc: decret_tzr, ref: "art. 3 à 5" }
