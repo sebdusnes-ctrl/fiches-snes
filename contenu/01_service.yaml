@@ -29,11 +29,12 @@ fiches:
     titre: "Entretien avec la direction : vos droits"
     resume: "Connaître le motif, reporter, venir accompagné·e, garder une trace."
     en_bref:
-      - "**Le motif d’abord** : demandez **par écrit l’objet** de l’entretien avant de vous y rendre. Tout en dépend : simple échange, question de service, ou début d’une procédure (disciplinaire, licenciement) qui vous ouvre des droits précis."
+      - "**Le motif d’abord** : demandez **par écrit l’objet** de l’entretien avant de vous y rendre. Tout en dépend : simple échange, question de service, ou faits qui pourraient faire l’objet d’un **rapport au rectorat**."
       - "**Vous pouvez venir accompagné·e** d’un·e collègue ou d’un·e représentant·e syndical·e, de l’établissement ou extérieur. Pour un simple entretien, **aucun texte ne l’interdit** : « tout ce qui n’est pas défendu par la loi ne peut être empêché » (Déclaration de 1789, art. 5)."
       - "**Vous pouvez demander un report**, par exemple pour venir accompagné·e : aucun texte ne fixe de délai pour un simple entretien."
     textes:
-      - "**Procédure disciplinaire** : droit à la « communication de l’intégralité de son dossier individuel » et à « l’assistance de défenseurs de son choix » (CGFP, art. L.532-4 ; contractuel·les : décret n° 86-83, art. 44)."
+      - "**Sanction disciplinaire : ce n’est pas la direction.** Pour les enseignant·es, CPE et Psy-ÉN, le pouvoir disciplinaire appartient à l’autorité de nomination, le **rectorat** (CGFP, art. L.532-1), qui tient votre dossier individuel. Le chef d’établissement ne peut pas vous sanctionner : il peut seulement adresser un **rapport** au rectorat. Si une procédure est engagée, vous avez droit à la « communication de l’intégralité de [votre] dossier » et à « l’assistance de défenseurs de [votre] choix » (art. L.532-4)."
+      - "**AED, et AESH recruté·es par l’établissement** : l’employeur est l’établissement (code de l’éducation, art. L.916-1 et L.917-1), donc le pouvoir disciplinaire appartient au chef d’établissement (décret n° 86-83, art. 44). Mêmes garanties."
       - "**Contractuel·les, entretien préalable au licenciement** : la convocation, par lettre recommandée ou remise contre signature, « **indique l’objet** » ; l’entretien a lieu au moins **5 jours ouvrables** après ; vous pouvez venir avec « la ou les personnes de [votre] choix » (décret n° 86-83, art. 47). Accompagnement prévu aussi en rupture conventionnelle."
       - "**Représentant·e extérieur·e** : prévenez la direction par écrit au moins **24 h avant** (règle des réunions syndicales, CGFP, art. R.213-36)."
     agir:
@@ -41,8 +42,9 @@ fiches:
       - "Ne signez rien sur le moment. Prenez des notes ; après l’entretien, envoyez un **courriel récapitulatif** à la direction."
       - "Contactez la section avant l’entretien : elle peut vous accompagner. Voir aussi [« Suis-je obligé·e ? »](fiche:suis-je-oblige)."
     source:
-      - { doc: cgfp, ref: "art. L.532-4, R.213-36" }
+      - { doc: cgfp, ref: "art. L.532-1, L.532-4, R.213-36" }
       - { doc: decret_86_83, ref: "art. 44 et 47" }
+      - { doc: code_education, ref: "art. L.916-1, L.917-1" }
       - { doc: ddhc, ref: "art. 5" }
 
   - id: maxima-de-service
