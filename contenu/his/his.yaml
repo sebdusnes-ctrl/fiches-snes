@@ -1,3 +1,8 @@
-# Heures d'information syndicale, saisies depuis l'espace admin (/admin).
-# Chaque HIS à venir s'affiche sur l'accueil ; l'annonce et le rappel de la veille partent tout seuls.
-his: []
+his:
+  - date: "2026-11-10"
+    debut: "11h00"
+    fin: "12h00"
+    lieu: "Salle 203"
+    odj: ""
+    statuts: []
+    annoncer: true
