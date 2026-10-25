@@ -270,7 +270,7 @@ def config_admin(config, themes):
     his = {"name": "his", "label": "Heures d’information syndicale", "files": [{
         "name": "his", "label": "HIS", "file": "contenu/his/his.yaml", "fields": [{
             "name": "his", "label": "HIS", "widget": "list", "summary": "{{fields.date}} {{fields.debut}} {{fields.lieu}}",
-            "hint": "Une HIS enregistrée s’affiche sur l’accueil ; l’annonce et le rappel de la veille partent tout seuls.",
+            "hint": "Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel deux jours avant (délai de prévenance de 48 h), partent tout seuls.",
             "fields": [
                 {"name": "date", "label": "Date", "widget": "datetime", "format": "YYYY-MM-DD",
                  "date_format": "DD/MM/YYYY", "time_format": False},

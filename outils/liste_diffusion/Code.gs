@@ -6,7 +6,7 @@
  *  - confirmation et désinscription par lien (doGet) ;
  *  - menu « SNES » dans la feuille : annoncer une HIS aux statuts choisis ;
  *  - alertes « stages » envoyées par le relevé quotidien de GitHub (clé secrète) ;
- *  - HIS saisies dans l'espace admin du site : annonce et rappel la veille (GitHub, clé secrète).
+ *  - HIS saisies dans l'espace admin du site : annonce et rappel deux jours avant (GitHub, clé secrète).
  * Installation : voir LISEZMOI.md dans ce dossier.
  */
 
@@ -104,9 +104,14 @@ function messageHIS_(d, rappel) {
   const jour = new Date(d.date + 'T12:00:00');
   const quand = JOURS[jour.getDay()] + ' ' + jour.getDate() + ' ' + MOIS[jour.getMonth()];
   const horaire = d.debut + (d.fin ? '-' + d.fin : '');
-  const sujet = (rappel ? 'Rappel : demain, ' : '') + 'Heure d’information syndicale le ' + quand + ', ' + horaire;
+  const sujet = (rappel ? 'Rappel : prévenez la direction aujourd’hui · ' : '') +
+    'Heure d’information syndicale le ' + quand + ', ' + horaire;
+  // Rappel envoyé deux jours avant : c'est le dernier moment pour respecter les 48 h de prévenance.
   const corps =
-    (rappel ? '<p><strong>Rappel</strong> : c’est demain.</p>' : '') +
+    (rappel ? '<p style="padding:10px 12px;border-left:4px solid #ed0f4c;background:#fdeef2">' +
+      '<strong>Rappel : l’HIS a lieu dans deux jours.</strong> Si vous avez cours sur ce créneau, ' +
+      '<strong>prévenez la direction aujourd’hui</strong> pour respecter le délai de 48 h ' +
+      '(un simple courriel suffit, sans avoir à donner l’ordre du jour).</p>' : '') +
     '<p>La section SNES-FSU organise une <strong>heure d’information syndicale</strong> :</p>' +
     '<p style="font-size:1.1em"><strong>' + echapper_(quand + ', ' + horaire) + '</strong>' +
     (d.lieu ? '<br>' + echapper_(d.lieu) : '') + '</p>' +
@@ -225,7 +230,8 @@ function purgerNonConfirmes() {
 
 /**
  * p.donnees : {date, debut, fin, lieu, odj, statuts}. Chaque HIS n'est annoncée qu'une fois,
- * et rappelée qu'une fois la veille (pas de rappel si l'annonce est partie il y a moins de 24 h).
+ * et rappelée qu'une fois, deux jours avant, pour le délai de prévenance de 48 h
+ * (pas de rappel si l'annonce est partie il y a moins de 24 h).
  */
 function hisAutomatique_(p) {
   const props = PropertiesService.getScriptProperties();

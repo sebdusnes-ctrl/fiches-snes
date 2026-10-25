@@ -23,8 +23,8 @@ collections:
       label: HIS
       widget: list
       summary: '{{fields.date}} {{fields.debut}} {{fields.lieu}}'
-      hint: Une HIS enregistrée s’affiche sur l’accueil ; l’annonce et le rappel de
-        la veille partent tout seuls.
+      hint: Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel
+        deux jours avant (délai de prévenance de 48 h), partent tout seuls.
       fields:
       - name: date
         label: Date

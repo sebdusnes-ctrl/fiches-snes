@@ -109,5 +109,5 @@ vers une fiche inexistante) fait échouer la publication : GitHub envoie un cour
 Après une modification depuis l'admin, vérifiez que la fiche tient toujours sur une page A4 (aperçu avant impression).
 
 **HIS** : une HIS enregistrée s'affiche sur l'accueil jusqu'à son jour ; si « Envoyer l'annonce » est coché,
-l'annonce part aussitôt (une seule fois), et un rappel la veille au matin (relevé quotidien).
+l'annonce part aussitôt (une seule fois), et un rappel deux jours avant au matin (relevé quotidien), qui rappelle de prévenir la direction 48 h avant.
 Changer la date ou l'heure d'une HIS déjà annoncée envoie une nouvelle annonce.

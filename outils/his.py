@@ -1,8 +1,9 @@
-"""Envoie l'annonce des HIS saisies dans l'espace admin, et leur rappel la veille.
+"""Envoie l'annonce des HIS saisies dans l'espace admin, et leur rappel deux jours avant.
 
 Usage : python outils/his.py
 Lit contenu/his/his.yaml. Pour chaque HIS à venir dont « annoncer » est coché :
-annonce (le script Google ne l'envoie qu'une fois), et rappel si elle a lieu demain.
+annonce (le script Google ne l'envoie qu'une fois), et rappel si elle a lieu dans deux jours
+(dernier moment pour prévenir la direction 48 h avant).
 Adresse et clé : variables d'environnement LISTE_URL et LISTE_CLE (secrets GitHub).
 Lancé après chaque publication et par le relevé quotidien des stages.
 """
@@ -42,7 +43,7 @@ def main():
     if not FICHIER.exists():
         return
     aujourdhui = dt.date.today()
-    demain = aujourdhui + dt.timedelta(days=1)
+    rappel = aujourdhui + dt.timedelta(days=2)
     erreur = False
     for h in (yaml.safe_load(FICHIER.read_text(encoding="utf-8")) or {}).get("his") or []:
         jour = h.get("date")
@@ -51,7 +52,7 @@ def main():
         if not jour or jour < aujourdhui or h.get("annoncer") is False or not h.get("debut"):
             continue
         h = dict(h, date=jour.isoformat(), debut=str(h["debut"]), fin=str(h.get("fin") or ""))
-        actions = ["his_annonce"] + (["his_rappel"] if jour == demain else [])
+        actions = ["his_annonce"] + (["his_rappel"] if jour == rappel else [])
         for action in actions:
             reponse = appeler(url, cle, action, h)
             print(f"HIS du {h['date']} {h['debut']} : {action} → {reponse}")

@@ -67,7 +67,7 @@ jobs:
           LISTE_CLE: ${{ secrets.LISTE_CLE }}
         run: python outils/alertes.py nouveautes.json
 
-      # Rappel la veille des HIS saisies dans l'espace admin (et annonce si elle n'est pas encore partie).
+      # Rappel deux jours avant des HIS saisies dans l'espace admin (et annonce si elle n'est pas encore partie).
       - name: HIS
         env:
           LISTE_URL: ${{ secrets.LISTE_URL }}
