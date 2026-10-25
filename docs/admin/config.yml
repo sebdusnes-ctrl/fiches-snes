@@ -357,3 +357,65 @@ collections:
       widget: list
       summary: '{{fields.titre}}'
       fields: *id002
+- name: textes
+  label: Textes du site
+  files:
+  - name: site
+    label: Titres, accroches et intros
+    file: contenu/textes/site.yaml
+    fields:
+    - name: titre_site
+      label: Titre du site (en-tête de chaque page)
+      widget: string
+      hint: ''
+      required: false
+    - name: section
+      label: Nom de la section (au-dessus du titre)
+      widget: string
+      hint: ''
+      required: false
+    - name: accroche
+      label: Accroche de l’accueil
+      widget: text
+      hint: ''
+      required: false
+    - name: esprit
+      label: Encadré « Faire valoir ses droits » (accueil et bas des fiches)
+      widget: text
+      hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+      required: false
+    - name: note_pied
+      label: Note en bas de chaque page
+      widget: text
+      hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+      required: false
+    - name: permanence
+      label: Permanence (bloc « Contactez la section »)
+      widget: string
+      hint: ''
+      required: false
+    - name: stages_titre
+      label: 'Page Stages : titre'
+      widget: string
+      hint: ''
+      required: false
+    - name: stages_intro
+      label: 'Page Stages : introduction'
+      widget: text
+      hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+      required: false
+    - name: inscription_titre
+      label: 'Page Inscription : titre'
+      widget: string
+      hint: ''
+      required: false
+    - name: inscription_intro
+      label: 'Page Inscription : introduction'
+      widget: text
+      hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+      required: false
+    - name: inscription_public
+      label: 'Page Inscription : qui peut s’inscrire'
+      widget: text
+      hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+      required: false

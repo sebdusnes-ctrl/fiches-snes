@@ -26,7 +26,8 @@
 <footer class="pied">
   <div class="conteneur">
     {% include "contact.html" %}
-    <p class="pied-note">Fiches de synthèse rédigées par la section à partir des publications nationales du SNES-FSU. En cas de doute, la publication d’origine et la section font foi.</p>
+    <p class="pied-note">{{ config.textes.note_pied|fmt_racine if racine == "" else config.textes.note_pied|fmt }}</p>
+    <p class="pied-admin"><a href="{{ racine }}admin/">Espace admin</a></p>
   </div>
 </footer>
 {% block scripts %}{% endblock %}

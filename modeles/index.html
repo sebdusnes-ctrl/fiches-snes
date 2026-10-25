@@ -12,7 +12,7 @@
     <p class="his-lien">Ouverte à toutes et tous, syndiqué·es ou non. <a href="fiches/heure-information-syndicale.html">Vos droits : la fiche HIS</a></p>
   </aside>
   {% endfor %}
-  {% if config.esprit %}<p class="esprit">{{ config.esprit|fmt }}</p>{% endif %}
+  {% if config.esprit %}<p class="esprit">{{ config.esprit|fmt_racine }}</p>{% endif %}
   <label class="recherche">
     <span class="visuellement-cache">Rechercher une fiche</span>
     <input id="recherche" type="search" placeholder="Rechercher : HSA, enfant malade, Pacte…" autocomplete="off">

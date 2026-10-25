@@ -30,15 +30,18 @@ def typographie(texte):
     return re.sub(r"« ", "«\u00a0", t)
 
 
-def formater(texte):
-    """Échappe le HTML puis interprète **gras** et [lien](https://…)."""
+def formater(texte, dossier_fiches=""):
+    """Échappe le HTML puis interprète **gras** et [lien](https://…).
+
+    dossier_fiches : préfixe des liens [texte](fiche:id), « fiches/ » depuis une page à la racine du site.
+    """
     t = html.escape(typographie(texte), quote=False)
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
     t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)",
                r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
     # Lien vers une autre fiche : [texte](fiche:identifiant) ; les pages sont toutes dans fiches/.
     t = re.sub(r"\[([^\]]+)\]\(fiche:([a-z0-9-]+)\)",
-               r'<a class="lien-fiche" href="\2.html">\1</a>', t)
+               rf'<a class="lien-fiche" href="{dossier_fiches}\2.html">\1</a>', t)
     return t
 
 
@@ -77,6 +80,11 @@ def qr_png(url, chemin):
 
 def charger():
     config = yaml.safe_load((RACINE / "config.yaml").read_text(encoding="utf-8"))
+    # Textes généraux (titres, accroche, intros), modifiables depuis l'espace admin.
+    textes = yaml.safe_load((RACINE / "contenu" / "textes" / "site.yaml").read_text(encoding="utf-8")) or {}
+    config.setdefault("contact", {})["permanence"] = textes.pop("permanence", "")
+    config.update({k: textes[k] for k in ("titre_site", "section", "accroche", "esprit") if k in textes})
+    config["textes"] = textes
     url = (config.get("url_site") or "").strip()
     if url and not url.endswith("/"):
         url += "/"
@@ -116,6 +124,9 @@ def charger():
             for cible in re.findall(r"\]\(fiche:([a-z0-9-]+)\)", " ".join(map(str, morceaux))):
                 if cible not in ids:
                     erreurs.append(f"fiche {f['id']} : lien vers une fiche inconnue « {cible} »")
+    for cible in re.findall(r"\]\(fiche:([a-z0-9-]+)\)", " ".join(map(str, config["textes"].values()))):
+        if cible not in ids:
+            erreurs.append(f"textes du site : lien vers une fiche inconnue « {cible} »")
     if erreurs:
         sys.exit("Contenu invalide :\n  " + "\n  ".join(erreurs))
     return config, themes
@@ -271,13 +282,29 @@ def config_admin(config, themes):
                  "required": False, "options": statuts, "hint": "Vide : tout le monde."},
                 {"name": "annoncer", "label": "Envoyer l’annonce et le rappel par courriel", "widget": "boolean",
                  "default": True}]}]}]}
+    def champ(nom, libelle, widget="string", aide=""):
+        return {"name": nom, "label": libelle, "widget": widget, "hint": aide, "required": False}
+    textes = {"name": "textes", "label": "Textes du site", "files": [{
+        "name": "site", "label": "Titres, accroches et intros", "file": "contenu/textes/site.yaml", "fields": [
+            champ("titre_site", "Titre du site (en-tête de chaque page)"),
+            champ("section", "Nom de la section (au-dessus du titre)"),
+            champ("accroche", "Accroche de l’accueil", "text"),
+            champ("esprit", "Encadré « Faire valoir ses droits » (accueil et bas des fiches)", "text", AIDE_TEXTE),
+            champ("note_pied", "Note en bas de chaque page", "text", AIDE_TEXTE),
+            champ("permanence", "Permanence (bloc « Contactez la section »)"),
+            champ("stages_titre", "Page Stages : titre"),
+            champ("stages_intro", "Page Stages : introduction", "text", AIDE_TEXTE),
+            champ("inscription_titre", "Page Inscription : titre"),
+            champ("inscription_intro", "Page Inscription : introduction", "text", AIDE_TEXTE),
+            champ("inscription_public", "Page Inscription : qui peut s’inscrire", "text", AIDE_TEXTE),
+        ]}]}
     return {
         "backend": {"name": "github", "repo": "sebdusnes-ctrl/fiches-snes", "branch": "main"},
         "site_url": config["url_site"], "display_url": config["url_site"],
         "media_folder": "static/images", "public_folder": "/static/images",
         "editor": {"preview": False},
         "output": {"yaml": {"quote": "double"}},
-        "collections": [his, {"name": "fiches", "label": "Fiches", "files": fichiers}],
+        "collections": [his, {"name": "fiches", "label": "Fiches", "files": fichiers}, textes],
     }
 
 
@@ -308,6 +335,7 @@ def construire():
 
     env = Environment(loader=FileSystemLoader(RACINE / "modeles"), autoescape=True)
     env.filters["fmt"] = lambda t: __import__("markupsafe").Markup(formater(t))
+    env.filters["fmt_racine"] = lambda t: __import__("markupsafe").Markup(formater(t, "fiches/"))
     env.filters["brut"] = texte_brut
     env.filters["typo"] = typographie
 

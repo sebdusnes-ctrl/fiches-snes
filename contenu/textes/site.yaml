@@ -1,0 +1,13 @@
+# Textes généraux du site, modifiables depuis l'espace admin (« Textes du site »).
+# Mise en forme possible : **gras**, [texte](https://…), [texte](fiche:identifiant).
+titre_site: "Fiches pratiques SNES-FSU"
+section: "SNES-FSU — section du collège Joséphine Baker"
+accroche: "Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU."
+esprit: "**Faire valoir ses droits, ce n’est pas entrer en conflit.** Dans bien des établissements, le dialogue avec la direction est bon, et un échange cordial règle souvent les choses. Mais la bonne entente ne remplace pas les textes : ce sont eux qui protègent chacun·e, quelles que soient les personnes en poste. Cordialement, mais fermement."
+note_pied: "Fiches de synthèse rédigées par la section à partir des publications nationales du SNES-FSU. En cas de doute, la publication d’origine et la section font foi."
+permanence: "Panneau syndical en salle des professeurs"
+stages_titre: "Stages syndicaux : calendrier et disponibilités"
+stages_intro: "Tout agent, titulaire ou non, a droit à 12 jours de formation syndicale par an. Si vous travaillez le jour du stage, la demande d’absence doit partir **au moins un mois avant** (CGFP, art. R.215-3). Voir la fiche [« Stage de formation syndicale »](fiche:stage-syndical)."
+inscription_titre: "Recevoir les informations de la section"
+inscription_intro: "**Facultatif** : le site reste entièrement consultable sans inscription. En vous inscrivant, vous êtes prévenu·e par courriel des **heures d’information syndicale** (HIS) organisées dans l’établissement, et des **nouveaux stages syndicaux** et de leurs changements de date ou de lieu."
+inscription_public: "Syndiqué·e ou non, tout le monde peut s’inscrire. Votre statut sert seulement à ne vous envoyer que ce qui vous concerne (par exemple, un stage réservé aux AESH)."

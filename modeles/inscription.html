@@ -6,13 +6,9 @@
 {% set liste = config.liste_diffusion %}
 <section class="inscription">
   <nav class="fil" aria-label="Fil d’Ariane"><a href="index.html">← Accueil</a></nav>
-  <h1>Recevoir les informations de la section</h1>
-  <p><strong>Facultatif</strong> : le site reste entièrement consultable sans inscription. En vous inscrivant, vous êtes prévenu·e par courriel :</p>
-  <ul>
-    <li>des <strong>heures d’information syndicale</strong> (HIS) organisées dans l’établissement ;</li>
-    <li>des <strong>nouveaux stages syndicaux</strong>, et de leurs changements de date ou de lieu (<a href="stages.html">calendrier</a>).</li>
-  </ul>
-  <p>Syndiqué·e ou non, tout le monde peut s’inscrire. Votre statut sert seulement à ne vous envoyer que ce qui vous concerne (par exemple, un stage réservé aux AESH).</p>
+  <h1>{{ config.textes.inscription_titre|typo }}</h1>
+  <p>{{ config.textes.inscription_intro|fmt_racine }}</p>
+  <p>{{ config.textes.inscription_public|fmt_racine }}</p>
 
   {% if liste.url %}
   <form id="form-inscription" class="formulaire" action="{{ liste.url }}" method="post">

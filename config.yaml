@@ -4,15 +4,12 @@
 # tant qu'elle n'est pas renseignée, les QR codes ne sont pas générés.
 url_site: "https://sebdusnes-ctrl.github.io/fiches-snes/" # ex. "https://mon-compte.github.io/fiches-snes/"
 
+# Titres, accroche, intros, encadré « Faire valoir ses droits » : contenu/textes/site.yaml (espace admin).
+
 # Fiches mises en avant en haut de l’accueil (identifiants).
 a_la_une:
   - suis-je-oblige
 
-titre_site: "Fiches pratiques SNES-FSU"
-section: "SNES-FSU — section du collège Joséphine Baker"
-accroche: "Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU."
-# Affiché sur l’accueil et en bas de chaque fiche (écran seulement).
-esprit: "**Faire valoir ses droits, ce n’est pas entrer en conflit.** Dans bien des établissements, le dialogue avec la direction est bon, et un échange cordial règle souvent les choses. Mais la bonne entente ne remplace pas les textes : ce sont eux qui protègent chacun·e, quelles que soient les personnes en poste. Cordialement, mais fermement."
 
 contact:
   # Laisser vide ce qui ne doit pas apparaître en ligne.
@@ -20,7 +17,6 @@ contact:
   courriels:            # adresses de la section : le bouton « Écrire à la section » écrit à toutes
     - "sebdusnes@gmail.com"
     - "ludivine.pedro@gmail.com"
-  permanence: "Panneau syndical en salle des professeurs"
   autres:
     - libelle: "SNES-FSU Lille (section académique)"
       url: "https://lille.snes.edu/"

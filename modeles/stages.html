@@ -5,8 +5,8 @@
 {% block contenu %}
 <section class="stages">
   <nav class="fil" aria-label="Fil d’Ariane"><a href="index.html">← Accueil</a></nav>
-  <h1>Stages syndicaux : calendrier et disponibilités</h1>
-  <p class="stages-intro">Tout agent, titulaire ou non, a droit à 12 jours de formation syndicale par an. Si vous travaillez le jour du stage, la demande d’absence doit partir <strong>au moins un mois avant</strong> (CGFP, art. R.215-3). Voir la fiche <a class="lien-fiche" href="fiches/stage-syndical.html">« Stage de formation syndicale »</a>.</p>
+  <h1>{{ config.textes.stages_titre|typo }}</h1>
+  <p class="stages-intro">{{ config.textes.stages_intro|fmt_racine }}</p>
   <p class="stages-actions">
     <a class="bouton-ecrire" href="{{ stages.inscription }}" target="_blank" rel="noopener">S’inscrire (adhérent·e ou non)</a>
     <a href="{{ stages.source }}" target="_blank" rel="noopener">Page du SNES-FSU Lille</a>
