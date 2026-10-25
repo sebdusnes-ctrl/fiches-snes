@@ -13,7 +13,7 @@
 
 // Version du script : à changer à chaque modification. GitHub vérifie que la version déployée
 // est bien celle-ci avant d'envoyer les HIS (outils/his.py).
-const VERSION = '2026-10-25.5 (adresses académiques refusées)';
+const VERSION = '2026-10-25.6 (sécurité : limites d’envoi, fonctions réservées)';
 
 const NOM_SECTION = 'SNES-FSU · collège Joséphine Baker';
 const SITE = 'https://sebdusnes-ctrl.github.io/fiches-snes/';
@@ -33,7 +33,12 @@ const STATUTS = [
 // liste_diffusion.domaines_refuses dans config.yaml.
 const DOMAINES_REFUSES = ['ac-lille.fr', 'pasdecalais.fr'];
 const ONGLET = 'Inscrits';
-const ENTETES = ['courriel', 'statut', 'etat', 'jeton', 'statut_demande', 'inscrit_le', 'confirme_le'];
+const ENTETES = ['courriel', 'statut', 'etat', 'jeton', 'statut_demande', 'inscrit_le', 'confirme_le', 'demande_le'];
+// Protection du quota Gmail (~100 envois/jour) contre les inscriptions en rafale :
+// un courriel de confirmation par adresse et par 24 h, et au plus 25 par jour en tout,
+// pour toujours garder de quoi envoyer les HIS. Au-delà de 100 inscriptions non confirmées, on refuse.
+const CONFIRMATIONS_PAR_JOUR = 25;
+const EN_ATTENTE_MAX = 100;
 const JOURS_POUR_CONFIRMER = 7;
 const JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
 const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août',
@@ -52,8 +57,18 @@ function onOpen() {
     .addToUi();
 }
 
+/**
+ * Les fonctions sans « _ » final peuvent être appelées depuis une page du script : on vérifie
+ * qu'elles le sont par la propriétaire, depuis la feuille, et jamais par un·e visiteur·se du site.
+ */
+function reserve_() {
+  const moi = Session.getEffectiveUser().getEmail();
+  if (!moi || Session.getActiveUser().getEmail() !== moi) throw new Error('Réservé à la section.');
+}
+
 /** Crée l'onglet, la clé secrète des alertes stages et le nettoyage quotidien. */
 function installer() {
+  reserve_();
   feuille_();
   const props = PropertiesService.getScriptProperties();
   if (!props.getProperty('CLE')) props.setProperty('CLE', Utilities.getUuid());
@@ -66,23 +81,27 @@ function installer() {
 }
 
 function afficherVersion() {
+  reserve_();
   SpreadsheetApp.getUi().alert('Version du script : ' + VERSION +
     '\n\nAprès avoir collé une nouvelle version : Déployer → Gérer les déploiements → ✏️ → Nouvelle version.');
 }
 
 function afficherBilan() {
+  reserve_();
   const n = effectifs();
   const lignes = STATUTS.map(s => s + ' : ' + (n[s] || 0));
   SpreadsheetApp.getUi().alert('Inscrit·es confirmé·es : ' + n.total + '\n\n' + lignes.join('\n'));
 }
 
 function ouvrirHIS() {
+  reserve_();
   const html = HtmlService.createHtmlOutputFromFile('HIS').setWidth(480).setHeight(640);
   SpreadsheetApp.getUi().showModalDialog(html, 'Annoncer une heure d’information syndicale');
 }
 
 /** Pour la fenêtre HIS : statuts et nombre d'inscrit·es confirmé·es. */
 function effectifs() {
+  reserve_();
   const n = { total: 0 };
   lignes_().filter(l => l.etat === 'confirme').forEach(l => {
     n[l.statut] = (n[l.statut] || 0) + 1;
@@ -97,6 +116,7 @@ function effectifs() {
  * Avec test = true, n'envoie qu'à vous-même.
  */
 function envoyerHIS(d) {
+  reserve_();
   const m = messageHIS_(d, 'annonce');
   if (d.test) {
     const moi = Session.getEffectiveUser().getEmail();
@@ -226,18 +246,27 @@ function inscrire_(p) {
       '<p>Veuillez n’entrer qu’une adresse personnelle : votre adresse académique est un outil institutionnel.</p>' +
       '<p><a href="' + SITE + 'inscription.html">Revenir au formulaire</a></p>');
   }
+  const merci = page_('Presque fini',
+    '<p>Un courriel de confirmation vient de partir : cliquez sur le lien qu’il contient ' +
+    '(pensez à regarder dans les indésirables).</p><p><a href="' + SITE + '">Retour au site</a></p>');
   const verrou = LockService.getScriptLock();
   verrou.waitLock(10000);
   let jeton;
   try {
     const sh = feuille_();
-    const l = lignes_().find(x => x.courriel === courriel);
+    const toutes = lignes_();
+    const l = toutes.find(x => x.courriel === courriel);
+    // Même réponse dans tous les cas : le formulaire ne révèle jamais si une adresse est inscrite.
+    if (l && l.demande_le && Date.now() - new Date(l.demande_le).getTime() < 24 * 3600 * 1000) return merci;
+    if (!l && toutes.filter(x => x.etat !== 'confirme').length >= EN_ATTENTE_MAX) return trop_();
+    if (!compterConfirmation_()) return trop_();
     if (l) {
       jeton = l.jeton;
       sh.getRange(l.ligne, ENTETES.indexOf('statut_demande') + 1).setValue(statut);
+      sh.getRange(l.ligne, ENTETES.indexOf('demande_le') + 1).setValue(new Date());
     } else {
       jeton = Utilities.getUuid();
-      sh.appendRow([courriel, '', 'en_attente', jeton, statut, new Date(), '']);
+      sh.appendRow([courriel, '', 'en_attente', jeton, statut, new Date(), '', new Date()]);
     }
   } finally {
     verrou.releaseLock();
@@ -254,9 +283,24 @@ function inscrire_(p) {
       '<p>Si vous n’êtes pas à l’origine de cette demande, ignorez ce message : sans confirmation, ' +
       'votre adresse est effacée sous ' + JOURS_POUR_CONFIRMER + ' jours.</p>',
   });
-  return page_('Presque fini',
-    '<p>Un courriel de confirmation vient de partir : cliquez sur le lien qu’il contient ' +
-    '(pensez à regarder dans les indésirables).</p><p><a href="' + SITE + '">Retour au site</a></p>');
+  return merci;
+}
+
+/** Compte un courriel de confirmation ; faux si le plafond du jour est atteint. */
+function compterConfirmation_() {
+  const props = PropertiesService.getScriptProperties();
+  const jour = Utilities.formatDate(new Date(), 'Europe/Paris', 'yyyy-MM-dd');
+  const c = JSON.parse(props.getProperty('CONFIRMATIONS') || '{}');
+  const n = c.jour === jour ? c.n : 0;
+  if (n >= CONFIRMATIONS_PAR_JOUR) return false;
+  props.setProperty('CONFIRMATIONS', JSON.stringify({ jour: jour, n: n + 1 }));
+  return true;
+}
+
+function trop_() {
+  return page_('Réessayez demain',
+    '<p>Trop de demandes d’inscription aujourd’hui. Réessayez demain, ou écrivez à la section.</p>' +
+    '<p><a href="' + SITE + '">Retour au site</a></p>');
 }
 
 function confirmer_(jeton) {
@@ -265,7 +309,7 @@ function confirmer_(jeton) {
   const sh = feuille_();
   const statut = l.statut_demande || l.statut;
   sh.getRange(l.ligne, 1, 1, ENTETES.length).setValues([[
-    l.courriel, statut, 'confirme', l.jeton, '', l.inscrit_le, new Date()]]);
+    l.courriel, statut, 'confirme', l.jeton, '', l.inscrit_le, new Date(), l.demande_le || '']]);
   return page_('Inscription confirmée',
     '<p>C’est fait : vous recevrez les informations de la section (' + echapper_(statut) + ').</p>' +
     '<p>Chaque courriel contient un lien pour vous désinscrire.</p><p><a href="' + SITE + '">Retour au site</a></p>');
@@ -280,6 +324,7 @@ function desinscrire_(jeton) {
 
 /** Déclencheur quotidien : efface les inscriptions jamais confirmées. */
 function purgerNonConfirmes() {
+  // Déclencheur horaire : s'exécute au nom de la propriétaire, sans utilisateur·rice actif·ve.
   const limite = Date.now() - JOURS_POUR_CONFIRMER * 86400000;
   const sh = feuille_();
   lignes_().filter(l => l.etat !== 'confirme' && new Date(l.inscrit_le).getTime() < limite)
@@ -357,7 +402,8 @@ function alertesStages_(p) {
       (it.type === 'nouveau' ? 'nouveau stage' : echapper_(it.changement)) + '<br>' +
       echapper_(it.date_fr || 'date à préciser') + (it.lieu ? ' · ' + echapper_(it.lieu) : '') +
       (it.limite_fr ? '<br>Demande d’absence avant le ' + echapper_(it.limite_fr) : '') +
-      (it.programme ? '<br><a href="' + it.programme + '">Programme</a>' : '') + '</li>').join('');
+      (/^https:\/\//.test(it.programme || '') ? '<br><a href="' + echapper_(it.programme) + '">Programme</a>' : '') +
+      '</li>').join('');
     envoyer_([l], 'Stages syndicaux : ' + (siens.length > 1 ? siens.length + ' nouveautés' : 'du nouveau'),
       '<p>Du nouveau dans les stages du SNES-FSU Lille :</p><ul>' + blocs + '</ul>' +
       '<p><a href="' + SITE + 'stages.html">Calendrier complet et disponibilités</a></p>' +
@@ -404,6 +450,8 @@ function feuille_() {
   if (sh.getLastRow() === 0) {
     sh.appendRow(ENTETES);
     sh.setFrozenRows(1);
+  } else if (sh.getRange(1, ENTETES.length).getValue() !== ENTETES[ENTETES.length - 1]) {
+    sh.getRange(1, 1, 1, ENTETES.length).setValues([ENTETES]);  // colonne ajoutée par une mise à jour
   }
   return sh;
 }

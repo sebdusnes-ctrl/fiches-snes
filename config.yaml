@@ -6,6 +6,10 @@ url_site: "https://sebdusnes-ctrl.github.io/fiches-snes/" # ex. "https://mon-com
 
 # Titres, accroche, intros, encadré « Faire valoir ses droits » : contenu/textes/site.yaml (espace admin).
 
+# Fiches retirées volontairement du site (identifiants). Sans cela, la publication refuse
+# qu’une fiche déjà en ligne disparaisse : son QR code est peut-être imprimé.
+fiches_retirees: []
+
 # Fiches mises en avant en haut de l’accueil (identifiants).
 a_la_une:
   - suis-je-oblige

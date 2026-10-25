@@ -8,6 +8,7 @@ LISTE_URL et LISTE_CLE (secrets GitHub). Sans elles, rien n'est envoyé.
 import datetime as dt
 import json
 import os
+import re
 import ssl
 import sys
 import urllib.parse
@@ -62,7 +63,8 @@ def main():
         contexte = None
     with urllib.request.urlopen(urllib.request.Request(url, data=corps), timeout=120, context=contexte) as r:
         reponse = r.read().decode("utf-8", errors="replace")
-    print(f"{len(items)} changement(s) envoyé(s) : {reponse}")
+    # Journaux GitHub publics : on n'y écrit pas le nombre d'inscrit·es.
+    print(f"{len(items)} changement(s) transmis : {re.sub(r' à [0-9]+', '', reponse)}")
     if not reponse.startswith(("envoyé", "rien")):
         sys.exit("Réponse inattendue du script Google.")
 

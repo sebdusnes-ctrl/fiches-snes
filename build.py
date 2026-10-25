@@ -37,7 +37,7 @@ def formater(texte, dossier_fiches=""):
     """
     t = html.escape(typographie(texte), quote=False)
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
-    t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)",
+    t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s\"]+)\)",  # pas de « " » : il fermerait l'attribut href
                r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
     # Lien vers une autre fiche : [texte](fiche:identifiant) ; les pages sont toutes dans fiches/.
     t = re.sub(r"\[([^\]]+)\]\(fiche:([a-z0-9-]+)\)",
@@ -230,6 +230,10 @@ def preparer_his(aujourdhui):
 # --- Espace admin (/admin : Sveltia CMS, connexion par jeton GitHub) ---------------
 
 VERSION_CMS = "0.233.0"
+# Empreinte SRI du fichier ci-dessus : le navigateur refuse un fichier modifié (CDN compromis),
+# qui pourrait sinon voler le jeton GitHub. À recalculer en changeant de version :
+# curl -sL https://unpkg.com/@sveltia/cms@VERSION/dist/sveltia-cms.js | openssl dgst -sha384 -binary | openssl base64 -A
+INTEGRITE_CMS = "sha384-lq8uMtdOlotHkm4oFSd+o7whev4/k4o8uZwio5iwuW8sJsUxf9K4OewbxVUzGP5m"
 AIDE_TEXTE = "**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)"
 
 
@@ -328,7 +332,7 @@ def construire_admin(config, themes):
 <title>Admin · {html.escape(config["titre_site"])}</title>
 </head>
 <body>
-<script src="https://unpkg.com/@sveltia/cms@{VERSION_CMS}/dist/sveltia-cms.js"></script>
+<script src="https://unpkg.com/@sveltia/cms@{VERSION_CMS}/dist/sveltia-cms.js" integrity="{INTEGRITE_CMS}" crossorigin="anonymous"></script>
 </body>
 </html>
 """, encoding="utf-8")
@@ -345,6 +349,17 @@ def construire():
     env.filters["fmt_racine"] = lambda t: __import__("markupsafe").Markup(formater(t, "fiches/"))
     env.filters["brut"] = texte_brut
     env.filters["typo"] = typographie
+
+    # Une fiche déjà en ligne ne disparaît pas par erreur (suppression dans l'admin) : son QR code
+    # est peut-être imprimé. Pour la retirer volontairement, l'ajouter à fiches_retirees (config.yaml).
+    ids = {f["id"] for th in themes for f in th["fiches"]}
+    retirees = set(config.get("fiches_retirees") or [])
+    en_ligne = {f.stem for f in (SORTIE / "fiches").glob("*.html")} if SORTIE.exists() else set()
+    disparues = sorted(en_ligne - ids - retirees)
+    if disparues:
+        sys.exit("Fiche(s) en ligne absente(s) du contenu : " + ", ".join(disparues) +
+                 "\n  Suppression voulue ? Ajoutez l'identifiant à « fiches_retirees » dans config.yaml."
+                 "\n  Sinon, rétablissez la fiche (historique GitHub).")
 
     if SORTIE.exists():
         shutil.rmtree(SORTIE)

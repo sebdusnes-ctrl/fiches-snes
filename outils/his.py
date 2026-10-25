@@ -82,7 +82,8 @@ def main():
             erreur = True
             continue
         reponse = appeler(url, cle, h, rappel=(jour == jour_rappel))
-        print(f"HIS du {h['date']} {h['debut']} ({h['etat']}) → {reponse}")
+        # Journaux GitHub publics : on n'y écrit pas le nombre d'inscrit·es.
+        print(f"HIS du {h['date']} {h['debut']} ({h['etat']}) → {re.sub(r' à [0-9]+', '', reponse)}")
         if not reponse.startswith(("envoyé", "rien")):
             erreur = True
     if erreur:
