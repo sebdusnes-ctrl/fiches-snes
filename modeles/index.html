@@ -5,11 +5,11 @@
   <h1>{{ config.accroche }}</h1>
   <p class="intro-meta">{{ nb_fiches }} fiches · {{ themes|length }} thèmes · <a href="inscription.html">Recevoir les infos par courriel</a></p>
   {% for h in his %}
-  <aside class="his-annonce" data-date="{{ h.date }}">
-    <p class="his-titre">{{ "Prochaine heure" if loop.first else "Heure" }} d’information syndicale</p>
+  <aside class="his-annonce{% if h.annulee %} his-annulee{% endif %}" data-date="{{ h.date }}">
+    <p class="his-titre">{% if h.annulee %}Annulée : heure{% else %}{{ "Prochaine heure" if loop.first else "Heure" }}{% endif %} d’information syndicale</p>
     <p class="his-quand"><strong>{{ h.date_fr|capitalize }}{% if h.horaire %}, {{ h.horaire }}{% endif %}</strong>{% if h.lieu %} · {{ h.lieu }}{% endif %}</p>
-    {% if h.odj %}<p class="his-odj">{{ h.odj }}</p>{% endif %}
-    <p class="his-lien">Ouverte à toutes et tous, syndiqué·es ou non. <a href="fiches/heure-information-syndicale.html">Vos droits : la fiche HIS</a></p>
+    {% if h.odj and not h.annulee %}<p class="his-odj">{{ h.odj }}</p>{% endif %}
+    {% if not h.annulee %}<p class="his-lien">Ouverte à toutes et tous, syndiqué·es ou non. <a href="fiches/heure-information-syndicale.html">Vos droits : la fiche HIS</a></p>{% endif %}
   </aside>
   {% endfor %}
   {% if config.esprit %}<p class="esprit">{{ config.esprit|fmt_racine }}</p>{% endif %}

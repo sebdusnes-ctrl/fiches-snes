@@ -221,6 +221,7 @@ def preparer_his(aujourdhui):
             continue
         h = dict(h, date=jour.isoformat(), date_fr=date_fr(jour, jour=True))
         h["horaire"] = (h.get("debut") or "") + (f"-{h['fin']}" if h.get("fin") else "")
+        h["annulee"] = h.get("etat") == "annulee"
         liste.append(h)
     return sorted(liste, key=lambda h: (h["date"], h.get("debut") or ""))
 
@@ -270,8 +271,12 @@ def config_admin(config, themes):
     his = {"name": "his", "label": "Heures d’information syndicale", "files": [{
         "name": "his", "label": "HIS", "file": "contenu/his/his.yaml", "fields": [{
             "name": "his", "label": "HIS", "widget": "list", "summary": "{{fields.date}} {{fields.debut}} {{fields.lieu}}",
-            "hint": "Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel deux jours avant (délai de prévenance de 48 h), partent tout seuls.",
+            "hint": "Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel deux jours avant (délai de prévenance de 48 h), partent tout seuls. Changer la date, l’horaire ou le lieu envoie un courriel « HIS modifiée ».",
             "fields": [
+                {"name": "id", "label": "Identifiant (automatique)", "widget": "uuid", "read_only": True},
+                {"name": "etat", "label": "État", "widget": "select", "default": "prevue",
+                 "options": [{"label": "Prévue", "value": "prevue"}, {"label": "Annulée", "value": "annulee"}],
+                 "hint": "Pour annuler, choisissez « Annulée » sans supprimer l’HIS : un courriel d’annulation part aux inscrit·es."},
                 {"name": "date", "label": "Date", "widget": "datetime", "format": "YYYY-MM-DD",
                  "date_format": "DD/MM/YYYY", "time_format": False},
                 {"name": "debut", "label": "Début", "widget": "string", "hint": "ex. 12h30"},

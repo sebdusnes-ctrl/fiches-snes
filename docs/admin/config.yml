@@ -24,8 +24,24 @@ collections:
       widget: list
       summary: '{{fields.date}} {{fields.debut}} {{fields.lieu}}'
       hint: Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel
-        deux jours avant (délai de prévenance de 48 h), partent tout seuls.
+        deux jours avant (délai de prévenance de 48 h), partent tout seuls. Changer
+        la date, l’horaire ou le lieu envoie un courriel « HIS modifiée ».
       fields:
+      - name: id
+        label: Identifiant (automatique)
+        widget: uuid
+        read_only: true
+      - name: etat
+        label: État
+        widget: select
+        default: prevue
+        options:
+        - label: Prévue
+          value: prevue
+        - label: Annulée
+          value: annulee
+        hint: 'Pour annuler, choisissez « Annulée » sans supprimer l’HIS : un courriel
+          d’annulation part aux inscrit·es.'
       - name: date
         label: Date
         widget: datetime

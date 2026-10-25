@@ -6,7 +6,8 @@
  *  - confirmation et désinscription par lien (doGet) ;
  *  - menu « SNES » dans la feuille : annoncer une HIS aux statuts choisis ;
  *  - alertes « stages » envoyées par le relevé quotidien de GitHub (clé secrète) ;
- *  - HIS saisies dans l'espace admin du site : annonce et rappel deux jours avant (GitHub, clé secrète).
+ *  - HIS saisies dans l'espace admin du site : annonce, modification, annulation et rappel
+ *    deux jours avant (GitHub, clé secrète).
  * Installation : voir LISEZMOI.md dans ce dossier.
  */
 
@@ -83,7 +84,7 @@ function effectifs() {
  * Avec test = true, n'envoie qu'à vous-même.
  */
 function envoyerHIS(d) {
-  const m = messageHIS_(d, false);
+  const m = messageHIS_(d, 'annonce');
   if (d.test) {
     const moi = Session.getEffectiveUser().getEmail();
     envoyer_([{ courriel: moi, jeton: 'test' }], '[TEST] ' + m.sujet, m.corps);
@@ -100,20 +101,48 @@ function destinatairesHIS_(statuts) {
   return lignes_().filter(l => l.etat === 'confirme' && (tous || statuts.indexOf(l.statut) >= 0));
 }
 
-function messageHIS_(d, rappel) {
+/** Date et horaire lisibles : « mardi 10 novembre, 11h00-12h00 ». */
+function quandHIS_(d) {
   const jour = new Date(d.date + 'T12:00:00');
-  const quand = JOURS[jour.getDay()] + ' ' + jour.getDate() + ' ' + MOIS[jour.getMonth()];
-  const horaire = d.debut + (d.fin ? '-' + d.fin : '');
-  const sujet = (rappel ? 'Rappel : prévenez la direction aujourd’hui · ' : '') +
-    'Heure d’information syndicale le ' + quand + ', ' + horaire;
-  // Rappel envoyé deux jours avant : c'est le dernier moment pour respecter les 48 h de prévenance.
-  const corps =
-    (rappel ? '<p style="padding:10px 12px;border-left:4px solid #ed0f4c;background:#fdeef2">' +
-      '<strong>Rappel : l’HIS a lieu dans deux jours.</strong> Si vous avez cours sur ce créneau, ' +
-      '<strong>prévenez la direction aujourd’hui</strong> pour respecter le délai de 48 h ' +
-      '(un simple courriel suffit, sans avoir à donner l’ordre du jour).</p>' : '') +
+  return JOURS[jour.getDay()] + ' ' + jour.getDate() + ' ' + MOIS[jour.getMonth()] + ', ' +
+    d.debut + (d.fin ? '-' + d.fin : '');
+}
+
+/**
+ * type : 'annonce', 'rappel' (deux jours avant, délai de prévenance), 'modif' (avant = ancienne version)
+ * ou 'annulation'.
+ */
+function messageHIS_(d, type, avant) {
+  const quand = quandHIS_(d);
+  const encadre = (couleur, fond, texte) =>
+    '<p style="padding:10px 12px;border-left:4px solid ' + couleur + ';background:' + fond + '">' + texte + '</p>';
+  if (type === 'annulation') {
+    return {
+      sujet: 'Annulée : heure d’information syndicale du ' + quand,
+      corps: encadre('#ed0f4c', '#fdeef2', '<strong>L’heure d’information syndicale du ' + echapper_(quand) +
+        '</strong>' + (d.lieu ? ' (' + echapper_(d.lieu) + ')' : '') + ' <strong>est annulée</strong>.') +
+        '<p>Si vous aviez prévenu la direction de votre participation, vous pouvez lui signaler l’annulation.</p>' +
+        '<p>Une autre date vous sera communiquée.</p>',
+    };
+  }
+  let entete = '';
+  let sujet = 'Heure d’information syndicale le ' + quand;
+  if (type === 'rappel') {
+    // Envoyé deux jours avant : dernier moment pour respecter les 48 h de prévenance.
+    sujet = 'Rappel : prévenez la direction aujourd’hui · ' + sujet;
+    entete = encadre('#ed0f4c', '#fdeef2', '<strong>Rappel : l’HIS a lieu dans deux jours.</strong> ' +
+      'Si vous avez cours sur ce créneau, <strong>prévenez la direction aujourd’hui</strong> pour respecter ' +
+      'le délai de 48 h (un simple courriel suffit, sans avoir à donner l’ordre du jour).');
+  } else if (type === 'modif') {
+    sujet = 'Modifiée : ' + sujet;
+    entete = encadre('#f78513', '#fef3e8', '<strong>Changement</strong> : l’heure d’information syndicale prévue le ' +
+      '<s>' + echapper_(quandHIS_(avant)) + (avant.lieu ? ' (' + echapper_(avant.lieu) + ')' : '') + '</s> ' +
+      'a lieu désormais aux date, heure et lieu ci-dessous. Si vous aviez prévenu la direction, ' +
+      'pensez à lui signaler le changement.');
+  }
+  const corps = entete +
     '<p>La section SNES-FSU organise une <strong>heure d’information syndicale</strong> :</p>' +
-    '<p style="font-size:1.1em"><strong>' + echapper_(quand + ', ' + horaire) + '</strong>' +
+    '<p style="font-size:1.1em"><strong>' + echapper_(quand) + '</strong>' +
     (d.lieu ? '<br>' + echapper_(d.lieu) : '') + '</p>' +
     (d.odj ? '<p><strong>Ordre du jour</strong><br>' + echapper_(d.odj).replace(/\n/g, '<br>') + '</p>' : '') +
     '<p>Chaque agent, titulaire ou non, a droit à une heure par mois sur son temps de service, ' +
@@ -130,7 +159,7 @@ function messageHIS_(d, rappel) {
 function doPost(e) {
   const p = (e && e.parameter) || {};
   if (p.action === 'stages') return alertesStages_(p);
-  if (p.action === 'his_annonce' || p.action === 'his_rappel') return hisAutomatique_(p);
+  if (p.action === 'his') return hisSuivi_(p);
   if (p.action === 'confirmer') return confirmer_(p.j);
   if (p.action === 'desinscrire') return desinscrire_(p.j);
   return inscrire_(p);
@@ -229,35 +258,46 @@ function purgerNonConfirmes() {
 // --- HIS saisies dans l'espace admin du site (appelé par GitHub) ------------
 
 /**
- * p.donnees : {date, debut, fin, lieu, odj, statuts}. Chaque HIS n'est annoncée qu'une fois,
- * et rappelée qu'une fois, deux jours avant, pour le délai de prévenance de 48 h
- * (pas de rappel si l'annonce est partie il y a moins de 24 h).
+ * p.donnees : {id, etat ('prevue' ou 'annulee'), date, debut, fin, lieu, odj, statuts}
+ * p.rappel : 'oui' quand l'HIS a lieu dans deux jours.
+ * Le script garde ce qu'il a déjà envoyé pour chaque HIS (propriété « HIS <id> ») et décide :
+ * annonce (première fois), modification (date, horaire ou lieu changés), annulation, ou rappel.
+ * Un changement de l'ordre du jour seul n'envoie rien.
  */
-function hisAutomatique_(p) {
+function hisSuivi_(p) {
   const props = PropertiesService.getScriptProperties();
   if (!props.getProperty('CLE') || p.cle !== props.getProperty('CLE')) return ContentService.createTextOutput('refusé');
   const d = JSON.parse(p.donnees || '{}');
-  if (!d.date || !d.debut) return ContentService.createTextOutput('incomplet');
-  const id = d.date + ' ' + d.debut;
-  const rappel = p.action === 'his_rappel';
-  const marque = (rappel ? 'RAPPEL ' : 'ANNONCE ') + id;
-  if (props.getProperty(marque)) return ContentService.createTextOutput('déjà envoyé');
-  if (rappel) {
-    const annonce = Number(props.getProperty('ANNONCE ' + id) || 0);
-    if (Date.now() - annonce < 24 * 3600 * 1000) {
-      props.setProperty(marque, String(Date.now()));
-      return ContentService.createTextOutput('annonce récente, pas de rappel');
-    }
-  }
+  if (!d.id || !d.date || !d.debut) return ContentService.createTextOutput('incomplet');
   const verrou = LockService.getScriptLock();
   verrou.waitLock(30000);
   try {
-    if (props.getProperty(marque)) return ContentService.createTextOutput('déjà envoyé');
-    const m = messageHIS_(d, rappel);
+    const cle = 'HIS ' + d.id;
+    const suivi = JSON.parse(props.getProperty(cle) || 'null');
+    const pratique = h => [h.date, h.debut, h.fin || '', h.lieu || ''].join(' | ');
+    let type = null;
+    if (d.etat === 'annulee') {
+      if (suivi && !suivi.annulee) type = 'annulation';
+    } else if (!suivi || suivi.annulee) {
+      type = 'annonce';
+    } else if (pratique(suivi) !== pratique(d)) {
+      type = 'modif';
+    } else if (p.rappel === 'oui' && !suivi.rappel && Date.now() - suivi.envoye > 24 * 3600 * 1000) {
+      type = 'rappel';
+    }
+    if (!type) {
+      if (!suivi && d.etat === 'annulee') props.setProperty(cle, JSON.stringify({ annulee: true }));
+      return ContentService.createTextOutput('rien à envoyer');
+    }
+    const m = messageHIS_(d, type, suivi);
     const cibles = destinatairesHIS_(d.statuts);
     envoyer_(cibles, m.sujet, m.corps);
-    props.setProperty(marque, String(Date.now()));
-    return ContentService.createTextOutput('envoyé à ' + cibles.length);
+    const nouveau = { date: d.date, debut: d.debut, fin: d.fin || '', lieu: d.lieu || '',
+      envoye: type === 'rappel' ? suivi.envoye : Date.now(),
+      rappel: type === 'rappel',
+      annulee: type === 'annulation' };
+    props.setProperty(cle, JSON.stringify(nouveau));
+    return ContentService.createTextOutput('envoyé (' + type + ') à ' + cibles.length);
   } finally {
     verrou.releaseLock();
   }

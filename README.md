@@ -110,4 +110,4 @@ Après une modification depuis l'admin, vérifiez que la fiche tient toujours su
 
 **HIS** : une HIS enregistrée s'affiche sur l'accueil jusqu'à son jour ; si « Envoyer l'annonce » est coché,
 l'annonce part aussitôt (une seule fois), et un rappel deux jours avant au matin (relevé quotidien), qui rappelle de prévenir la direction 48 h avant.
-Changer la date ou l'heure d'une HIS déjà annoncée envoie une nouvelle annonce.
+Changer la date, l'horaire ou le lieu d'une HIS déjà annoncée envoie un courriel « HIS modifiée » (l'ancienne version barrée). Pour annuler : état « Annulée » (ne pas supprimer l'HIS) → courriel d'annulation, HIS barrée sur l'accueil jusqu'à sa date. Un changement de l'ordre du jour seul n'envoie rien.

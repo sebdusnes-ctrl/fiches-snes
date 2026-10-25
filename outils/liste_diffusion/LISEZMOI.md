@@ -39,7 +39,8 @@ du compte de la section, courriels envoyés depuis sa messagerie Gmail.
 
 ## Mise à jour du 25/10/2026 : HIS saisies dans l'espace admin
 
-Le script gère maintenant l'annonce et le rappel des HIS saisies dans `/admin`. Pour l'activer :
+Le script gère maintenant les HIS saisies dans `/admin` : annonce, modification (date, horaire, lieu),
+annulation, et rappel deux jours avant. Pour l'activer :
 copier le nouveau [Code.gs](Code.gs) dans Apps Script, enregistrer, puis
 **Déployer → Gérer les déploiements → ✏️ → Version : Nouvelle version → Déployer** (l'adresse ne change pas).
 

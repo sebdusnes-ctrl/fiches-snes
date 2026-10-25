@@ -99,6 +99,8 @@ body::before {
 .his-titre { color: var(--snes-framboise); font-weight: 700; font-size: .9rem; text-transform: uppercase; letter-spacing: .03em; }
 .his-quand { font-size: 1.1rem; }
 .his-odj { white-space: pre-line; }
+.his-annulee { border-style: dashed; opacity: .85; }
+.his-annulee .his-quand { text-decoration: line-through; }
 .his-lien { font-size: .9rem; color: var(--texte-doux); }
 .pied-admin { margin: 6px 0 0; font-size: .8rem; }
 .pied-admin a { color: var(--texte-doux); }
