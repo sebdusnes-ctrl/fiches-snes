@@ -11,6 +11,10 @@
  * Installation : voir LISEZMOI.md dans ce dossier.
  */
 
+// Version du script : à changer à chaque modification. GitHub vérifie que la version déployée
+// est bien celle-ci avant d'envoyer les HIS (outils/his.py).
+const VERSION = '2026-10-25.3 (HIS : modification et annulation)';
+
 const NOM_SECTION = 'SNES-FSU · collège Joséphine Baker';
 const SITE = 'https://sebdusnes-ctrl.github.io/fiches-snes/';
 const REPONDRE_A = 'sebdusnes@gmail.com';
@@ -39,6 +43,7 @@ function onOpen() {
   SpreadsheetApp.getUi().createMenu('SNES')
     .addItem('Annoncer une HIS…', 'ouvrirHIS')
     .addItem('Inscrit·es par statut', 'afficherBilan')
+    .addItem('Version du script', 'afficherVersion')
     .addSeparator()
     .addItem('Installer (une seule fois)', 'installer')
     .addToUi();
@@ -55,6 +60,11 @@ function installer() {
   ScriptApp.newTrigger('purgerNonConfirmes').timeBased().everyDays(1).atHour(3).create();
   SpreadsheetApp.getUi().alert(
     'Installation terminée.\n\nClé secrète à copier dans GitHub (secret LISTE_CLE) :\n\n' + props.getProperty('CLE'));
+}
+
+function afficherVersion() {
+  SpreadsheetApp.getUi().alert('Version du script : ' + VERSION +
+    '\n\nAprès avoir collé une nouvelle version : Déployer → Gérer les déploiements → ✏️ → Nouvelle version.');
 }
 
 function afficherBilan() {
@@ -173,7 +183,8 @@ function doGet(e) {
   const p = (e && e.parameter) || {};
   if (p.a === 'confirmer') return bouton_('Confirmer votre inscription', 'confirmer', p.j, 'Confirmer mon inscription');
   if (p.a === 'desinscrire') return bouton_('Se désinscrire', 'desinscrire', p.j, 'Me désinscrire');
-  return page_('Liste de diffusion', '<p>Rien à faire ici.</p>');
+  if (p.a === 'version') return ContentService.createTextOutput(VERSION);
+  return page_('Liste de diffusion', '<p>Rien à faire ici.</p><p style="color:#888;font-size:12px">Version ' + VERSION + '</p>');
 }
 
 function bouton_(titre, action, jeton, libelle) {

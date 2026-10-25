@@ -11,6 +11,7 @@ Lancé après chaque publication et par le relevé quotidien des stages.
 import datetime as dt
 import json
 import os
+import re
 import ssl
 import sys
 import urllib.parse
@@ -27,13 +28,29 @@ def appeler(url, cle, his, rappel):
     donnees = {k: his.get(k) for k in ("id", "etat", "date", "debut", "fin", "lieu", "odj", "statuts")}
     corps = urllib.parse.urlencode({"action": "his", "cle": cle, "rappel": "oui" if rappel else "non",
                                     "donnees": json.dumps(donnees, ensure_ascii=False, default=str)}).encode()
+    with urllib.request.urlopen(urllib.request.Request(url, data=corps), timeout=120, context=contexte_ssl()) as r:
+        return r.read().decode("utf-8", errors="replace")
+
+
+def version_attendue():
+    """Version écrite dans Code.gs (dépôt) : celle que le script Google déployé doit avoir."""
+    texte = (RACINE / "outils" / "liste_diffusion" / "Code.gs").read_text(encoding="utf-8")
+    return re.search(r"^const VERSION = '([^']+)'", texte, re.M).group(1)
+
+
+def version_deployee(url):
+    with urllib.request.urlopen(url + "?a=version", timeout=60, context=contexte_ssl()) as r:
+        texte = r.read().decode("utf-8", errors="replace").strip()
+    # Les versions antérieures au numéro de version répondent par une page HTML.
+    return "ancienne version, sans numéro" if texte.startswith("<") else texte
+
+
+def contexte_ssl():
     try:
         import certifi
-        contexte = ssl.create_default_context(cafile=certifi.where())
+        return ssl.create_default_context(cafile=certifi.where())
     except ImportError:
-        contexte = None
-    with urllib.request.urlopen(urllib.request.Request(url, data=corps), timeout=120, context=contexte) as r:
-        return r.read().decode("utf-8", errors="replace")
+        return None
 
 
 def main():
@@ -43,6 +60,12 @@ def main():
         return
     if not FICHIER.exists():
         return
+    attendue, deployee = version_attendue(), version_deployee(url)
+    if deployee != attendue:
+        sys.exit(f"Le script Google n'est pas à jour : version déployée « {deployee} », "
+                 f"attendue « {attendue} ». Copiez outils/liste_diffusion/Code.gs dans Apps Script, puis "
+                 "Déployer → Gérer les déploiements → Nouvelle version.")
+    print(f"Script Google : version {deployee}")
     aujourdhui = dt.date.today()
     jour_rappel = aujourdhui + dt.timedelta(days=2)
     erreur = False

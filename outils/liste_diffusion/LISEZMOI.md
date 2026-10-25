@@ -44,9 +44,18 @@ annulation, et rappel deux jours avant. Pour l'activer :
 copier le nouveau [Code.gs](Code.gs) dans Apps Script, enregistrer, puis
 **Déployer → Gérer les déploiements → ✏️ → Version : Nouvelle version → Déployer** (l'adresse ne change pas).
 
+## Quelle version est en place ?
+
+La version figure en haut de [Code.gs](Code.gs) (`const VERSION = '…'`). Pour vérifier celle qui est déployée :
+- dans la feuille : **SNES → Version du script** ;
+- ou dans un navigateur : l'adresse `/exec` suivie de `?a=version`.
+
+GitHub fait la même vérification avant chaque envoi d'HIS : si le script déployé n'est pas à jour,
+le workflow s'arrête avec le message « Le script Google n'est pas à jour… » et GitHub vous écrit.
+
 ## Modifier le script ensuite
 
-Après avoir changé `Code.gs` : **Déployer → Gérer les déploiements → ✏️ → Version : Nouvelle version**.
+Après avoir changé `Code.gs` (et son numéro `VERSION`) : **Déployer → Gérer les déploiements → ✏️ → Version : Nouvelle version**.
 L'adresse `/exec` ne change pas.
 
 Les statuts sont listés deux fois, à garder identiques : `STATUTS` dans `Code.gs`
