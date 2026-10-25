@@ -217,8 +217,9 @@ def preparer_stages(aujourdhui):
 
 # --- Heures d'information syndicale (contenu/his/his.yaml, saisies dans /admin) ------
 
-def preparer_his(aujourdhui):
-    """HIS à venir, de la plus proche à la plus lointaine."""
+def preparer_his(aujourdhui, jours_annulee=7):
+    """HIS à venir, de la plus proche à la plus lointaine. Une HIS annulée reste affichée (barrée)
+    jours_annulee jours après son annulation (annulee_le, noté par outils/his_entretien.py)."""
     fichier = RACINE / "contenu" / "his" / "his.yaml"
     if not fichier.exists():
         return []
@@ -232,6 +233,9 @@ def preparer_his(aujourdhui):
         h = dict(h, date=jour.isoformat(), date_fr=date_fr(jour, jour=True))
         h["horaire"] = (h.get("debut") or "") + (f"-{h['fin']}" if h.get("fin") else "")
         h["annulee"] = h.get("etat") == "annulee"
+        if h["annulee"] and h.get("annulee_le"):
+            if (aujourdhui - dt.date.fromisoformat(str(h["annulee_le"])[:10])).days > jours_annulee:
+                continue
         liste.append(h)
     return sorted(liste, key=lambda h: (h["date"], h.get("debut") or ""))
 
@@ -285,7 +289,7 @@ def config_admin(config, themes):
     his = {"name": "his", "label": "Heures d’information syndicale", "files": [{
         "name": "his", "label": "HIS", "file": "contenu/his/his.yaml", "fields": [{
             "name": "his", "label": "HIS", "widget": "list", "summary": "{{fields.date}} {{fields.debut}} {{fields.lieu}}",
-            "hint": "Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel deux jours avant (délai de prévenance de 48 h), partent tout seuls. Changer la date, l’horaire ou le lieu envoie un courriel « HIS modifiée ».",
+            "hint": "Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel deux jours avant (délai de prévenance de 48 h), partent tout seuls. Changer la date, l’horaire ou le lieu envoie un courriel « HIS modifiée ». Une HIS annulée reste affichée barrée 7 jours ; une HIS passée disparaît de cette liste après 30 jours.",
             "fields": [
                 {"name": "id", "label": "Identifiant (automatique)", "widget": "uuid", "read_only": True},
                 {"name": "etat", "label": "État", "widget": "select", "default": "prevue",
@@ -300,7 +304,9 @@ def config_admin(config, themes):
                 {"name": "statuts", "label": "Destinataires", "widget": "select", "multiple": True,
                  "required": False, "options": statuts, "hint": "Vide : tout le monde."},
                 {"name": "annoncer", "label": "Envoyer l’annonce et le rappel par courriel", "widget": "boolean",
-                 "default": True}]}]}]}
+                 "default": True},
+                # Rempli par le robot à l'annulation (affichage limité dans le temps) : à conserver.
+                {"name": "annulee_le", "label": "Annulée le (automatique)", "widget": "hidden", "required": False}]}]}]}
     def champ(nom, libelle, widget="string", aide=""):
         return {"name": nom, "label": libelle, "widget": widget, "hint": aide, "required": False}
     textes = {"name": "textes", "label": "Textes du site", "files": [{
@@ -393,7 +399,7 @@ def construire():
     stages = preparer_stages(aujourdhui)
     page = env.get_template("index.html").render(
         racine="", url_page=url, une=une, avec_stages=bool(stages),
-        his=preparer_his(aujourdhui), **commun)
+        his=preparer_his(aujourdhui, int((config.get("his") or {}).get("annulee_affichee_jours", 7))), **commun)
     (SORTIE / "index.html").write_text(page, encoding="utf-8")
 
     for theme in themes:

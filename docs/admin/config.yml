@@ -25,7 +25,9 @@ collections:
       summary: '{{fields.date}} {{fields.debut}} {{fields.lieu}}'
       hint: Une HIS enregistrée s’affiche sur l’accueil ; l’annonce, puis un rappel
         deux jours avant (délai de prévenance de 48 h), partent tout seuls. Changer
-        la date, l’horaire ou le lieu envoie un courriel « HIS modifiée ».
+        la date, l’horaire ou le lieu envoie un courriel « HIS modifiée ». Une HIS
+        annulée reste affichée barrée 7 jours ; une HIS passée disparaît de cette
+        liste après 30 jours.
       fields:
       - name: id
         label: Identifiant (automatique)
@@ -84,6 +86,10 @@ collections:
         label: Envoyer l’annonce et le rappel par courriel
         widget: boolean
         default: true
+      - name: annulee_le
+        label: Annulée le (automatique)
+        widget: hidden
+        required: false
 - name: fiches
   label: Fiches
   files:

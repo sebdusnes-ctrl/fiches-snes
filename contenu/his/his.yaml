@@ -1,10 +1,11 @@
 his:
-  - id: "99340039-266c-428e-b579-403c734f2738"
-    etat: "annulee"
-    date: "2026-11-12"
-    debut: "13h30"
-    fin: "14h30"
-    lieu: "Salle 203"
-    odj: ""
-    statuts: []
-    annoncer: true
+- id: 99340039-266c-428e-b579-403c734f2738
+  etat: annulee
+  date: '2026-11-12'
+  debut: 13h30
+  fin: 14h30
+  lieu: Salle 203
+  odj: ''
+  statuts: []
+  annoncer: true
+  annulee_le: '2026-10-25'

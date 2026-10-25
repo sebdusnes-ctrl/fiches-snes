@@ -27,6 +27,11 @@ contact:
     - libelle: "SNES-FSU national"
       url: "https://www.snes.edu/"
 
+# Heures d’information syndicale (saisies dans l’espace admin).
+his:
+  annulee_affichee_jours: 7   # une HIS annulée reste affichée barrée ce nombre de jours après l’annulation
+  conservation_jours: 30      # une HIS passée est retirée de l’admin ce nombre de jours après sa date
+
 # Liste de diffusion (HIS, stages) : script Google, voir outils/liste_diffusion/LISEZMOI.md.
 # Tant que « url » est vide, la page d’inscription annonce une ouverture prochaine.
 liste_diffusion:

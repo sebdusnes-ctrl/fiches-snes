@@ -37,6 +37,10 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      # Date d'annulation des HIS, retrait des HIS passées depuis longtemps.
+      - name: Entretien des HIS
+        run: python outils/his_entretien.py
+
       # Échoue si une fiche est invalide (champ manquant, identifiant en double, lien cassé) :
       # GitHub envoie alors un courriel, et le site en ligne reste tel quel.
       - name: Construction du site
@@ -48,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
-          git add docs
+          git add contenu/his/his.yaml docs
           if git diff --cached --quiet; then
             echo "Site déjà à jour."
           else
