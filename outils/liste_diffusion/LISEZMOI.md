@@ -16,8 +16,10 @@ du compte de la section, courriels envoyés depuis sa messagerie Gmail.
 1. Créer une feuille Google, par exemple « Liste SNES Baker ». **Ne la partager avec personne.**
 2. Dans la feuille : **Extensions → Apps Script**.
    - Remplacer le contenu de `Code.gs` par celui de [Code.gs](Code.gs).
-   - **+ → HTML**, nommer le fichier `HIS` (sans `.html`), y coller [HIS.html](HIS.html).
-   - Enregistrer.
+   - Ajouter un 2e fichier, la fenêtre « Annoncer une HIS » : dans la colonne de gauche, cliquer
+     sur **+** à côté de « Fichiers », choisir **HTML**, taper le nom **HIS** (Google ajoute `.html`
+     tout seul). Effacer les quelques lignes déjà présentes et coller tout le contenu de [HIS.html](HIS.html).
+   - Enregistrer (Ctrl+S). À gauche, il doit y avoir deux fichiers : `Code.gs` et `HIS.html`.
 3. Revenir à la feuille et la recharger : un menu **SNES** apparaît.
    **SNES → Installer (une seule fois)**, puis autoriser le script
    (« Google n'a pas validé cette application » → *Paramètres avancés* → *Accéder au projet*).
