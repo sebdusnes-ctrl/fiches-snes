@@ -30,7 +30,7 @@ contact:
 # Liste de diffusion (HIS, stages) : script Google, voir outils/liste_diffusion/LISEZMOI.md.
 # Tant que « url » est vide, la page d’inscription annonce une ouverture prochaine.
 liste_diffusion:
-  url: ""   # adresse « /exec » du déploiement Web du script Google
+  url: "https://script.google.com/macros/s/AKfycbx-RRBlaCWppFivkWnv7LNwtT7xT8p74MxdTycEhA0tnAb8g6mbKhSNCi4XyZDU4hTY0g/exec"   # adresse « /exec » du déploiement Web du script Google
   responsable: "la section SNES-FSU (S1) du collège Joséphine Baker"
   statuts:  # doit rester identique à STATUTS dans Code.gs
     - "Professeur·e titulaire"

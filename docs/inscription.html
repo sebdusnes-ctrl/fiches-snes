@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recevoir les infos · Fiches pratiques SNES-FSU</title>
 <meta name="description" content="Inscription facultative à la liste de la section : HIS et stages syndicaux.">
-<link rel="stylesheet" href="static/style.css?v=93b6b27f">
+<link rel="stylesheet" href="static/style.css?v=30b7ca7f">
 </head>
 <body class="page-inscription">
 <header class="bandeau">
@@ -34,7 +34,19 @@
   <p>Syndiqué·e ou non, tout le monde peut s’inscrire. Votre statut sert seulement à ne vous envoyer que ce qui vous concerne (par exemple, un stage réservé aux AESH).</p>
 
   
-  <p class="alerte">L’inscription ouvrira très prochainement.</p>
+  <form id="form-inscription" class="formulaire" action="https://script.google.com/macros/s/AKfycbx-RRBlaCWppFivkWnv7LNwtT7xT8p74MxdTycEhA0tnAb8g6mbKhSNCi4XyZDU4hTY0g/exec" method="post">
+    <label for="courriel">Adresse électronique</label>
+    <input id="courriel" type="email" name="courriel" required autocomplete="email" placeholder="prenom.nom@exemple.fr">
+    <label for="statut">Vous êtes</label>
+    <select id="statut" name="statut" required>
+      <option value="">Choisir…</option>
+      <option>Professeur·e titulaire</option><option>Professeur·e contractuel·le</option><option>CPE</option><option>Psy-ÉN</option><option>AED</option><option>AESH</option><option>Personnel administratif, social ou de santé</option><option>Autre</option>
+    </select>
+    <p class="pot" aria-hidden="true"><label>Ne pas remplir <input name="site" tabindex="-1" autocomplete="off"></label></p>
+    <label class="case"><input type="checkbox" name="consentement" value="oui" required> J’accepte que la section SNES-FSU (S1) du collège Joséphine Baker conserve mon adresse et mon statut pour m’envoyer ces informations.</label>
+    <button type="submit" class="bouton-ecrire">S’inscrire</button>
+    <p id="inscription-message" class="inscription-message" role="status"></p>
+  </form>
   
 
   <section class="donnees">
@@ -66,6 +78,6 @@
     <p class="pied-note">Fiches de synthèse rédigées par la section à partir des publications nationales du SNES-FSU. En cas de doute, la publication d’origine et la section font foi.</p>
   </div>
 </footer>
-<script src="static/inscription.js?v=93b6b27f"></script>
+<script src="static/inscription.js?v=30b7ca7f"></script>
 </body>
 </html>
