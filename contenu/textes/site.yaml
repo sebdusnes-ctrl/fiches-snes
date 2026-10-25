@@ -1,9 +1,7 @@
-# Textes généraux du site, modifiables depuis l'espace admin (« Textes du site »).
-# Mise en forme possible : **gras**, [texte](https://…), [texte](fiche:identifiant).
 titre_site: "Fiches pratiques SNES-FSU"
 section: "SNES-FSU — section du collège Joséphine Baker"
 accroche: "Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU."
-esprit: "**Faire valoir ses droits, ce n’est pas entrer en conflit.** Dans bien des établissements, le dialogue avec la direction est bon, et un échange cordial règle souvent les choses. Mais la bonne entente ne remplace pas les textes : ce sont eux qui protègent chacun·e, quelles que soient les personnes en poste. Cordialement, mais fermement."
+esprit: "**Faire valoir ses droits, ce n’est pas entrer en conflit.** Dans bien des établissements, le dialogue avec la direction est bon, et un échange cordial règle souvent les choses. Mais la bonne entente ne remplace pas les textes : ce sont eux qui protègent chacun·e, quelles que soient les personnes en poste."
 note_pied: "Fiches de synthèse rédigées par la section à partir des publications nationales du SNES-FSU. En cas de doute, la publication d’origine et la section font foi."
 permanence: "Panneau syndical en salle des professeurs"
 stages_titre: "Stages syndicaux : calendrier et disponibilités"
