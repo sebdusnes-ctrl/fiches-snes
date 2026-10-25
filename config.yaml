@@ -28,6 +28,10 @@ contact:
 liste_diffusion:
   url: "https://script.google.com/macros/s/AKfycbx-RRBlaCWppFivkWnv7LNwtT7xT8p74MxdTycEhA0tnAb8g6mbKhSNCi4XyZDU4hTY0g/exec"   # adresse « /exec » du déploiement Web du script Google
   responsable: "la section SNES-FSU (S1) du collège Joséphine Baker"
+  # Adresses refusées à l’inscription (institutionnelles) : identique à DOMAINES_REFUSES dans Code.gs.
+  domaines_refuses:
+    - "ac-lille.fr"
+    - "pasdecalais.fr"
   statuts:  # doit rester identique à STATUTS dans Code.gs
     - "Professeur·e titulaire"
     - "Professeur·e contractuel·le"

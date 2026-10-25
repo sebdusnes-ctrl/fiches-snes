@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recevoir les infos · Fiches pratiques SNES-FSU</title>
 <meta name="description" content="Inscription facultative à la liste de la section : HIS et stages syndicaux.">
-<link rel="stylesheet" href="static/style.css?v=cb863d89">
+<link rel="stylesheet" href="static/style.css?v=7e3e5921">
 </head>
 <body class="page-inscription">
 <header class="bandeau">
@@ -33,7 +33,9 @@ Veuillez n'entrer qu'une <strong>adresse personnelle</strong> dans cet espace, v
   
   <form id="form-inscription" class="formulaire" action="https://script.google.com/macros/s/AKfycbx-RRBlaCWppFivkWnv7LNwtT7xT8p74MxdTycEhA0tnAb8g6mbKhSNCi4XyZDU4hTY0g/exec" method="post">
     <label for="courriel">Adresse électronique</label>
-    <input id="courriel" type="email" name="courriel" required autocomplete="email" placeholder="prenom.nom@exemple.fr">
+    <input id="courriel" type="email" name="courriel" required autocomplete="email" placeholder="prenom.nom@exemple.fr"
+           aria-describedby="consigne-adresse" data-domaines-refuses="ac-lille.fr,pasdecalais.fr">
+    <p id="consigne-adresse" class="consigne">Veuillez n’entrer qu’une adresse personnelle dans cet espace : votre adresse académique est un outil institutionnel.</p>
     <label for="statut">Vous êtes</label>
     <select id="statut" name="statut" required>
       <option value="">Choisir…</option>
@@ -76,6 +78,6 @@ Veuillez n'entrer qu'une <strong>adresse personnelle</strong> dans cet espace, v
     <p class="pied-admin"><a href="admin/">Espace admin</a></p>
   </div>
 </footer>
-<script src="static/inscription.js?v=cb863d89"></script>
+<script src="static/inscription.js?v=7e3e5921"></script>
 </body>
 </html>

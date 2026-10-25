@@ -97,6 +97,7 @@ def charger():
     liste = config.setdefault("liste_diffusion", {})
     liste.setdefault("url", "")
     liste.setdefault("statuts", [])
+    liste.setdefault("domaines_refuses", [])
 
     themes, ids, erreurs = [], set(), []
     for fichier in sorted((RACINE / "contenu").glob("*.yaml")):
@@ -302,6 +303,7 @@ def config_admin(config, themes):
             champ("inscription_titre", "Page Inscription : titre"),
             champ("inscription_intro", "Page Inscription : introduction", "text", AIDE_TEXTE),
             champ("inscription_public", "Page Inscription : qui peut s’inscrire", "text", AIDE_TEXTE),
+            champ("inscription_adresse", "Page Inscription : consigne sous l’adresse (adresse personnelle)", "text"),
         ]}]}
     return {
         "backend": {"name": "github", "repo": "sebdusnes-ctrl/fiches-snes", "branch": "main"},

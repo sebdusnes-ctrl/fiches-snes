@@ -13,7 +13,9 @@
   {% if liste.url %}
   <form id="form-inscription" class="formulaire" action="{{ liste.url }}" method="post">
     <label for="courriel">Adresse électronique</label>
-    <input id="courriel" type="email" name="courriel" required autocomplete="email" placeholder="prenom.nom@exemple.fr">
+    <input id="courriel" type="email" name="courriel" required autocomplete="email" placeholder="prenom.nom@exemple.fr"
+           aria-describedby="consigne-adresse" data-domaines-refuses="{{ liste.domaines_refuses|join(',') }}">
+    {% if config.textes.inscription_adresse %}<p id="consigne-adresse" class="consigne">{{ config.textes.inscription_adresse|typo }}</p>{% endif %}
     <label for="statut">Vous êtes</label>
     <select id="statut" name="statut" required>
       <option value="">Choisir…</option>

@@ -13,7 +13,7 @@
 
 // Version du script : à changer à chaque modification. GitHub vérifie que la version déployée
 // est bien celle-ci avant d'envoyer les HIS (outils/his.py).
-const VERSION = '2026-10-25.4 (objet « Horaire modifié », « Lieu modifié »…)';
+const VERSION = '2026-10-25.5 (adresses académiques refusées)';
 
 const NOM_SECTION = 'SNES-FSU · collège Joséphine Baker';
 const SITE = 'https://sebdusnes-ctrl.github.io/fiches-snes/';
@@ -29,6 +29,9 @@ const STATUTS = [
   'Personnel administratif, social ou de santé',
   'Autre',
 ];
+// Adresses institutionnelles refusées (sous-domaines compris) : identique à
+// liste_diffusion.domaines_refuses dans config.yaml.
+const DOMAINES_REFUSES = ['ac-lille.fr', 'pasdecalais.fr'];
 const ONGLET = 'Inscrits';
 const ENTETES = ['courriel', 'statut', 'etat', 'jeton', 'statut_demande', 'inscrit_le', 'confirme_le'];
 const JOURS_POUR_CONFIRMER = 7;
@@ -216,6 +219,12 @@ function inscrire_(p) {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(courriel) || STATUTS.indexOf(statut) < 0 || p.consentement !== 'oui') {
     return page_('Inscription incomplète',
       '<p>Adresse, statut et accord sont nécessaires. <a href="' + SITE + 'inscription.html">Revenir au formulaire</a>.</p>');
+  }
+  const domaine = courriel.split('@')[1];
+  if (DOMAINES_REFUSES.some(d => domaine === d || domaine.endsWith('.' + d))) {
+    return page_('Adresse personnelle uniquement',
+      '<p>Veuillez n’entrer qu’une adresse personnelle : votre adresse académique est un outil institutionnel.</p>' +
+      '<p><a href="' + SITE + 'inscription.html">Revenir au formulaire</a></p>');
   }
   const verrou = LockService.getScriptLock();
   verrou.waitLock(10000);

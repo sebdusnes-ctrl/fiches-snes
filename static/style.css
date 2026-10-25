@@ -92,6 +92,8 @@ body::before {
 .formulaire button { justify-self: start; margin-top: 10px; font: inherit; cursor: pointer; border: 0; }
 .formulaire button:disabled { opacity: .6; cursor: wait; }
 .formulaire .pot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.formulaire .consigne { margin: 2px 0 4px; font-size: .9rem; color: var(--texte-doux); }
+.formulaire .consigne-erreur { color: var(--snes-framboise); font-weight: 600; }
 .inscription-message { min-height: 1.5em; font-weight: 600; }
 .donnees { margin-top: 28px; font-size: .95rem; }
 .his-annonce { border: 2px solid var(--snes-framboise); border-radius: var(--rayon); padding: 12px 14px; margin: 0 0 18px; background: var(--surface); }

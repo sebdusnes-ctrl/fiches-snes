@@ -435,3 +435,8 @@ collections:
       widget: text
       hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
       required: false
+    - name: inscription_adresse
+      label: 'Page Inscription : consigne sous l’adresse (adresse personnelle)'
+      widget: text
+      hint: ''
+      required: false
