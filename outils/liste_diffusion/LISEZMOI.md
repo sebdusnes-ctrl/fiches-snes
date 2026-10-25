@@ -28,8 +28,10 @@ du compte de la section, courriels envoyés depuis sa messagerie Gmail.
    - Exécuter en tant que : **Moi**
    - Qui a accès : **Tout le monde**
    - Copier l'adresse qui se termine par `/exec`.
-5. Dans `config.yaml`, coller cette adresse dans `liste_diffusion.url`, puis `python build.py`,
-   commit, `git pull --rebase`, push. Le formulaire apparaît sur le site.
+5. Dans `config.yaml`, coller cette adresse entre les guillemets de la ligne `url: ""`
+   (sous `liste_diffusion:`), et enregistrer. Puis, dans un terminal, **lancer** (rien à modifier
+   dans ce fichier) la commande `python build.py`, et publier : commit, `git pull --rebase`, push.
+   Le formulaire apparaît sur le site.
 6. Sur GitHub : **Settings → Secrets and variables → Actions → New repository secret** :
    - `LISTE_URL` : l'adresse `/exec`
    - `LISTE_CLE` : la clé secrète de l'étape 3
