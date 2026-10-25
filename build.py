@@ -159,6 +159,9 @@ def moins_un_mois(d):
 
 
 def titre_lisible(t):
+    """Titre en capitales (ancienne source) → casse normale ; un titre déjà en minuscules est gardé."""
+    if any(c.islower() for c in t):
+        return t
     mots = [m if m.strip("()«»,.") in SIGLES else m.lower() for m in t.split()]
     s = " ".join(mots)
     return s[:1].upper() + s[1:]
@@ -176,6 +179,8 @@ def preparer_stages(aujourdhui):
         jour = dt.date.fromisoformat(s["date"]) if s.get("date") else None
         s["date_fr"] = date_fr(jour)
         s["date_initiale_fr"] = date_fr(dt.date.fromisoformat(s["date_initiale"])) if s.get("date_initiale") else ""
+        cloture = dt.date.fromisoformat(s["cloture"]) if s.get("cloture") else None
+        s["cloture_fr"] = date_fr(cloture, jour=False) if cloture else ""
         if jour is None:
             s["statut"], s["statut_libelle"] = "info", "Date à préciser"
         else:
@@ -183,6 +188,10 @@ def preparer_stages(aujourdhui):
             s["limite_fr"] = date_fr(limite, jour=False)
             if jour < aujourdhui:
                 s["statut"], s["statut_libelle"] = "termine", "Terminé"
+            elif s.get("inscriptions_closes") or (cloture and cloture < aujourdhui):
+                s["statut"], s["statut_libelle"] = "ferme", "Inscriptions closes"
+            elif s.get("sans_autorisation"):
+                s["statut"], s["statut_libelle"] = "info", "Sans autorisation d’absence"
             elif aujourdhui > limite:
                 s["statut"], s["statut_libelle"] = "depasse", "Délai dépassé"
             elif (limite - aujourdhui).days <= 7:

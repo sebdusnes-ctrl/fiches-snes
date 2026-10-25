@@ -30,6 +30,8 @@ def preparer(nouveautes, stages):
         if e.get("type") not in TYPES_ALERTE or not s:
             continue
         jour = dt.date.fromisoformat(s["date"]) if s.get("date") else None
+        if (jour and jour < dt.date.today()) or s.get("inscriptions_closes"):
+            continue  # stage passé ou inscriptions closes : rien à annoncer
         items.append({
             "type": e["type"],
             "titre": titre_lisible(s["titre"]),

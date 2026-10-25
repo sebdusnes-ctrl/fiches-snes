@@ -12,12 +12,13 @@
     <a href="{{ stages.source }}" target="_blank" rel="noopener">Page du SNES-FSU Lille</a>
     <a href="inscription.html">Être prévenu·e par courriel</a>
   </p>
-  <p class="stages-maj">Vérifié le {{ stages.verifie_le_fr }} sur la page du SNES-FSU Lille. Disponibilités calculées le {{ aujourdhui_fr }}.</p>
+  <p class="stages-maj">Vérifié le {{ stages.verifie_le_fr }} sur le <a href="{{ stages.inscription }}" target="_blank" rel="noopener">tableau d’inscription du SNES-FSU</a> et la page du SNES-FSU Lille. Disponibilités calculées le {{ aujourdhui_fr }}.</p>
 
   <ul class="legende">
     <li><span class="badge ouvert">Ouvert</span> demande d’absence encore dans les délais</li>
     <li><span class="badge proche">Derniers jours</span> moins d’une semaine pour la demande</li>
     <li><span class="badge depasse">Délai dépassé</span> plus de demande d’absence possible ; inscription possible si vous ne travaillez pas ce jour-là</li>
+    <li><span class="badge ferme">Inscriptions closes</span> date d’inscription auprès du SNES-FSU dépassée</li>
     <li><span class="badge termine">Terminé</span></li>
   </ul>
 
@@ -29,7 +30,7 @@
     <div class="ligne statut-{{ s.statut }}" role="row">
       <span class="c-titre" role="cell">
         <strong>{{ s.titre_affiche }}</strong>
-        <a href="{{ s.programme }}" target="_blank" rel="noopener">Programme (PDF)</a>
+        {% if s.programme %}<a href="{{ s.programme }}" target="_blank" rel="noopener">Programme (PDF)</a>{% endif %}
       </span>
       <span class="c-date" role="cell">
         {% if s.date_initiale %}<del>{{ s.date_initiale_fr }}</del><br>{% endif %}
@@ -39,12 +40,13 @@
       <span class="c-lieu" role="cell">
         {% if s.lieu_barre %}<del>{{ s.lieu_barre }}</del><br>{% endif %}
         {{ s.lieu or "—" }}
-        {% if s.lieu == "Lieu à définir" %}<br><span class="badge info">Lieu à définir</span>{% elif s.lieu_barre %}<br><span class="badge info">Lieu modifié</span>{% endif %}
+        {% if "à définir" in s.lieu %}<br><span class="badge info">Lieu à définir</span>{% elif s.lieu_barre %}<br><span class="badge info">Lieu modifié</span>{% endif %}
       </span>
       <span class="c-statut" role="cell">
         <span class="badge {{ s.statut }}">{{ s.statut_libelle }}</span>
         {% if s.statut in ("ouvert", "proche") %}<small>Demande d’absence avant le {{ s.limite_fr }}</small>{% endif %}
         {% if s.statut == "depasse" %}<small>Limite : {{ s.limite_fr }}</small>{% endif %}
+        {% if s.cloture_fr and s.statut not in ("termine", "ferme") %}<small>Inscription au SNES avant le {{ s.cloture_fr }}</small>{% endif %}
         {% if s.recent %}<small class="modifie">Modifié le {{ s.modifie_fr }}</small>{% endif %}
       </span>
     </div>

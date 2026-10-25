@@ -224,6 +224,7 @@ body::before {
 .badge.proche { color: #a85a00; background: color-mix(in srgb, #f78513 16%, var(--surface)); }
 .badge.depasse { color: #b30d3c; background: color-mix(in srgb, #ed0f4c 12%, var(--surface)); }
 .badge.termine { color: var(--texte-doux); background: var(--surface); }
+.badge.ferme { color: #8a5a00; border-color: #c98a1a; background: var(--surface); }
 .badge.info { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
 .table-stages { display: grid; gap: 10px; }
 .table-stages .ligne { display: grid; gap: 6px; padding: 12px 14px; background: var(--surface);

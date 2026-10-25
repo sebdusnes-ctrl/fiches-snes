@@ -54,7 +54,8 @@ Après chaque modification : `python build.py`, commit, push. L’adresse ne cha
 
 ## Stages syndicaux (`stages.html`, mis à jour chaque jour)
 
-`python outils/stages.py` relève la page des stages du SNES-FSU Lille
+`python outils/stages.py` relève le tableau d'inscription du SNES-FSU (liste complète, clôture des inscriptions)
+et la page des stages du SNES-FSU Lille (programmes, reports)
 (`PAGE` dans le script : **à changer à chaque rentrée**, ex. `Stages-SNES-FSU-2027-2028.html`)
 et écrit `contenu/stages.json` : date, lieu, horaires, ancienne date ou ancien lieu barrés,
 et un journal des changements (stage ajouté ou retiré, date reportée, lieu ou horaires modifiés).
