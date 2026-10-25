@@ -13,7 +13,7 @@
 
 // Version du script : à changer à chaque modification. GitHub vérifie que la version déployée
 // est bien celle-ci avant d'envoyer les HIS (outils/his.py).
-const VERSION = '2026-10-25.3 (HIS : modification et annulation)';
+const VERSION = '2026-10-25.4 (objet « Horaire modifié », « Lieu modifié »…)';
 
 const NOM_SECTION = 'SNES-FSU · collège Joséphine Baker';
 const SITE = 'https://sebdusnes-ctrl.github.io/fiches-snes/';
@@ -118,6 +118,18 @@ function quandHIS_(d) {
     d.debut + (d.fin ? '-' + d.fin : '');
 }
 
+/** Ce qui a changé, pour l'objet du courriel : « Horaire modifié », « Date et lieu modifiés »… */
+function changementHIS_(avant, d) {
+  const noms = [];
+  if (avant.date !== d.date) noms.push('date');
+  if (avant.debut !== d.debut || (avant.fin || '') !== (d.fin || '')) noms.push('horaire');
+  if ((avant.lieu || '') !== (d.lieu || '')) noms.push('lieu');
+  if (!noms.length) return 'HIS modifiée';
+  const accord = noms.length > 1 ? 'modifiés' : (noms[0] === 'date' ? 'modifiée' : 'modifié');
+  const liste = noms.length > 1 ? noms.slice(0, -1).join(', ') + ' et ' + noms[noms.length - 1] : noms[0];
+  return liste.charAt(0).toUpperCase() + liste.slice(1) + ' ' + accord;
+}
+
 /**
  * type : 'annonce', 'rappel' (deux jours avant, délai de prévenance), 'modif' (avant = ancienne version)
  * ou 'annulation'.
@@ -144,8 +156,9 @@ function messageHIS_(d, type, avant) {
       'Si vous avez cours sur ce créneau, <strong>prévenez la direction aujourd’hui</strong> pour respecter ' +
       'le délai de 48 h (un simple courriel suffit, sans avoir à donner l’ordre du jour).');
   } else if (type === 'modif') {
-    sujet = 'Modifiée : ' + sujet;
-    entete = encadre('#f78513', '#fef3e8', '<strong>Changement</strong> : l’heure d’information syndicale prévue le ' +
+    const change = changementHIS_(avant, d);
+    sujet = change + ' : ' + sujet;
+    entete = encadre('#f78513', '#fef3e8', '<strong>' + change + '</strong> : l’heure d’information syndicale prévue le ' +
       '<s>' + echapper_(quandHIS_(avant)) + (avant.lieu ? ' (' + echapper_(avant.lieu) + ')' : '') + '</s> ' +
       'a lieu désormais aux date, heure et lieu ci-dessous. Si vous aviez prévenu la direction, ' +
       'pensez à lui signaler le changement.');
