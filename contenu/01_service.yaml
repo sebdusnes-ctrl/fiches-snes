@@ -135,7 +135,8 @@ fiches:
     snes: "Le Pacte fait passer une partie de nos missions sous contrat individuel : c’est une attaque contre le statut. Le SNES-FSU appelle à le refuser."
     liens:
       - { libelle: "Plan de remplacement : l’analyse du SNES-FSU", url: "https://r.snes.edu/PlanRemplacement" }
-    source: { doc: abecedaire, pages: "9, 17, 19, 22" }
+    source:
+      - { doc: abecedaire, pages: "9, 17, 19, 22" }
 
   - id: missions-particulieres-imp
     titre: "Missions particulières (IMP)"

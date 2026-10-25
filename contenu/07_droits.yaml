@@ -83,7 +83,8 @@ fiches:
       - "Il est interdit de cumuler deux emplois permanents à temps complet (art. L.123-1, 5°)."
     agir:
       - "Demandez l’autorisation **avant** de commencer, avec l’imprimé académique de demande de cumul."
-    source: { doc: cgfp, ref: "art. L.123-1 à L.123-8" }
+    source:
+      - { doc: cgfp, ref: "art. L.123-1 à L.123-8" }
 
   - id: elections-professionnelles
     titre: "Élections professionnelles : du 3 au 10 décembre 2026"
@@ -95,4 +96,5 @@ fiches:
     agir:
       - "Vérifiez dès maintenant que vous avez accès à votre messagerie professionnelle : c’est là que vous recevrez vos identifiants."
       - "Votez, et faites voter autour de vous !"
-    source: { doc: abecedaire, pages: "11" }
+    source:
+      - { doc: abecedaire, pages: "11" }

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fiches pratiques SNES-FSU</title>
 <meta name="description" content="Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU.">
-<link rel="stylesheet" href="static/style.css?v=30b7ca7f">
+<link rel="stylesheet" href="static/style.css?v=c2b58e32">
 </head>
 <body class="accueil">
 <header class="bandeau">
@@ -25,6 +25,7 @@
 <section class="intro">
   <h1>Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU.</h1>
   <p class="intro-meta">60 fiches · 11 thèmes · <a href="inscription.html">Recevoir les infos par courriel</a></p>
+  
   <p class="esprit"><strong>Faire valoir ses droits, ce n’est pas entrer en conflit.</strong> Dans bien des établissements, le dialogue avec la direction est bon, et un échange cordial règle souvent les choses. Mais la bonne entente ne remplace pas les textes : ce sont eux qui protègent chacun·e, quelles que soient les personnes en poste. Cordialement, mais fermement.</p>
   <label class="recherche">
     <span class="visuellement-cache">Rechercher une fiche</span>
@@ -586,6 +587,13 @@
     <p class="pied-note">Fiches de synthèse rédigées par la section à partir des publications nationales du SNES-FSU. En cas de doute, la publication d’origine et la section font foi.</p>
   </div>
 </footer>
-<script src="static/recherche.js?v=30b7ca7f"></script>
+<script src="static/recherche.js?v=c2b58e32"></script>
+<script>
+// Une HIS passée disparaît même si le site n'a pas encore été reconstruit.
+(function () {
+  var d = new Date(), j = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  document.querySelectorAll('.his-annonce').forEach(function (e) { if (e.dataset.date < j) e.hidden = true; });
+})();
+</script>
 </body>
 </html>

@@ -19,7 +19,8 @@ fiches:
       - "Demandez où se trouve le registre (papier ou en ligne) et remplissez une fiche à chaque problème."
       - "Signalez à plusieurs une même situation : cela pèse davantage."
       - "Envoyez une copie de votre fiche à la section : nous suivons les réponses de l’administration."
-    source: { doc: abecedaire, pages: "13, 22" }
+    source:
+      - { doc: abecedaire, pages: "13, 22" }
 
   - id: protection-fonctionnelle
     titre: "Agressé·e, menacé·e, diffamé·e : la protection fonctionnelle"
@@ -52,4 +53,5 @@ fiches:
       - "Posez la question de l’adaptation du bâti scolaire en conseil d’administration."
     liens:
       - { libelle: "Canicule : vos droits, nos interventions", url: "https://www.snes.edu/article/canicule-vos-droits-nos-interventions/" }
-    source: { doc: abecedaire, pages: "5" }
+    source:
+      - { doc: abecedaire, pages: "5" }

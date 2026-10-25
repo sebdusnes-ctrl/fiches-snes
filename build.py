@@ -194,6 +194,112 @@ def preparer_stages(aujourdhui):
     return d
 
 
+# --- Heures d'information syndicale (contenu/his/his.yaml, saisies dans /admin) ------
+
+def preparer_his(aujourdhui):
+    """HIS à venir, de la plus proche à la plus lointaine."""
+    fichier = RACINE / "contenu" / "his" / "his.yaml"
+    if not fichier.exists():
+        return []
+    liste = []
+    for h in (yaml.safe_load(fichier.read_text(encoding="utf-8")) or {}).get("his") or []:
+        jour = h.get("date")
+        if isinstance(jour, str):
+            jour = dt.date.fromisoformat(jour[:10])
+        if not jour or jour < aujourdhui:
+            continue
+        h = dict(h, date=jour.isoformat(), date_fr=date_fr(jour, jour=True))
+        h["horaire"] = (h.get("debut") or "") + (f"-{h['fin']}" if h.get("fin") else "")
+        liste.append(h)
+    return sorted(liste, key=lambda h: (h["date"], h.get("debut") or ""))
+
+
+# --- Espace admin (/admin : Sveltia CMS, connexion par jeton GitHub) ---------------
+
+VERSION_CMS = "0.233.0"
+AIDE_TEXTE = "**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)"
+
+
+def config_admin(config, themes):
+    """Configuration du CMS, tirée du contenu réel : un formulaire par thème, sources de config.yaml."""
+    def liste_textes(nom, libelle, requis=True):
+        return {"name": nom, "label": libelle, "widget": "list", "required": requis, "hint": AIDE_TEXTE,
+                "field": {"name": "point", "label": "Point", "widget": "text"}}
+    fiche = [
+        {"name": "id", "label": "Identifiant (adresse de la page)", "widget": "string",
+         "pattern": ["^[a-z0-9-]+$", "minuscules, chiffres et tirets"],
+         "hint": "Ne plus le changer une fois la fiche imprimée : il est dans le QR code."},
+        {"name": "titre", "label": "Titre", "widget": "string"},
+        {"name": "resume", "label": "Résumé (une ligne, sous le titre)", "widget": "string"},
+        {"name": "a_jour", "label": "Avertissement (facultatif)", "widget": "string", "required": False},
+        liste_textes("en_bref", "En bref"),
+        liste_textes("textes", "Ce que disent les textes", False),
+        liste_textes("agir", "Ce que vous pouvez faire", False),
+        {"name": "snes", "label": "Position du SNES-FSU (facultatif)", "widget": "text", "required": False},
+        {"name": "liens", "label": "Pour aller plus loin", "widget": "list", "required": False,
+         "summary": "{{fields.libelle}}",
+         "fields": [{"name": "libelle", "label": "Libellé", "widget": "string"},
+                    {"name": "url", "label": "Adresse", "widget": "string"}]},
+        {"name": "source", "label": "Sources", "widget": "list", "summary": "{{fields.doc}} {{fields.pages}} {{fields.ref}}",
+         "fields": [{"name": "doc", "label": "Document", "widget": "select",
+                     "options": [{"label": d["titre"], "value": k} for k, d in config["sources"].items()]},
+                    {"name": "pages", "label": "Pages", "widget": "string", "required": False},
+                    {"name": "ref", "label": "Référence (articles…)", "widget": "string", "required": False}]},
+    ]
+    theme = {"name": "theme", "label": "Thème", "widget": "object", "collapsed": True, "fields": [
+        {"name": "id", "label": "Identifiant", "widget": "string"},
+        {"name": "titre", "label": "Titre", "widget": "string"},
+        {"name": "description", "label": "Description", "widget": "string"},
+        {"name": "couleur", "label": "Couleur", "widget": "string"}]}
+    fichiers = [{"name": f.stem, "label": th["titre"], "file": f"contenu/{f.name}",
+                 "fields": [theme, {"name": "fiches", "label": "Fiches", "widget": "list",
+                                    "summary": "{{fields.titre}}", "fields": fiche}]}
+                for f, th in zip(sorted((RACINE / "contenu").glob("*.yaml")), themes)]
+    statuts = (config.get("liste_diffusion") or {}).get("statuts") or []
+    his = {"name": "his", "label": "Heures d’information syndicale", "files": [{
+        "name": "his", "label": "HIS", "file": "contenu/his/his.yaml", "fields": [{
+            "name": "his", "label": "HIS", "widget": "list", "summary": "{{fields.date}} {{fields.debut}} {{fields.lieu}}",
+            "hint": "Une HIS enregistrée s’affiche sur l’accueil ; l’annonce et le rappel de la veille partent tout seuls.",
+            "fields": [
+                {"name": "date", "label": "Date", "widget": "datetime", "format": "YYYY-MM-DD",
+                 "date_format": "DD/MM/YYYY", "time_format": False},
+                {"name": "debut", "label": "Début", "widget": "string", "hint": "ex. 12h30"},
+                {"name": "fin", "label": "Fin", "widget": "string", "required": False, "hint": "ex. 13h30"},
+                {"name": "lieu", "label": "Lieu", "widget": "string", "required": False},
+                {"name": "odj", "label": "Ordre du jour", "widget": "text", "required": False},
+                {"name": "statuts", "label": "Destinataires", "widget": "select", "multiple": True,
+                 "required": False, "options": statuts, "hint": "Vide : tout le monde."},
+                {"name": "annoncer", "label": "Envoyer l’annonce et le rappel par courriel", "widget": "boolean",
+                 "default": True}]}]}]}
+    return {
+        "backend": {"name": "github", "repo": "sebdusnes-ctrl/fiches-snes", "branch": "main"},
+        "site_url": config["url_site"], "display_url": config["url_site"],
+        "media_folder": "static/images", "public_folder": "/static/images",
+        "editor": {"preview": False},
+        "output": {"yaml": {"quote": "double"}},
+        "collections": [his, {"name": "fiches", "label": "Fiches", "files": fichiers}],
+    }
+
+
+def construire_admin(config, themes):
+    (SORTIE / "admin").mkdir()
+    (SORTIE / "admin" / "config.yml").write_text(
+        yaml.safe_dump(config_admin(config, themes), allow_unicode=True, sort_keys=False), encoding="utf-8")
+    (SORTIE / "admin" / "index.html").write_text(f"""<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Admin · {html.escape(config["titre_site"])}</title>
+</head>
+<body>
+<script src="https://unpkg.com/@sveltia/cms@{VERSION_CMS}/dist/sveltia-cms.js"></script>
+</body>
+</html>
+""", encoding="utf-8")
+
+
 # --- Génération --------------------------------------------------------------
 
 def construire():
@@ -227,7 +333,8 @@ def construire():
     aujourdhui = dt.date.today()
     stages = preparer_stages(aujourdhui)
     page = env.get_template("index.html").render(
-        racine="", url_page=url, une=une, avec_stages=bool(stages), **commun)
+        racine="", url_page=url, une=une, avec_stages=bool(stages),
+        his=preparer_his(aujourdhui), **commun)
     (SORTIE / "index.html").write_text(page, encoding="utf-8")
 
     for theme in themes:
@@ -254,6 +361,8 @@ def construire():
             racine="", url_page=f"{url}stages.html" if url else "", stages=stages,
             aujourdhui_fr=date_fr(aujourdhui, jour=False), **commun)
         (SORTIE / "stages.html").write_text(page, encoding="utf-8")
+
+    construire_admin(config, themes)
 
     print(f"{commun['nb_fiches']} fiches, {len(themes)} thèmes → {SORTIE}"
           + (f" ; {len(stages['liste'])} stages" if stages else ""))

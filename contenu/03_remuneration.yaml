@@ -22,7 +22,8 @@ fiches:
       - "Une lettre recommandée demandant des intérêts de retard oblige l’administration à répondre."
     liens:
       - { libelle: "ENSAP : bulletins de paie en ligne", url: "https://ensap.gouv.fr/" }
-    source: { doc: abecedaire, pages: "3, 5, 20" }
+    source:
+      - { doc: abecedaire, pages: "3, 5, 20" }
 
   - id: isoe-professeur-principal
     titre: "ISOE et professeur·e principal·e"
@@ -62,7 +63,8 @@ fiches:
       - "Partagé·e entre plusieurs établissements : vérifiez le prorata appliqué."
       - "En REP+, vérifiez que la pondération figure sur votre état VS."
     snes: "Le SNES-FSU demande que l’indemnité soit versée en entier à toutes et tous, sans prorata, et qu’elle soit transformée en NBI."
-    source: { doc: abecedaire, pages: "15, 19, 20" }
+    source:
+      - { doc: abecedaire, pages: "15, 19, 20" }
 
   - id: frais-de-deplacement
     titre: "Frais de déplacement et trajets domicile-travail"
@@ -78,4 +80,5 @@ fiches:
       - "Demandez le formulaire de prise en charge de l’abonnement au secrétariat."
       - "Gardez vos justificatifs (convocations, billets, tickets) pour chaque déplacement."
       - "Paiement en retard ou refusé : contactez la section."
-    source: { doc: abecedaire, pages: "10, 13" }
+    source:
+      - { doc: abecedaire, pages: "10, 13" }

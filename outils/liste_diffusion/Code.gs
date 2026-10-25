@@ -5,7 +5,8 @@
  *  - inscription depuis le site (doPost), avec confirmation par courriel (double opt-in) ;
  *  - confirmation et désinscription par lien (doGet) ;
  *  - menu « SNES » dans la feuille : annoncer une HIS aux statuts choisis ;
- *  - alertes « stages » envoyées par le relevé quotidien de GitHub (clé secrète).
+ *  - alertes « stages » envoyées par le relevé quotidien de GitHub (clé secrète) ;
+ *  - HIS saisies dans l'espace admin du site : annonce et rappel la veille (GitHub, clé secrète).
  * Installation : voir LISEZMOI.md dans ce dossier.
  */
 
@@ -82,11 +83,30 @@ function effectifs() {
  * Avec test = true, n'envoie qu'à vous-même.
  */
 function envoyerHIS(d) {
+  const m = messageHIS_(d, false);
+  if (d.test) {
+    const moi = Session.getEffectiveUser().getEmail();
+    envoyer_([{ courriel: moi, jeton: 'test' }], '[TEST] ' + m.sujet, m.corps);
+    return 1;
+  }
+  const cibles = destinatairesHIS_(d.statuts);
+  envoyer_(cibles, m.sujet, m.corps);
+  return cibles.length;
+}
+
+/** Inscrit·es confirmé·es des statuts visés (liste vide : tout le monde). */
+function destinatairesHIS_(statuts) {
+  const tous = !statuts || !statuts.length;
+  return lignes_().filter(l => l.etat === 'confirme' && (tous || statuts.indexOf(l.statut) >= 0));
+}
+
+function messageHIS_(d, rappel) {
   const jour = new Date(d.date + 'T12:00:00');
   const quand = JOURS[jour.getDay()] + ' ' + jour.getDate() + ' ' + MOIS[jour.getMonth()];
   const horaire = d.debut + (d.fin ? '-' + d.fin : '');
-  const sujet = 'Heure d’information syndicale le ' + quand + ', ' + horaire;
+  const sujet = (rappel ? 'Rappel : demain, ' : '') + 'Heure d’information syndicale le ' + quand + ', ' + horaire;
   const corps =
+    (rappel ? '<p><strong>Rappel</strong> : c’est demain.</p>' : '') +
     '<p>La section SNES-FSU organise une <strong>heure d’information syndicale</strong> :</p>' +
     '<p style="font-size:1.1em"><strong>' + echapper_(quand + ', ' + horaire) + '</strong>' +
     (d.lieu ? '<br>' + echapper_(d.lieu) : '') + '</p>' +
@@ -96,14 +116,7 @@ function envoyerHIS(d) {
     '<strong>au moins 48 h avant</strong> (un courriel suffit) et vos élèves. ' +
     '<strong>AED, AESH</strong> : prévenez le ou la CPE.</p>' +
     '<p><a href="' + SITE + 'fiches/heure-information-syndicale.html">Vos droits : la fiche HIS</a></p>';
-  if (d.test) {
-    const moi = Session.getEffectiveUser().getEmail();
-    envoyer_([{ courriel: moi, jeton: 'test' }], '[TEST] ' + sujet, corps);
-    return 1;
-  }
-  const cibles = lignes_().filter(l => l.etat === 'confirme' && d.statuts.indexOf(l.statut) >= 0);
-  envoyer_(cibles, sujet, corps);
-  return cibles.length;
+  return { sujet: sujet, corps: corps };
 }
 
 
@@ -112,6 +125,7 @@ function envoyerHIS(d) {
 function doPost(e) {
   const p = (e && e.parameter) || {};
   if (p.action === 'stages') return alertesStages_(p);
+  if (p.action === 'his_annonce' || p.action === 'his_rappel') return hisAutomatique_(p);
   if (p.action === 'confirmer') return confirmer_(p.j);
   if (p.action === 'desinscrire') return desinscrire_(p.j);
   return inscrire_(p);
@@ -204,6 +218,43 @@ function purgerNonConfirmes() {
   lignes_().filter(l => l.etat !== 'confirme' && new Date(l.inscrit_le).getTime() < limite)
     .reverse()  // du bas vers le haut, pour ne pas décaler les lignes restantes
     .forEach(l => sh.deleteRow(l.ligne));
+}
+
+
+// --- HIS saisies dans l'espace admin du site (appelé par GitHub) ------------
+
+/**
+ * p.donnees : {date, debut, fin, lieu, odj, statuts}. Chaque HIS n'est annoncée qu'une fois,
+ * et rappelée qu'une fois la veille (pas de rappel si l'annonce est partie il y a moins de 24 h).
+ */
+function hisAutomatique_(p) {
+  const props = PropertiesService.getScriptProperties();
+  if (!props.getProperty('CLE') || p.cle !== props.getProperty('CLE')) return ContentService.createTextOutput('refusé');
+  const d = JSON.parse(p.donnees || '{}');
+  if (!d.date || !d.debut) return ContentService.createTextOutput('incomplet');
+  const id = d.date + ' ' + d.debut;
+  const rappel = p.action === 'his_rappel';
+  const marque = (rappel ? 'RAPPEL ' : 'ANNONCE ') + id;
+  if (props.getProperty(marque)) return ContentService.createTextOutput('déjà envoyé');
+  if (rappel) {
+    const annonce = Number(props.getProperty('ANNONCE ' + id) || 0);
+    if (Date.now() - annonce < 24 * 3600 * 1000) {
+      props.setProperty(marque, String(Date.now()));
+      return ContentService.createTextOutput('annonce récente, pas de rappel');
+    }
+  }
+  const verrou = LockService.getScriptLock();
+  verrou.waitLock(30000);
+  try {
+    if (props.getProperty(marque)) return ContentService.createTextOutput('déjà envoyé');
+    const m = messageHIS_(d, rappel);
+    const cibles = destinatairesHIS_(d.statuts);
+    envoyer_(cibles, m.sujet, m.corps);
+    props.setProperty(marque, String(Date.now()));
+    return ContentService.createTextOutput('envoyé à ' + cibles.length);
+  } finally {
+    verrou.releaseLock();
+  }
 }
 
 

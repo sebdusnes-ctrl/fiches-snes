@@ -1,0 +1,65 @@
+# À chaque modification du contenu (espace admin ou push) : reconstruit le site, le publie,
+# puis envoie l'annonce des nouvelles HIS aux inscrit·es (une seule fois par HIS).
+name: Publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "contenu/**"
+      - "config.yaml"
+      - "modeles/**"
+      - "static/**"
+      - "build.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+# Même groupe que le relevé des stages : jamais deux commits du robot en même temps.
+concurrency:
+  group: publication
+  cancel-in-progress: false
+
+jobs:
+  publication:
+    runs-on: ubuntu-24.04
+    env:
+      TZ: Europe/Paris
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      # Échoue si une fiche est invalide (champ manquant, identifiant en double, lien cassé) :
+      # GitHub envoie alors un courriel, et le site en ligne reste tel quel.
+      - name: Construction du site
+        run: python build.py
+
+      - name: Publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "Site déjà à jour."
+          else
+            git commit -m "Publication : site reconstruit"
+            git pull --rebase
+            git push
+          fi
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+
+      - name: Annonce des HIS
+        env:
+          LISTE_URL: ${{ secrets.LISTE_URL }}
+          LISTE_CLE: ${{ secrets.LISTE_CLE }}
+        run: python outils/his.py

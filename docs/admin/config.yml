@@ -1,0 +1,359 @@
+backend:
+  name: github
+  repo: sebdusnes-ctrl/fiches-snes
+  branch: main
+site_url: https://sebdusnes-ctrl.github.io/fiches-snes/
+display_url: https://sebdusnes-ctrl.github.io/fiches-snes/
+media_folder: static/images
+public_folder: /static/images
+editor:
+  preview: false
+output:
+  yaml:
+    quote: double
+collections:
+- name: his
+  label: Heures d’information syndicale
+  files:
+  - name: his
+    label: HIS
+    file: contenu/his/his.yaml
+    fields:
+    - name: his
+      label: HIS
+      widget: list
+      summary: '{{fields.date}} {{fields.debut}} {{fields.lieu}}'
+      hint: Une HIS enregistrée s’affiche sur l’accueil ; l’annonce et le rappel de
+        la veille partent tout seuls.
+      fields:
+      - name: date
+        label: Date
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: DD/MM/YYYY
+        time_format: false
+      - name: debut
+        label: Début
+        widget: string
+        hint: ex. 12h30
+      - name: fin
+        label: Fin
+        widget: string
+        required: false
+        hint: ex. 13h30
+      - name: lieu
+        label: Lieu
+        widget: string
+        required: false
+      - name: odj
+        label: Ordre du jour
+        widget: text
+        required: false
+      - name: statuts
+        label: Destinataires
+        widget: select
+        multiple: true
+        required: false
+        options:
+        - Professeur·e titulaire
+        - Professeur·e contractuel·le
+        - CPE
+        - Psy-ÉN
+        - AED
+        - AESH
+        - Personnel administratif, social ou de santé
+        - Autre
+        hint: 'Vide : tout le monde.'
+      - name: annoncer
+        label: Envoyer l’annonce et le rappel par courriel
+        widget: boolean
+        default: true
+- name: fiches
+  label: Fiches
+  files:
+  - name: 01_service
+    label: Mon service
+    file: contenu/01_service.yaml
+    fields:
+    - &id001
+      name: theme
+      label: Thème
+      widget: object
+      collapsed: true
+      fields:
+      - name: id
+        label: Identifiant
+        widget: string
+      - name: titre
+        label: Titre
+        widget: string
+      - name: description
+        label: Description
+        widget: string
+      - name: couleur
+        label: Couleur
+        widget: string
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: &id002
+      - name: id
+        label: Identifiant (adresse de la page)
+        widget: string
+        pattern:
+        - ^[a-z0-9-]+$
+        - minuscules, chiffres et tirets
+        hint: 'Ne plus le changer une fois la fiche imprimée : il est dans le QR code.'
+      - name: titre
+        label: Titre
+        widget: string
+      - name: resume
+        label: Résumé (une ligne, sous le titre)
+        widget: string
+      - name: a_jour
+        label: Avertissement (facultatif)
+        widget: string
+        required: false
+      - name: en_bref
+        label: En bref
+        widget: list
+        required: true
+        hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+        field:
+          name: point
+          label: Point
+          widget: text
+      - name: textes
+        label: Ce que disent les textes
+        widget: list
+        required: false
+        hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+        field:
+          name: point
+          label: Point
+          widget: text
+      - name: agir
+        label: Ce que vous pouvez faire
+        widget: list
+        required: false
+        hint: '**gras** · [texte](https://…) · lien vers une fiche : [texte](fiche:identifiant)'
+        field:
+          name: point
+          label: Point
+          widget: text
+      - name: snes
+        label: Position du SNES-FSU (facultatif)
+        widget: text
+        required: false
+      - name: liens
+        label: Pour aller plus loin
+        widget: list
+        required: false
+        summary: '{{fields.libelle}}'
+        fields:
+        - name: libelle
+          label: Libellé
+          widget: string
+        - name: url
+          label: Adresse
+          widget: string
+      - name: source
+        label: Sources
+        widget: list
+        summary: '{{fields.doc}} {{fields.pages}} {{fields.ref}}'
+        fields:
+        - name: doc
+          label: Document
+          widget: select
+          options:
+          - label: Abécédaire rentrée 2026
+            value: abecedaire
+          - label: Mémo TZR 2024-2025
+            value: memo_tzr
+          - label: 'Courrier de l’établissement n° 2 : Conseil d’administration'
+            value: agir_ca
+          - label: Foire aux questions du SNES-FSU
+            value: faq_snes
+          - label: Une « continuité pédagogique » individualisée et permanente ?
+            value: continuite
+          - label: 'Fonctionnaire et obéissance : quel lien ?'
+            value: obeissance
+          - label: Publications du SNES-FSU Lille
+            value: s3_lille
+          - label: 'AED : n’acceptez plus ce qui sort de vos missions !'
+            value: aed
+          - label: AESH
+            value: aesh
+          - label: Décret n° 2014-940 du 20 août 2014 (obligations de service)
+            value: decret_ors
+          - label: Circulaire n° 2015-057 du 29 avril 2015 (missions et obligations
+              de service)
+            value: circ_ors
+          - label: Code général de la fonction publique
+            value: cgfp
+          - label: Circulaire n° 2014-120 du 16 septembre 2014 (réunions d’information
+              syndicale)
+            value: circ_his
+          - label: Circulaire n° 2015-058 du 29 avril 2015 (missions particulières,
+              IMP)
+            value: circ_imp
+          - label: Code de la défense
+            value: code_defense
+          - label: Arrêté du 19 mai 2015 relatif à l’organisation des enseignements
+              dans les classes de collège
+            value: arrete_college
+          - label: Décret n° 2003-484 du 6 juin 2003 (assistants d’éducation)
+            value: decret_aed
+          - label: Décret n° 2014-724 du 27 juin 2014 (AESH)
+            value: decret_aesh
+          - label: Décret n° 99-823 du 17 septembre 1999 (fonctions de remplacement)
+            value: decret_tzr
+          - label: Décret n° 89-825 du 9 novembre 1989 (ISSR)
+            value: decret_issr
+          - label: Circulaire n° 2018-108 du 10 octobre 2018 (rôle du professeur principal)
+            value: circ_pp
+          - label: Arrêté du 4 novembre 2005 fixant la journée de solidarité (éducation
+              nationale)
+            value: arrete_solidarite
+          - label: Arrêté du 22 octobre 2025 fixant le calendrier scolaire 2026-2027
+            value: calendrier
+          - label: Vade-mecum examens du SNES-FSU
+            value: vademecum_examens
+          - label: Décret n° 86-83 du 17 janvier 1986 (agents contractuels de l’État)
+            value: decret_86_83
+          - label: Décret n° 2006-781 du 3 juillet 2006 (frais de déplacement, ordre
+              de mission)
+            value: decret_deplacements
+          - label: Code des relations entre le public et l’administration
+            value: crpa
+          - label: Déclaration des droits de l’homme et du citoyen de 1789
+            value: ddhc
+          - label: Décret n° 82-624 du 20 juillet 1982 (temps partiel des fonctionnaires
+              de l’État)
+            value: decret_temps_partiel
+          - label: 'Les heures supplémentaires : HSA, HSE, exemptions'
+            value: snes_hs
+          - label: Décret n° 86-442 du 14 mars 1986 (médecins agréés, congés de maladie,
+              temps partiel thérapeutique)
+            value: decret_sante
+          - label: Circulaire n° 2014-059 du 27 mai 2014 (application de la règle,
+              mesures de prévention et sanctions)
+            value: circ_regle
+          - label: Quelles sont les punitions ou sanctions applicables au collège
+              ou au lycée ?
+            value: service_public_punitions
+          - label: Code de l’éducation
+            value: code_education
+          - label: 'Ressource sur les sanctions disciplinaires, fiche n° 2 : le sursis'
+            value: eduscol_sursis
+          - label: Les réunions obligatoires… et celles qui ne le sont pas
+            value: reunions
+        - name: pages
+          label: Pages
+          widget: string
+          required: false
+        - name: ref
+          label: Référence (articles…)
+          widget: string
+          required: false
+  - name: 02_absences
+    label: Absences et congés
+    file: contenu/02_absences.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 03_remuneration
+    label: Salaire et indemnités
+    file: contenu/03_remuneration.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 04_carriere
+    label: Carrière
+    file: contenu/04_carriere.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 05_etablissement
+    label: Vie de l’établissement
+    file: contenu/05_etablissement.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 05b_conseil_administration
+    label: Conseil d’administration
+    file: contenu/05b_conseil_administration.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 06_sante
+    label: Santé et sécurité au travail
+    file: contenu/06_sante.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 07_droits
+    label: Droits syndicaux et libertés
+    file: contenu/07_droits.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 08_eleves
+    label: Élèves à besoins particuliers
+    file: contenu/08_eleves.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 08b_aed_aesh
+    label: AED et AESH
+    file: contenu/08b_aed_aesh.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002
+  - name: 09_tzr
+    label: TZR
+    file: contenu/09_tzr.yaml
+    fields:
+    - *id001
+    - name: fiches
+      label: Fiches
+      widget: list
+      summary: '{{fields.titre}}'
+      fields: *id002

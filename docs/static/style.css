@@ -94,6 +94,12 @@ body::before {
 .formulaire .pot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .inscription-message { min-height: 1.5em; font-weight: 600; }
 .donnees { margin-top: 28px; font-size: .95rem; }
+.his-annonce { border: 2px solid var(--snes-framboise); border-radius: var(--rayon); padding: 12px 14px; margin: 0 0 18px; background: var(--surface); }
+.his-annonce p { margin: 4px 0; }
+.his-titre { color: var(--snes-framboise); font-weight: 700; font-size: .9rem; text-transform: uppercase; letter-spacing: .03em; }
+.his-quand { font-size: 1.1rem; }
+.his-odj { white-space: pre-line; }
+.his-lien { font-size: .9rem; color: var(--texte-doux); }
 .esprit { border-left: 4px solid var(--snes-vert); padding: 8px 12px; margin: 0 0 18px; font-size: .95rem; line-height: 1.5; background: color-mix(in srgb, var(--snes-vert) 9%, var(--surface)); border-radius: 0 6px 6px 0; }
 
 .recherche input {
@@ -286,7 +292,7 @@ body::before {
   .marque-logo { width: 20mm; }
   .bande-couleurs { height: 1.5mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .conteneur { max-width: none; padding: 0; }
-  .fil, .actions, .pied, .themes-nav, .recherche, .esprit { display: none !important; }
+  .fil, .actions, .pied, .themes-nav, .recherche, .esprit, .his-annonce { display: none !important; }
   .fiche { padding: 0; }
   .fiche-tete { margin: 3mm 0 3mm; }
   .fiche h1 { font-size: 17pt; }

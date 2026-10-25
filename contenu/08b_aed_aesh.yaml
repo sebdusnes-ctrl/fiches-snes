@@ -66,7 +66,8 @@ fiches:
       - "Pression ou menace de non-renouvellement : contactez la section académique."
     liens:
       - { libelle: "CNIL : la vidéoprotection", url: "https://www.cnil.fr/fr/la-videoprotection" }
-    source: { doc: aed, ref: "4 pages" }
+    source:
+      - { doc: aed, ref: "4 pages" }
 
   - id: aesh-contrat
     titre: "AESH : contrat, salaire, mutuelle"

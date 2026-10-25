@@ -11,8 +11,9 @@ permissions:
   contents: write
   pages: write
 
+# Même groupe que la publication : jamais deux commits du robot en même temps.
 concurrency:
-  group: stages
+  group: publication
   cancel-in-progress: false
 
 jobs:
@@ -53,6 +54,7 @@ jobs:
             exit 0
           fi
           git commit -m "Stages : relevé du $(date +%d/%m/%Y)"
+          git pull --rebase
           git push
           # Les push faits avec le jeton du workflow ne relancent pas toujours GitHub Pages.
           gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
@@ -64,6 +66,13 @@ jobs:
           LISTE_URL: ${{ secrets.LISTE_URL }}
           LISTE_CLE: ${{ secrets.LISTE_CLE }}
         run: python outils/alertes.py nouveautes.json
+
+      # Rappel la veille des HIS saisies dans l'espace admin (et annonce si elle n'est pas encore partie).
+      - name: HIS
+        env:
+          LISTE_URL: ${{ secrets.LISTE_URL }}
+          LISTE_CLE: ${{ secrets.LISTE_CLE }}
+        run: python outils/his.py
 
       - name: Alerte si le relevé a échoué
         if: steps.releve.outcome == 'failure'

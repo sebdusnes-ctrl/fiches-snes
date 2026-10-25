@@ -40,4 +40,5 @@ fiches:
       - "« C’est obligatoire », « sinon l’élève ne pourra pas passer son examen », « la famille portera plainte » : ces arguments ne reposent sur aucun texte."
       - "Exigez que les autorisations d’enregistrement et de diffusion soient recueillies (personnels et élèves) avant toute utilisation."
     snes: "Un dispositif technologique ne remplace pas un accompagnement humain. Le SNES-FSU demande de la formation et des moyens pour une inclusion réelle, sans management par la culpabilisation."
-    source: { doc: s3_lille, ref: "Bulletin académique n° 341, mars 2026" }
+    source:
+      - { doc: s3_lille, ref: "Bulletin académique n° 341, mars 2026" }

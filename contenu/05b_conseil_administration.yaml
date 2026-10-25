@@ -20,7 +20,8 @@ fiches:
       - "Une décision qui relève du CA (organisation des groupes, journée banalisée, convention…) ne peut pas être prise par la direction seule : demandez son inscription à l’ordre du jour."
       - "Faites voter des vœux et transmettez-les à la section départementale ou académique."
       - "Les délibérations sur le règlement intérieur, la structure pédagogique, la DHG, le temps scolaire et le projet d’établissement deviennent exécutoires **15 jours après leur transmission** au recteur, qui peut les annuler dans ce délai si elles sont illégales (art. L.421-14 et R.421-55). C’est le moment de le saisir."
-    source: { doc: agir_ca, pages: "2, 4, 6, 15, 21, 22, 30" }
+    source:
+      - { doc: agir_ca, pages: "2, 4, 6, 15, 21, 22, 30" }
 
   - id: ca-fonctionnement
     titre: "Faire vivre le CA : convocation, quorum, votes, procès-verbal"
@@ -40,7 +41,8 @@ fiches:
       - "Tout membre peut demander une **suspension de séance** pour se concerter."
       - "Manquement (délais, documents absents…) : faites-le inscrire au PV, puis écrivez à la DSDEN ou au rectorat, en prévenant la section. Pour en parler avec le chef d’établissement, privilégiez une **rencontre en délégation**."
       - "Refuser de siéger n’a d’effet que si le quorum n’est pas atteint : organisez-le avec les autres élu·es et les parents."
-    source: { doc: agir_ca, pages: "9, 15, 16, 17" }
+    source:
+      - { doc: agir_ca, pages: "9, 15, 16, 17" }
 
   - id: commission-permanente
     titre: "Commission permanente : la faire exister"
@@ -55,7 +57,8 @@ fiches:
     agir:
       - "Préparez avec les autres élu·es **trois votes** : création de la CP, délégation d’une compétence accessoire, liste des questions qui lui sont soumises pour avis."
       - "Le CA peut modifier cette liste en cours d’année par un nouveau vote."
-    source: { doc: agir_ca, pages: "9" }
+    source:
+      - { doc: agir_ca, pages: "9" }
 
   - id: dhg-repartition
     titre: "DHG : la répartition des heures se vote en CA"
@@ -73,7 +76,8 @@ fiches:
       - "Tenez une **heure d’information syndicale** dès réception de la DHG pour construire les propositions avec les collègues."
       - "Défendez les postes implantés et les disciplines fragiles ; demandez la **transformation d’HSA en heures-postes**."
       - "Faites voter le CA sur les créations et suppressions de postes : sa position sera relayée par les élu·es FSU en CSA."
-    source: { doc: agir_ca, pages: "5, 29, 30" }
+    source:
+      - { doc: agir_ca, pages: "5, 29, 30" }
 
   - id: imp-en-ca
     titre: "IMP et décharges : ce que vote le CA"
@@ -113,7 +117,8 @@ fiches:
       - "Recensez avant le CA les besoins des collègues (reprographie, matériel, logiciels…) et chiffrez-les."
       - "Vérifiez la part des dépenses pédagogiques (AP) face à ALO, le montant du fonds de roulement et l’usage des fonds sociaux."
       - "Expliquez votre vote par une motion chiffrée. Un vote contre vise les choix de la collectivité ou la présentation incomplète, pas le travail du ou de la gestionnaire."
-    source: { doc: agir_ca, pages: "24 à 28" }
+    source:
+      - { doc: agir_ca, pages: "24 à 28" }
 
   - id: reglement-interieur
     titre: "Règlement intérieur, sanctions, portable"
@@ -131,7 +136,8 @@ fiches:
       - "Demandez que le RI soit soumis pour avis à la commission permanente avant le vote."
       - "Refusez toute interdiction globale, dans le RI ou le projet d’établissement, qui permettrait de contester vos choix pédagogiques."
       - "Un élève ne peut jamais être exclu d’une activité parce qu’il n’a pas l’équipement demandé."
-    source: { doc: agir_ca, pages: "4, 11, 23" }
+    source:
+      - { doc: agir_ca, pages: "4, 11, 23" }
 
   - id: conseil-de-discipline
     titre: "Commission éducative et conseil de discipline"
@@ -208,4 +214,5 @@ fiches:
       - "Constituez une liste syndicale (FSU ou SNES-FSU) plutôt qu’une liste « maison » : elle affiche ses positions et légitime les élu·es."
       - "Pensez à toutes les catégories : CPE, AED, AESH, documentalistes."
       - "Demandez que les suppléant·es soient convoqué·es automatiquement quand un·e titulaire est empêché·e."
-    source: { doc: agir_ca, pages: "6, 7, 8, 15" }
+    source:
+      - { doc: agir_ca, pages: "6, 7, 8, 15" }

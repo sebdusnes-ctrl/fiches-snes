@@ -40,4 +40,5 @@ fiches:
     snes: "Le SNES-FSU demande que l’accès à la classe exceptionnelle devienne la norme en fin de carrière."
     liens:
       - { libelle: "Mémo rémunérations et carrières (SNES-FSU)", url: "https://r.snes.edu/RemuneraCarrieres" }
-    source: { doc: abecedaire, pages: "6, 21" }
+    source:
+      - { doc: abecedaire, pages: "6, 21" }

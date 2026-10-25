@@ -1,0 +1,3 @@
+# Heures d'information syndicale, saisies depuis l'espace admin (/admin).
+# Chaque HIS à venir s'affiche sur l'accueil ; l'annonce et le rappel de la veille partent tout seuls.
+his: []

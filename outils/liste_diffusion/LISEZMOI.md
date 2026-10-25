@@ -37,6 +37,12 @@ du compte de la section, courriels envoyés depuis sa messagerie Gmail.
    - `LISTE_CLE` : la clé secrète de l'étape 3
 7. Tester : s'inscrire sur le site, confirmer, puis **SNES → Annoncer une HIS… → M'envoyer un test**.
 
+## Mise à jour du 25/10/2026 : HIS saisies dans l'espace admin
+
+Le script gère maintenant l'annonce et le rappel des HIS saisies dans `/admin`. Pour l'activer :
+copier le nouveau [Code.gs](Code.gs) dans Apps Script, enregistrer, puis
+**Déployer → Gérer les déploiements → ✏️ → Version : Nouvelle version → Déployer** (l'adresse ne change pas).
+
 ## Modifier le script ensuite
 
 Après avoir changé `Code.gs` : **Déployer → Gérer les déploiements → ✏️ → Version : Nouvelle version**.

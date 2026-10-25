@@ -88,3 +88,26 @@ L'OCR peut mélanger les encadrés pleine largeur : vérifier chiffres et dates 
 
 - Le Mémo TZR date de 2024-2025 : les montants d’ISSR sont à vérifier chaque année.
 - Ne pas publier de nom ni d’adresse personnelle sans l’accord des intéressé·es (champ `contact`).
+
+## Espace admin (`/admin`)
+
+https://sebdusnes-ctrl.github.io/fiches-snes/admin/ : formulaires pour modifier ou ajouter des fiches,
+et saisir les HIS (Sveltia CMS, version figée dans `build.py`, `VERSION_CMS`). Navigateur récent requis.
+La configuration (`docs/admin/config.yml`) est générée par `build.py` à partir des thèmes et des sources.
+
+**Connexion** : « Se connecter avec un jeton d'accès ». Créer le jeton une fois sur GitHub :
+Settings (du compte) → Developer settings → Personal access tokens → **Fine-grained tokens** → Generate new token :
+- Repository access : **Only select repositories** → `fiches-snes`
+- Permissions → Repository permissions → **Contents : Read and write**
+- Expiration : au choix (un an, par exemple), puis le recréer.
+
+Ce jeton ne donne accès qu'à ce dépôt. Ne le communiquer à personne.
+
+**Après chaque enregistrement**, le workflow « Publication » reconstruit et publie le site (1 à 2 minutes),
+puis annonce les nouvelles HIS. Une fiche invalide (champ obligatoire vide, identifiant en double, lien
+vers une fiche inexistante) fait échouer la publication : GitHub envoie un courriel et le site reste tel quel.
+Après une modification depuis l'admin, vérifiez que la fiche tient toujours sur une page A4 (aperçu avant impression).
+
+**HIS** : une HIS enregistrée s'affiche sur l'accueil jusqu'à son jour ; si « Envoyer l'annonce » est coché,
+l'annonce part aussitôt (une seule fois), et un rappel la veille au matin (relevé quotidien).
+Changer la date ou l'heure d'une HIS déjà annoncée envoie une nouvelle annonce.

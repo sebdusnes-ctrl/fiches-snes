@@ -19,7 +19,8 @@ fiches:
       - "Prévenez l’établissement dès que possible, puis transmettez le certificat médical."
       - "Gardez un décompte de vos jours utilisés dans l’année."
     snes: "Le SNES-FSU dénonce la suppression du doublement au 1er janvier 2027."
-    source: { doc: abecedaire, pages: "4" }
+    source:
+      - { doc: abecedaire, pages: "4" }
 
   - id: arret-maladie
     titre: "Arrêt maladie et temps partiel thérapeutique"

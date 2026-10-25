@@ -61,7 +61,8 @@ fiches:
       - "Refusez toute « hiérarchie intermédiaire » entre collègues."
       - "Ce qui relève du CA (ou de la commission permanente) doit y être débattu et voté."
     snes: "Le SNES-FSU s’est opposé à la création de ce conseil, qui sert plus souvent à imposer qu’à concerter."
-    source: { doc: abecedaire, pages: "9" }
+    source:
+      - { doc: abecedaire, pages: "9" }
 
   - id: organisation-pedagogique
     titre: "Groupes de besoins, soutien, AP : c’est le CA qui décide"
@@ -98,7 +99,8 @@ fiches:
     agir:
       - "À la rentrée, demandez comment Devoirs faits est organisé dans l’établissement."
       - "Si vous encadrez des volontaires du service civique, demandez à être rémunéré·e pour ce tutorat."
-    source: { doc: abecedaire, pages: "3, 10" }
+    source:
+      - { doc: abecedaire, pages: "3, 10" }
 
   - id: cahier-de-textes-pronote
     titre: "Cahier de textes, Pronote : vos obligations"
@@ -113,7 +115,8 @@ fiches:
     agir:
       - "Le paramétrage de Pronote (évaluation, messagerie) doit respecter votre **droit à la déconnexion** : il ne peut pas dicter vos pratiques."
       - "Vous pouvez demander que l’usage de Pronote et son paramétrage soient discutés en CA."
-    source: { doc: abecedaire, pages: "5, 21" }
+    source:
+      - { doc: abecedaire, pages: "5, 21" }
 
   - id: continuite-pedagogique
     titre: "Élève absent : faut-il tout mettre en ligne ?"
@@ -190,7 +193,8 @@ fiches:
       - "Pressions en conseil pédagogique ou en CA pour le généraliser : rappelez qu’aucun texte ne l’impose et que les horaires d’enseignement sont réglementaires."
       - "Si le climat scolaire est en cause, demandez de vrais moyens : vie scolaire, effectifs réduits, dédoublements."
     snes: "Un dispositif « magique » ne remplace ni l’accompagnement des élèves en difficulté de lecture, ni les moyens."
-    source: { doc: s3_lille, ref: "« Silence on lit, Quart d’heure lecture… De quoi parle-t-on ? »" }
+    source:
+      - { doc: s3_lille, ref: "« Silence on lit, Quart d’heure lecture… De quoi parle-t-on ? »" }
 
   - id: manuels-numerique
     titre: "Manuels et outils numériques : qui choisit ?"
@@ -205,4 +209,5 @@ fiches:
     agir:
       - "En CA, demandez le montant de l’enveloppe reçue pour les manuels et expliquez aux parents ce qu’elle permet réellement."
       - "Défendez la liberté de choix entre papier et numérique."
-    source: { doc: agir_ca, pages: "21" }
+    source:
+      - { doc: agir_ca, pages: "21" }
