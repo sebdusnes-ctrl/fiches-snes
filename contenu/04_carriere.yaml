@@ -42,3 +42,65 @@ fiches:
       - { libelle: "Mémo rémunérations et carrières (SNES-FSU)", url: "https://r.snes.edu/RemuneraCarrieres" }
     source:
       - { doc: abecedaire, pages: "6, 21" }
+
+  - id: temps-partiel-disponibilite
+    titre: "Temps partiel et disponibilité"
+    resume: "Temps partiel de droit ou sur autorisation ; quelle rémunération, quels effets sur la carrière et la retraite."
+    en_bref:
+      - "**Sur autorisation** : un service à temps partiel, au moins un mi-temps, « sous réserve des nécessités » du service. Un refus doit être **précédé d’un entretien et motivé** (CGFP, art. L.612-1 et L.612-2)."
+      - "**De droit** (50, 60, 70 ou 80 %) : après chaque naissance ou adoption, jusqu’aux trois ans de l’enfant ou trois ans après l’arrivée au foyer, ou pour donner des soins à un proche handicapé, malade ou accidenté (art. L.612-3). Demande deux mois avant au moins."
+      - "**Carrière** : le temps partiel compte comme du temps plein pour l’avancement, la promotion et la formation (art. L.612-4)."
+    textes:
+      - "**Paie** : au prorata du service ; à 80 %, six septièmes (85,7 %), à 90 %, 32/35 (91,4 %) (art. L.612-5). Pour un service en heures entre 80 et 90 % (15 h sur 18, par exemple), la paie suit la formule (quotité × 4/7) + 40 (décret n° 82-624, art. 1)."
+      - "L’autorisation est accordée pour six mois à un an (en pratique, l’année scolaire), reconduite tacitement dans la limite de trois ans. Retour à temps plein possible en cours d’année pour motif grave (art. 2)."
+      - "**Retraite** : le temps partiel compte comme du temps plein pour la durée d’assurance, mais au prorata pour la pension, sauf temps partiel de droit pour un enfant de moins de trois ans. Une surcotisation est possible, dans la limite de quatre trimestres (37,65 % en 2026)."
+      - "**Disponibilité** de droit, trois ans renouvelables : pour élever un enfant de moins de 12 ans, donner des soins à un proche, suivre son ou sa conjoint·e (décret n° 85-986, art. 47). Sur demande : convenances personnelles (cinq ans, dix ans sur la carrière), études, création d’entreprise (art. 44 et 46). Pas de traitement ; avancement conservé cinq ans au plus si vous travaillez ou élevez un enfant (CGFP, art. L.514-2)."
+    agir:
+      - "Faites la demande dans les délais fixés chaque année par le rectorat : la section vous les communique."
+      - "Refus : demandez l’entretien et le motif écrit ; la commission paritaire peut être saisie (art. L.612-13)."
+    source:
+      - { doc: cgfp, ref: "art. L.514-1 à L.514-4, L.612-1 à L.612-13" }
+      - { doc: decret_temps_partiel, ref: "art. 1 et 2" }
+      - { doc: decret_85_986, ref: "art. 44, 46, 47" }
+      - { doc: snes_tp_retraite }
+
+  - id: formation-cpf
+    titre: "Formation continue, CPF, congé de formation"
+    resume: "Sur instruction : pendant le service. Hors service : avec votre accord écrit. 25 h de CPF par an."
+    en_bref:
+      - "Les formations suivies **sur instruction de l’administration** se déroulent **pendant le temps de service** (CGFP, art. R.422-51). En dehors, il faut **votre accord écrit**, dans la limite de 50 ou 80 heures par an selon la formation (art. R.422-52)."
+      - "**Compte personnel de formation (CPF)** : 25 heures par an, jusqu’à 150 heures (art. R.422-84), pour un projet d’évolution professionnelle. Il s’utilise avec l’accord de l’administration, en priorité pendant le temps de travail ; un refus doit être motivé (art. L.422-9 et L.422-11)."
+      - "**Congé de formation professionnelle** : trois ans au plus sur la carrière (art. R.422-116), avec une indemnité de 85 % du traitement pendant douze mois, plafonnée à l’indice brut 650 (art. R.422-118). Demande au moins **120 jours** avant (art. R.422-112), dans la limite des crédits (art. R.422-110)."
+    textes:
+      - "Sans aucune formation du plan académique depuis trois ans, l’accès à une action de ce plan est **de droit** ; il ne peut être différé que d’un an (art. R.422-53)."
+      - "Après deux refus consécutifs de CPF, un troisième refus pour une formation de même nature exige l’avis de l’instance paritaire (art. L.422-13)."
+      - "Ces règles ont été intégrées au Code général de la fonction publique le 1er août 2026 (décret n° 2026-366)."
+    agir:
+      - "Une formation hors temps de service vous est imposée ? Rappelez l’article R.422-52 : sans accord écrit, elle ne peut pas l’être."
+      - "Refus de CPF ou de congé de formation : demandez le motif écrit et contactez la section ; la commission paritaire peut être saisie."
+    snes: "Le SNES-FSU rappelle que la formation continue fait partie du temps de travail et revendique qu’elle se déroule sur le temps de service."
+    source:
+      - { doc: cgfp, ref: "art. L.422-1, L.422-8 à L.422-13, R.422-51 à R.422-53, R.422-84, R.422-110 à R.422-118" }
+      - { doc: reunions }
+
+  - id: professeurs-contractuels
+    titre: "Professeur·es contractuel·les : vos droits"
+    resume: "Contrat, rémunération, renouvellement, CDI après six ans : l’essentiel."
+    en_bref:
+      - "Recruté·e par le recteur, vous avez **les mêmes obligations de service** que les titulaires (décret n° 2016-1171, art. 3 et 14) et **les mêmes primes et indemnités** (ISOE, REP…), sauf exception réservée aux fonctionnaires (art. 11)."
+      - "Pour un besoin couvrant l’année scolaire, le contrat court jusqu’à **la veille de la rentrée suivante**, donc vacances d’été comprises (art. 4)."
+      - "**CDI** : après six ans de services publics dans la même catégorie et auprès du même ministère, le contrat suivant est conclu pour une durée indéterminée (CGFP, art. L.332-4)."
+    textes:
+      - "Le contrat précise vos fonctions, votre établissement et la quotité de travail (art. 6). La rémunération est **réévaluée au moins tous les trois ans** (art. 10)."
+      - "**Renouvellement** : l’administration doit vous dire si elle renouvelle votre contrat au plus tard 8 jours avant son terme (moins de 6 mois), un mois (moins de 2 ans), deux mois (2 ans et plus) ou trois mois s’il peut devenir un CDI (CGFP, art. R.332-27)."
+      - "Contrat d’un an au plus et faible rémunération : une **indemnité de fin de contrat** peut être due (art. L.554-3)."
+      - "La **commission consultative paritaire** (CCP) peut être saisie notamment en cas de refus de temps partiel, de congé de formation ou de CPF ; elle est consultée avant tout licenciement."
+    agir:
+      - "Vérifiez votre classement et votre première paie : les erreurs sont fréquentes et souvent rattrapables."
+      - "Fin de contrat : inscrivez-vous sans attendre auprès de France Travail."
+      - "Accident, arrêt maladie : voir [« Accident de service, CITIS »](fiche:accident-de-service)."
+    snes: "Le SNES-FSU, avec la FSU, revendique une grille nationale de rémunération et un plan de titularisation."
+    source:
+      - { doc: decret_contractuels_en, ref: "art. 3 à 14" }
+      - { doc: cgfp, ref: "art. L.332-4, L.554-3, R.332-27" }
+      - { doc: snes_nontit, pages: "2 à 7" }

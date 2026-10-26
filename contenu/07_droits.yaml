@@ -98,3 +98,23 @@ fiches:
       - "Votez, et faites voter autour de vous !"
     source:
       - { doc: abecedaire, pages: "11" }
+
+  - id: faire-greve
+    titre: "Faire grève"
+    resume: "Un droit, sans déclaration préalable dans le second degré ; un trentième retenu par jour de grève."
+    en_bref:
+      - "« Les agents publics exercent le droit de grève dans le cadre des lois qui le réglementent » (CGFP, art. L.114-1), titulaires ou non, AED et AESH compris. Le préavis est déposé **par un syndicat**, cinq jours francs avant (code du travail, art. L.2512-2) : vous pouvez alors faire grève, même seul·e dans votre établissement."
+      - "**Pas de déclaration préalable** : le SNES-FSU rappelle que l’obligation de prévenir à l’avance ne concerne que les enseignant·es du premier degré. La direction n’a pas à vous demander si vous ferez grève."
+      - "**Retenue** : toute absence de service fait pendant une journée, même d’une heure, entraîne la retenue d’**un trentième** de la rémunération, sauf supplément familial et remboursements de frais (CGFP, art. L.711-3). Elle s’applique aussi à l’ISOE et aux HSA."
+    textes:
+      - "C’est l’administration qui relève les grévistes, à partir du service non fait. On n’a pas à se déclarer après coup, et une liste de grévistes ne s’affiche pas."
+      - "**Grève sur plusieurs jours** (arrêt Omont, 1978) : l’administration peut retenir tous les jours entre le début de la grève et votre reprise effective, y compris ceux où vous n’aviez pas cours. En revanche, une grève le vendredi suivie d’une reprise le lundi ne justifie pas de retenir le week-end."
+      - "Se déclarer publiquement gréviste un jour sans cours entraîne aussi une retenue (arrêt Tinel, 1988)."
+    agir:
+      - "Après une grève, demandez la copie de ce qui a été déclaré vous concernant : elle permet de vérifier, et de faire corriger, les retenues."
+      - "On vous demande à l’avance si vous ferez grève ? Vous pouvez ne pas répondre ; prévenez la section en cas d’insistance."
+      - "Grève reconductible, veille de vacances : demandez conseil à la section avant de reprendre."
+    source:
+      - { doc: cgfp, ref: "art. L.114-1, L.114-2, L.711-3" }
+      - { doc: snes_greve }
+      - { doc: snes_lille_omont }

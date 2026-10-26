@@ -266,6 +266,19 @@ collections:
           - label: 'Congés maladie, temps partiel thérapeutique : ce que change le
               décret n° 2026-705'
             value: snes_decret_2026_705
+          - label: Décret n° 85-986 du 16 septembre 1985 (disponibilité)
+            value: decret_85_986
+          - label: Décret n° 2016-1171 du 29 août 2016 (agents contractuels enseignants,
+              d’éducation et d’orientation)
+            value: decret_contractuels_en
+          - label: Droit de grève
+            value: snes_greve
+          - label: 'Grève : l’arrêt Omont et le week-end'
+            value: snes_lille_omont
+          - label: Le temps partiel et la retraite
+            value: snes_tp_retraite
+          - label: Non-titulaires
+            value: snes_nontit
           - label: Déclaration des droits de l’homme et du citoyen de 1789
             value: ddhc
           - label: Décret n° 82-624 du 20 juillet 1982 (temps partiel des fonctionnaires

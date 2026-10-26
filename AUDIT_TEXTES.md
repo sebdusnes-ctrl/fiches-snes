@@ -180,6 +180,14 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | conges-longs | CLM 3 ans (1 an plein, 2 ans 60 %) ; CLD 5 ans (3 ans plein, 2 ans demi) ; SFT et IR maintenus ; continu ou discontinu | CGFP L.822-6 à L.822-17 ; décret 86-442 art. 28-1 | ✅ |
 | | Maintien jusqu'à décision CLM/CLD ; contrôle à domicile ; absences > 2 semaines | décret 86-442 art. 27, 36-1, 39 (version 1er août 2026) | ✅ |
 | arret-maladie (mise à jour) | TPT : refus motivé, entretien si nécessités de service, décision sous 30 j ou à la reprise | décret 2026-705 (via L'US/article SNES ; articles du décret 86-442 non cités un par un) | 🟡 |
+| faire-greve (26/10/2026) | Droit de grève des agents publics ; préavis syndical (code du travail L.2512-2) ; trentième indivisible, hors SFT et frais, pour les agents de l'État déclarés grévistes | CGFP L.114-1, L.114-2, L.711-3 | ✅ |
+| | Pas de déclaration préalable dans le 2d degré ; relevé par l'administration ; Omont ; Tinel ; retenue sur ISOE et HSA ; week-end non retenu | SNES « Droit de grève » ; SNES Lille | 🟡 (jurisprudence non relue) |
+| temps-partiel-disponibilite | Sur autorisation, refus après entretien et motivé ; de droit (naissance, adoption, soins) ; carrière ; paie 6/7 et 32/35 ; formule 4/7 + 40 ; périodes 6 mois à 1 an, 3 ans ; CAP | CGFP L.612-1 à L.612-13 ; décret 82-624 art. 1, 1-3, 2 | ✅ |
+| | Disponibilité de droit et sur demande, durées ; avancement conservé 5 ans | décret 85-986 art. 44, 46, 47 ; CGFP L.514-1 à L.514-4 | ✅ |
+| | Retraite : durée d'assurance, prorata, surcotisation 4 trimestres, 37,65 % en 2026 | SNES « Le temps partiel et la retraite » | 🟡 |
+| formation-cpf | Formation sur instruction pendant le service ; hors service avec accord écrit 50/80 h ; droit d'accès après 3 ans ; CPF 25 h/150 h, refus motivé, 3e refus après instance ; CFP 3 ans, 85 %, IB 650, 12 mois, 120 jours | CGFP L.422-1 à L.422-13, R.422-51 à R.422-53, R.422-84, R.422-110 à R.422-118 (décret 2026-366, en vigueur au 1er août 2026) | ✅ |
+| professeurs-contractuels | Recrutement par le recteur ; ORS et primes identiques ; contrat jusqu'à la veille de la rentrée ; réévaluation 3 ans ; CDI après 6 ans ; délais de non-renouvellement ; indemnité de fin de contrat | décret 2016-1171 art. 3 à 14 ; CGFP L.332-4, L.554-3, R.332-27 | ✅ |
+| | Saisine de la CCP (temps partiel, CFP, CPF), consultation avant licenciement | L'US 873 | 🟡 |
 
 ## Reste à auditer (⏳)
 - ✅ Fait : organisation pédagogique (groupes de besoins « peut » ; soutien « peuvent » ; CA via R.421-2/R.421-20) et protection fonctionnelle (CGFP L.134-4 à L.134-6).
