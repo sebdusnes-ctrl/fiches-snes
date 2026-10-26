@@ -14,7 +14,7 @@ fiches:
       - "**Crédit de formation : 200 heures** pour un temps plein, à déduire du temps de travail (AED en CDD uniquement)."
     textes:
       - "Décret n° 2003-484 du 6 juin 2003, modifié notamment par le décret n° 2022-1140 du 9 août 2022."
-      - "**Après six ans de CDD, un CDI** peut être signé avec le recteur ou la rectrice."
+      - "**Après six ans** comme AED (temps partiel compris), tout nouveau contrat est **un CDI**, conclu par le recteur (décret n° 2003-484, art. 1 ter). Vérifiez la quotité proposée."
       - "Rémunération : indice 366 au minimum en CDD, 375 en CDI, sans grille nationale ni progression garantie. Les AED touchent l’indemnité REP ou REP+, au prorata du temps passé dans l’établissement."
       - "Licenciement après la période d’essai ou sanction disciplinaire (sauf avertissement et blâme) : la **commission consultative paritaire** (CCP), où siègent des élu·es AED et AESH, doit être consultée."
       - "Comme tous les personnels : une heure d’information syndicale par mois sur le temps de travail, 12 jours de formation syndicale par an."
@@ -40,7 +40,7 @@ fiches:
     textes:
       - "Décret n° 2003-484 du 6 juin 2003 ; cadre de gestion ministériel des AED du 17 septembre 2025."
       - "En cas de difficultés graves, le chef d’établissement peut interdire l’accès aux locaux ou suspendre des activités (art. R.421-12 du code de l’éducation). **Rien ne lui permet de réquisitionner des AED** ou de leur demander d’aller au-delà de leurs missions."
-      - "Les missions de vigile ou de service d’ordre ne font pas partie des missions des AED."
+      - "Ce n’est pas votre rôle : remplacer un·e enseignant·e, un·e CPE ou un autre professionnel, administrer des médicaments, fouiller les sacs, concevoir et animer seul·e une activité éducative, faire office de vigile ou de service d’ordre."
     agir:
       - "Une injonction de dernière minute à venir à d’autres horaires : demandez une modification écrite de l’emploi du temps."
       - "Mission ou lieu d’exercice absent de votre contrat : vous pouvez refuser. Contactez la section."
@@ -48,6 +48,7 @@ fiches:
       - { doc: decret_aed, ref: "art. 1" }
       - { doc: code_education, ref: "art. R.421-12" }
       - { doc: aed, ref: "4 pages" }
+      - { doc: snes_aed875, pages: "2" }
 
   - id: aed-limites
     titre: "AED : vidéosurveillance, mobilisations, grève à l’internat"

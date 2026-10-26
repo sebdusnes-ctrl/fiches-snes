@@ -193,6 +193,12 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Calendrier (SIAM 4-25 novembre, confirmation 26 novembre, barème janvier, tardives 5 février, résultats 10 mars, recours 9 mai) | L'US 876, avant la note de service | 🟡 à vérifier au BO du 29 octobre 2026 |
 | stagiaires | Services temps plein / mi-temps, pas d'HSA, formation 10 à 20 jours, tutorat, titularisation (avis, jury, entretien) | Mémo stagiaires L'US 872 ; NS 2015-055 et 2016-070 (non relues) | 🟡 |
 | harcelement-violences-sexistes | Harcèlement sexuel et moral, protection des victimes et témoins, dispositif de signalement | CGFP L.133-1 à L.133-3, R.135-1 à R.135-10 | ✅ |
+| Mises à jour du 26/10/2026 | AED : CDI de plein droit après 6 ans pour tout nouveau contrat, conclu par le recteur, temps partiel compris | décret 2003-484 art. 1 ter | ✅ 🔧 (« peut être signé » corrigé) |
+| | AED : ce qui n'est pas leur rôle (médicaments, fouille, remplacement…) | L'US 875 | 🟡 |
+| | ISSR : taux du 1er juin au 31 décembre 2026 | L'US 874 (barème officiel non relu) | 🟡 |
+| | ISOE part modulable PP : 1 308,72 € / 1 497,84 € / agrégés 1 609,40 € ; versement 2/12 puis 1/12 d'octobre à août | L'US 874 | 🟡 🔧 (« 9 fois » corrigé) |
+| | Contrôle des montants REP (1 734 / 5 114 / 702 €) et ISOE part fixe (2 550 €) | L'US 874 | ✅ conformes |
+| | AESH : fiches à jour du livret L'US 874 ; TZR : rattachement pérenne confirmé par L'US 875 | L'US 874, 875 | ✅ |
 
 ## Reste à auditer (⏳)
 - ✅ Fait : organisation pédagogique (groupes de besoins « peut » ; soutien « peuvent » ; CA via R.421-2/R.421-20) et protection fonctionnelle (CGFP L.134-4 à L.134-6).

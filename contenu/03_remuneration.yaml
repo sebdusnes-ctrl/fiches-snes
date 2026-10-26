@@ -30,13 +30,13 @@ fiches:
     resume: "Une part fixe pour tous, une part modulable pour les PP. Aucune tâche en plus ne peut être imposée."
     en_bref:
       - "**Part fixe de l’ISOE** : 2 550 € brut par an, versée chaque mois à tout·e enseignant·e (au prorata en cas de temps partiel). Elle ne peut faire l’objet d’aucune liste de tâches."
-      - "**Part modulable** : versée aux **professeur·es principaux et principales**. Son montant varie selon le niveau."
+      - "**Part modulable** : versée aux **professeur·es principaux et principales** : 1 308,72 € par an en 6e, 5e et 4e, 1 497,84 € en 3e (agrégé·es en collège : 1 609,40 €)."
       - "**Part fonctionnelle** : c’est la rémunération des missions du Pacte (1 250 € brut par mission)."
     textes:
       - "Le chef d’établissement désigne les professeur·es principaux·ales « **avec l’accord des intéressés** » (code de l’éducation, art. D.421-49-1). Le ou la PP coordonne le suivi des élèves et la préparation de leur orientation, en liaison avec les Psy-ÉN."
       - "La circulaire n° 2018-108 décrit les missions du ou de la PP : coordination de l’équipe, suivi des élèves, préparation de l’orientation avec le ou la Psy-ÉN, lien avec les familles. Le SNES-FSU rappelle qu’elle ne crée pas d’obligation nouvelle et qu’aucune autre tâche ne peut être imposée au PP."
       - "Les professeur·es documentalistes qui sont PP peuvent percevoir la part modulable depuis la rentrée 2024."
-      - "Les parts modulable et fonctionnelle sont versées en 9 fois à partir d’octobre, après inscription sur l’état VS."
+      - "La part modulable est versée pour 2/12 en octobre, puis 1/12 chaque mois de novembre à août ; les missions du Pacte, en 9 fois d’octobre à juin. Elles doivent figurer sur l’état VS."
     agir:
       - "Vous pouvez refuser d’être PP."
       - "Si vous êtes PP, vérifiez que la part modulable figure bien sur votre VS."
@@ -44,6 +44,7 @@ fiches:
     liens:
       - { libelle: "Mémo rémunérations et carrières (SNES-FSU)", url: "https://r.snes.edu/RemuneraCarrieres" }
     source:
+      - { doc: snes_remun, pages: "10" }
       - { doc: code_education, ref: "art. D.421-49-1" }
       - { doc: circ_pp, ref: "I et III" }
       - { doc: abecedaire, pages: "15, 20" }

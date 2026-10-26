@@ -26,17 +26,18 @@ fiches:
     source:
       - { doc: decret_tzr, ref: "art. 3 à 5" }
       - { doc: memo_tzr, pages: "5 à 9" }
+      - { doc: snes_tzr875, pages: "2" }
 
   - id: tzr-indemnites
     titre: "TZR : ISSR et frais de déplacement"
     resume: "L’indemnité journalière de remplacement, et le remboursement des trajets en affectation à l’année."
-    a_jour: "Montants du Mémo TZR 2024-2025, à vérifier pour l’année en cours."
+    a_jour: "Taux de l’ISSR en vigueur du 1er juin au 31 décembre 2026."
     en_bref:
       - "**ISSR** (indemnité de sujétions spéciales de remplacement) : une indemnité **par jour de remplacement**, hors de votre établissement de rattachement. Son montant dépend de la distance."
       - "Elle est due pour une **suppléance de courte ou moyenne durée**, ou pour une affectation à l’année **commencée après la rentrée**."
       - "Elle n’est **pas** due pour une affectation à l’année dès la rentrée, ni pour une suppléance dans votre établissement de rattachement."
     textes:
-      - "Taux journaliers (2024) : moins de 10 km = 15,94 € ; 10-19 km = 21,04 € ; 20-29 km = 26,16 € ; 30-39 km = 30,87 € ; 40-49 km = 36,86 € ; 50-59 km = 42,89 € ; 60-80 km = 49,24 € ; + 7,34 € par tranche de 20 km au-delà."
+      - "Taux journaliers depuis le 1er juin 2026 : moins de 10 km = 16,45 € ; 10-19 km = 21,71 € ; 20-29 km = 27 € ; 30-39 km = 31,86 € ; 40-49 km = 38,04 € ; 50-59 km = 44,26 € ; 60-80 km = 50,82 € ; + 7,57 € par tranche de 20 km au-delà."
       - "La distance retenue est la distance par la route entre la commune de rattachement et celle du remplacement."
       - "**Affectation à l’année hors de votre commune** : vos frais de déplacement sont remboursés (au tarif des indemnités kilométriques s’il n’y a pas de transport en commun adapté), ainsi que vos repas pris hors de la commune entre 11 h et 14 h."
     agir:
@@ -46,3 +47,4 @@ fiches:
     source:
       - { doc: decret_issr, ref: "art. 2 et 5" }
       - { doc: memo_tzr, pages: "12 à 14" }
+      - { doc: snes_remun, pages: "11" }

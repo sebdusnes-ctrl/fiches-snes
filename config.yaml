@@ -228,6 +228,18 @@ sources:
     titre: "Femmes"
     detail: "pages spéciales de L’US n° 867, février 2026"
     url: "https://www.snes.edu/publications/les-supplements-de-lus/femmes-supplement-de-lus-n867/"
+  snes_remun:
+    titre: "Rémunérations et carrières"
+    detail: "pages spéciales de L’US n° 874, à jour au 18 septembre 2026"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/remunerations-et-carrieres-supplement-us-n874/"
+  snes_aed875:
+    titre: "AED, personnels-clés dans les établissements"
+    detail: "pages spéciales de L’US n° 875 du 10 octobre 2026"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/aed-supplement-de-lus-n875/"
+  snes_tzr875:
+    titre: "TZR : pour vos droits"
+    detail: "pages spéciales de L’US n° 875 du 10 octobre 2026"
+    url: "https://www.snes.edu/article/tzr-supplement-de-lus-n875/"
   ddhc:
     titre: "Déclaration des droits de l’homme et du citoyen de 1789"
     detail: "bloc de constitutionnalité, Légifrance"
