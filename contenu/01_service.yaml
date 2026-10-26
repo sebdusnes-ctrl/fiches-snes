@@ -236,3 +236,22 @@ fiches:
       - { doc: circ_ors, ref: "I-B-1 et II" }
       - { doc: code_education, ref: "art. D.421-49-1" }
       - { doc: faq_snes, ref: "« Heure de vie de classe »" }
+
+  - id: professeurs-documentalistes
+    titre: "Professeur·es documentalistes : votre service"
+    resume: "30 h d’information-documentation et 6 h de relations extérieures ; heures d’enseignement avec votre accord, comptées double."
+    en_bref:
+      - "Le service hebdomadaire comprend **30 heures d’information et documentation** et **6 heures consacrées aux relations avec l’extérieur** (décret n° 2014-940, art. 2, III)."
+      - "Des **heures d’enseignement** peuvent y être incluses, **avec votre accord** ; chacune compte pour **deux heures** dans le maximum de service."
+      - "Les professeur·es documentalistes sont exclu·es de l’heure supplémentaire imposable : **aucune HSA ne peut vous être imposée** (circulaire n° 2015-057)."
+    textes:
+      - "Le décret ne distingue pas les titulaires du CAPES de documentation des collègues d’autres disciplines exerçant au CDI avec leur accord : même service de 36 heures (circulaire n° 2015-057)."
+      - "Formateur·rice académique : libération de deux à trois demi-journées par semaine (décret n° 2014-940, art. 3, III)."
+      - "Le SNES-FSU rappelle que le CDI n’est pas un lieu d’accueil en renfort de la vie scolaire : votre mission est pédagogique."
+    agir:
+      - "Vérifiez votre état VS : les heures d’enseignement acceptées doivent y figurer, comptées double."
+      - "Accueil d’élèves en permanence au CDI, tâches hors de vos missions : demandez une instruction écrite et contactez la section."
+    source:
+      - { doc: decret_ors, ref: "art. 2 (III) et 3" }
+      - { doc: circ_ors, ref: "« Situation particulière des professeurs documentalistes »" }
+      - { doc: snes_doc }

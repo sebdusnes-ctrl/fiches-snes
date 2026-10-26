@@ -118,3 +118,23 @@ fiches:
       - { doc: cgfp, ref: "art. L.114-1, L.114-2, L.711-3" }
       - { doc: snes_greve }
       - { doc: snes_lille_omont }
+
+  - id: harcelement-violences-sexistes
+    titre: "Harcèlement, violences sexistes et sexuelles : vos droits"
+    resume: "Aucun agent ne doit les subir ; signaler, être protégé·e, être accompagné·e."
+    en_bref:
+      - "« Aucun agent public ne doit subir » de **harcèlement sexuel** (propos ou comportements à connotation sexuelle répétés, ou pression grave même non répétée) ni de **harcèlement moral** (CGFP, art. L.133-1 et L.133-2)."
+      - "Personne ne peut être pénalisé·e pour avoir subi ou refusé ces faits, pour les avoir dénoncés, ou pour en avoir **témoigné de bonne foi** (art. L.133-3)."
+      - "Chaque employeur public a mis en place un **dispositif de signalement** des violences, discriminations, harcèlements et agissements sexistes, ouvert aux victimes et aux témoins (CGFP, art. R.135-1 et suivants)."
+    textes:
+      - "L’employeur doit protéger l’agent : **protection fonctionnelle** et mesures pour faire cesser les faits (CGFP, art. L.134-5 et L.134-6 ; [fiche](fiche:protection-fonctionnelle))."
+      - "Des violences au travail qui atteignent la santé peuvent être reconnues en **accident de service** ([« CITIS »](fiche:accident-de-service))."
+    agir:
+      - "Notez les faits (dates, lieux, témoins) et conservez messages et courriels."
+      - "Saisissez le dispositif de signalement de l’académie ; le SNES-FSU peut vous accompagner dans la démarche. Remplissez aussi le [RSST](fiche:registre-sst)."
+      - "Témoin : vous pouvez signaler, et vous êtes protégé·e."
+    snes: "Le SNES-FSU revendique des moyens réels pour la prévention, l’accompagnement des victimes et l’égalité professionnelle entre les femmes et les hommes."
+    source:
+      - { doc: cgfp, ref: "art. L.133-1 à L.133-3, L.134-5, L.134-6, R.135-1 à R.135-10" }
+      - { doc: snes_sst, pages: "2" }
+      - { doc: snes_femmes }

@@ -104,3 +104,42 @@ fiches:
       - { doc: decret_contractuels_en, ref: "art. 3 à 14" }
       - { doc: cgfp, ref: "art. L.332-4, L.554-3, R.332-27" }
       - { doc: snes_nontit, pages: "2 à 7" }
+
+  - id: mutations-inter-2027
+    titre: "Mutations 2027 : la phase inter"
+    resume: "Vœux sur SIAM du 4 au 25 novembre 2026 (midi) ; confirmation dès le 26 novembre ; résultats le 10 mars 2027."
+    a_jour: "Dates annoncées par le SNES-FSU avant la note de service (BO du 29 octobre 2026) : à vérifier à sa parution. Phase intra : calendrier du rectorat de Lille."
+    en_bref:
+      - "**Deux phases** : l’inter pour obtenir une académie (ministère), puis l’intra pour un poste dans l’académie (rectorat). Les stagiaires y participent pour leur première affectation."
+      - "**Saisie des vœux sur SIAM** (via I-Prof) du **mercredi 4 novembre 2026, midi, au mercredi 25 novembre, midi**."
+      - "**Confirmation** à télécharger dès le **26 novembre** : vérifiez-la, signez-la et déposez-la avec les pièces justificatives (Colibris ou chef·fe d’établissement selon l’académie), dans un délai très court."
+    textes:
+      - "**Priorités légales** du barème : rapprochement de conjoint·e (marié·e ou pacsé·e), handicap, exercice en quartier difficile, centre des intérêts matériels et moraux outre-mer, suppression de poste (CGFP, art. L.512-19)."
+      - "Le barème affiché pendant la saisie **n’est pas définitif** : vérifié par l’administration, il est affiché sur I-Prof **courant janvier**, au moins deux semaines, pour demander une correction."
+      - "**5 février 2027, 23 h 59** : date limite des demandes tardives, annulations et modifications (motifs limités). **10 mars** : résultats. Recours possible jusqu’au **9 mai**."
+    agir:
+      - "Remplissez la fiche de suivi syndicale en ligne et envoyez au SNES-FSU une copie de votre dossier (sans document médical)."
+      - "Barème erroné sur la confirmation : corrigez-le en rouge ; vérifiez-le à nouveau en janvier."
+      - "Participez aux réunions mutations du SNES-FSU Lille et contactez la section pour construire vos vœux."
+    source:
+      - { doc: snes_mutations, pages: "2 à 5" }
+      - { doc: cgfp, ref: "art. L.512-18 à L.512-22" }
+
+  - id: stagiaires
+    titre: "Professeur·es stagiaires : vos droits"
+    resume: "Service, formation, tuteur, titularisation : ce qu’on peut vous demander, et ce qu’on ne peut pas."
+    en_bref:
+      - "**Service** selon votre parcours : à temps plein (18 h certifié·e, 15 h agrégé·e, 30 + 6 h documentaliste, 35 h CPE) ou à mi-temps en alternance avec l’INSPÉ (8 à 10 h certifié·e, 7 à 9 h agrégé·e, 15 + 3 h documentaliste, 18 h CPE)."
+      - "**Pas d’heures supplémentaires à l’année** : à mi-temps, aucune HSA, et aucune heure au-delà de la fourchette prévue. Les pondérations (REP+ : 1,1) comptent dans le service : vérifiez votre état VS."
+      - "**Volontariat** : on ne peut pas vous imposer d’être professeur·e principal·e, ni d’assurer Devoirs faits au-delà de votre service."
+    textes:
+      - "**Formation** : 10 à 20 jours pour les stagiaires à temps plein, sur le temps de service et hors vacances ; elle est prioritaire sur toute autre obligation dans l’établissement."
+      - "**Tutorat** : un·e tuteur·rice dans l’établissement pour tous ; un·e tuteur·rice INSPÉ en plus pour les stagiaires à mi-temps. Il est recommandé de ne pas confier plus de deux niveaux."
+      - "**Titularisation** : le jury académique se prononce au vu des avis du chef d’établissement, de l’inspecteur·rice (sur rapport du tuteur ou après inspection) et, à mi-temps, de l’INSPÉ (notes de service n° 2015-055 et 2016-070). Il reçoit en entretien les stagiaires qu’il envisage de ne pas titulariser."
+    agir:
+      - "Demandez à connaître les avis vous concernant avant le jury."
+      - "Première affectation : voir [« Mutations 2027 »](fiche:mutations-inter-2027)."
+      - "Difficulté, avis défavorable annoncé : contactez la section sans attendre."
+    source:
+      - { doc: snes_stagiaires, pages: "8 à 20" }
+      - { doc: decret_ors, ref: "art. 2" }

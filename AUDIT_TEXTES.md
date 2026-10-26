@@ -188,6 +188,11 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | formation-cpf | Formation sur instruction pendant le service ; hors service avec accord écrit 50/80 h ; droit d'accès après 3 ans ; CPF 25 h/150 h, refus motivé, 3e refus après instance ; CFP 3 ans, 85 %, IB 650, 12 mois, 120 jours | CGFP L.422-1 à L.422-13, R.422-51 à R.422-53, R.422-84, R.422-110 à R.422-118 (décret 2026-366, en vigueur au 1er août 2026) | ✅ |
 | professeurs-contractuels | Recrutement par le recteur ; ORS et primes identiques ; contrat jusqu'à la veille de la rentrée ; réévaluation 3 ans ; CDI après 6 ans ; délais de non-renouvellement ; indemnité de fin de contrat | décret 2016-1171 art. 3 à 14 ; CGFP L.332-4, L.554-3, R.332-27 | ✅ |
 | | Saisine de la CCP (temps partiel, CFP, CPF), consultation avant licenciement | L'US 873 | 🟡 |
+| professeurs-documentalistes (26/10/2026) | 30 h + 6 h ; heures d'enseignement avec accord, comptées double ; pas d'heure supplémentaire imposable ; même service quel que soit le corps ; formateur académique | décret 2014-940 art. 2 III et 3 III ; circulaire 2015-057 | ✅ |
+| mutations-inter-2027 | Priorités légales | CGFP L.512-19 | ✅ |
+| | Calendrier (SIAM 4-25 novembre, confirmation 26 novembre, barème janvier, tardives 5 février, résultats 10 mars, recours 9 mai) | L'US 876, avant la note de service | 🟡 à vérifier au BO du 29 octobre 2026 |
+| stagiaires | Services temps plein / mi-temps, pas d'HSA, formation 10 à 20 jours, tutorat, titularisation (avis, jury, entretien) | Mémo stagiaires L'US 872 ; NS 2015-055 et 2016-070 (non relues) | 🟡 |
+| harcelement-violences-sexistes | Harcèlement sexuel et moral, protection des victimes et témoins, dispositif de signalement | CGFP L.133-1 à L.133-3, R.135-1 à R.135-10 | ✅ |
 
 ## Reste à auditer (⏳)
 - ✅ Fait : organisation pédagogique (groupes de besoins « peut » ; soutien « peuvent » ; CA via R.421-2/R.421-20) et protection fonctionnelle (CGFP L.134-4 à L.134-6).

@@ -279,6 +279,14 @@ collections:
             value: snes_tp_retraite
           - label: Non-titulaires
             value: snes_nontit
+          - label: Mutations 2027
+            value: snes_mutations
+          - label: Mémo stagiaires 2026-2027
+            value: snes_stagiaires
+          - label: Professeur·es documentalistes
+            value: snes_doc
+          - label: Femmes
+            value: snes_femmes
           - label: Déclaration des droits de l’homme et du citoyen de 1789
             value: ddhc
           - label: Décret n° 82-624 du 20 juillet 1982 (temps partiel des fonctionnaires

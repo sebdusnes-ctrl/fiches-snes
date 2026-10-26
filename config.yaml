@@ -212,6 +212,22 @@ sources:
     titre: "Non-titulaires"
     detail: "pages spéciales de L’US n° 873 du 22 août 2026"
     url: "https://www.snes.edu/publications/les-supplements-de-lus/non-titulaires-supplement-de-lus-n873/"
+  snes_mutations:
+    titre: "Mutations 2027"
+    detail: "pages spéciales de L’US n° 876 du 7 novembre 2026"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/mutations-2027-supplement-de-lus-n876/"
+  snes_stagiaires:
+    titre: "Mémo stagiaires 2026-2027"
+    detail: "supplément à L’US n° 872"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/memo-stagiaires-2026-2027-supplement-de-lus-n872/"
+  snes_doc:
+    titre: "Professeur·es documentalistes"
+    detail: "pages spéciales de L’US n° 867, février 2026"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/professeur-es-documentaliste-supplement-de-lus-n867/"
+  snes_femmes:
+    titre: "Femmes"
+    detail: "pages spéciales de L’US n° 867, février 2026"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/femmes-supplement-de-lus-n867/"
   ddhc:
     titre: "Déclaration des droits de l’homme et du citoyen de 1789"
     detail: "bloc de constitutionnalité, Légifrance"
