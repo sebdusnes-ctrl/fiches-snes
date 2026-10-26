@@ -55,3 +55,65 @@ fiches:
       - { libelle: "Canicule : vos droits, nos interventions", url: "https://www.snes.edu/article/canicule-vos-droits-nos-interventions/" }
     source:
       - { doc: abecedaire, pages: "5" }
+
+  - id: accident-de-service
+    titre: "Accident de service, de trajet, maladie professionnelle : le CITIS"
+    resume: "Déclarer dans les 15 jours ; plein traitement jusqu’à la reprise, soins remboursés."
+    en_bref:
+      - "Un accident survenu « dans le temps et le lieu du service, dans l’exercice ou à l’occasion de l’exercice » de vos fonctions est **présumé imputable au service** (CGFP, art. L.822-18). La lésion peut être physique ou psychique, si elle est médicalement constatée (agression, choc émotionnel…)."
+      - "**Déclarez dans les 15 jours** suivant l’accident, ou suivant la constatation médicale si elle intervient dans les deux ans. Pour une maladie professionnelle : **deux ans** (décret n° 86-442, art. 47-3)."
+      - "Le **CITIS** (congé pour invalidité temporaire imputable au service) maintient **l’intégralité du traitement** jusqu’à la reprise ou la retraite (CGFP, art. L.822-22), et les soins sont **remboursés** (art. L.822-24)."
+    textes:
+      - "**Le dossier** : un formulaire sur les circonstances (formulaire type en ligne, ou remis par l’administration à votre demande) et un certificat médical décrivant les lésions, avec l’arrêt de travail s’il y en a un (art. 47-2). Envoyez-le à la DSDEN ou au rectorat, de préférence en recommandé."
+      - "**Délais de l’administration** : un mois pour un accident, deux mois pour une maladie, plus trois mois en cas d’enquête ou d’expertise. Au-delà, vous êtes placé·e en **CITIS à titre provisoire** (art. 47-5)."
+      - "**Trajet** : le parcours habituel entre le domicile (ou le lieu de repas) et le travail, dans la durée normale. Un détour lié aux nécessités de la vie courante ne fait pas perdre la protection (CGFP, art. L.822-19)."
+      - "**Maladie professionnelle** : présumée si elle figure aux tableaux de la Sécurité sociale ; sinon, elle doit être « essentiellement et directement causée par l’exercice des fonctions » et entraîner une incapacité permanente d’au moins 25 % (art. L.822-20 ; décret n° 86-442, art. 47-8)."
+      - "**Contractuel·les** : prévenir l’employeur dans les 24 h ; indemnités journalières de la Sécurité sociale, complétées jusqu’au plein traitement pendant un à trois mois selon l’ancienneté."
+    agir:
+      - "Faites constater toute blessure ou tout choc par un médecin, même sans arrêt de travail, et déclarez."
+      - "Le document de prise en charge des soins remis par le secrétariat **ne vaut pas déclaration** : envoyez vous-même votre dossier et gardez une copie de tout."
+      - "Agression, menaces : demandez aussi la [protection fonctionnelle](fiche:protection-fonctionnelle). La section peut relire votre déclaration."
+    source:
+      - { doc: cgfp, ref: "art. L.822-18 à L.822-24" }
+      - { doc: decret_sante, ref: "art. 47-2 à 47-8" }
+      - { doc: snes_sst, pages: "4" }
+
+  - id: droit-de-retrait
+    titre: "Danger grave et imminent : le droit de retrait"
+    resume: "Se retirer d’une situation dangereuse, sans sanction ni retenue, après avoir alerté."
+    en_bref:
+      - "Vous pouvez vous retirer d’une situation de travail dont vous avez « un motif raisonnable de penser qu’elle présente un **danger grave et imminent** pour [votre] vie ou [votre] santé ». Vous **alertez immédiatement** l’autorité, en pratique la direction (décret n° 82-453, art. 5-6)."
+      - "« **Aucune sanction, aucune retenue de salaire** » ne peut être prise contre l’agent qui s’est retiré pour un motif raisonnable (art. 5-6, II). L’administration ne peut pas vous demander de reprendre tant que le danger persiste."
+      - "Le retrait ne doit pas créer « pour autrui une nouvelle situation de danger » : jamais au détriment des élèves. On peut quitter une salle ou un lieu sans quitter l’établissement."
+    textes:
+      - "**Grave** : risque d’accident ou de maladie entraînant la mort ou une incapacité permanente ou prolongée, et pas seulement un danger de mort. **Imminent** : le danger peut survenir très vite, même si ses effets sur la santé sont différés (l’amiante, par exemple)."
+      - "C’est un **droit individuel** : il s’exerce par la personne exposée au danger. L’administration doit permettre aux agents de se mettre en sécurité (art. 5-10)."
+      - "**Droit d’alerte** : témoin d’un danger grave, même sans être exposé·e, prévenez les représentant·es des personnels en **F3SCT** : leur signalement déclenche une enquête immédiate."
+    agir:
+      - "Prévenez la direction **par écrit** (un courriel suffit) en décrivant précisément le danger, et remplissez le [registre santé et sécurité au travail](fiche:registre-sst)."
+      - "Contactez aussitôt la section ou les élu·es SNES-FSU en F3SCT."
+      - "Des conditions dégradées sans danger immédiat (surcharge, température…) se signalent au RSST et à la F3SCT : voir [« Canicule »](fiche:canicule)."
+    source:
+      - { doc: decret_82_453, ref: "art. 5-6 et 5-10" }
+      - { doc: snes_sst, pages: "3" }
+
+  - id: mutuelle-prevoyance
+    titre: "Mutuelle obligatoire et prévoyance"
+    resume: "Santé : contrat ministériel obligatoire depuis le 1er mai 2026. Prévoyance : facultative, à décider avant le 1er novembre 2026."
+    a_jour: "Montants 2026 et date du 1er novembre 2026 : cette fiche sera mise à jour ensuite."
+    en_bref:
+      - "**Complémentaire santé** : depuis le **1er mai 2026**, les personnels en activité, titulaires ou non, sont **affilié·es obligatoirement** au contrat collectif choisi par le ministère (MGEN-CNP). Le ministère paie la moitié de la cotisation d’équilibre, soit **37,70 € par mois** en 2026."
+      - "**Prévoyance** (revenu en cas d’arrêt long, invalidité, décès) : **facultative**. Adhésion au contrat collectif **sans questionnaire de santé jusqu’au 1er novembre 2026** ; l’employeur y participe pour 7 € par mois."
+      - "**En arrêt (CMO, CLM, CLD)** : gardez votre contrat prévoyance individuel actuel, pour conserver vos droits aux indemnités."
+    textes:
+      - "**Cotisation santé** : une part forfaitaire et une part selon le traitement, soit de 28 à 49 € par mois environ pour un·e agent·e en activité, hors options facultatives (option 1 : 7,23 €, option 2 : 30,33 €, en partie prises en charge)."
+      - "**Dispense** possible seulement si : complémentaire santé solidaire ; contrat collectif obligatoire du ou de la conjoint·e ; CDD déjà couvert à titre individuel ; contrat individuel en cours avant le 1er avril 2026 ou à la prise de fonction, pour un an au plus. On peut y renoncer à tout moment."
+      - "Conjoint·e et enfants peuvent être couverts, sans participation de l’employeur. L’adhésion est maintenue en congé parental, en congé ou en disponibilité pour raison de santé."
+    agir:
+      - "Prévoyance : décidez **avant le 1er novembre 2026** ; ensuite, un questionnaire de santé et une surcotisation sont possibles."
+      - "Méfiez-vous des démarchages commerciaux. Cas particulier (conjoint·e, retraite proche, arrêt en cours) : contactez la section."
+    snes: "Le SNES-FSU, avec la FSU, s’est opposé à l’adhésion obligatoire et à la séparation santé-prévoyance, et revendique le remboursement à 100 % des soins prescrits par la Sécurité sociale."
+    source:
+      - { doc: snes_psc, pages: "3 à 7" }
+      - { doc: snes_prevoyance }
+      - { doc: decret_psc }

@@ -28,20 +28,43 @@ fiches:
     en_bref:
       - "Transmettez l’avis d’arrêt de travail (3e volet) à l’établissement **dans les 48 heures**."
       - "Un **jour de carence** s’applique. Ensuite, sur douze mois consécutifs : **90 % du traitement pendant trois mois**, puis la moitié pendant neuf mois (CGFP, art. L.822-3, depuis le 1er mars 2025 ; c’était 100 % auparavant). Supplément familial et indemnité de résidence sont maintenus en entier."
-      - "Depuis 2026, une prolongation n’est sans jour de carence que si elle est prescrite par le médecin de l’arrêt initial ou par votre médecin traitant (sauf impossibilité justifiée)."
+      - "Depuis 2026, une prolongation n’est sans jour de carence que si elle est prescrite par le médecin de l’arrêt initial ou par votre médecin traitant (sauf impossibilité justifiée). L’administration peut faire contrôler votre présence à domicile (décret n° 86-442, art. 36-1)."
     textes:
       - "**Temps partiel thérapeutique** (CGFP, art. L.823-1 à L.823-6) : au moins un mi-temps, **avec l’intégralité du traitement**, sur certificat médical précisant la quotité, l’organisation et la durée."
-      - "Le SNES-FSU rappelle que, si vous le demandez sans être déjà en congé maladie, l’administration a 30 jours pour répondre, après avis d’un·e médecin agréé·e."
+      - "**Depuis le 1er août 2026** : décision au plus tard à la reprise (après un congé long ou un CITIS), sinon sous 30 jours ; un **refus doit être motivé** et, s’il invoque les nécessités du service, précédé d’un **entretien** où vous pouvez être accompagné·e. La demande peut dépasser trois mois (décret n° 86-442 modifié par le décret n° 2026-705)."
       - "Il peut être exercé de manière continue ou discontinue, **un an au maximum au total** ; une nouvelle autorisation est possible après un délai d’un an (art. L.823-5 et L.823-6)."
       - "**Contractuel·les** : si vous avez touché votre salaire **et** les indemnités journalières de la Sécurité sociale, vous devrez rembourser le doublon."
     agir:
       - "Pour une prolongation, retournez si possible chez le médecin qui a prescrit l’arrêt, ou chez votre médecin traitant."
-      - "Pensez au temps partiel thérapeutique pour reprendre progressivement après un arrêt."
+      - "Pensez au temps partiel thérapeutique pour reprendre progressivement. Arrêt long : voir [« CLM, CLD »](fiche:conges-longs)."
       - "En cas de retenue ou de remboursement réclamé, contactez la section."
     snes: "Le SNES-FSU, avec la FSU, dénonce le jour de carence et la baisse à 90 % du traitement en arrêt maladie."
     source:
       - { doc: cgfp, ref: "art. L.822-1 à L.822-3, L.823-1 à L.823-6" }
+      - { doc: decret_sante, ref: "art. 36-1" }
+      - { doc: snes_decret_2026_705 }
       - { doc: abecedaire, pages: "8, 25" }
+
+  - id: conges-longs
+    titre: "Congé de longue maladie, congé de longue durée"
+    resume: "CLM : 3 ans, dont un à plein traitement. CLD : 5 ans, dont trois à plein traitement."
+    en_bref:
+      - "**Congé de longue maladie (CLM)** : maladie qui empêche d’exercer, demande des soins prolongés et présente « un caractère invalidant et de gravité confirmée ». **3 ans** au plus : **1 an à plein traitement**, puis **2 ans à 60 %** (CGFP, art. L.822-6 à L.822-8 ; décret n° 86-442, art. 28-1)."
+      - "**Congé de longue durée (CLD)** : tuberculose, maladie mentale, cancer, poliomyélite, déficit immunitaire grave. **5 ans** au plus : **3 ans à plein traitement**, puis **2 ans à demi-traitement** (art. L.822-12 et L.822-15)."
+      - "Supplément familial et indemnité de résidence restent versés **en entier**. Ces congés peuvent être pris de façon continue ou fractionnée."
+    textes:
+      - "**Pas de rupture de salaire** : si vos droits à congé ordinaire sont épuisés pendant l’examen de votre demande de CLM ou de CLD, votre situation est maintenue jusqu’à la décision (décret n° 86-442, art. 27)."
+      - "La demande passe par le **conseil médical**, sur certificat de votre médecin ; un·e médecin agréé·e peut vous examiner."
+      - "**Pendant le congé** : signalez tout changement de domicile et toute absence de plus de deux semaines (art. 39). L’administration peut faire contrôler votre présence à domicile pendant les heures de sortie non autorisées (art. 36-1)."
+      - "**Nouveau (2026)** : avec l’avis du médecin agréé, vous pouvez suivre une formation ou un bilan de compétences pendant le congé, pour préparer la reprise ou une reconversion."
+    agir:
+      - "Pour reprendre progressivement, pensez au [temps partiel thérapeutique](fiche:arret-maladie)."
+      - "Vérifiez votre prévoyance : elle complète le traitement réduit ([« Mutuelle et prévoyance »](fiche:mutuelle-prevoyance))."
+      - "La section et les élu·es FSU au conseil médical peuvent vous conseiller et suivre votre dossier."
+    source:
+      - { doc: cgfp, ref: "art. L.822-6 à L.822-17" }
+      - { doc: decret_sante, ref: "art. 27, 28-1, 36-1, 39" }
+      - { doc: snes_decret_2026_705 }
 
   - id: naissance-adoption
     titre: "Naissance et adoption : vos congés"

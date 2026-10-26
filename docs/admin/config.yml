@@ -249,6 +249,23 @@ collections:
             value: decret_deplacements
           - label: Code des relations entre le public et l’administration
             value: crpa
+          - label: Décret n° 82-453 du 28 mai 1982 (hygiène et sécurité du travail,
+              droit de retrait)
+            value: decret_82_453
+          - label: Décret n° 2022-633 du 22 avril 2022 (protection sociale complémentaire,
+              État)
+            value: decret_psc
+          - label: Santé et sécurité au travail
+            value: snes_sst
+          - label: Mutuelle obligatoire au 1er mai
+            value: snes_psc
+          - label: 'PSC : l’offre prévoyance du contrat collectif'
+            value: snes_prevoyance
+          - label: Droits sociaux et santé
+            value: snes_protsoc
+          - label: 'Congés maladie, temps partiel thérapeutique : ce que change le
+              décret n° 2026-705'
+            value: snes_decret_2026_705
           - label: Déclaration des droits de l’homme et du citoyen de 1789
             value: ddhc
           - label: Décret n° 82-624 du 20 juillet 1982 (temps partiel des fonctionnaires

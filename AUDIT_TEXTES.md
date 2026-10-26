@@ -170,6 +170,16 @@ Légende : ✅ vérifié sur le texte · 🔧 corrigé · 🟡 position ou lectu
 | | Rattachement non modifiable sans demande | jurisprudence citée par le SNES | 🟡 |
 | tzr-indemnites | ISSR hors établissement de rattachement ; pas pour un remplacement continu d'un même collègue toute l'année ; exclusive des frais | décret 89-825 art. 2 et 5 | ✅ |
 | | Taux journaliers | arrêté (montants 2024) | ⏳ |
+| accident-de-service (26/10/2026) | Présomption d'imputabilité ; trajet ; maladie pro (tableaux, sinon 25 % via R.461-8 CSS) ; plein traitement ; soins remboursés | CGFP L.822-18 à L.822-24 ; décret 86-442 art. 47-8 | ✅ |
+| | Déclaration 15 j (ou 2 ans pour la constatation) / 2 ans maladie ; délais administration 1 mois / 2 mois + 3 mois ; CITIS provisoire | décret 86-442 art. 47-2 à 47-5 | ✅ |
+| | Contractuel·les : 24 h, IJ + complément 1 à 3 mois | L'US 869 (pas de texte relu) | 🟡 |
+| | Jour de carence non applicable au CITIS | loi 2017-1837 (non relue) : **non écrit** dans la fiche | ⏳ |
+| droit-de-retrait | Motif raisonnable, danger grave et imminent, alerte, aucune sanction ni retenue, pas de nouveau danger pour autrui, mise en sécurité | décret 82-453 art. 5-6, 5-10 | ✅ |
+| | Définitions de « grave » et « imminent », droit d'alerte via F3SCT | L'US 869 | 🟡 |
+| mutuelle-prevoyance | Affiliation obligatoire au 1er mai 2026, 37,70 €, dispenses, options, prévoyance facultative (7 €), sans questionnaire jusqu'au 1er novembre 2026 | L'US 866 ; article SNES mai 2026 ; décret 2022-633 (cadre) | 🟡 (à revoir après le 1er novembre 2026) |
+| conges-longs | CLM 3 ans (1 an plein, 2 ans 60 %) ; CLD 5 ans (3 ans plein, 2 ans demi) ; SFT et IR maintenus ; continu ou discontinu | CGFP L.822-6 à L.822-17 ; décret 86-442 art. 28-1 | ✅ |
+| | Maintien jusqu'à décision CLM/CLD ; contrôle à domicile ; absences > 2 semaines | décret 86-442 art. 27, 36-1, 39 (version 1er août 2026) | ✅ |
+| arret-maladie (mise à jour) | TPT : refus motivé, entretien si nécessités de service, décision sous 30 j ou à la reprise | décret 2026-705 (via L'US/article SNES ; articles du décret 86-442 non cités un par un) | 🟡 |
 
 ## Reste à auditer (⏳)
 - ✅ Fait : organisation pédagogique (groupes de besoins « peut » ; soutien « peuvent » ; CA via R.421-2/R.421-20) et protection fonctionnelle (CGFP L.134-4 à L.134-6).

@@ -160,6 +160,34 @@ sources:
     titre: "Code des relations entre le public et l’administration"
     detail: "Légifrance, version en vigueur"
     url: "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000031366350"
+  decret_82_453:
+    titre: "Décret n° 82-453 du 28 mai 1982 (hygiène et sécurité du travail, droit de retrait)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000519520"
+  decret_psc:
+    titre: "Décret n° 2022-633 du 22 avril 2022 (protection sociale complémentaire, État)"
+    detail: "Légifrance, version en vigueur"
+    url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000045641233"
+  snes_sst:
+    titre: "Santé et sécurité au travail"
+    detail: "pages spéciales de L’US n° 869 du 4 avril 2026"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/sante-et-securite-au-travail-supplement-de-lus-n869/"
+  snes_psc:
+    titre: "Mutuelle obligatoire au 1er mai"
+    detail: "pages spéciales de L’US n° 866 du 17 janvier 2026"
+    url: "https://www.snes.edu/publications/les-supplements-de-lus/mutuelle-obligatoire-au-1er-mai-supplement-de-lus-n866/"
+  snes_prevoyance:
+    titre: "PSC : l’offre prévoyance du contrat collectif"
+    detail: "SNES-FSU, mai 2026"
+    url: "https://www.snes.edu/article/psc-offre-prevoyance-contrat-collectif/"
+  snes_protsoc:
+    titre: "Droits sociaux et santé"
+    detail: "pages spéciales de L’US n° 862, septembre 2025"
+    url: "https://www.snes.edu/ma-carriere/protection-sociale/droits-sociaux-et-sante-supplement-de-lus-n862/"
+  snes_decret_2026_705:
+    titre: "Congés maladie, temps partiel thérapeutique : ce que change le décret n° 2026-705"
+    detail: "SNES-FSU, 2 septembre 2026"
+    url: "https://www.snes.edu/article/conges-maladie-temps-partiel-therapeutique-ce-que-change-le-decret-n-2026-705/"
   ddhc:
     titre: "Déclaration des droits de l’homme et du citoyen de 1789"
     detail: "bloc de constitutionnalité, Légifrance"
