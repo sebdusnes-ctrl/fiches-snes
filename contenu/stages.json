@@ -1,7 +1,7 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-10-27 10:59",
+ "verifie_le": "2026-10-28 11:45",
  "stages": [
   {
    "id": "stage-cpe",
@@ -133,7 +133,7 @@
    "lieu_barre": "",
    "reporte": false,
    "programme": "https://lille.snes.edu/IMG/pdf/stage_carriere-6.pdf",
-   "cloture": null,
+   "cloture": "2026-11-06",
    "inscriptions_closes": false,
    "sans_autorisation": false,
    "modifie_le": null
