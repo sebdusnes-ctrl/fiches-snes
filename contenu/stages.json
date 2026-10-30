@@ -1,23 +1,8 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-10-29 12:02",
+ "verifie_le": "2026-10-30 11:58",
  "stages": [
-  {
-   "id": "stage-cpe",
-   "titre": "Stage CPE",
-   "date": "2026-11-03",
-   "date_initiale": null,
-   "horaires": "9h-16h30",
-   "lieu": "LILLE · Lycée Pasteur",
-   "lieu_barre": "",
-   "reporte": false,
-   "programme": "https://lille.snes.edu/IMG/pdf/stage_cpe-5.pdf",
-   "cloture": "2026-10-29",
-   "inscriptions_closes": false,
-   "sans_autorisation": false,
-   "modifie_le": null
-  },
   {
    "id": "stage-non-titulaires",
    "titre": "Stage Non-Titulaires",
@@ -253,6 +238,21 @@
    "lieu_barre": "LILLE · Lycée Baggio",
    "reporte": false,
    "programme": "https://lille.snes.edu/IMG/pdf/stage_animer_le_s1-5.pdf",
+   "cloture": null,
+   "inscriptions_closes": true,
+   "sans_autorisation": false,
+   "modifie_le": null
+  },
+  {
+   "id": "stage-cpe",
+   "titre": "Stage CPE",
+   "date": "2026-11-03",
+   "date_initiale": null,
+   "horaires": "9h-16h30",
+   "lieu": "LILLE · Lycée Pasteur",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_cpe-5.pdf",
    "cloture": null,
    "inscriptions_closes": true,
    "sans_autorisation": false,
