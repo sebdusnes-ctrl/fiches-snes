@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étiquettes casiers · {{ config.titre_site }}</title>
+<link rel="stylesheet" href="static/visuels.css?v={{ v }}">
+</head>
+<body class="visuel">
+<div class="feuille-casiers">
+  {% include "etiquette.html" %}
+  {% include "etiquette.html" %}
+</div>
+<p class="visuel-aide">2 étiquettes sur une feuille A4, à découper : <button type="button" onclick="window.print()">Imprimer</button> <a href="static/visuels/casiers.pdf">PDF</a> · <a href="visuel-carre.html">Image seule</a></p>
+</body>
+</html>

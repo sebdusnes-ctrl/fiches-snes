@@ -1,5 +1,5 @@
 """Produit les visuels prêts à imprimer ou à partager dans static/visuels/ :
-affiche A4 (PDF), planche de 4 cartes A6 (PDF), image carrée (PNG).
+affiche A4 (PDF), planche de 4 cartes A6 (PDF), 2 étiquettes casiers sur A4 (PDF), image (PNG).
 
 Usage : python build.py && python outils/visuels.py && python build.py
 (le second build copie les fichiers produits dans docs/). Nécessite Playwright (local).
@@ -18,8 +18,8 @@ def main():
     SORTIE.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
         b = p.chromium.launch()
-        pg = b.new_page()
-        for nom in ("affiche", "cartes"):
+        pg = b.new_page(device_scale_factor=2)
+        for nom in ("affiche", "cartes", "casiers"):
             pg.goto((DOCS / f"{nom}.html").resolve().as_uri())
             pg.emulate_media(media="print")
             pg.pdf(path=str(SORTIE / f"{nom}.pdf"), width="210mm", height="297mm", print_background=True)

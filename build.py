@@ -415,7 +415,7 @@ def construire():
     # sont produits par outils/visuels.py dans static/visuels/.
     qr_accueil = qr_svg(url)
     qr_inscription = qr_svg(f"{url}inscription.html" if url else "")
-    for modele in ("affiche.html", "cartes.html", "visuel-carre.html"):
+    for modele in ("affiche.html", "cartes.html", "visuel-carre.html", "casiers.html"):
         page = env.get_template(modele).render(
             racine="", url_page=url, qr=qr_accueil, qr_inscription=qr_inscription, **commun)
         (SORTIE / modele).write_text(page, encoding="utf-8")

@@ -7,39 +7,7 @@
 <link rel="stylesheet" href="static/visuels.css?v={{ v }}">
 </head>
 <body class="visuel">
-<div class="carre">
-  <div class="ca-entete">
-    <img class="ca-logo" src="static/snes_lille.png" alt="SNES-FSU Lille">
-    <div>
-      <p class="ca-section">Section SNES-FSU</p>
-      <p class="ca-college">Collège Joséphine Baker</p>
-    </div>
-  </div>
-  {% include "bande.html" %}
-  <p class="ca-accroche">Vos droits, vos obligations, en clair</p>
-  <div class="ca-milieu">
-    <div class="ca-qr-bloc">
-      <div class="ca-qr">{{ qr|safe }}</div>
-      <p class="ca-flashez">Flashez : {{ nb_fiches }} fiches</p>
-    </div>
-    <ul class="ca-sujets">
-      <li>Service, heures sup, Pacte</li>
-      <li>Réunions, convocations</li>
-      <li>Arrêt maladie, congés</li>
-      <li>Accident de service (CITIS)</li>
-      <li>Paie, carrière, mutations</li>
-      <li>Stages syndicaux, HIS</li>
-    </ul>
-  </div>
-  <p class="ca-url">{{ url_page }}</p>
-  <div class="ca-bas">
-    {% if qr_inscription %}<div class="ca-qr-petit">{{ qr_inscription|safe }}</div>{% endif %}
-    <div>
-      <p><strong>Infos de la section par courriel</strong> (HIS, stages) : inscription libre, adhérent·e ou non.</p>
-      {% if config.contact.courriels %}<p>{{ config.contact.courriels|join(" · ") }}</p>{% endif %}
-    </div>
-  </div>
-</div>
-<p class="visuel-aide">Image carrée (casiers, messages) : <a href="static/visuels/qr-college-baker.png" download>télécharger le PNG</a> · <a href="affiche.html">Affiche A4</a> · <a href="cartes.html">Cartes A6</a></p>
+{% include "etiquette.html" %}
+<p class="visuel-aide">Image (messages, casiers) : <a href="static/visuels/qr-college-baker.png" download>télécharger le PNG</a> · <a href="casiers.html">2 étiquettes sur une feuille A4</a> · <a href="affiche.html">Affiche A4</a> · <a href="cartes.html">Cartes A6</a></p>
 </body>
 </html>

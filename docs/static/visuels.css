@@ -55,8 +55,8 @@ body.visuel { margin: 0; background: #e9e6e1; color: var(--encre);
 .carte-a6 .c-url { margin: 0; font-size: 6.5pt; color: var(--doux); word-break: break-all; }
 .carte-a6 .c-infos { margin: auto 0 0; font-size: 7.5pt; color: var(--doux); }
 
-/* --- Image carrée (1080 × 1080 px, collée sur les casiers : rien sous 24 px) ------ */
-.carre { width: 1080px; height: 1080px; margin: 20px auto; background: #fff; padding: 52px 64px 44px;
+/* --- Étiquette casiers (1080 px de large ; image PNG et 2 par feuille A4) --------- */
+.carre { width: 1080px; margin: 20px auto; background: #fff; padding: 52px 64px 40px;
   display: flex; flex-direction: column; align-items: center; text-align: center; overflow: hidden; }
 .carre p { margin: 0; }
 .carre .ca-entete { display: flex; align-items: center; gap: 36px; text-align: left; }
@@ -75,12 +75,18 @@ body.visuel { margin: 0; background: #e9e6e1; color: var(--encre);
 .carre .ca-sujets li:nth-child(4n+2) { background: var(--vert); }
 .carre .ca-sujets li:nth-child(4n+3) { background: var(--framboise); }
 .carre .ca-sujets li:nth-child(4n) { background: var(--orange); }
-.carre .ca-url { margin-top: 14px; font-size: 24px; color: var(--doux); }
+.carre .ca-url { margin-top: 16px; font-size: 24px; color: var(--doux); }
 .carre .ca-bas { display: flex; align-items: center; gap: 28px; width: 100%; margin-top: auto; padding-top: 20px;
   border-top: 3px solid #ddd; text-align: left; }
 .carre .ca-qr-petit { width: 205px; flex: none; }
 .carre .ca-bas p { font-size: 26px; line-height: 1.3; margin-bottom: 6px; }
 .carre .ca-bas strong { font-size: 29px; }
+
+/* 2 étiquettes sur une feuille A4 : réduites à 177 mm de large (zoom garde le vectoriel) */
+.feuille-casiers { width: 210mm; height: 297mm; margin: 10mm auto; background: #fff;
+  display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .15); overflow: hidden; }
+.feuille-casiers .carre { zoom: .62; margin: 0; outline: 1px dashed #b5b5b5; }
 
 /* --- Barre d'aide (écran seulement) ------------------------------------------------- */
 .visuel-aide { max-width: 210mm; margin: 0 auto 12mm; text-align: center; font-size: 15px; }
@@ -89,6 +95,6 @@ body.visuel { margin: 0; background: #e9e6e1; color: var(--encre);
 @page { size: A4; margin: 0; }
 @media print {
   body.visuel { background: #fff; }
-  .feuille-a4, .planche { margin: 0; box-shadow: none; }
+  .feuille-a4, .planche, .feuille-casiers { margin: 0; box-shadow: none; }
   .visuel-aide { display: none; }
 }

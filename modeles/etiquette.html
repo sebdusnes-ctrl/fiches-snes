@@ -1,0 +1,26 @@
+<div class="carre">
+  <div class="ca-entete">
+    <img class="ca-logo" src="static/snes_lille.png" alt="SNES-FSU Lille">
+    <div>
+      <p class="ca-section">Section SNES-FSU</p>
+      <p class="ca-college">Collège Joséphine Baker</p>
+    </div>
+  </div>
+  {% include "bande.html" %}
+  <p class="ca-accroche">Vos droits, vos obligations, en clair</p>
+  <div class="ca-milieu">
+    <div class="ca-qr-bloc">
+      <div class="ca-qr">{{ qr|safe }}</div>
+      <p class="ca-flashez">Flashez : {{ nb_fiches }} fiches</p>
+    </div>
+    <ul class="ca-sujets">
+      <li>Service, heures sup, Pacte</li>
+      <li>Réunions, convocations</li>
+      <li>Arrêt maladie, congés</li>
+      <li>Accident de service (CITIS)</li>
+      <li>Paie, carrière, mutations</li>
+      <li>Stages syndicaux, HIS</li>
+    </ul>
+  </div>
+  <p class="ca-url">{{ url_page }}</p>
+</div>
