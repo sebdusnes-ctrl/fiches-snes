@@ -46,7 +46,13 @@ Puis : `python build.py` (contrôle les champs obligatoires et les identifiants 
 
 Après chaque modification : `python build.py`, commit, push. L’adresse ne change pas, les QR déjà imprimés restent valables.
 
-## QR codes
+## QR codes et visuels
+
+- `docs/affiche.html` : affiche A4 (collège Joséphine Baker, QR vers l'accueil + petit QR vers l'inscription) ;
+  `docs/cartes.html` : 4 cartes A6 à découper ; `docs/visuel-carre.html` : image carrée à partager.
+- PDF et PNG prêts à l'emploi : `python build.py && python outils/visuels.py && python build.py`
+  (fichiers dans `static/visuels/`, en ligne sous `static/visuels/`). À relancer si l'adresse, le nombre
+  de fiches ou les contacts changent.
 
 - `docs/affiche.html` : affiche A4 (QR vers l’accueil) à imprimer depuis le navigateur.
 - `docs/qr/accueil.png` et `docs/qr/<id>.png` : QR en image (pour un document, un mail…).

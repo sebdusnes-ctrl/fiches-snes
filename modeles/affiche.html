@@ -3,28 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Affiche QR code · {{ config.titre_site }}</title>
-<link rel="stylesheet" href="static/style.css?v={{ v }}">
+<title>Affiche · {{ config.titre_site }}</title>
+<link rel="stylesheet" href="static/visuels.css?v={{ v }}">
 </head>
-<body class="affiche">
-<div class="affiche-page">
-  <img class="affiche-logo" src="static/snes_lille.png" alt="SNES-FSU Lille">
+<body class="visuel">
+<div class="feuille-a4">
+  <img class="aff-logo" src="static/snes_lille.png" alt="SNES-FSU Lille">
   {% include "bande.html" %}
-  <p class="affiche-section">{{ config.section }}</p>
-  <h1>{{ config.titre_site }}</h1>
-  <p class="affiche-accroche">Flashez pour accéder à toutes les fiches</p>
-  <div class="affiche-qr">
-    {% if qr %}{{ qr|safe }}{% else %}<p class="alerte">Renseignez <code>url_site</code> dans config.yaml puis relancez <code>python build.py</code> pour générer le QR code.</p>{% endif %}
+  <p class="aff-section">Section SNES-FSU</p>
+  <p class="aff-college">Collège Joséphine Baker</p>
+  <p class="etoiles" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span><span>✦</span></p>
+  <p class="aff-accroche">Vos droits, vos obligations, en clair</p>
+  <div class="aff-qr-cadre">
+    {% if qr %}{{ qr|safe }}{% else %}<p>Renseignez <code>url_site</code> dans config.yaml.</p>{% endif %}
+    <p class="aff-flashez">Flashez : {{ nb_fiches }} fiches pratiques</p>
+    {% if url_page %}<p class="aff-url">{{ url_page }}</p>{% endif %}
   </div>
-  {% if url_page %}<p class="affiche-url">{{ url_page }}</p>{% endif %}
-  <ul class="affiche-themes">
-    {% for t in themes %}<li style="--c: {{ t.couleur }}">{{ t.titre }}</li>{% endfor %}
+  <ul class="aff-atouts">
+    <li>Service, heures, réunions</li>
+    <li>Santé, absences, congés</li>
+    <li>Paie, carrière, mutations</li>
+    <li>Stages syndicaux et HIS</li>
   </ul>
-  <p class="affiche-contact">
-    {% if config.contact.correspondant %}Vos correspondant·es : {{ config.contact.correspondant }}{% endif %}
-    {% if config.contact.mailto %}<br>{{ config.contact.courriels|join(" · ") }}{% endif %}
-  </p>
+  <div class="aff-bas">
+    {% if qr_inscription %}<div class="aff-qr-petit">{{ qr_inscription|safe }}</div>{% endif %}
+    <div>
+      <p><strong>Recevoir les infos de la section par courriel</strong> (HIS, stages) : inscription facultative, adhérent·e ou non.</p>
+      {% if config.contact.mailto %}<p>Écrire à la section : {{ config.contact.courriels|join(" · ") }}</p>{% endif %}
+      {% if config.contact.permanence %}<p>{{ config.contact.permanence }}</p>{% endif %}
+    </div>
+  </div>
 </div>
-<p class="affiche-aide">Aperçu de l’affiche A4 : utilisez <strong>Imprimer</strong> (Ctrl+P) de votre navigateur. <button type="button" onclick="window.print()">Imprimer</button></p>
+<p class="visuel-aide">Affiche A4 : <button type="button" onclick="window.print()">Imprimer</button>
+  <a href="static/visuels/affiche.pdf">PDF</a> · <a href="cartes.html">Cartes A6 à découper</a> · <a href="visuel-carre.html">Image carrée</a></p>
 </body>
 </html>

@@ -1,0 +1,79 @@
+/* Visuels à imprimer ou à partager : affiche A4, cartes A6, image carrée.
+   Couleurs du SNES-FSU ; tout est dimensionné en millimètres pour l'impression. */
+:root {
+  --bleu: #3067b7; --vert: #32b158; --framboise: #ed0f4c; --orange: #f78513;
+  --encre: #1d1d1f; --doux: #55585e;
+}
+* { box-sizing: border-box; }
+body.visuel { margin: 0; background: #e9e6e1; color: var(--encre);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+.etoiles { display: flex; justify-content: center; gap: 3mm; font-size: 14pt; line-height: 1; margin: 0; }
+.etoiles span:nth-child(1) { color: var(--bleu); }
+.etoiles span:nth-child(2) { color: var(--vert); }
+.etoiles span:nth-child(3) { color: var(--framboise); }
+.etoiles span:nth-child(4) { color: var(--orange); }
+.bande-couleurs { display: block; width: 100%; }
+.qr { display: block; width: 100%; height: auto; }
+
+/* --- Affiche A4 --------------------------------------------------------------- */
+.feuille-a4 { width: 210mm; height: 297mm; margin: 10mm auto; background: #fff; padding: 12mm 16mm 10mm;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .15); overflow: hidden; }
+.aff-logo { width: 58mm; height: auto; }
+.feuille-a4 .bande-couleurs { height: 3mm; margin: 4mm 0 5mm; }
+.aff-section { margin: 0; font-size: 13pt; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--bleu); }
+.aff-college { margin: 1mm 0 2mm; font-size: 34pt; line-height: 1.05; font-weight: 800; }
+.aff-accroche { margin: 3mm 0 6mm; font-size: 18pt; font-weight: 600; }
+.aff-qr-cadre { width: 112mm; padding: 6mm 8mm 4mm; border: 1.2mm solid var(--bleu); border-radius: 7mm; }
+.aff-qr-cadre p { margin: 2mm 0 0; }
+.aff-flashez { font-size: 15pt; font-weight: 700; }
+.aff-url { font-size: 10pt; color: var(--doux); word-break: break-all; }
+.aff-atouts { display: flex; gap: 4mm; margin: 6mm 0 0; padding: 0; list-style: none; }
+.aff-atouts li { flex: 1; padding: 3mm 3mm; border-radius: 3mm; color: #fff; font-size: 11.5pt; font-weight: 600; line-height: 1.25; }
+.aff-atouts li:nth-child(1) { background: var(--bleu); }
+.aff-atouts li:nth-child(2) { background: var(--vert); }
+.aff-atouts li:nth-child(3) { background: var(--framboise); }
+.aff-atouts li:nth-child(4) { background: var(--orange); }
+.aff-bas { display: flex; align-items: center; gap: 6mm; margin-top: auto; width: 100%; text-align: left;
+  padding-top: 5mm; border-top: .4mm solid #ddd; }
+.aff-qr-petit { width: 30mm; flex: none; }
+.aff-bas p { margin: 0 0 1.5mm; font-size: 11pt; line-height: 1.35; }
+.aff-bas strong { font-size: 12.5pt; }
+
+/* --- Cartes A6 (4 par A4) ------------------------------------------------------- */
+.planche { width: 210mm; height: 297mm; margin: 10mm auto; background: #fff; display: grid;
+  grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; box-shadow: 0 2px 12px rgba(0, 0, 0, .15); }
+.carte-a6 { display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 7mm 7mm 5mm; border: .2mm dashed #b5b5b5; overflow: hidden; }
+.carte-a6 .c-logo { width: 34mm; height: auto; }
+.carte-a6 .bande-couleurs { height: 1.6mm; margin: 2.5mm 0 3mm; }
+.carte-a6 .c-section { margin: 0; font-size: 7.5pt; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--bleu); }
+.carte-a6 .c-college { margin: .5mm 0 1mm; font-size: 15pt; font-weight: 800; line-height: 1.05; }
+.carte-a6 .c-accroche { margin: 1mm 0 3mm; font-size: 10pt; font-weight: 600; }
+.carte-a6 .c-qr { width: 54mm; }
+.carte-a6 .c-flashez { margin: 2mm 0 .5mm; font-size: 10pt; font-weight: 700; }
+.carte-a6 .c-url { margin: 0; font-size: 6.5pt; color: var(--doux); word-break: break-all; }
+.carte-a6 .c-infos { margin: auto 0 0; font-size: 7.5pt; color: var(--doux); }
+
+/* --- Image carrée (1080 × 1080 px) -------------------------------------------------- */
+.carre { width: 1080px; height: 1080px; margin: 20px auto; background: #fff; padding: 64px 80px 48px;
+  display: flex; flex-direction: column; align-items: center; text-align: center; overflow: hidden; }
+.carre .ca-logo { width: 300px; height: auto; }
+.carre .bande-couleurs { height: 14px; margin: 26px 0 26px; }
+.carre .ca-section { margin: 0; font-size: 26px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--bleu); }
+.carre .ca-college { margin: 6px 0 10px; font-size: 66px; font-weight: 800; line-height: 1.05; }
+.carre .ca-accroche { margin: 4px 0 26px; font-size: 32px; font-weight: 600; }
+.carre .ca-qr { width: 400px; }
+.carre .ca-url { margin: 16px 0 0; font-size: 22px; color: var(--doux); }
+.carre .etoiles { font-size: 30px; gap: 14px; margin-top: auto; }
+
+/* --- Barre d'aide (écran seulement) ------------------------------------------------- */
+.visuel-aide { max-width: 210mm; margin: 0 auto 12mm; text-align: center; font-size: 15px; }
+.visuel-aide a, .visuel-aide button { margin: 0 6px; }
+
+@page { size: A4; margin: 0; }
+@media print {
+  body.visuel { background: #fff; }
+  .feuille-a4, .planche { margin: 0; box-shadow: none; }
+  .visuel-aide { display: none; }
+}

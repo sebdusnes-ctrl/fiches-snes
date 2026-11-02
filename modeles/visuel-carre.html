@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image à partager · {{ config.titre_site }}</title>
+<link rel="stylesheet" href="static/visuels.css?v={{ v }}">
+</head>
+<body class="visuel">
+<div class="carre">
+  <img class="ca-logo" src="static/snes_lille.png" alt="SNES-FSU Lille">
+  {% include "bande.html" %}
+  <p class="ca-section">Section SNES-FSU</p>
+  <p class="ca-college">Collège Joséphine Baker</p>
+  <p class="ca-accroche">{{ nb_fiches }} fiches pratiques : vos droits, en clair</p>
+  <div class="ca-qr">{{ qr|safe }}</div>
+  <p class="ca-url">{{ url_page }}</p>
+  <p class="etoiles" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span><span>✦</span></p>
+</div>
+<p class="visuel-aide">Image carrée à partager : <a href="static/visuels/qr-college-baker.png" download>télécharger le PNG</a> · <a href="affiche.html">Affiche A4</a></p>
+</body>
+</html>

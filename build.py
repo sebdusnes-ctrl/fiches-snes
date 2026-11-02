@@ -411,11 +411,17 @@ def construire():
             if url:
                 qr_png(url_fiche, SORTIE / "qr" / f"{f['id']}.png")
 
-    page = env.get_template("affiche.html").render(
-        racine="", url_page=url, qr=qr_svg(url), **commun)
-    (SORTIE / "affiche.html").write_text(page, encoding="utf-8")
+    # Visuels à imprimer ou partager (affiche A4, cartes A6, image carrée) ; leurs PDF et PNG
+    # sont produits par outils/visuels.py dans static/visuels/.
+    qr_accueil = qr_svg(url)
+    qr_inscription = qr_svg(f"{url}inscription.html" if url else "")
+    for modele in ("affiche.html", "cartes.html", "visuel-carre.html"):
+        page = env.get_template(modele).render(
+            racine="", url_page=url, qr=qr_accueil, qr_inscription=qr_inscription, **commun)
+        (SORTIE / modele).write_text(page, encoding="utf-8")
     if url:
         qr_png(url, SORTIE / "qr" / "accueil.png")
+        qr_png(f"{url}inscription.html", SORTIE / "qr" / "inscription.png")
 
     page = env.get_template("inscription.html").render(
         racine="", url_page=f"{url}inscription.html" if url else "", **commun)

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartes à découper · {{ config.titre_site }}</title>
+<link rel="stylesheet" href="static/visuels.css?v={{ v }}">
+</head>
+<body class="visuel">
+<div class="planche">
+  {% for i in range(4) %}
+  <div class="carte-a6">
+    <img class="c-logo" src="static/snes_lille.png" alt="SNES-FSU Lille">
+    {% include "bande.html" %}
+    <p class="c-section">Section SNES-FSU</p>
+    <p class="c-college">Collège Joséphine Baker</p>
+    <p class="c-accroche">Vos droits, vos obligations, en clair</p>
+    <div class="c-qr">{{ qr|safe }}</div>
+    <p class="c-flashez">Flashez : {{ nb_fiches }} fiches pratiques</p>
+    <p class="c-url">{{ url_page }}</p>
+    <p class="c-infos">Stages, HIS, infos par courriel : tout est sur le site.</p>
+  </div>
+  {% endfor %}
+</div>
+<p class="visuel-aide">4 cartes A6 sur une feuille A4, à découper : <button type="button" onclick="window.print()">Imprimer</button>
+  <a href="static/visuels/cartes.pdf">PDF</a> · <a href="affiche.html">Affiche A4</a></p>
+</body>
+</html>
