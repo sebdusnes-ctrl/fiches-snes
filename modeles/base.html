@@ -27,7 +27,7 @@
   <div class="conteneur">
     {% include "contact.html" %}
     <p class="pied-note">{{ config.textes.note_pied|fmt_racine if racine == "" else config.textes.note_pied|fmt }}</p>
-    <p class="pied-admin"><a href="{{ racine }}admin/">Espace admin</a></p>
+    <p class="pied-admin"><a href="{{ racine }}affiche.html">QR code, affiche et visuels</a> · <a href="{{ racine }}admin/">Espace admin</a></p>
   </div>
 </footer>
 {% block scripts %}{% endblock %}
