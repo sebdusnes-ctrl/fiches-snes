@@ -55,17 +55,32 @@ body.visuel { margin: 0; background: #e9e6e1; color: var(--encre);
 .carte-a6 .c-url { margin: 0; font-size: 6.5pt; color: var(--doux); word-break: break-all; }
 .carte-a6 .c-infos { margin: auto 0 0; font-size: 7.5pt; color: var(--doux); }
 
-/* --- Image carrée (1080 × 1080 px) -------------------------------------------------- */
-.carre { width: 1080px; height: 1080px; margin: 20px auto; background: #fff; padding: 64px 80px 48px;
+/* --- Image carrée (1080 × 1080 px, collée sur les casiers : rien sous 24 px) ------ */
+.carre { width: 1080px; height: 1080px; margin: 20px auto; background: #fff; padding: 52px 64px 44px;
   display: flex; flex-direction: column; align-items: center; text-align: center; overflow: hidden; }
-.carre .ca-logo { width: 300px; height: auto; }
-.carre .bande-couleurs { height: 14px; margin: 26px 0 26px; }
-.carre .ca-section { margin: 0; font-size: 26px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--bleu); }
-.carre .ca-college { margin: 6px 0 10px; font-size: 66px; font-weight: 800; line-height: 1.05; }
-.carre .ca-accroche { margin: 4px 0 26px; font-size: 32px; font-weight: 600; }
-.carre .ca-qr { width: 400px; }
-.carre .ca-url { margin: 16px 0 0; font-size: 22px; color: var(--doux); }
-.carre .etoiles { font-size: 30px; gap: 14px; margin-top: auto; }
+.carre p { margin: 0; }
+.carre .ca-entete { display: flex; align-items: center; gap: 36px; text-align: left; }
+.carre .ca-logo { width: 230px; height: auto; flex: none; }
+.carre .ca-section { font-size: 26px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--bleu); }
+.carre .ca-college { font-size: 58px; font-weight: 800; line-height: 1.05; }
+.carre .bande-couleurs { height: 12px; margin: 26px 0 20px; }
+.carre .ca-accroche { margin-bottom: 26px; font-size: 38px; font-weight: 700; }
+.carre .ca-milieu { display: flex; align-items: center; gap: 44px; width: 100%; }
+.carre .ca-qr-bloc { width: 430px; flex: none; padding: 20px 22px 14px; border: 8px solid var(--bleu); border-radius: 30px; }
+.carre .ca-flashez { margin-top: 8px; font-size: 32px; font-weight: 700; }
+.carre .ca-sujets { flex: 1; margin: 0; padding: 0; list-style: none; text-align: left; }
+.carre .ca-sujets li { margin: 0 0 14px; padding: 12px 18px; border-radius: 14px; color: #fff;
+  font-size: 29px; font-weight: 600; line-height: 1.2; }
+.carre .ca-sujets li:nth-child(4n+1) { background: var(--bleu); }
+.carre .ca-sujets li:nth-child(4n+2) { background: var(--vert); }
+.carre .ca-sujets li:nth-child(4n+3) { background: var(--framboise); }
+.carre .ca-sujets li:nth-child(4n) { background: var(--orange); }
+.carre .ca-url { margin-top: 14px; font-size: 24px; color: var(--doux); }
+.carre .ca-bas { display: flex; align-items: center; gap: 28px; width: 100%; margin-top: auto; padding-top: 20px;
+  border-top: 3px solid #ddd; text-align: left; }
+.carre .ca-qr-petit { width: 150px; flex: none; }
+.carre .ca-bas p { font-size: 26px; line-height: 1.3; margin-bottom: 6px; }
+.carre .ca-bas strong { font-size: 29px; }
 
 /* --- Barre d'aide (écran seulement) ------------------------------------------------- */
 .visuel-aide { max-width: 210mm; margin: 0 auto 12mm; text-align: center; font-size: 15px; }
