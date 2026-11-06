@@ -17,6 +17,7 @@
         <span class="marque-titre">{{ config.titre_site }}</span>
       </span>
     </a>
+    {% block bouton_inscription %}<a class="bouton-inscription" href="{{ racine }}inscription.html" aria-label="Recevoir les infos de la section par courriel">Recevoir les infos</a>{% endblock %}
   </div>
   {% include "bande.html" %}
 </header>
