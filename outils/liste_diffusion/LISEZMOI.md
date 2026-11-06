@@ -44,6 +44,15 @@ annulation, et rappel deux jours avant. Pour l'activer :
 copier le nouveau [Code.gs](Code.gs) dans Apps Script, enregistrer, puis
 **Déployer → Gérer les déploiements → ✏️ → Version : Nouvelle version → Déployer** (l'adresse ne change pas).
 
+## Mise à jour du 06/11/2026 : compteur de visites
+
+Copier le nouveau [Code.gs](Code.gs), enregistrer, puis **Déployer → Gérer les déploiements → ✏️ → Nouvelle version**.
+Recharger ensuite la feuille : le menu **SNES → Statistiques du site** crée la feuille à part « Statistiques du site
+SNES-FSU » et la met à jour à chaque clic (Google peut demander une nouvelle autorisation la première fois).
+Le total s'affiche en bas de l'accueil ; le détail par fiche reste dans cette feuille.
+Pour ne pas compter vos propres passages : ouvrir une fois le site avec `?nostat=1` sur chaque appareil
+(par exemple `index.html?nostat=1` ; `?nostat=0` pour annuler).
+
 ## Quelle version est en place ?
 
 La version figure en haut de [Code.gs](Code.gs) (`const VERSION = '…'`). Pour vérifier celle qui est déployée :

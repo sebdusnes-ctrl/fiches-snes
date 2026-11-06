@@ -55,6 +55,11 @@ et le script ne renvoie qu'un compte rendu (« envoyé (annonce) »), sans adres
 
 ## Risques résiduels connus
 
+- **Compteur de visites** : n'importe qui peut gonfler les chiffres ou remplir le détail avec de faux noms de
+  fiches (plafonds : 3 000 vues par jour, 8 Ko). Ces écritures ne touchent que la propriété `STATS` du script,
+  jamais la feuille des inscrit·es. Aucun cookie ni adresse IP n'est enregistré ; Google voit techniquement
+  l'adresse IP de l'appel, comme GitHub pour l'affichage des pages. Le détail par fiche n'est jamais renvoyé au public.
+
 - **Même adresse que le site `dhg`** : le navigateur range le jeton de l'admin pour tout
   `sebdusnes-ctrl.github.io`. Un script malveillant sur le site `dhg` pourrait le lire.
   Ne charger aucun script extérieur sur `dhg` (aujourd'hui : seulement son propre `script.js`).

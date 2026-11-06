@@ -7,13 +7,14 @@
  *  - menu « SNES » dans la feuille : annoncer une HIS aux statuts choisis ;
  *  - alertes « stages » envoyées par le relevé quotidien de GitHub (clé secrète) ;
  *  - HIS saisies dans l'espace admin du site : annonce, modification, annulation et rappel
- *    deux jours avant (GitHub, clé secrète).
+ *    deux jours avant (GitHub, clé secrète) ;
+ *  - compteur anonyme de visites et de fiches consultées, sans cookie ni adresse IP.
  * Installation : voir LISEZMOI.md dans ce dossier.
  */
 
 // Version du script : à changer à chaque modification. GitHub vérifie que la version déployée
 // est bien celle-ci avant d'envoyer les HIS (outils/his.py).
-const VERSION = '2026-10-25.6 (sécurité : limites d’envoi, fonctions réservées)';
+const VERSION = '2026-11-06.1 (compteur anonyme de visites et de fiches)';
 
 const NOM_SECTION = 'SNES-FSU · collège Joséphine Baker';
 const SITE = 'https://sebdusnes-ctrl.github.io/fiches-snes/';
@@ -41,6 +42,10 @@ const CONFIRMATIONS_PAR_JOUR = 25;
 const EN_ATTENTE_MAX = 100;
 const JOURS_POUR_CONFIRMER = 7;
 const JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+// Compteur : garde-fous contre un remplissage malveillant (les statistiques sont les seules
+// données qu'un·e visiteur·se peut écrire sans confirmation, et jamais dans la feuille des inscrit·es).
+const STATS_PAR_JOUR = 3000;
+const STATS_TAILLE_MAX = 8000;  // une propriété du script est limitée à 9 Ko
 const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août',
   'septembre', 'octobre', 'novembre', 'décembre'];
 
@@ -51,6 +56,7 @@ function onOpen() {
   SpreadsheetApp.getUi().createMenu('SNES')
     .addItem('Annoncer une HIS…', 'ouvrirHIS')
     .addItem('Inscrit·es par statut', 'afficherBilan')
+    .addItem('Statistiques du site', 'afficherStatistiques')
     .addItem('Version du script', 'afficherVersion')
     .addSeparator()
     .addItem('Installer (une seule fois)', 'installer')
@@ -220,7 +226,84 @@ function doGet(e) {
   if (p.a === 'confirmer') return bouton_('Confirmer votre inscription', 'confirmer', p.j, 'Confirmer mon inscription');
   if (p.a === 'desinscrire') return bouton_('Se désinscrire', 'desinscrire', p.j, 'Me désinscrire');
   if (p.a === 'version') return ContentService.createTextOutput(VERSION);
+  if (p.a === 'vue') return compterVue_(p);
+  if (p.a === 'stats') return statsPubliques_();
   return page_('Liste de diffusion', '<p>Rien à faire ici.</p><p style="color:#888;font-size:12px">Version ' + VERSION + '</p>');
+}
+
+
+// --- Compteur anonyme --------------------------------------------------------
+
+function lireStats_() {
+  const brut = PropertiesService.getScriptProperties().getProperty('STATS');
+  return brut ? JSON.parse(brut) : { visites: 0, fiches: 0, mois: {}, detail: {}, jour: '', vues_jour: 0 };
+}
+
+/** Une vue perdue n'a aucune gravité : ne jamais attendre longtemps ni échouer pour un simple compteur. */
+function compterVue_(p) {
+  const visite = p.v === '1';
+  const fiche = /^[a-z0-9-]{1,60}$/.test(p.f || '') ? p.f : '';
+  const verrou = LockService.getScriptLock();
+  if ((visite || fiche) && verrou.tryLock(2000)) {
+    try {
+      const s = lireStats_();
+      const jour = Utilities.formatDate(new Date(), 'Europe/Paris', 'yyyy-MM-dd');
+      if (s.jour !== jour) { s.jour = jour; s.vues_jour = 0; }
+      if (s.vues_jour < STATS_PAR_JOUR) {
+        s.vues_jour++;
+        const mois = jour.slice(0, 7);
+        const m = s.mois[mois] = s.mois[mois] || { visites: 0, fiches: 0 };
+        if (visite) { s.visites++; m.visites++; }
+        // Une fiche encore inconnue n'est ajoutée que s'il reste de la place.
+        if (fiche && (s.detail[fiche] || JSON.stringify(s).length < STATS_TAILLE_MAX)) {
+          s.detail[fiche] = (s.detail[fiche] || 0) + 1;
+          s.fiches++;
+          m.fiches++;
+        }
+        PropertiesService.getScriptProperties().setProperty('STATS', JSON.stringify(s));
+      }
+    } finally {
+      verrou.releaseLock();
+    }
+  }
+  return ContentService.createTextOutput('ok');
+}
+
+/** Totaux seulement : le détail par fiche reste réservé à la section. */
+function statsPubliques_() {
+  const s = lireStats_();
+  return ContentService.createTextOutput(JSON.stringify({ visites: s.visites, fiches: s.fiches }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+/** Menu SNES : écrit les chiffres dans une feuille à part, sans aucune adresse des inscrit·es. */
+function afficherStatistiques() {
+  reserve_();
+  const props = PropertiesService.getScriptProperties();
+  let classeur = null;
+  try {
+    const id = props.getProperty('STATS_FEUILLE');
+    if (id) classeur = SpreadsheetApp.openById(id);
+  } catch (err) { classeur = null; }  // feuille supprimée : on la recrée
+  if (!classeur) {
+    classeur = SpreadsheetApp.create('Statistiques du site SNES-FSU');
+    classeur.getSheets()[0].setName('Statistiques');
+    props.setProperty('STATS_FEUILLE', classeur.getId());
+  }
+  const s = lireStats_();
+  const lignes = [['Total', 'Visites', 'Fiches consultées'], ['Depuis le début', s.visites, s.fiches], ['', '', ''],
+    ['Mois', 'Visites', 'Fiches consultées']];
+  Object.keys(s.mois).sort().reverse().forEach(m => lignes.push(["'" + m, s.mois[m].visites, s.mois[m].fiches]));
+  lignes.push(['', '', ''], ['Fiche', 'Consultations', '']);
+  Object.keys(s.detail).sort((a, b) => s.detail[b] - s.detail[a]).forEach(f => lignes.push(["'" + f, s.detail[f], '']));
+  const onglet = classeur.getSheets()[0];
+  onglet.clear();
+  onglet.getRange(1, 1, lignes.length, 3).setValues(lignes);
+  onglet.autoResizeColumn(1);
+  SpreadsheetApp.getUi().showModalDialog(HtmlService.createHtmlOutput(
+    '<p>' + s.visites + ' visites, ' + s.fiches + ' fiches consultées.</p>' +
+    '<p><a target="_blank" rel="noopener" href="' + classeur.getUrl() + '">Ouvrir le détail</a></p>')
+    .setWidth(360).setHeight(120), 'Statistiques du site');
 }
 
 function bouton_(titre, action, jeton, libelle) {

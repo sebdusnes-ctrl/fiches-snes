@@ -64,6 +64,7 @@
 </section>
 {% endfor %}
 {% endblock %}
+{% block compteur %}<p class="pied-note" id="compteur" hidden></p>{% endblock %}
 {% block scripts %}<script src="static/recherche.js?v={{ v }}"></script>
 <script>
 // Une HIS passée disparaît même si le site n'a pas encore été reconstruit.
