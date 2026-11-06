@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fiches pratiques SNES-FSU</title>
 <meta name="description" content="Vos droits, vos obligations, en clair. Fiches tirées des publications nationales du SNES-FSU.">
-<link rel="stylesheet" href="static/style.css?v=33040086">
+<link rel="stylesheet" href="static/style.css?v=920f34c5">
 </head>
 <body class="accueil">
 <header class="bandeau">
@@ -670,10 +670,11 @@
   </ul>
 </section>
     <p class="pied-note">Fiches de synthèse rédigées par la section à partir des publications nationales du SNES-FSU. En cas de doute, la publication d’origine et la section font foi.</p>
+    <p class="pied-note" id="compteur" hidden></p>
     <p class="pied-admin"><a href="affiche.html">QR code, affiche et visuels</a> · <a href="admin/">Espace admin</a></p>
   </div>
 </footer>
-<script src="static/recherche.js?v=33040086"></script>
+<script src="static/recherche.js?v=920f34c5"></script>
 <script>
 // Une HIS passée disparaît même si le site n'a pas encore été reconstruit.
 (function () {
@@ -681,5 +682,6 @@
   document.querySelectorAll('.his-annonce').forEach(function (e) { if (e.dataset.date < j) e.hidden = true; });
 })();
 </script>
+<script src="static/stats.js?v=920f34c5" data-url="https://script.google.com/macros/s/AKfycbx-RRBlaCWppFivkWnv7LNwtT7xT8p74MxdTycEhA0tnAb8g6mbKhSNCi4XyZDU4hTY0g/exec"></script>
 </body>
 </html>
