@@ -14,6 +14,10 @@ fiches_retirees: []
 a_la_une:
   - suis-je-oblige
 
+# Une fiche modifiée est signalée « Mise à jour » (accueil et fiche) pendant ce nombre de jours.
+# Dates suivies dans contenu/suivi_fiches.json (géré par build.py, ne pas modifier).
+maj_signalee_jours: 30
+
 
 contact:
   # Laisser vide ce qui ne doit pas apparaître en ligne.

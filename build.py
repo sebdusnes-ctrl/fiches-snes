@@ -217,6 +217,84 @@ def preparer_stages(aujourdhui):
 
 # --- Heures d'information syndicale (contenu/his/his.yaml, saisies dans /admin) ------
 
+# --- Fiches modifiées (contenu/suivi_fiches.json) -------------------------------
+
+SUIVI = RACINE / "contenu" / "suivi_fiches.json"
+CHAMPS_SUIVIS = ("titre", "resume", "a_jour", "en_bref", "textes", "agir", "snes", "liens", "source", "maj_note")
+
+
+def suivre_modifications(themes, aujourdhui, jours):
+    """Date de dernière modification de chaque fiche, par empreinte de son contenu.
+    Une fiche modifiée (ou nouvelle) est signalée « jours » jours. La note de mise à jour
+    (champ maj_note) n'est affichée que si elle a changé lors de cette modification.
+    Premier passage : toutes les fiches enregistrées, aucune signalée."""
+    ancien = json.loads(SUIVI.read_text(encoding="utf-8")) if SUIVI.exists() else None
+    suivi = {}
+    for th in themes:
+        for f in th["fiches"]:
+            contenu = {k: f.get(k) for k in CHAMPS_SUIVIS if f.get(k)}
+            emp = hashlib.sha1(json.dumps(contenu, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()[:12]
+            note = (f.get("maj_note") or "").strip()
+            r = dict((ancien or {}).get(f["id"]) or {})
+            if ancien is None:
+                r = {"empreinte": emp, "date": "", "type": "", "note": "", "note_vue": note}
+            elif not r:
+                r = {"empreinte": emp, "date": aujourdhui.isoformat(), "type": "nouvelle", "note": "", "note_vue": note}
+            elif r.get("empreinte") != emp:
+                r.update(empreinte=emp, date=aujourdhui.isoformat(), type="maj",
+                         note=note if note != r.get("note_vue", "") else "", note_vue=note)
+            suivi[f["id"]] = r
+            d = dt.date.fromisoformat(r["date"]) if r["date"] else None
+            f["maj"] = {"date_fr": date_fr(d, jour=False), "type": r["type"], "note": r["note"],
+                        "recente": bool(d) and (aujourdhui - d).days < jours}
+    texte = json.dumps(suivi, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
+    if not SUIVI.exists() or SUIVI.read_text(encoding="utf-8") != texte:
+        SUIVI.write_text(texte, encoding="utf-8")
+
+
+# --- Échéances du calendrier (contenu/textes/calendrier.yaml) --------------------
+
+CALENDRIER = RACINE / "contenu" / "textes" / "calendrier.yaml"
+
+
+def jour_mois(texte, erreurs, titre):
+    m = re.fullmatch(r"\s*(\d{1,2})/(\d{1,2})\s*", str(texte or ""))
+    try:
+        return (int(m.group(2)), int(m.group(1))) if m and dt.date(2024, int(m.group(2)), int(m.group(1))) else None
+    except ValueError:
+        pass
+    erreurs.append(f"calendrier : « {titre} » : date « {texte} » invalide (JJ/MM attendu)")
+    return None
+
+
+def preparer_echeances(par_id, aujourdhui):
+    """Échéances en cours, avec leurs fiches. Une période peut chevaucher deux années."""
+    if not CALENDRIER.exists():
+        return []
+    erreurs, actives = [], []
+    for e in (yaml.safe_load(CALENDRIER.read_text(encoding="utf-8")) or {}).get("echeances") or []:
+        titre = e.get("titre") or "?"
+        du, au = jour_mois(e.get("du"), erreurs, titre), jour_mois(e.get("au"), erreurs, titre)
+        inconnues = [i for i in e.get("fiches") or [] if i not in par_id]
+        erreurs += [f"calendrier : « {titre} » : fiche inconnue « {i} »" for i in inconnues]
+        annees = [int(a) for a in re.findall(r"\d{4}", str(e.get("annees") or ""))]
+        if not (du and au and e.get("titre")):
+            erreurs += [] if e.get("titre") else ["calendrier : échéance sans titre"]
+            continue
+        auj = (aujourdhui.month, aujourdhui.day)
+        if du <= au:
+            en_cours, annee = du <= auj <= au, aujourdhui.year
+        else:  # ex. du 15/12 au 15/01 : l'année de l'échéance est celle de son début
+            en_cours = auj >= du or auj <= au
+            annee = aujourdhui.year if auj >= du else aujourdhui.year - 1
+        if en_cours and (not annees or annee in annees):
+            actives.append({"titre": titre, "texte": e.get("texte") or "",
+                            "fiches": [par_id[i] for i in e.get("fiches") or []]})
+    if erreurs:
+        sys.exit("Calendrier invalide :\n  " + "\n  ".join(erreurs))
+    return actives
+
+
 def preparer_his(aujourdhui, jours_annulee=7):
     """HIS à venir, de la plus proche à la plus lointaine. Une HIS annulée reste affichée (barrée)
     jours_annulee jours après son annulation (annulee_le, noté par outils/his_entretien.py)."""
@@ -262,6 +340,9 @@ def config_admin(config, themes):
         {"name": "titre", "label": "Titre", "widget": "string"},
         {"name": "resume", "label": "Résumé (une ligne, sous le titre)", "widget": "string"},
         {"name": "a_jour", "label": "Avertissement (facultatif)", "widget": "string", "required": False},
+        {"name": "maj_note", "label": "Ce qui change (facultatif)", "widget": "string", "required": False,
+         "hint": "Toute modification signale la fiche « Mise à jour » pendant " + str(config.get("maj_signalee_jours", 30))
+                 + " jours. Cette phrase s’affiche dans l’encadré, ex. « ajout de l’heure déplacée sans accord »."},
         liste_textes("en_bref", "En bref"),
         liste_textes("textes", "Ce que disent les textes", False),
         liste_textes("agir", "Ce que vous pouvez faire", False),
@@ -324,6 +405,19 @@ def config_admin(config, themes):
             champ("inscription_public", "Page Inscription : qui peut s’inscrire", "text", AIDE_TEXTE),
             champ("inscription_adresse", "Page Inscription : consigne sous l’adresse (adresse personnelle)", "text"),
         ]}]}
+    toutes = [{"label": f["titre"], "value": f["id"]} for th in themes for f in th["fiches"]]
+    textes["files"].append({
+        "name": "calendrier", "label": "Calendrier : échéances en haut de l’accueil", "file": "contenu/textes/calendrier.yaml",
+        "fields": [{"name": "echeances", "label": "Échéances", "widget": "list", "summary": "{{fields.titre}} ({{fields.du}} → {{fields.au}})",
+                    "hint": "Pendant sa période, l’échéance s’affiche en haut de l’accueil avec ses fiches (qui restent dans leur thème).",
+                    "fields": [
+                        {"name": "titre", "label": "Titre", "widget": "string"},
+                        {"name": "texte", "label": "Texte court", "widget": "text", "required": False},
+                        {"name": "du", "label": "Du (JJ/MM)", "widget": "string", "pattern": ["^\\d{1,2}/\\d{1,2}$", "JJ/MM, ex. 02/11"]},
+                        {"name": "au", "label": "Au (JJ/MM)", "widget": "string", "pattern": ["^\\d{1,2}/\\d{1,2}$", "JJ/MM, ex. 10/12"]},
+                        {"name": "annees", "label": "Seulement ces années (facultatif)", "widget": "string", "required": False,
+                         "hint": "ex. « 2026, 2030 » pour les élections professionnelles ; vide : chaque année."},
+                        {"name": "fiches", "label": "Fiches à remonter", "widget": "select", "multiple": True, "options": toutes}]}]})
     return {
         "backend": {"name": "github", "repo": "sebdusnes-ctrl/fiches-snes", "branch": "main"},
         "site_url": config["url_site"], "display_url": config["url_site"],
@@ -396,9 +490,10 @@ def construire():
     par_id = {f["id"]: f for th in themes for f in th["fiches"]}
     une = [par_id[i] for i in (config.get("a_la_une") or []) if i in par_id]
     aujourdhui = dt.date.today()
+    suivre_modifications(themes, aujourdhui, int(config.get("maj_signalee_jours", 30)))
     stages = preparer_stages(aujourdhui)
     page = env.get_template("index.html").render(
-        racine="", url_page=url, une=une, avec_stages=bool(stages),
+        racine="", url_page=url, une=une, avec_stages=bool(stages), echeances=preparer_echeances(par_id, aujourdhui),
         his=preparer_his(aujourdhui, int((config.get("his") or {}).get("annulee_affichee_jours", 7))), **commun)
     (SORTIE / "index.html").write_text(page, encoding="utf-8")
 

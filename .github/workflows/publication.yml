@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
-          git add contenu/his/his.yaml docs
+          git add contenu/his/his.yaml contenu/suivi_fiches.json docs
           if git diff --cached --quiet; then
             echo "Site déjà à jour."
           else

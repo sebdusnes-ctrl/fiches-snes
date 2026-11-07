@@ -1,0 +1,506 @@
+{
+ "accident-de-service": {
+  "date": "",
+  "empreinte": "ed6002513f9e",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "aed-contrat": {
+  "date": "",
+  "empreinte": "2064ec4000f8",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "aed-limites": {
+  "date": "",
+  "empreinte": "e9b61ff301e7",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "aed-missions": {
+  "date": "",
+  "empreinte": "56bcc29d071b",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "aesh-contrat": {
+  "date": "",
+  "empreinte": "b654ac5229f3",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "aesh-emploi-du-temps": {
+  "date": "",
+  "empreinte": "0fcd564851fd",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "aesh-missions": {
+  "date": "",
+  "empreinte": "8701ee10ec92",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "arret-maladie": {
+  "date": "",
+  "empreinte": "8f15f41684b4",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "autorisations-absence": {
+  "date": "",
+  "empreinte": "6df2bad69ed0",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "budget-etablissement": {
+  "date": "",
+  "empreinte": "551992222277",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "bulletin-de-paie": {
+  "date": "",
+  "empreinte": "1c6ffb210a98",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "ca-ce-qu-il-decide": {
+  "date": "",
+  "empreinte": "1fed86503a07",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "ca-fonctionnement": {
+  "date": "",
+  "empreinte": "b37e6032dcb6",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "cahier-de-textes-pronote": {
+  "date": "",
+  "empreinte": "d3a87d7b9547",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "canicule": {
+  "date": "",
+  "empreinte": "fcab6dd7b56c",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "commission-permanente": {
+  "date": "",
+  "empreinte": "ac65e3e645c6",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "conges-longs": {
+  "date": "",
+  "empreinte": "acd99fdee826",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "conseil-de-classe": {
+  "date": "",
+  "empreinte": "95818e2bf28a",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "conseil-de-discipline": {
+  "date": "",
+  "empreinte": "b8fe2564d095",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "conseil-pedagogique": {
+  "date": "",
+  "empreinte": "591431e51b64",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "continuite-pedagogique": {
+  "date": "",
+  "empreinte": "1d484c1bc38b",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "cumul-activites": {
+  "date": "",
+  "empreinte": "06f6875f3747",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "demi-journees-banalisees": {
+  "date": "",
+  "empreinte": "7ccf680eaf52",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "devoir-de-reserve": {
+  "date": "",
+  "empreinte": "a79d12e988fa",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "devoirs-communs-examens-blancs": {
+  "date": "2026-11-02",
+  "empreinte": "f77ef732e1d5",
+  "note": "ajout de l’heure déplacée sans votre accord, de la réunion d’information avant l’ouverture et de la « nécessité de service »",
+  "note_vue": "",
+  "type": "maj"
+ },
+ "devoirs-faits": {
+  "date": "",
+  "empreinte": "188849e8945f",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "dhg-repartition": {
+  "date": "",
+  "empreinte": "c2259b642f22",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "droit-de-retrait": {
+  "date": "",
+  "empreinte": "7ab5c2aa656e",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "elections-ca": {
+  "date": "",
+  "empreinte": "80c2350b4c12",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "elections-professionnelles": {
+  "date": "",
+  "empreinte": "1d420976d075",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "entretien-direction": {
+  "date": "",
+  "empreinte": "4f9394e5f1df",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "etat-vs-emploi-du-temps": {
+  "date": "",
+  "empreinte": "68eaafd76c39",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "examens-dnb": {
+  "date": "",
+  "empreinte": "e3a09ceb4050",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "faire-greve": {
+  "date": "",
+  "empreinte": "4e2493cbbbdb",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "formation-cpf": {
+  "date": "",
+  "empreinte": "3fc2b3ace3e2",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "frais-de-deplacement": {
+  "date": "",
+  "empreinte": "c5f5a7b7268b",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "harcelement-violences-sexistes": {
+  "date": "",
+  "empreinte": "907a0e9dbf7f",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "heure-de-vie-de-classe": {
+  "date": "",
+  "empreinte": "db7e6433caab",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "heure-information-syndicale": {
+  "date": "",
+  "empreinte": "c67ff01982ac",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "heures-supplementaires": {
+  "date": "",
+  "empreinte": "460f839746a8",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "imp-en-ca": {
+  "date": "",
+  "empreinte": "882beb32a63c",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "isoe-professeur-principal": {
+  "date": "",
+  "empreinte": "c0ce0a6a4fed",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "manuels-numerique": {
+  "date": "",
+  "empreinte": "c6b40b7263ad",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "maxima-de-service": {
+  "date": "",
+  "empreinte": "faa45aaab9b2",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "missions-particulieres-imp": {
+  "date": "",
+  "empreinte": "bf0f26c020fa",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "mutations-inter-2027": {
+  "date": "",
+  "empreinte": "2c4ecc15c397",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "mutuelle-prevoyance": {
+  "date": "",
+  "empreinte": "d80965f7820f",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "naissance-adoption": {
+  "date": "",
+  "empreinte": "b8e104e03deb",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "organisation-pedagogique": {
+  "date": "",
+  "empreinte": "cb4644d96269",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "pacte-remplacements": {
+  "date": "",
+  "empreinte": "0e30d3271d95",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "pai-pps": {
+  "date": "",
+  "empreinte": "7d49ea9e2638",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "professeurs-contractuels": {
+  "date": "",
+  "empreinte": "e74be488184f",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "professeurs-documentalistes": {
+  "date": "",
+  "empreinte": "52709d46e85b",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "projet-etablissement": {
+  "date": "",
+  "empreinte": "230a8876f2e8",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "promotions-de-grade": {
+  "date": "",
+  "empreinte": "16ffa2c6b63a",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "protection-fonctionnelle": {
+  "date": "",
+  "empreinte": "1037f5cd6b3f",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "punitions": {
+  "date": "",
+  "empreinte": "057e97e07377",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "quart-heure-lecture": {
+  "date": "",
+  "empreinte": "49ccfda36eba",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "registre-sst": {
+  "date": "",
+  "empreinte": "2d60aa272421",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "reglement-interieur": {
+  "date": "",
+  "empreinte": "bbb0965b3ef0",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "rendez-vous-de-carriere": {
+  "date": "",
+  "empreinte": "fa98c9a9d62c",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "rep-rep-plus": {
+  "date": "",
+  "empreinte": "2ad26a0bf8bf",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "reunions-obligatoires": {
+  "date": "",
+  "empreinte": "55f01e6c1191",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "robot-ted-i": {
+  "date": "",
+  "empreinte": "6ade21a4f323",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "sanctions-et-sursis": {
+  "date": "",
+  "empreinte": "5881bc96365e",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "sorties-et-voyages": {
+  "date": "",
+  "empreinte": "9797a9cda390",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "stage-syndical": {
+  "date": "",
+  "empreinte": "77770d09d46d",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "stagiaires": {
+  "date": "",
+  "empreinte": "b4c2832c4046",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "suis-je-oblige": {
+  "date": "2026-11-02",
+  "empreinte": "37f90722416c",
+  "note": "ajout de ce que vaut la « nécessité de service »",
+  "note_vue": "",
+  "type": "maj"
+ },
+ "temps-partiel-disponibilite": {
+  "date": "",
+  "empreinte": "384ccf376390",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "tzr-affectation": {
+  "date": "",
+  "empreinte": "7af45be9c7a5",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ },
+ "tzr-indemnites": {
+  "date": "",
+  "empreinte": "9508c98f00d3",
+  "note": "",
+  "note_vue": "",
+  "type": ""
+ }
+}

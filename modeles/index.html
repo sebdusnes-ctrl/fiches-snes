@@ -4,6 +4,18 @@
 <section class="intro">
   <h1>{{ config.accroche }}</h1>
   <p class="intro-meta">{{ nb_fiches }} fiches · {{ themes|length }} thèmes · <a href="inscription.html">Recevoir les infos par courriel</a></p>
+  {% if echeances %}
+  <section class="echeances" aria-labelledby="echeances-titre">
+    <h2 id="echeances-titre">En ce moment</h2>
+    {% for e in echeances %}
+    <div class="echeance">
+      <p class="echeance-titre">{{ e.titre|typo }}</p>
+      {% if e.texte %}<p class="echeance-texte">{{ e.texte|typo }}</p>{% endif %}
+      {% if e.fiches %}<ul class="echeance-fiches">{% for f in e.fiches %}<li><a href="fiches/{{ f.id }}.html" style="--c: {{ f.theme.couleur }}">{{ f.titre|typo }}</a></li>{% endfor %}</ul>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
   {% for h in his %}
   <aside class="his-annonce{% if h.annulee %} his-annulee{% endif %}" data-date="{{ h.date }}">
     <p class="his-titre">{% if h.annulee %}Annulée : heure{% else %}{{ "Prochaine heure" if loop.first else "Heure" }}{% endif %} d’information syndicale</p>
@@ -54,7 +66,8 @@
   <ul class="cartes">
     {% for f in t.fiches %}
     <li class="carte" data-texte="{{ (t.titre ~ ' ' ~ f.titre ~ ' ' ~ f.resume ~ ' ' ~ (f.en_bref|join(' ')))|brut|lower }}">
-      <a href="fiches/{{ f.id }}.html">
+      <a href="fiches/{{ f.id }}.html"{% if f.maj.recente %} class="carte-maj"{% endif %}>
+        {% if f.maj.recente %}<span class="badge-maj">{{ "Nouvelle fiche" if f.maj.type == "nouvelle" else "Mise à jour" }} · {{ f.maj.date_fr }}</span>{% endif %}
         <span class="carte-titre">{{ f.titre|typo }}</span>
         <span class="carte-resume">{{ f.resume|typo }}</span>
       </a>

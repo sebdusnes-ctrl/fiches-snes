@@ -37,6 +37,16 @@ Toujours mettre les textes entre guillemets droits `"…"` (le « : » français
 
 Puis : `python build.py` (contrôle les champs obligatoires et les identifiants en double).
 
+## Fiches mises à jour et échéances du calendrier
+
+- **Mise à jour** : `build.py` compare le contenu de chaque fiche à `contenu/suivi_fiches.json` (empreintes, géré
+  automatiquement, ne pas modifier). Une fiche modifiée ou nouvelle est surlignée sur l'accueil et porte un encadré
+  « Fiche mise à jour le … » pendant `maj_signalee_jours` jours (`config.yaml`). Le champ facultatif `maj_note`
+  (« Ce qui change » dans l'admin) s'affiche dans l'encadré. Toute modification compte, même une virgule.
+- **Échéances** : `contenu/textes/calendrier.yaml` (admin : Textes du site → Calendrier). Pendant sa période (JJ/MM,
+  années facultatives), une échéance s'affiche en haut de l'accueil (« En ce moment ») avec ses fiches, qui restent
+  dans leur thème. Le site est reconstruit chaque matin : l'encadré apparaît et disparaît tout seul.
+
 ## Publier sur GitHub Pages
 
 1. Créer un dépôt public sur github.com (ex. `fiches-snes`).
@@ -85,7 +95,7 @@ des nouveaux stages et des changements de date ou de lieu.
 
 ## Corpus des sources (pour rédiger les fiches)
 
-`python outils/corpus.py "E:/Ressources Collège/SNES/Mémos_SNES"` écrit dans `sources/`
+`python outils/corpus.py "C:/Projets/SNES/Mémos_SNES"` écrit dans `sources/`
 le texte de chaque PDF du dossier des Mémos (une page par bloc, origine indiquée) :
 texte direct pour les PDF numériques, OCR Tesseract (fra, pages tournées redressées) pour les scans.
 Un 2e argument facultatif pointe vers des retranscriptions relues (`<section data-pages="N">`),

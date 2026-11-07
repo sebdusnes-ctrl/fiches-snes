@@ -14,6 +14,9 @@
     <p class="fiche-resume">{{ fiche.resume|typo }}</p>
   </header>
 
+  {% if fiche.maj.recente %}<p class="maj-recente"><strong>{{ "Nouvelle fiche" if fiche.maj.type == "nouvelle" else "Fiche mise à jour" }} le {{ fiche.maj.date_fr }}</strong>{% if fiche.maj.note %} : {{ fiche.maj.note|typo }}{% endif %}</p>
+  {% elif fiche.maj.date_fr %}<p class="maj-date">Dernière mise à jour : {{ fiche.maj.date_fr }}</p>{% endif %}
+
   {% if fiche.a_jour %}<p class="alerte">⚠ {{ fiche.a_jour|typo }}</p>{% endif %}
 
   <section class="bloc bloc-bref">

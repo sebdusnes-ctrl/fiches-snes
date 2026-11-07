@@ -1,0 +1,46 @@
+# Échéances mises en avant en haut de l'accueil pendant leur période (modifiable dans l'espace admin).
+# du / au : JJ/MM (une période peut passer d'une année à l'autre, ex. du 15/12 au 15/01).
+# annees : facultatif, années où l'échéance existe (ex. élections professionnelles tous les 4 ans).
+# Les fiches restent toujours dans leur thème : cet encadré ne fait que les remonter.
+echeances:
+  - titre: "Élections professionnelles"
+    texte: "Tous les quatre ans, vous élisez vos représentant·es (CSA, CAP, CCP) par vote électronique, début décembre."
+    du: "02/11"
+    au: "10/12"
+    annees: "2026, 2030, 2034"
+    fiches: ["elections-professionnelles"]
+  - titre: "Mutations : phase inter"
+    texte: "Vœux sur SIAM en novembre, puis confirmation à signer et pièces justificatives à déposer dans un délai très court."
+    du: "02/11"
+    au: "10/12"
+    fiches: ["mutations-inter-2027"]
+  - titre: "Budget de l’établissement"
+    texte: "Le CA vote le budget dans les 30 jours qui suivent la notification de la collectivité."
+    du: "02/11"
+    au: "15/12"
+    fiches: ["budget-etablissement"]
+  - titre: "DHG : la répartition des heures"
+    texte: "L’établissement reçoit sa dotation ; le CA vote sa répartition. Exigez les documents à temps."
+    du: "05/01"
+    au: "28/02"
+    fiches: ["dhg-repartition", "commission-permanente"]
+  - titre: "Mutations : phase intra"
+    texte: "Après les résultats de l’inter, les vœux pour un poste dans l’académie se font auprès du rectorat. La section vous aide à les préparer."
+    du: "01/03"
+    au: "31/03"
+    fiches: ["mutations-inter-2027"]
+  - titre: "Fin d’année : DNB et fortes chaleurs"
+    texte: "Convocations aux examens, et ce que l’on peut faire en cas de canicule."
+    du: "01/06"
+    au: "05/07"
+    fiches: ["examens-dnb", "canicule"]
+  - titre: "Rentrée : votre service"
+    texte: "Vérifiez votre état VS avant de le signer : heures, pondérations, HSA, missions du Pacte."
+    du: "25/08"
+    au: "15/10"
+    fiches: ["etat-vs-emploi-du-temps", "heures-supplementaires", "maxima-de-service"]
+  - titre: "Élections au conseil d’administration"
+    texte: "Avant la fin de la 7e semaine de l’année : liste, candidatures, vote par correspondance."
+    du: "01/09"
+    au: "15/10"
+    fiches: ["elections-ca", "ca-fonctionnement"]
