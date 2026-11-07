@@ -1,7 +1,7 @@
 # Fiches pratiques SNES-FSU (site de la section)
 
 Site statique mobile, accessible par QR code, généré à partir des Mémos du SNES-FSU
-(`E:\Ressources Collège\SNES\Mémos_SNES`).
+(`C:\Projets\SNES\Mémos_SNES`).
 
 ## Organisation
 
