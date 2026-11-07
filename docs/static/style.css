@@ -155,6 +155,24 @@ body::before {
 }
 .carte a:hover, .carte a:focus-visible { border-color: var(--c); }
 .carte-titre { font-weight: 650; line-height: 1.3; }
+/* Fiche modifiée récemment : surlignée pendant maj_signalee_jours (config.yaml). */
+.carte a.carte-maj { border: 2px solid var(--snes-orange); background: color-mix(in srgb, var(--snes-orange) 7%, var(--surface)); }
+.badge-maj { align-self: flex-start; padding: 1px 9px; border-radius: 999px; font-size: .76rem; font-weight: 700;
+  color: #fff; background: #b85f00; }
+.maj-recente { margin: 0 0 14px; padding: 10px 14px; border-radius: var(--rayon); border-left: 5px solid var(--snes-orange);
+  background: color-mix(in srgb, var(--snes-orange) 13%, var(--surface)); }
+.maj-date { margin: -10px 0 14px; font-size: .85rem; color: var(--texte-doux); }
+/* Échéances du calendrier, en haut de l'accueil. */
+.echeances { margin: 0 0 18px; padding: 12px 14px; border-radius: var(--rayon); border: 2px solid var(--snes-orange);
+  background: color-mix(in srgb, var(--snes-orange) 8%, var(--surface)); }
+.echeances h2 { margin: 0 0 6px; font-size: 1.05rem; color: #b85f00; }
+.echeance + .echeance { margin-top: 10px; padding-top: 10px; border-top: 1px solid color-mix(in srgb, var(--snes-orange) 30%, var(--bordure)); }
+.echeance p { margin: 0 0 4px; }
+.echeance-titre { font-weight: 700; }
+.echeance-texte { font-size: .93rem; }
+.echeance-fiches { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.echeance-fiches a { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: .88rem; font-weight: 600;
+  text-decoration: none; color: var(--texte); background: var(--surface); border: 1px solid var(--c); }
 .carte-resume { color: var(--texte-doux); font-size: .92rem; line-height: 1.4; }
 
 /* --- Fiche --- */
@@ -305,7 +323,7 @@ body::before {
   .marque-logo { width: 20mm; }
   .bande-couleurs { height: 1.5mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .conteneur { max-width: none; padding: 0; }
-  .fil, .actions, .pied, .themes-nav, .recherche, .esprit, .his-annonce, .bouton-inscription { display: none !important; }
+  .fil, .actions, .pied, .themes-nav, .recherche, .esprit, .his-annonce, .bouton-inscription, .maj-recente, .maj-date { display: none !important; }
   .fiche { padding: 0; }
   .fiche-tete { margin: 3mm 0 3mm; }
   .fiche h1 { font-size: 17pt; }

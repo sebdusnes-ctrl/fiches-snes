@@ -137,6 +137,13 @@ collections:
         label: Avertissement (facultatif)
         widget: string
         required: false
+      - name: maj_note
+        label: Ce qui change (facultatif)
+        widget: string
+        required: false
+        hint: Toute modification signale la fiche « Mise à jour » pendant 30 jours.
+          Cette phrase s’affiche dans l’encadré, ex. « ajout de l’heure déplacée sans
+          accord ».
       - name: en_bref
         label: En bref
         widget: list
@@ -490,3 +497,190 @@ collections:
       widget: text
       hint: ''
       required: false
+  - name: calendrier
+    label: 'Calendrier : échéances en haut de l’accueil'
+    file: contenu/textes/calendrier.yaml
+    fields:
+    - name: echeances
+      label: Échéances
+      widget: list
+      summary: '{{fields.titre}} ({{fields.du}} → {{fields.au}})'
+      hint: Pendant sa période, l’échéance s’affiche en haut de l’accueil avec ses
+        fiches (qui restent dans leur thème).
+      fields:
+      - name: titre
+        label: Titre
+        widget: string
+      - name: texte
+        label: Texte court
+        widget: text
+        required: false
+      - name: du
+        label: Du (JJ/MM)
+        widget: string
+        pattern:
+        - ^\d{1,2}/\d{1,2}$
+        - JJ/MM, ex. 02/11
+      - name: au
+        label: Au (JJ/MM)
+        widget: string
+        pattern:
+        - ^\d{1,2}/\d{1,2}$
+        - JJ/MM, ex. 10/12
+      - name: annees
+        label: Seulement ces années (facultatif)
+        widget: string
+        required: false
+        hint: 'ex. « 2026, 2030 » pour les élections professionnelles ; vide : chaque
+          année.'
+      - name: fiches
+        label: Fiches à remonter
+        widget: select
+        multiple: true
+        options:
+        - label: 'Convocation, ordre de mission : suis-je obligé·e ?'
+          value: suis-je-oblige
+        - label: 'Entretien avec la direction : vos droits'
+          value: entretien-direction
+        - label: Combien d’heures dois-je faire ?
+          value: maxima-de-service
+        - label: 'Heures supplémentaires : HSA et HSE'
+          value: heures-supplementaires
+        - label: État VS et emploi du temps
+          value: etat-vs-emploi-du-temps
+        - label: Pacte et remplacements de courte durée
+          value: pacte-remplacements
+        - label: Missions particulières (IMP)
+          value: missions-particulieres-imp
+        - label: 'Réunions : convoqué·e ou convié·e ? Obligatoire ou non ?'
+          value: reunions-obligatoires
+        - label: 'Examens (DNB) : surveillance, jury, convocation'
+          value: examens-dnb
+        - label: 'Demi-journées banalisées, journée de solidarité, journées académiques
+            : qui doit venir ?'
+          value: demi-journees-banalisees
+        - label: 'Heures de vie de classe : ce que disent vraiment les textes'
+          value: heure-de-vie-de-classe
+        - label: 'Professeur·es documentalistes : votre service'
+          value: professeurs-documentalistes
+        - label: 'Enfant malade, PMA : les autorisations d’absence'
+          value: autorisations-absence
+        - label: Arrêt maladie et temps partiel thérapeutique
+          value: arret-maladie
+        - label: Congé de longue maladie, congé de longue durée
+          value: conges-longs
+        - label: 'Naissance et adoption : vos congés'
+          value: naissance-adoption
+        - label: 'Ma paie : bulletin, retards, erreurs'
+          value: bulletin-de-paie
+        - label: ISOE et professeur·e principal·e
+          value: isoe-professeur-principal
+        - label: Exercer en REP ou en REP+
+          value: rep-rep-plus
+        - label: Frais de déplacement et trajets domicile-travail
+          value: frais-de-deplacement
+        - label: Les rendez-vous de carrière
+          value: rendez-vous-de-carriere
+        - label: Échelons, hors-classe, classe exceptionnelle
+          value: promotions-de-grade
+        - label: Temps partiel et disponibilité
+          value: temps-partiel-disponibilite
+        - label: Formation continue, CPF, congé de formation
+          value: formation-cpf
+        - label: 'Professeur·es contractuel·les : vos droits'
+          value: professeurs-contractuels
+        - label: 'Mutations 2027 : la phase inter'
+          value: mutations-inter-2027
+        - label: 'Professeur·es stagiaires : vos droits'
+          value: stagiaires
+        - label: 'Conseils de classe : participation n’est pas présence'
+          value: conseil-de-classe
+        - label: 'Punitions : votre compétence, à ne pas confondre avec les sanctions'
+          value: punitions
+        - label: Conseil pédagogique
+          value: conseil-pedagogique
+        - label: 'Groupes de besoins, soutien, AP : c’est le CA qui décide'
+          value: organisation-pedagogique
+        - label: Devoirs faits
+          value: devoirs-faits
+        - label: 'Cahier de textes, Pronote : vos obligations'
+          value: cahier-de-textes-pronote
+        - label: 'Élève absent : faut-il tout mettre en ligne ?'
+          value: continuite-pedagogique
+        - label: 'Devoirs communs, brevets blancs : obligatoires ?'
+          value: devoirs-communs-examens-blancs
+        - label: Sorties et voyages scolaires
+          value: sorties-et-voyages
+        - label: '« Quart d’heure lecture » : peut-on l’imposer ?'
+          value: quart-heure-lecture
+        - label: 'Manuels et outils numériques : qui choisit ?'
+          value: manuels-numerique
+        - label: 'Le CA : ce qu’il décide, ce qu’il ne décide pas'
+          value: ca-ce-qu-il-decide
+        - label: 'Faire vivre le CA : convocation, quorum, votes, procès-verbal'
+          value: ca-fonctionnement
+        - label: 'Commission permanente : la faire exister'
+          value: commission-permanente
+        - label: 'DHG : la répartition des heures se vote en CA'
+          value: dhg-repartition
+        - label: 'IMP et décharges : ce que vote le CA'
+          value: imp-en-ca
+        - label: Le budget de l’établissement
+          value: budget-etablissement
+        - label: Règlement intérieur, sanctions, portable
+          value: reglement-interieur
+        - label: Commission éducative et conseil de discipline
+          value: conseil-de-discipline
+        - label: Sanctions disciplinaires et sursis
+          value: sanctions-et-sursis
+        - label: Projet d’établissement, contrat d’objectifs, auto-évaluation
+          value: projet-etablissement
+        - label: 'Élections au CA : listes, vote, mandat'
+          value: elections-ca
+        - label: Le registre santé et sécurité au travail (RSST)
+          value: registre-sst
+        - label: 'Agressé·e, menacé·e, diffamé·e : la protection fonctionnelle'
+          value: protection-fonctionnelle
+        - label: 'Canicule : que faire ?'
+          value: canicule
+        - label: 'Accident de service, de trajet, maladie professionnelle : le CITIS'
+          value: accident-de-service
+        - label: 'Danger grave et imminent : le droit de retrait'
+          value: droit-de-retrait
+        - label: Mutuelle obligatoire et prévoyance
+          value: mutuelle-prevoyance
+        - label: L’heure d’information syndicale (HIS)
+          value: heure-information-syndicale
+        - label: 'Stage de formation syndicale : 12 jours par an'
+          value: stage-syndical
+        - label: 'Obéir, se conformer, « devoir de réserve » : ce que dit vraiment
+            le droit'
+          value: devoir-de-reserve
+        - label: 'Cumul d’activités : ce qui est permis'
+          value: cumul-activites
+        - label: 'Élections professionnelles : du 3 au 10 décembre 2026'
+          value: elections-professionnelles
+        - label: Faire grève
+          value: faire-greve
+        - label: 'Harcèlement, violences sexistes et sexuelles : vos droits'
+          value: harcelement-violences-sexistes
+        - label: 'PAI et PPS : quelles différences ?'
+          value: pai-pps
+        - label: 'Robot de téléprésence (Ted-I) : volontariat obligatoire'
+          value: robot-ted-i
+        - label: 'AED : contrat, temps de travail, rémunération'
+          value: aed-contrat
+        - label: 'AED : vos missions, et rien que vos missions'
+          value: aed-missions
+        - label: 'AED : vidéosurveillance, mobilisations, grève à l’internat'
+          value: aed-limites
+        - label: 'AESH : contrat, salaire, mutuelle'
+          value: aesh-contrat
+        - label: 'AESH : emploi du temps et temps de travail'
+          value: aesh-emploi-du-temps
+        - label: 'AESH : vos missions et leurs limites'
+          value: aesh-missions
+        - label: 'TZR : affectation et suppléances'
+          value: tzr-affectation
+        - label: 'TZR : ISSR et frais de déplacement'
+          value: tzr-indemnites
