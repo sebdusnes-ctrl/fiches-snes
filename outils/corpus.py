@@ -1,6 +1,6 @@
 """Construit sources/ : le texte de chaque PDF des Mémos, une page par bloc.
 
-Usage : python outils/corpus.py "E:/Ressources Collège/SNES/Mémos_SNES" [dossier_retranscriptions]
+Usage : python outils/corpus.py "C:/Projets/SNES/Mémos_SNES" [dossier_retranscriptions]
 - PDF numériques : texte extrait directement (PyMuPDF).
 - PDF scannés : OCR Tesseract (fra), avec redressement automatique des pages tournées.
 - Retranscriptions relues (HTML pNN) : prioritaires sur l'OCR pour les pages concernées.
