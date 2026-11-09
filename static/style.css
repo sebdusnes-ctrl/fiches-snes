@@ -250,6 +250,7 @@ body::before {
 .badge.termine { color: var(--texte-doux); background: var(--surface); }
 .badge.ferme { color: #8a5a00; border-color: #c98a1a; background: var(--surface); }
 .badge.info { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+.badge.prevu { color: #6a4bb0; border-style: dashed; background: var(--surface); }
 .table-stages { display: grid; gap: 10px; }
 .table-stages .ligne { display: grid; gap: 6px; padding: 12px 14px; background: var(--surface);
   border: 1px solid var(--bordure); border-radius: var(--rayon); box-shadow: var(--ombre); }

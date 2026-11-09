@@ -3,3 +3,4 @@ jinja2
 markupsafe
 qrcode[pil]
 certifi
+pymupdf

@@ -4,7 +4,9 @@ Usage : python outils/stages.py [--table page.html] [--s3 page.html] [--nouveaut
 Deux sources, combinées :
   - le tableau d'inscription du SNES-FSU (INSCRIPTION) : liste complète et officielle des stages,
     date, horaires, lieu, clôture des inscriptions, inscriptions closes (ligne barrée) ;
-  - la page du SNES-FSU Lille (PAGE) : programme (PDF) et anciennes date ou lieu barrés (report).
+  - la page du SNES-FSU Lille (PAGE) : programme (PDF) et anciennes date ou lieu barrés (report) ;
+  - le « plan de formation syndicale » de l'année (affiche PDF liée depuis PAGE) : stages prévus
+    sans date ni lieu, avec le mois indiqué par l'affiche (« prevus » dans stages.json).
 Écrit contenu/stages.json : stages, date de vérification et journal (stage ajouté, retiré, date
 reportée, lieu modifié). Lancé chaque jour par GitHub Actions ; --nouveautes écrit les changements
 du jour pour outils/alertes.py. --table et --s3 : pages déjà téléchargées (tests).
@@ -33,7 +35,23 @@ JOURS = {"lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"
 RE_DATE = re.compile(r"(\d{1,2})(?:er)?\s+(" + "|".join(MOIS) + r")\s+(\d{4})", re.I)
 RE_HEURES = re.compile(r"\d{1,2}\s*h(?:\s*\d{2})?\s*[-–]\s*\d{1,2}\s*h(?:\s*\d{2})?", re.I)
 TIRET = "—"
+# Affiche annuelle des stages, liée depuis PAGE (ex. IMG/pdf/stages_26-27_maj.pdf).
+RE_PLAN = re.compile(r'href="([^"]*IMG/pdf/stages_\d\d-\d\d[^"]*\.pdf)"', re.I)
+MOIS_AFFICHE = {"SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12, "DÉC": 12, "JAN": 1, "FEV": 2, "FÉV": 2, "MAR": 3,
+                "AVR": 4, "MAI": 5, "JUIN": 6, "JUIL": 7, "AOU": 8, "AOÛ": 8}
+RE_JOUR_DATE = re.compile(r"(?i)\b(?:lundi|mardi|mercredi|jeudi|vendredi|samedi)\s+\d|\d{1,2}\s+(?:" + "|".join(MOIS) + r")")
 BARRE = "\x01"  # marque interne d'une ligne barrée (<del>) : ancienne information
+
+
+def telecharger_octets(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (fiches SNES-FSU)"})
+    try:
+        import certifi
+        contexte = ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        contexte = None
+    with urllib.request.urlopen(req, timeout=60, context=contexte) as r:
+        return r.read()
 
 
 def telecharger(url):
@@ -195,6 +213,79 @@ def analyser_s3(page):
     return stages
 
 
+def analyser_plan(octets, aujourdhui):
+    """Stages de l'affiche annuelle qui n'ont encore ni date ni lieu, avec leur mois.
+    Sur l'affiche, une frise des mois au centre ; chaque groupe de stages est relié à son mois
+    par un trait qui part d'un point placé juste au-dessus du groupe. Un stage suivi d'une date
+    (« jeudi 3 décembre ») est déjà daté : il figure dans le tableau d'inscription."""
+    import fitz  # PyMuPDF
+    page = fitz.open(stream=octets, filetype="pdf")[0]
+    lignes = []
+    for b in page.get_text("dict")["blocks"]:
+        for l in b.get("lines", []):
+            t = "".join(s["text"] for s in l["spans"]).strip()
+            if t:
+                x0, y0, x1, y1 = l["bbox"]
+                lignes.append({"t": t, "x0": x0, "x1": x1, "y": (y0 + y1) / 2, "taille": l["spans"][0]["size"]})
+    mois = [(MOIS_AFFICHE[l["t"].upper()], l["y"], (l["x0"] + l["x1"]) / 2)
+            for l in lignes if l["t"].upper() in MOIS_AFFICHE and l["taille"] >= 14]
+    if len(mois) < 6:
+        return []
+    x_frise = sum(x for _, _, x in mois) / len(mois)
+    m_annee = re.search(r"(20\d\d)\s*[-–]\s*20\d\d", " ".join(l["t"] for l in lignes))
+    debut = int(m_annee.group(1)) if m_annee else (aujourdhui.year if aujourdhui.month >= 8 else aujourdhui.year - 1)
+    # Traits : chaque dessin fait de segments ; point de départ = petit disque.
+    points, traits = [], []
+    for d in page.get_drawings():
+        r = d["rect"]
+        segs = [(it[1], it[2]) for it in d["items"] if it[0] == "l"]
+        if segs and r.width > 40 and r.height < 60:  # trait coudé (fin polygone)
+            traits.append([p for s in segs for p in s])
+        elif r.width < 12 and r.height < 12 and d.get("fill"):
+            points.append(((r.x0 + r.x1) / 2, (r.y0 + r.y1) / 2))
+
+    def mois_le_plus_proche(y):
+        return min(mois, key=lambda m: abs(m[1] - y))[0]
+
+    prevus = []
+    for l in lignes:
+        if not l["t"].startswith(("\uf06c", "•", "●")) or l["taille"] < 6:
+            continue  # pas une puce de stage (ou sous-puce de ville)
+        titre = l["t"].lstrip("\uf06c•● ").strip()
+        date_suit = any(0 < m["y"] - l["y"] <= 16 and m["x0"] < l["x1"] and m["x1"] > l["x0"] and RE_JOUR_DATE.search(m["t"])
+                        for m in lignes)
+        if date_suit or not titre:
+            continue
+        cote = -1 if l["x0"] < x_frise else 1
+        au_dessus = [p for p in points if (p[0] - x_frise) * cote > 0 and p[1] < l["y"]]
+        y_mois = l["y"]
+        if au_dessus:
+            px, py = max(au_dessus, key=lambda p: p[1])
+            trait = next((t for t in traits if any(abs(q.x - px) < 8 and abs(q.y - py) < 8 for q in t)), None)
+            if trait:
+                y_mois = min(trait, key=lambda q: abs(q.x - x_frise)).y
+        m = mois_le_plus_proche(y_mois)
+        prevus.append({"titre": titre, "mois": f"{debut if m >= 8 else debut + 1}-{m:02d}"})
+    return prevus
+
+
+def mots(titre):
+    t = unicodedata.normalize("NFKD", titre.lower()).encode("ascii", "ignore").decode()
+    return {m for m in re.findall(r"[a-z]{3,}", t)} - {"stage", "stages", "des", "les", "pour", "voie"}
+
+
+def meme_stage(prevu, titre):
+    """Un mot du titre en commun, et pas deux départements différents (« DHG 59 » ≠ « DHG 62 »)."""
+    n1, n2 = set(re.findall(r"\b\d{2}\b", prevu)), set(re.findall(r"\b\d{2}\b", titre))
+    return bool(mots(prevu) & mots(titre)) and not (n1 and n2 and not n1 & n2)
+
+
+def sans_doublons(prevus, stages):
+    """Un stage prévu disparaît dès qu'un stage daté du même mois lui ressemble."""
+    return [p for p in prevus
+            if not any((s.get("date") or "")[:7] == p["mois"] and meme_stage(p["titre"], s["titre"]) for s in stages)]
+
+
 def fusionner(stages, s3):
     """Ajoute à chaque stage du tableau le programme et le report de la page du SNES-FSU Lille,
     en rapprochant par la date, puis par la ville."""
@@ -254,6 +345,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--table", help="tableau d'inscription déjà téléchargé (test)")
     ap.add_argument("--s3", help="page du SNES-FSU Lille déjà téléchargée (test)")
+    ap.add_argument("--plan", help="affiche annuelle (PDF) déjà téléchargée (test)")
     ap.add_argument("--nouveautes", help="écrit aussi les changements du jour dans ce fichier (alertes)")
     args = ap.parse_args()
     table = decoder(Path(args.table).read_bytes()) if args.table else telecharger(INSCRIPTION)
@@ -261,14 +353,27 @@ def main():
     if not stages:
         sys.exit("Aucun stage reconnu dans le tableau d'inscription : la page a peut-être changé de forme. "
                  "Rien n'est modifié.")
+    page_s3 = ""
     try:
-        s3 = analyser_s3(decoder(Path(args.s3).read_bytes()) if args.s3 else telecharger(PAGE))
+        page_s3 = decoder(Path(args.s3).read_bytes()) if args.s3 else telecharger(PAGE)
+        s3 = analyser_s3(page_s3)
     except OSError as e:  # page du SNES-FSU Lille indisponible : on publie quand même la liste
         print(f"Page du SNES-FSU Lille indisponible ({e}) : programmes et reports non mis à jour.")
         s3 = []
     fusionner(stages, s3)
 
     ancien = json.loads(SORTIE.read_text(encoding="utf-8")) if SORTIE.exists() else {}
+    # Stages prévus de l'affiche annuelle ; en cas d'échec, on garde la liste précédente.
+    m_plan = RE_PLAN.search(page_s3)
+    plan = (m_plan.group(1) if m_plan.group(1).startswith("http") else BASE + m_plan.group(1).lstrip("/")) if m_plan else ancien.get("plan")
+    prevus = ancien.get("prevus", [])
+    if plan:
+        try:
+            octets = Path(args.plan).read_bytes() if args.plan else telecharger_octets(plan)
+            prevus = analyser_plan(octets, dt.date.today())
+        except Exception as e:  # affiche absente, changée ou illisible : le reste du relevé continue
+            print(f"Affiche des stages illisible ({e}) : stages prévus non mis à jour.")
+    prevus = sans_doublons(prevus, stages)
     jour = dt.date.today().isoformat()
     nouvelles = comparer(ancien.get("stages", []), stages, jour)
     journal = nouvelles + ancien.get("journal", [])
@@ -283,13 +388,15 @@ def main():
         "inscription": INSCRIPTION,
         "verifie_le": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
         "stages": stages,
+        "plan": plan,
+        "prevus": prevus,
         "journal": journal[:30],
     }
     SORTIE.write_text(json.dumps(donnees, ensure_ascii=False, indent=1), encoding="utf-8")
     if args.nouveautes:
         Path(args.nouveautes).write_text(json.dumps(nouvelles, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{len(stages)} stages relevés ({sum(1 for s in stages if s['programme'])} avec programme) ; "
-          f"{len(nouvelles)} changement(s) détecté(s).")
+    print(f"{len(stages)} stages relevés ({sum(1 for s in stages if s['programme'])} avec programme), "
+          f"{len(prevus)} prévu(s) sans date ; {len(nouvelles)} changement(s) détecté(s).")
     for e in nouvelles:
         print(f"  - {e['stage']} : {e['changement']}")
 

@@ -202,6 +202,14 @@ def preparer_stages(aujourdhui):
         s["recent"] = bool(modif and (aujourdhui - modif).days <= 30)
         s["modifie_fr"] = date_fr(modif, jour=False) if modif else ""
         liste.append((jour or dt.date.max, s))
+    # Stages annoncés sur l'affiche annuelle, sans date ni lieu : placés à la fin de leur mois.
+    for p in d.get("prevus") or []:
+        a, m = map(int, p["mois"].split("-"))
+        if (a, m) < (aujourdhui.year, aujourdhui.month):
+            continue
+        fin_mois = (dt.date(a + m // 12, m % 12 + 1, 1) - dt.timedelta(days=1))
+        liste.append((fin_mois, {"titre_affiche": p["titre"], "prevu": True, "periode_fr": f"{MOIS_FR[m - 1].capitalize()} {a}",
+                                 "lieu": "", "statut": "prevu", "statut_libelle": "Prévu, date à venir", "programme": ""}))
     d["liste"] = [s for _, s in sorted(liste, key=lambda x: x[0])]
     for e in d.get("journal", []):
         e["jour_fr"] = date_fr(dt.date.fromisoformat(e["jour"]), jour=False)

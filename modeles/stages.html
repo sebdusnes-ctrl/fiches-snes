@@ -20,6 +20,7 @@
     <li><span class="badge depasse">Délai dépassé</span> plus de demande d’absence possible ; inscription possible si vous ne travaillez pas ce jour-là</li>
     <li><span class="badge ferme">Inscriptions closes</span> date d’inscription auprès du SNES-FSU dépassée</li>
     <li><span class="badge termine">Terminé</span></li>
+    {% if stages.prevus %}<li><span class="badge prevu">Prévu, date à venir</span> annoncé dans le {% if stages.plan %}<a href="{{ stages.plan }}" target="_blank" rel="noopener">plan de formation du SNES-FSU Lille</a>{% else %}plan de formation du SNES-FSU Lille{% endif %} ; date et lieu pas encore fixés, mois indicatif</li>{% endif %}
   </ul>
 
   <div class="table-stages" role="table" aria-label="Stages">
@@ -34,16 +35,17 @@
       </span>
       <span class="c-date" role="cell">
         {% if s.date_initiale %}<del>{{ s.date_initiale_fr }}</del><br>{% endif %}
-        {{ s.date_fr or "Date à préciser" }}{% if s.horaires %}<br><small>{{ s.horaires }}</small>{% endif %}
+        {% if s.prevu %}{{ s.periode_fr }}<br><small>date à venir</small>{% else %}{{ s.date_fr or "Date à préciser" }}{% endif %}{% if s.horaires %}<br><small>{{ s.horaires }}</small>{% endif %}
         {% if s.reporte %}<br><span class="badge info">Reporté</span>{% endif %}
       </span>
       <span class="c-lieu" role="cell">
         {% if s.lieu_barre %}<del>{{ s.lieu_barre }}</del><br>{% endif %}
-        {{ s.lieu or "—" }}
+        {{ s.lieu or ("À venir" if s.prevu else "—") }}
         {% if "à définir" in s.lieu %}<br><span class="badge info">Lieu à définir</span>{% elif s.lieu_barre %}<br><span class="badge info">Lieu modifié</span>{% endif %}
       </span>
       <span class="c-statut" role="cell">
         <span class="badge {{ s.statut }}">{{ s.statut_libelle }}</span>
+        {% if s.prevu %}<small>Inscription dès que la date sera fixée</small>{% endif %}
         {% if s.statut in ("ouvert", "proche") %}<small>Demande d’absence avant le {{ s.limite_fr }}</small>{% endif %}
         {% if s.statut == "depasse" %}<small>Limite : {{ s.limite_fr }}</small>{% endif %}
         {% if s.cloture_fr and s.statut not in ("termine", "ferme") %}<small>Inscription au SNES avant le {{ s.cloture_fr }}</small>{% endif %}

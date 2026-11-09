@@ -1,7 +1,7 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-11-08 12:27",
+ "verifie_le": "2026-11-09 09:44",
  "stages": [
   {
    "id": "stage-aesh",
@@ -257,6 +257,41 @@
    "inscriptions_closes": true,
    "sans_autorisation": false,
    "modifie_le": null
+  }
+ ],
+ "plan": "https://lille.snes.edu/IMG/pdf/stages_26-27_maj.pdf",
+ "prevus": [
+  {
+   "titre": "DHG/TRMD collèges 59",
+   "mois": "2027-01"
+  },
+  {
+   "titre": "DHG/TRMD collèges 62",
+   "mois": "2027-01"
+  },
+  {
+   "titre": "DHG/TRMD lycée",
+   "mois": "2027-01"
+  },
+  {
+   "titre": "Mutations Intra 59",
+   "mois": "2027-03"
+  },
+  {
+   "titre": "Mutations Intra 62",
+   "mois": "2027-03"
+  },
+  {
+   "titre": "Sciences Physiques",
+   "mois": "2027-04"
+  },
+  {
+   "titre": "GRETA",
+   "mois": "2027-04"
+  },
+  {
+   "titre": "Langues vivantes",
+   "mois": "2027-04"
   }
  ],
  "journal": []
