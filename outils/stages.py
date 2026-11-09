@@ -6,7 +6,9 @@ Deux sources, combinées :
     date, horaires, lieu, clôture des inscriptions, inscriptions closes (ligne barrée) ;
   - la page du SNES-FSU Lille (PAGE) : programme (PDF) et anciennes date ou lieu barrés (report) ;
   - le « plan de formation syndicale » de l'année (affiche PDF liée depuis PAGE) : stages prévus
-    sans date ni lieu, avec le mois indiqué par l'affiche (« prevus » dans stages.json).
+    sans date ni lieu, avec le mois indiqué par l'affiche (« prevus » dans stages.json) ;
+  - la rubrique « Stages » de la FSU Nord (FSU) : stages fédéraux, ouverts à toutes et à tous
+    (organisateur « FSU », lien vers l'article et son formulaire d'inscription).
 Écrit contenu/stages.json : stages, date de vérification et journal (stage ajouté, retiré, date
 reportée, lieu modifié). Lancé chaque jour par GitHub Actions ; --nouveautes écrit les changements
 du jour pour outils/alertes.py. --table et --s3 : pages déjà téléchargées (tests).
@@ -27,6 +29,9 @@ SORTIE = RACINE / "contenu" / "stages.json"
 PAGE = "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html"
 BASE = "https://lille.snes.edu/"
 INSCRIPTION = "https://adherent.snes.edu/Public/indexStages.php?Aca=15"
+# Rubrique des stages de la FSU Nord : à changer à chaque rentrée si elle change.
+FSU = "https://fsu59.fr/spip.php?rubrique13"
+FSU_BASE = "https://fsu59.fr/"
 
 MOIS = {m: i for i, m in enumerate(
     ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
@@ -286,6 +291,51 @@ def sans_doublons(prevus, stages):
             if not any((s.get("date") or "")[:7] == p["mois"] and meme_stage(p["titre"], s["titre"]) for s in stages)]
 
 
+def analyser_article_fsu(page, url):
+    """Un article de stage FSU : titre (balise title), puis en gras « Lundi 5 avril 2027 ; 9h-17h »
+    et le lieu à la ligne suivante ; « inscription … avant le 5 mars 2027 »."""
+    m_titre = re.search(r"<title>(.*?)</title>", page, re.S)
+    texte = page[page.find('id="texte-article"'):] if 'id="texte-article"' in page else ""
+    m_tete = re.search(r"<strong>(.*?)</strong>", texte, re.S)
+    if not (m_titre and m_tete):
+        return None
+    titre = re.sub(r"\s*-\s*\[FSU[^\]]*\]\s*$", "", texte_brut(m_titre.group(1)))
+    lignes = [texte_brut(l) for l in re.split(r"<br[^>]*>", m_tete.group(1)) if texte_brut(l)]
+    date = date_iso(lignes[0]) if lignes else None
+    m_h = RE_HEURES.search(lignes[0]) if lignes else None
+    corps = texte_brut(texte[:texte.find("<form")] if "<form" in texte else texte)
+    m_clot = re.search(r"(?i)inscription[^.]*?avant le\s+(?:\w+\s+)?(\d{1,2}(?:er)?\s+\w+\s+\d{4})", corps)
+    return {
+        "id": "fsu-" + identifiant(titre)[:80],
+        "titre": titre,
+        "date": date,
+        "date_initiale": None,
+        "horaires": re.sub(r"\s+", "", m_h.group(0)) if m_h else None,
+        "lieu": " · ".join(lignes[1:]).replace(" - ", " · ", 1),
+        "lieu_barre": "",
+        "reporte": False,
+        "programme": None,
+        "cloture": date_iso(m_clot.group(1)) if m_clot else None,
+        "inscriptions_closes": False,
+        "sans_autorisation": False,
+        "organisateur": "FSU",
+        "lien": url,
+    }
+
+
+def stages_fsu():
+    """Stages de la rubrique FSU Nord (un article par stage)."""
+    rubrique = telecharger(FSU)
+    articles = dict.fromkeys(a for a in re.findall(r'href="(spip\.php\?article\d+)"', rubrique) if a != "spip.php?article0")
+    stages = []
+    for a in articles:
+        url = FSU_BASE + a
+        s = analyser_article_fsu(telecharger(url), url)
+        if s and s["date"]:
+            stages.append(s)
+    return stages
+
+
 def fusionner(stages, s3):
     """Ajoute à chaque stage du tableau le programme et le report de la page du SNES-FSU Lille,
     en rapprochant par la date, puis par la ville."""
@@ -337,7 +387,7 @@ def comparer(anciens, nouveaux, jour):
     for i, a in av.items():
         if i not in ap:
             journal.append({"jour": jour, "id": i, "type": "retire", "stage": a["titre"],
-                            "changement": "retiré de la liste du SNES-FSU"})
+                            "changement": "retiré de la liste " + ("de la FSU" if a.get("organisateur") == "FSU" else "du SNES-FSU")})
     return journal
 
 
@@ -363,6 +413,13 @@ def main():
     fusionner(stages, s3)
 
     ancien = json.loads(SORTIE.read_text(encoding="utf-8")) if SORTIE.exists() else {}
+    # Stages de la FSU Nord ; site injoignable : on garde les précédents (sinon « retirés » à tort).
+    try:
+        fsu = stages_fsu()
+    except OSError as e:
+        print(f"Page des stages de la FSU Nord indisponible ({e}) : stages FSU non mis à jour.")
+        fsu = [s for s in ancien.get("stages", []) if s.get("organisateur") == "FSU"]
+    stages += fsu
     # Stages prévus de l'affiche annuelle ; en cas d'échec, on garde la liste précédente.
     m_plan = RE_PLAN.search(page_s3)
     plan = (m_plan.group(1) if m_plan.group(1).startswith("http") else BASE + m_plan.group(1).lstrip("/")) if m_plan else ancien.get("plan")
@@ -395,7 +452,7 @@ def main():
     SORTIE.write_text(json.dumps(donnees, ensure_ascii=False, indent=1), encoding="utf-8")
     if args.nouveautes:
         Path(args.nouveautes).write_text(json.dumps(nouvelles, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{len(stages)} stages relevés ({sum(1 for s in stages if s['programme'])} avec programme), "
+    print(f"{len(stages)} stages relevés dont {len(fsu)} FSU ({sum(1 for s in stages if s['programme'])} avec programme), "
           f"{len(prevus)} prévu(s) sans date ; {len(nouvelles)} changement(s) détecté(s).")
     for e in nouvelles:
         print(f"  - {e['stage']} : {e['changement']}")

@@ -39,7 +39,7 @@ def preparer(nouveautes, stages):
             "date_fr": date_fr(jour) + (f", {s['horaires']}" if jour and s.get("horaires") else ""),
             "lieu": s.get("lieu", ""),
             "limite_fr": date_fr(moins_un_mois(jour), jour=False) if jour else "",
-            "programme": s.get("programme", ""),
+            "programme": s.get("programme") or s.get("lien") or "",
         })
     return items
 

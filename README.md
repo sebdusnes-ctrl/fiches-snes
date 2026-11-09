@@ -76,6 +76,7 @@ et la page des stages du SNES-FSU Lille (programmes, reports)
 (`PAGE` dans le script : **à changer à chaque rentrée**, ex. `Stages-SNES-FSU-2027-2028.html`)
 ainsi que l'affiche annuelle du « plan de formation syndicale » (PDF lié depuis cette page : stages prévus sans date ni
 lieu, avec le mois indiqué par les traits de l'affiche ; retirés dès qu'un stage daté du même mois leur correspond),
+les stages de la FSU Nord (rubrique `FSU` dans le script, un article par stage, ouverts à toutes et à tous),
 et écrit `contenu/stages.json` : date, lieu, horaires, ancienne date ou ancien lieu barrés,
 et un journal des changements (stage ajouté ou retiré, date reportée, lieu ou horaires modifiés).
 `build.py` en tire `docs/stages.html` : la disponibilité de chaque stage est calculée le jour

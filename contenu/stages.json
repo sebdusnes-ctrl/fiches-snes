@@ -1,7 +1,7 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-11-09 09:44",
+ "verifie_le": "2026-11-09 09:52",
  "stages": [
   {
    "id": "stage-aesh",
@@ -257,6 +257,23 @@
    "inscriptions_closes": true,
    "sans_autorisation": false,
    "modifie_le": null
+  },
+  {
+   "id": "fsu-stage-academique-fsu-les-services-publics-pour-qui-pour-quoi-quel-role-quels-dro",
+   "titre": "Stage Académique FSU - Les Services Publics : pour qui ? Pour quoi ? Quel rôle, quels droits pour les agent.e.s dans un contexte de remises en cause multiples ?",
+   "date": "2027-04-05",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "Arras · INSPE, Rue du Temple (à confirmer)",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": null,
+   "cloture": "2027-03-05",
+   "inscriptions_closes": false,
+   "sans_autorisation": false,
+   "organisateur": "FSU",
+   "lien": "https://fsu59.fr/spip.php?article1222",
+   "modifie_le": "2026-11-09"
   }
  ],
  "plan": "https://lille.snes.edu/IMG/pdf/stages_26-27_maj.pdf",
@@ -294,5 +311,13 @@
    "mois": "2027-04"
   }
  ],
- "journal": []
+ "journal": [
+  {
+   "jour": "2026-11-09",
+   "id": "fsu-stage-academique-fsu-les-services-publics-pour-qui-pour-quoi-quel-role-quels-dro",
+   "type": "nouveau",
+   "stage": "Stage Académique FSU - Les Services Publics : pour qui ? Pour quoi ? Quel rôle, quels droits pour les agent.e.s dans un contexte de remises en cause multiples ?",
+   "changement": "nouveau stage publié"
+  }
+ ]
 }

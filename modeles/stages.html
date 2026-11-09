@@ -10,9 +10,10 @@
   <p class="stages-actions">
     <a class="bouton-ecrire" href="{{ stages.inscription }}" target="_blank" rel="noopener">S’inscrire (adhérent·e ou non)</a>
     <a href="{{ stages.source }}" target="_blank" rel="noopener">Page du SNES-FSU Lille</a>
+    <a href="https://fsu59.fr/spip.php?rubrique13" target="_blank" rel="noopener">Stages de la FSU</a>
     <a href="inscription.html">Être prévenu·e par courriel</a>
   </p>
-  <p class="stages-maj">Vérifié le {{ stages.verifie_le_fr }} sur le <a href="{{ stages.inscription }}" target="_blank" rel="noopener">tableau d’inscription du SNES-FSU</a> et la page du SNES-FSU Lille. Disponibilités calculées le {{ aujourdhui_fr }}.</p>
+  <p class="stages-maj">Vérifié le {{ stages.verifie_le_fr }} sur le <a href="{{ stages.inscription }}" target="_blank" rel="noopener">tableau d’inscription du SNES-FSU</a>, la page du SNES-FSU Lille et celle des stages de la FSU Nord. Disponibilités calculées le {{ aujourdhui_fr }}.</p>
 
   <ul class="legende">
     <li><span class="badge ouvert">Ouvert</span> demande d’absence encore dans les délais</li>
@@ -20,6 +21,7 @@
     <li><span class="badge depasse">Délai dépassé</span> plus de demande d’absence possible ; inscription possible si vous ne travaillez pas ce jour-là</li>
     <li><span class="badge ferme">Inscriptions closes</span> date d’inscription auprès du SNES-FSU dépassée</li>
     <li><span class="badge termine">Terminé</span></li>
+    <li><span class="badge fsu">FSU</span> stage de la fédération (FSU Nord), ouvert à toutes et à tous : inscription sur la page du stage</li>
     {% if stages.prevus %}<li><span class="badge prevu">Prévu, date à venir</span> annoncé dans le {% if stages.plan %}<a href="{{ stages.plan }}" target="_blank" rel="noopener">plan de formation du SNES-FSU Lille</a>{% else %}plan de formation du SNES-FSU Lille{% endif %} ; date et lieu pas encore fixés, mois indicatif</li>{% endif %}
   </ul>
 
@@ -31,6 +33,7 @@
     <div class="ligne statut-{{ s.statut }}" role="row">
       <span class="c-titre" role="cell">
         <strong>{{ s.titre_affiche }}</strong>
+        {% if s.organisateur == "FSU" %}<span class="badge fsu">FSU</span> <a href="{{ s.lien }}" target="_blank" rel="noopener">Présentation et inscription</a>{% endif %}
         {% if s.programme %}<a href="{{ s.programme }}" target="_blank" rel="noopener">Programme (PDF)</a>{% endif %}
       </span>
       <span class="c-date" role="cell">
@@ -48,7 +51,7 @@
         {% if s.prevu %}<small>Inscription dès que la date sera fixée</small>{% endif %}
         {% if s.statut in ("ouvert", "proche") %}<small>Demande d’absence avant le {{ s.limite_fr }}</small>{% endif %}
         {% if s.statut == "depasse" %}<small>Limite : {{ s.limite_fr }}</small>{% endif %}
-        {% if s.cloture_fr and s.statut not in ("termine", "ferme") %}<small>Inscription au SNES avant le {{ s.cloture_fr }}</small>{% endif %}
+        {% if s.cloture_fr and s.statut not in ("termine", "ferme") %}<small>Inscription {{ "à la FSU" if s.organisateur == "FSU" else "au SNES" }} avant le {{ s.cloture_fr }}</small>{% endif %}
         {% if s.recent %}<small class="modifie">Modifié le {{ s.modifie_fr }}</small>{% endif %}
       </span>
     </div>
