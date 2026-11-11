@@ -1,23 +1,8 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-11-10 13:54",
+ "verifie_le": "2026-11-11 13:03",
  "stages": [
-  {
-   "id": "stage-aesh",
-   "titre": "Stage AESH",
-   "date": "2026-11-17",
-   "date_initiale": null,
-   "horaires": "9h-17h",
-   "lieu": "LENS · Collège Jean Zay",
-   "lieu_barre": "",
-   "reporte": false,
-   "programme": "https://lille.snes.edu/IMG/pdf/stage_aesh-5.pdf",
-   "cloture": "2026-11-10",
-   "inscriptions_closes": false,
-   "sans_autorisation": false,
-   "modifie_le": null
-  },
   {
    "id": "mouvement-inter",
    "titre": "Mouvement INTER",
@@ -223,6 +208,21 @@
    "lieu_barre": "",
    "reporte": false,
    "programme": "https://lille.snes.edu/IMG/pdf/stage_stagiaires_inter_snuep.pdf",
+   "cloture": null,
+   "inscriptions_closes": true,
+   "sans_autorisation": false,
+   "modifie_le": null
+  },
+  {
+   "id": "stage-aesh",
+   "titre": "Stage AESH",
+   "date": "2026-11-17",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "LENS · Collège Jean Zay",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_aesh-5.pdf",
    "cloture": null,
    "inscriptions_closes": true,
    "sans_autorisation": false,
