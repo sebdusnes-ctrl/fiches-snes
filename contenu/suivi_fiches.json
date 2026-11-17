@@ -203,11 +203,11 @@
   "type": ""
  },
  "elections-professionnelles": {
-  "date": "",
-  "empreinte": "1d420976d075",
+  "date": "2026-11-17",
+  "empreinte": "a95bf88e14d6",
   "note": "",
-  "note_vue": "",
-  "type": ""
+  "note_vue": "ajout du vote pas à pas, du code de vote, de qui vote pour quels scrutins et du secret du vote",
+  "type": "maj"
  },
  "entretien-direction": {
   "date": "",

@@ -88,16 +88,25 @@ fiches:
 
   - id: elections-professionnelles
     titre: "Élections professionnelles : du 3 au 10 décembre 2026"
-    resume: "Vote électronique pour élire vos représentant·es."
+    resume: "Quatre minutes de vote pour quatre ans : comment voter, et pour quoi."
+    maj_note: "ajout du vote pas à pas, du code de vote, de qui vote pour quels scrutins et du secret du vote"
     en_bref:
-      - "Le **vote électronique** a lieu **du 3 au 10 décembre 2026**."
-      - "Vous élisez vos représentant·es aux **CSA** (comités sociaux d’administration), aux **CAP** (commissions administratives paritaires) et aux **CCP** (pour les contractuel·les)."
-      - "Ces élu·es vous défendent sur les mutations, les carrières, les conditions de travail et la santé au travail."
+      - "**Vote électronique du jeudi 3 décembre (8 h) au jeudi 10 décembre 2026 (17 h)**. Résultats le 11 décembre."
+      - "Il vous faut : votre **adresse académique** (identifiant), le **mot de passe** et la **réponse à la question défi** choisis en ouvrant votre espace électeur, et votre **code de vote** (sur l’ENSAP)."
+      - "**Le vote est secret** : seule votre participation est enregistrée. Ni la direction ni les syndicats ne savent pour qui vous votez."
+      - "Pour quatre ans, vos élu·es en **CAP** et **CCP** (carrière, mutations) et en **CSA** et **F3SCT** (moyens des établissements, conditions de travail)."
+    textes:
+      - "**Titulaires** : CSA ministériel, CSA académique, CAP nationale et CAP académique. **Stagiaires** : les deux CSA."
+      - "**Contractuel·les** (CDI, ou CDD d’au moins 6 mois signé au plus tard le 3 octobre), **AED**, **AESH** : les deux CSA et la CCP."
+      - "Congé maladie, congé parental, temps partiel : **vous votez**. Disponibilité, congé non rémunéré : non. Un doute : [questions fréquentes du SNES-FSU](https://www.snes.edu/elections2026/faq/) ou la section."
     agir:
-      - "Vérifiez dès maintenant que vous avez accès à votre messagerie professionnelle : c’est là que vous recevrez vos identifiants."
-      - "Votez, et faites voter autour de vous !"
+      - "**Espace électeur** : lien du courriel du 5 octobre (boîte académique) ou [portail des élections](https://electionspro2026.education-superieur-recherche-jeunesse-sports.gouv.fr/portail/identification-portail-electeur). Mot de passe oublié : FranceConnect ou question défi (avec NIR ou NUMEN)."
+      - "**Code de vote** : sur l’ENSAP jusqu’au 10 décembre. **AED en CDD** ou sans accès à l’ENSAP : code à partir du 3 décembre sur l’espace électeur, par FranceConnect ou la question défi."
+      - "**Voter** : « Je vote » → code de vote → commencez par le **CSA ministériel** → sélectionnez la liste, validez, gardez l’accusé de réception, puis **recommencez pour chaque scrutin**."
+    snes: "Le SNES-FSU rappelle que plus la participation est forte, plus vos élu·es pèsent face à l’administration. Il appelle à voter et à faire voter FSU."
     source:
-      - { doc: abecedaire, pages: "11" }
+      - { doc: snes_ep2026, ref: "« Comment voter ? », FAQ" }
+      - { doc: snes_lille_ep2026 }
 
   - id: faire-greve
     titre: "Faire grève"

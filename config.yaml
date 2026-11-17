@@ -216,6 +216,14 @@ sources:
     titre: "Non-titulaires"
     detail: "pages spéciales de L’US n° 873 du 22 août 2026"
     url: "https://www.snes.edu/publications/les-supplements-de-lus/non-titulaires-supplement-de-lus-n873/"
+  snes_ep2026:
+    titre: "Élections professionnelles 2026"
+    detail: "site du SNES-FSU, novembre 2026"
+    url: "https://www.snes.edu/elections2026/comment-voter/"
+  snes_lille_ep2026:
+    titre: "Pense-bête élections professionnelles 2026"
+    detail: "SNES-FSU Lille (calendrier, qui vote pour qui)"
+    url: "https://lille.snes.edu/Pense-bete-EP2026.html"
   snes_mutations:
     titre: "Mutations 2027"
     detail: "pages spéciales de L’US n° 876 du 7 novembre 2026"
