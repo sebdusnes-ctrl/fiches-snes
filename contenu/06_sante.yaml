@@ -99,21 +99,23 @@ fiches:
 
   - id: mutuelle-prevoyance
     titre: "Mutuelle obligatoire et prévoyance"
-    resume: "Santé : contrat ministériel obligatoire depuis le 1er mai 2026. Prévoyance : facultative, à décider avant le 1er novembre 2026."
-    a_jour: "Montants 2026 et date du 1er novembre 2026 : cette fiche sera mise à jour ensuite."
+    resume: "Santé : contrat ministériel obligatoire depuis le 1er mai 2026. Prévoyance : facultative, adhésion sans questionnaire de santé repoussée au 30 avril 2027."
+    a_jour: "Montants 2026 : à vérifier pour 2027."
+    maj_note: "date limite de la prévoyance sans questionnaire de santé repoussée au 30 avril 2027"
     en_bref:
       - "**Complémentaire santé** : depuis le **1er mai 2026**, les personnels en activité, titulaires ou non, sont **affilié·es obligatoirement** au contrat collectif choisi par le ministère (MGEN-CNP). Le ministère paie la moitié de la cotisation d’équilibre, soit **37,70 € par mois** en 2026."
-      - "**Prévoyance** (revenu en cas d’arrêt long, invalidité, décès) : **facultative**. Adhésion au contrat collectif **sans questionnaire de santé jusqu’au 1er novembre 2026** ; l’employeur y participe pour 7 € par mois."
+      - "**Prévoyance** (revenu en cas d’arrêt long, invalidité, décès) : **facultative**. Adhésion **sans questionnaire de santé** : la MGEN a **repoussé la date limite** du 1er novembre 2026 **au 30 avril 2027**. L’employeur participe pour 7 € par mois."
       - "**En arrêt (CMO, CLM, CLD)** : gardez votre contrat prévoyance individuel actuel, pour conserver vos droits aux indemnités."
     textes:
       - "**Cotisation santé** : une part forfaitaire et une part selon le traitement, soit de 28 à 49 € par mois environ pour un·e agent·e en activité, hors options facultatives (option 1 : 7,23 €, option 2 : 30,33 €, en partie prises en charge)."
       - "**Dispense** possible seulement si : complémentaire santé solidaire ; contrat collectif obligatoire du ou de la conjoint·e ; CDD déjà couvert à titre individuel ; contrat individuel en cours avant le 1er avril 2026 ou à la prise de fonction, pour un an au plus. On peut y renoncer à tout moment."
       - "Conjoint·e et enfants peuvent être couverts, sans participation de l’employeur. L’adhésion est maintenue en congé parental, en congé ou en disponibilité pour raison de santé."
     agir:
-      - "Prévoyance : décidez **avant le 1er novembre 2026** ; ensuite, un questionnaire de santé et une surcotisation sont possibles."
+      - "Prévoyance : décidez **au plus tard le 30 avril 2027** ; ensuite, un questionnaire de santé et une surcotisation sont possibles."
       - "Méfiez-vous des démarchages commerciaux. Cas particulier (conjoint·e, retraite proche, arrêt en cours) : contactez la section."
     snes: "Le SNES-FSU, avec la FSU, s’est opposé à l’adhésion obligatoire et à la séparation santé-prévoyance, et revendique le remboursement à 100 % des soins prescrits par la Sécurité sociale."
     source:
       - { doc: snes_psc, pages: "3 à 7" }
       - { doc: snes_prevoyance }
+      - { doc: fsu_prevoyance_report }
       - { doc: decret_psc }

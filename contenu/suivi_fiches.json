@@ -322,11 +322,11 @@
   "type": ""
  },
  "mutuelle-prevoyance": {
-  "date": "",
-  "empreinte": "d80965f7820f",
+  "date": "2026-11-17",
+  "empreinte": "a48ddd320ee5",
   "note": "",
-  "note_vue": "",
-  "type": ""
+  "note_vue": "date limite de la prévoyance sans questionnaire de santé repoussée au 30 avril 2027",
+  "type": "maj"
  },
  "naissance-adoption": {
   "date": "",
