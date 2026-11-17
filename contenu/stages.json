@@ -1,7 +1,7 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-11-16 14:03",
+ "verifie_le": "2026-11-17 14:45",
  "stages": [
   {
    "id": "stage-aesh-n2",
@@ -12,7 +12,7 @@
    "lieu": "CALAIS · Lycée Léonard de Vinci",
    "lieu_barre": "",
    "reporte": false,
-   "programme": "https://lille.snes.edu/IMG/pdf/stage_aesh_2.pdf",
+   "programme": null,
    "cloture": "2026-11-25",
    "inscriptions_closes": false,
    "sans_autorisation": false,
@@ -222,7 +222,7 @@
    "lieu": "LILLE · visio ou présentiel au S3, 209 rue nationale",
    "lieu_barre": "",
    "reporte": false,
-   "programme": null,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_inter.pdf",
    "cloture": null,
    "inscriptions_closes": true,
    "sans_autorisation": false,
