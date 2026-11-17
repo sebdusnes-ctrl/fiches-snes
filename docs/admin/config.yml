@@ -286,6 +286,10 @@ collections:
             value: snes_tp_retraite
           - label: Non-titulaires
             value: snes_nontit
+          - label: Élections professionnelles 2026
+            value: snes_ep2026
+          - label: Pense-bête élections professionnelles 2026
+            value: snes_lille_ep2026
           - label: Mutations 2027
             value: snes_mutations
           - label: Mémo stagiaires 2026-2027
