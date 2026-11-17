@@ -1,11 +1,10 @@
 his:
-- id: 99340039-266c-428e-b579-403c734f2738
-  etat: annulee
-  date: '2026-11-12'
-  debut: 13h30
-  fin: 14h30
-  lieu: Salle 203
-  odj: ''
-  statuts: []
-  annoncer: true
-  annulee_le: '2026-10-25'
+  - id: "36d265ca-1fef-4aab-97ee-f7489a48e94d"
+    etat: "prevue"
+    date: "2026-11-24"
+    debut: "11h00"
+    fin: "12h00"
+    lieu: "Salle Polyvalente"
+    odj: "Actualité de notre établissement"
+    statuts: []
+    annoncer: true
