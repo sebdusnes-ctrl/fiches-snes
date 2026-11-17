@@ -1,7 +1,7 @@
 # Fiches pratiques SNES-FSU (site de la section)
 
 Site statique mobile, accessible par QR code, généré à partir des Mémos du SNES-FSU
-(`C:\Projets\SNES\Mémos_SNES`).
+(`C:\Projets\SNES\Ressources\Mémos_SNES`).
 
 ## Organisation
 
@@ -98,7 +98,7 @@ des nouveaux stages et des changements de date ou de lieu.
 
 ## Corpus des sources (pour rédiger les fiches)
 
-`python outils/corpus.py "C:/Projets/SNES/Mémos_SNES"` écrit dans `sources/`
+`python outils/corpus.py "C:/Projets/SNES/Ressources/Mémos_SNES"` écrit dans `sources/`
 le texte de chaque PDF du dossier des Mémos (une page par bloc, origine indiquée) :
 texte direct pour les PDF numériques, OCR Tesseract (fra, pages tournées redressées) pour les scans.
 Un 2e argument facultatif pointe vers des retranscriptions relues (`<section data-pages="N">`),
