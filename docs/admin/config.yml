@@ -266,7 +266,8 @@ collections:
             value: snes_sst
           - label: Mutuelle obligatoire au 1er mai
             value: snes_psc
-          - label: Délai prolongé pour accéder à la prévoyance collective MGEN
+          - label: 'Prévoyance collective : date limite d’affiliation reportée fin
+              avril 2027'
             value: fsu_prevoyance_report
           - label: 'PSC : l’offre prévoyance du contrat collectif'
             value: snes_prevoyance
