@@ -1,7 +1,7 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-11-19 14:44",
+ "verifie_le": "2026-11-20 14:28",
  "stages": [
   {
    "id": "stage-aesh-n2",
@@ -27,7 +27,7 @@
    "lieu": "LENS · Lieu à définir",
    "lieu_barre": "",
    "reporte": false,
-   "programme": null,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_lycee_vg_vt.pdf",
    "cloture": "2026-12-11",
    "inscriptions_closes": false,
    "sans_autorisation": false,
@@ -42,7 +42,7 @@
    "lieu": "LILLE · Lycée Gaston Berger",
    "lieu_barre": "",
    "reporte": false,
-   "programme": null,
+   "programme": "https://lille.snes.edu/IMG/pdf/stage_lycee_vg_vt.pdf",
    "cloture": "2026-12-11",
    "inscriptions_closes": false,
    "sans_autorisation": false,
