@@ -1,23 +1,8 @@
 {
  "source": "https://lille.snes.edu/Stages-SNES-FSU-2026-2027.html",
  "inscription": "https://adherent.snes.edu/Public/indexStages.php?Aca=15",
- "verifie_le": "2026-11-25 15:48",
+ "verifie_le": "2026-11-26 15:15",
  "stages": [
-  {
-   "id": "stage-aesh-n2",
-   "titre": "Stage AESH n°2",
-   "date": "2026-11-30",
-   "date_initiale": null,
-   "horaires": "9h-17h",
-   "lieu": "CALAIS · Lycée Léonard de Vinci",
-   "lieu_barre": "",
-   "reporte": false,
-   "programme": null,
-   "cloture": "2026-11-25",
-   "inscriptions_closes": false,
-   "sans_autorisation": false,
-   "modifie_le": null
-  },
   {
    "id": "stage-college",
    "titre": "Stage collège",
@@ -47,6 +32,21 @@
    "inscriptions_closes": false,
    "sans_autorisation": false,
    "modifie_le": null
+  },
+  {
+   "id": "stage-aesh-n2",
+   "titre": "Stage AESH n°2",
+   "date": "2027-01-11",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "CALAIS · Lycée Léonard de Vinci",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": null,
+   "cloture": "2027-01-04",
+   "inscriptions_closes": false,
+   "sans_autorisation": false,
+   "modifie_le": "2026-11-26"
   },
   {
    "id": "reunion-speciale-tzr",
@@ -244,6 +244,21 @@
    "modifie_le": null
   },
   {
+   "id": "stage-aesh-n2-2",
+   "titre": "Stage AESH n°2",
+   "date": "2026-11-30",
+   "date_initiale": null,
+   "horaires": "9h-17h",
+   "lieu": "CALAIS · Lycée Léonard de Vinci",
+   "lieu_barre": "",
+   "reporte": false,
+   "programme": null,
+   "cloture": null,
+   "inscriptions_closes": true,
+   "sans_autorisation": false,
+   "modifie_le": "2026-11-26"
+  },
+  {
    "id": "stage-preparer-sa-retraite",
    "titre": "Stage Préparer sa retraite",
    "date": "2026-12-03",
@@ -312,6 +327,20 @@
   }
  ],
  "journal": [
+  {
+   "jour": "2026-11-26",
+   "id": "stage-aesh-n2",
+   "type": "date",
+   "stage": "Stage AESH n°2",
+   "changement": "date : 30 novembre 2026 → 11 janvier 2027"
+  },
+  {
+   "jour": "2026-11-26",
+   "id": "stage-aesh-n2-2",
+   "type": "nouveau",
+   "stage": "Stage AESH n°2",
+   "changement": "nouveau stage publié"
+  },
   {
    "jour": "2026-11-09",
    "id": "fsu-stage-academique-fsu-les-services-publics-pour-qui-pour-quoi-quel-role-quels-dro",
